@@ -2,74 +2,200 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>世界樹の迷宮TRPG ココフォリア出力ツール</title>
+    <title>世界樹の迷宮TRPG キャラクターシート ＆ ココフォリア出力ツール</title>
     <style>
-        body { font-family: sans-serif; max-width: 800px; margin: 20px auto; padding: 20px; background: #f9f9f9; color: #333; }
-        h1 { font-size: 1.5rem; border-bottom: 2px solid #0066cc; padding-bottom: 5px; }
-        .section { background: #fff; padding: 15px; margin-bottom: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        label { display: block; margin-top: 10px; font-weight: bold; }
-        input, select, textarea { width: 100%; padding: 8px; margin-top: 5px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; }
-        button { background: #0066cc; color: white; border: none; padding: 10px 15px; font-size: 1rem; border-radius: 4px; cursor: pointer; margin-right: 10px; margin-top: 10px; }
+        body { font-family: sans-serif; max-width: 900px; margin: 20px auto; padding: 20px; background: #f4f6f9; color: #333; }
+        h1 { font-size: 1.4rem; border-bottom: 2px solid #0066cc; padding-bottom: 5px; color: #0066cc; }
+        h2 { font-size: 1.1rem; background: #e2ecf8; padding: 6px 10px; border-radius: 4px; margin-top: 20px; }
+        .section { background: #fff; padding: 15px; margin-bottom: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        label { display: block; margin-top: 8px; font-weight: bold; font-size: 0.9rem; }
+        input, select, textarea { width: 100%; padding: 7px; margin-top: 3px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; font-size: 0.95rem; }
+        
+        /* シナリオメモ管理用スタイル */
+        .scenario-box { background: #fcfcfc; border: 1px solid #ddd; padding: 10px; margin-bottom: 10px; border-radius: 6px; }
+        .scenario-grid { display: grid; grid-template-columns: 2fr 1fr 100px; gap: 8px; margin-bottom: 5px; }
+        
+        .btn-group { margin-top: 15px; display: flex; gap: 10px; flex-wrap: wrap; }
+        button { background: #0066cc; color: white; border: none; padding: 10px 18px; font-size: 0.95rem; border-radius: 4px; cursor: pointer; font-weight: bold; }
         button:hover { background: #004999; }
-        pre { background: #eee; padding: 10px; border-radius: 4px; overflow-x: auto; font-size: 0.9rem; }
+        button.sub-btn { background: #28a745; }
+        button.sub-btn:hover { background: #1e7e34; }
+        button.del-btn { background: #dc3545; padding: 5px 10px; font-size: 0.8rem; margin-top: 3px; }
+        button.del-btn:hover { background: #a71d2a; }
+        
+        pre { background: #222; color: #0f0; padding: 12px; border-radius: 4px; overflow-x: auto; font-size: 0.85rem; max-height: 200px; }
+        .note { font-size: 0.8rem; color: #666; margin-top: 5px; }
     </style>
 </head>
 <body>
 
-    <h1>世界樹の迷宮TRPG ココフォリア出力ツール</h1>
+    <h1>世界樹の迷宮TRPG キャラクター管理ツール</h1>
 
     <div class="section">
         <h2>1. 基本情報</h2>
-        <label>キャラクター名</label>
-        <input type="text" id="charName" value="アルケミストのまっちゃん">
-        
-        <label>メインクラス</label>
-        <select id="mainClass">
-            <option value="アルケミスト">アルケミスト</option>
-            <option value="ソードマン">ソードマン</option>
-            <option value="メディック">メディック</option>
-        </select>
-
-        <label>通過シナリオ・メモ</label>
-        <textarea id="charMemo">炎雷メインの属性魔法型アルケミスト</textarea>
+        <div class="grid-2">
+            <div>
+                <label>キャラクター名</label>
+                <input type="text" id="charName" value="まっちゃん">
+            </div>
+            <div>
+                <label>プレイヤー名</label>
+                <input type="text" id="playerName" value="ゲスト">
+            </div>
+        </div>
+        <div class="grid-2">
+            <div>
+                <label>メインクラス</label>
+                <select id="mainClass">
+                    <option value="アルケミスト">アルケミスト</option>
+                    <option value="ソードマン">ソードマン</option>
+                    <option value="メディック">メディック</option>
+                    <option value="パラディン">パラディン</option>
+                    <option value="ダークハンター">ダークハンター</option>
+                </select>
+            </div>
+            <div>
+                <label>サブクラス</label>
+                <select id="subClass">
+                    <option value="なし">なし</option>
+                    <option value="アルケミスト">アルケミスト</option>
+                    <option value="ソードマン">ソードマン</option>
+                    <option value="メディック">メディック</option>
+                </select>
+            </div>
+        </div>
+        <div class="grid-2">
+            <div>
+                <label>レベル</label>
+                <input type="number" id="charLevel" value="1">
+            </div>
+            <div>
+                <label>累積経験点</label>
+                <input type="number" id="expPoints" value="0">
+            </div>
+        </div>
     </div>
 
     <div class="section">
-        <h2>2. データ入出力・ココフォリア用出力</h2>
-        <button onclick="copyForCcfolia()">ココフォリア用データをコピー (Ctrl+V用)</button>
-        <button onclick="saveJson()">ファイルに保存 (JSON)</button>
-        <input type="file" id="loadFileInput" style="display:none" onchange="loadJson(event)">
-        <button onclick="document.getElementById('loadFileInput').click()">ファイルを読み込む</button>
+        <h2>2. シナリオメモ（通過履歴）</h2>
+        <div id="scenarioList">
+            <!-- JavaScriptでここにシナリオ入力フォームが動的に追加されます -->
+        </div>
+        <button type="button" onclick="addScenarioField()">＋ シナリオを追加</button>
     </div>
 
     <div class="section">
-        <h2>出力プレビュー（ココフォリア形式）</h2>
+        <h2>3. ステータス・能力値</h2>
+        <div class="grid-2">
+            <div>
+                <label>HP</label>
+                <input type="number" id="hp" value="50">
+            </div>
+            <div>
+                <label>TP</label>
+                <input type="number" id="tp" value="30">
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>4. セーブ・ココフォリア出力</h2>
+        <div class="btn-group">
+            <button onclick="copyForCcfolia()">ココフォリア用データをコピー (Ctrl+V)</button>
+            <button class="sub-btn" onclick="saveEncryptedFile()">暗号化ファイルに保存 (.dat)</button>
+            <input type="file" id="loadFileInput" style="display:none" accept=".dat" onchange="loadEncryptedFile(event)">
+            <button class="sub-btn" onclick="document.getElementById('loadFileInput').click()">ファイルを読み込む</button>
+        </div>
+        <div class="note">※保存される `.dat` ファイルは暗号化されているため、このツール以外では中身を直接編集できません。</div>
+    </div>
+
+    <div class="section">
+        <h2>ココフォリア出力プレビュー</h2>
         <pre id="previewArea">ここにプレビューが表示されます</pre>
     </div>
 
     <script>
-        // ココフォリア用のペーストデータ（JSON形式）を生成してクリップボードにコピーする
+        function encryptData(str) { return btoa(unescape(encodeURIComponent(str))); }
+        function decryptData(base64Str) { return decodeURIComponent(escape(atob(base64Str))); }
+
+        // シナリオ入力欄を追加する
+        function addScenarioField(data = {}) {
+            const list = document.getElementById('scenarioList');
+            const div = document.createElement('div');
+            div.className = 'scenario-box';
+            div.innerHTML = `
+                <div class="scenario-grid">
+                    <div>
+                        <label style="margin-top:0;">シナリオ名</label>
+                        <input type="text" class="sc-title" value="${data.title || ''}" placeholder="例: はじまりの迷宮" oninput="updatePreview()">
+                    </div>
+                    <div>
+                        <label style="margin-top:0;">通過日 (開始,終了)</label>
+                        <input type="text" class="sc-date" value="${data.date || ''}" placeholder="例: 2026/08/01〜08/02" oninput="updatePreview()">
+                    </div>
+                    <div>
+                        <label style="margin-top:0;">獲得経験点</label>
+                        <input type="number" class="sc-exp" value="${data.exp || 0}" max="999" oninput="updatePreview()">
+                    </div>
+                </div>
+                <label style="margin-top:5px;">メモ・感想など</label>
+                <textarea class="sc-memo" placeholder="シナリオ中の出来事やメモ" oninput="updatePreview()">${data.memo || ''}</textarea>
+                <button type="button" class="del-btn" onclick="this.parentElement.remove(); updatePreview();">このシナリオを削除</button>
+            `;
+            list.appendChild(div);
+            updatePreview();
+        }
+
+        // シナリオデータを組み立ててテキスト化する
+        function buildScenarioMemoText() {
+            const boxes = document.querySelectorAll('.scenario-box');
+            if (boxes.length === 0) return "【シナリオメモ】\nなし";
+
+            let text = "【シナリオメモ】\n";
+            boxes.forEach((box, index) => {
+                const title = box.querySelector('.sc-title').value || "無題のシナリオ";
+                const date = box.querySelector('.sc-date').value || "日付未記入";
+                const exp = box.querySelector('.sc-exp').value || "0";
+                const memo = box.querySelector('.sc-memo').value || "";
+
+                text += `\n■ ${title}\n`;
+                text += `・通過日: ${date}\n`;
+                text += `・獲得経験点: ${exp}点\n`;
+                if (memo) {
+                    text += `・メモ: ${memo}\n`;
+                }
+            });
+            return text.trim();
+        }
+
+        // ココフォリア用コマデータの生成
         function generateCcfoliaData() {
             const name = document.getElementById('charName').value;
             const mainClass = document.getElementById('mainClass').value;
-            const memo = document.getElementById('charMemo').value;
+            const subClass = document.getElementById('subClass').value;
+            const level = document.getElementById('charLevel').value;
+            const hp = document.getElementById('hp').value;
+            const tp = document.getElementById('tp').value;
+            
+            const scenarioText = buildScenarioMemoText();
 
-            // ココフォリアのコマ用フォーマット
             const ccfoliaObj = {
                 "kind": "character",
                 "data": {
                     "name": name,
-                    "memo": `【メインクラス】${mainClass}\n${memo}`,
+                    "memo": `【レベル】${level}\n【メイン】${mainClass} / 【サブ】${subClass}\n\n${scenarioText}`,
                     "initiative": 0,
                     "externalUrl": "",
                     "status": [
-                        { "label": "HP", "value": 50, "max": 50 },
-                        { "label": "TP", "value": 30, "max": 30 }
+                        { "label": "HP", "value": Number(hp), "max": Number(hp) },
+                        { "label": "TP", "value": Number(tp), "max": Number(tp) }
                     ],
                     "params": [
-                        { "label": "メイン", "value": mainClass }
+                        { "label": "メイン", "value": mainClass },
+                        { "label": "サブ", "value": subClass }
                     ],
-                    "commands": "3d6+? >= ? 炎術式\n3d6+? >= ? 雷術式"
+                    "commands": "3d6+? >= ? 炎術式\n3d6+? >= ? 雷術式\n3d6+? >= ? 氷術式"
                 }
             };
             return JSON.stringify(ccfoliaObj, null, 2);
@@ -79,12 +205,13 @@
             document.getElementById('previewArea').textContent = generateCcfoliaData();
         }
 
-        // 入力が変わったらプレビューを自動更新
-        document.querySelectorAll('input, select, textarea').forEach(el => {
+        // 基本情報の変更監視
+        document.querySelectorAll('#charName, #playerName, #mainClass, #subClass, #charLevel, #expPoints, #hp, #tp').forEach(el => {
             el.addEventListener('input', updatePreview);
+            el.addEventListener('change', updatePreview);
         });
 
-        // クリップボードにコピー
+        // クリップボードへコピー
         function copyForCcfolia() {
             const data = generateCcfoliaData();
             navigator.clipboard.writeText(data).then(() => {
@@ -94,44 +221,77 @@
             });
         }
 
-        // JSONファイルとして保存（続きからの編集用）
-        function saveJson() {
-            const data = {
-                name: document.getElementById('charName').value,
+        // 暗号化ファイルの保存（シナリオデータも含めて保存）
+        function saveEncryptedFile() {
+            const scenarios = [];
+            document.querySelectorAll('.scenario-box').forEach(box => {
+                scenarios.push({
+                    title: box.querySelector('.sc-title').value,
+                    date: box.querySelector('.sc-date').value,
+                    exp: box.querySelector('.sc-exp').value,
+                    memo: box.querySelector('.sc-memo').value
+                });
+            });
+
+            const formData = {
+                charName: document.getElementById('charName').value,
+                playerName: document.getElementById('playerName').value,
                 mainClass: document.getElementById('mainClass').value,
-                memo: document.getElementById('charMemo').value
+                subClass: document.getElementById('subClass').value,
+                charLevel: document.getElementById('charLevel').value,
+                expPoints: document.getElementById('expPoints').value,
+                hp: document.getElementById('hp').value,
+                tp: document.getElementById('tp').value,
+                scenarios: scenarios
             };
-            const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+            
+            const encryptedStr = encryptData(JSON.stringify(formData));
+            const blob = new Blob([encryptedStr], { type: 'text/plain' });
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
-            a.download = (data.name || 'character') + '.json';
+            a.download = (formData.charName || 'character') + '.dat';
             a.click();
             URL.revokeObjectURL(url);
         }
 
-        // ファイルから読み込み
-        function loadJson(event) {
+        // 暗号化ファイルの読み込み
+        function loadEncryptedFile(event) {
             const file = event.target.files[0];
             if (!file) return;
             const reader = new FileReader();
             reader.onload = function(e) {
                 try {
-                    const data = JSON.parse(e.target.result);
-                    document.getElementById('charName').value = data.name || '';
+                    const data = JSON.parse(decryptData(e.target.result));
+                    document.getElementById('charName').value = data.charName || '';
+                    document.getElementById('playerName').value = data.playerName || '';
                     document.getElementById('mainClass').value = data.mainClass || 'アルケミスト';
-                    document.getElementById('charMemo').value = data.memo || '';
+                    document.getElementById('subClass').value = data.subClass || 'なし';
+                    document.getElementById('charLevel').value = data.charLevel || '1';
+                    document.getElementById('expPoints').value = data.expPoints || '0';
+                    document.getElementById('hp').value = data.hp || '50';
+                    document.getElementById('tp').value = data.tp || '30';
+
+                    // シナリオリストの復元
+                    const list = document.getElementById('scenarioList');
+                    list.innerHTML = '';
+                    if (data.scenarios && data.scenarios.length > 0) {
+                        data.scenarios.forEach(sc => addScenarioField(sc));
+                    } else {
+                        addScenarioField();
+                    }
+
                     updatePreview();
-                    alert('データを読み込みました！');
+                    alert('データを正常に読み込みました！');
                 } catch (err) {
-                    alert('ファイルの読み込みに失敗しました（JSON形式ではありません）');
+                    alert('ファイルの読み込みに失敗しました（データ形式が異なります）');
                 }
             };
             reader.readAsText(file);
         }
 
-        // 初期化時プレビュー更新
-        updatePreview();
+        // 初期状態で空のシナリオ欄を1つ表示
+        addScenarioField();
     </script>
 </body>
 </html>
