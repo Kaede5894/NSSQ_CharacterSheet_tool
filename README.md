@@ -1,0 +1,2 @@
+# NSSQ_CharacterSheet_tool
+SRSじゃない世界樹の迷宮trpg(NSSQ)のキャラクターシート作成用のツール
