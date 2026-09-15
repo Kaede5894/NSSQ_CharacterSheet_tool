@@ -2,19 +2,54 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>世界樹の迷宮TRPG キャラクターシート ＆ ココフォリア出力ツール</title>
+    <title>世界樹の迷宮TRPG キャラクター管理ツール</title>
     <style>
         body { font-family: sans-serif; max-width: 900px; margin: 20px auto; padding: 20px; background: #f4f6f9; color: #333; }
         h1 { font-size: 1.4rem; border-bottom: 2px solid #0066cc; padding-bottom: 5px; color: #0066cc; }
-        h2 { font-size: 1.1rem; background: #e2ecf8; padding: 6px 10px; border-radius: 4px; margin-top: 20px; }
+        h2 { font-size: 1.1rem; background: #e2ecf8; padding: 6px 10px; border-radius: 4px; margin-top: 0; display: inline-block; width: 100%; box-sizing: border-box; }
+        
+        /* セクション共通スタイル */
         .section { background: #fff; padding: 15px; margin-bottom: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        
+        /* 折りたたみ（details / summary）のスタイル */
+        details summary.section-summary {
+            font-size: 1.1rem;
+            background: #e2ecf8;
+            padding: 6px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            color: #333;
+            outline: none;
+            user-select: none;
+            transition: background 0.2s;
+        }
+        details summary.section-summary:hover {
+            background: #d0e1f5;
+        }
+        details[open] summary.section-summary {
+            margin-bottom: 15px;
+        }
+
         .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
         label { display: block; margin-top: 8px; font-weight: bold; font-size: 0.9rem; }
         input, select, textarea { width: 100%; padding: 7px; margin-top: 3px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; font-size: 0.95rem; }
+        
+        /* 自動計算項目のスタイル（グレー背景） */
+        input.auto-calc { background: #e9ecef; font-weight: bold; color: #495057; }
+        
+        /* クラス特性インフォメーション */
+        .class-info-box { background: #f8f9fa; border-left: 4px solid #0066cc; padding: 8px 12px; margin-top: 8px; border-radius: 0 4px 4px 0; font-size: 0.9rem; display: flex; gap: 20px; }
+        .class-info-item span { font-weight: normal; color: #495057; }
+
+        /* テキストエリアの調整 */
+        textarea.bg-area { height: 100px; resize: vertical; }
         
         /* シナリオメモ管理用スタイル */
         .scenario-box { background: #fcfcfc; border: 1px solid #ddd; padding: 10px; margin-bottom: 10px; border-radius: 6px; }
         .scenario-grid { display: grid; grid-template-columns: 2fr 1fr 100px; gap: 8px; margin-bottom: 5px; }
+        .scenario-memo-area { height: 200px; resize: vertical; }
         
         .btn-group { margin-top: 15px; display: flex; gap: 10px; flex-wrap: wrap; }
         button { background: #0066cc; color: white; border: none; padding: 10px 18px; font-size: 0.95rem; border-radius: 4px; cursor: pointer; font-weight: bold; }
@@ -34,74 +69,76 @@
 
     <div class="section">
         <h2>1. 基本情報</h2>
-        <div class="grid-2">
-            <div>
-                <label>キャラクター名</label>
-                <input type="text" id="charName" value="まっちゃん">
-            </div>
-            <div>
-                <label>プレイヤー名</label>
-                <input type="text" id="playerName" value="ゲスト">
-            </div>
+        <div style="margin-top: 10px;">
+            <label>キャラクター名</label>
+            <input type="text" id="charName" value="まっちゃん">
         </div>
         <div class="grid-2">
             <div>
                 <label>メインクラス</label>
-                <select id="mainClass">
-                    <option value="アルケミスト">アルケミスト</option>
-                    <option value="ソードマン">ソードマン</option>
-                    <option value="メディック">メディック</option>
-                    <option value="パラディン">パラディン</option>
-                    <option value="ダークハンター">ダークハンター</option>
-                </select>
+                <select id="mainClass" onchange="onMainClassChange()"></select>
             </div>
             <div>
                 <label>サブクラス</label>
-                <select id="subClass">
-                    <option value="なし">なし</option>
-                    <option value="アルケミスト">アルケミスト</option>
-                    <option value="ソードマン">ソードマン</option>
-                    <option value="メディック">メディック</option>
-                </select>
+                <select id="subClass"></select>
             </div>
         </div>
-        <div class="grid-2">
+        <!-- メインクラスの配置・型を表示するボックス -->
+        <div class="class-info-box" id="classInfoBox">
+            <div class="class-info-item"><strong>適正配置:</strong> <span id="infoPosition">-</span></div>
+            <div class="class-info-item"><strong>戦闘スタイル:</strong> <span id="infoType">-</span></div>
+        </div>
+
+        <div class="grid-3">
             <div>
                 <label>レベル</label>
-                <input type="number" id="charLevel" value="1">
+                <input type="text" id="charLevel" class="auto-calc" value="1" readonly>
+            </div>
+            <div>
+                <label>次のLvまで</label>
+                <input type="text" id="nextExpNeeded" class="auto-calc" value="15" readonly>
             </div>
             <div>
                 <label>累積経験点</label>
-                <input type="number" id="expPoints" value="0">
+                <input type="text" id="cumulativeExp" class="auto-calc" value="0" readonly>
             </div>
         </div>
     </div>
 
     <div class="section">
-        <h2>2. シナリオメモ（通過履歴）</h2>
-        <div id="scenarioList">
-            <!-- JavaScriptでここにシナリオ入力フォームが動的に追加されます -->
-        </div>
-        <button type="button" onclick="addScenarioField()">＋ シナリオを追加</button>
+        <h2>2. キャラクター背景</h2>
+        <textarea id="charBackground" class="bg-area" style="margin-top: 10px;" placeholder="経歴、パーソナリティ、大惨事表の結果などを記入" oninput="updatePreview()"></textarea>
     </div>
 
     <div class="section">
-        <h2>3. ステータス・能力値</h2>
-        <div class="grid-2">
-            <div>
-                <label>HP</label>
-                <input type="number" id="hp" value="50">
+        <details open>
+            <summary class="section-summary">3. ステータス・能力値</summary>
+            <div class="grid-2" style="margin-top: 10px;">
+                <div>
+                    <label>HP</label>
+                    <input type="number" id="hp" value="50">
+                </div>
+                <div>
+                    <label>TP</label>
+                    <input type="number" id="tp" value="30">
+                </div>
             </div>
-            <div>
-                <label>TP</label>
-                <input type="number" id="tp" value="30">
-            </div>
-        </div>
+        </details>
     </div>
 
     <div class="section">
-        <h2>4. セーブ・ココフォリア出力</h2>
-        <div class="btn-group">
+        <details open>
+            <summary class="section-summary">4. シナリオメモ（通過履歴）</summary>
+            <div id="scenarioList" style="margin-top: 10px;">
+                <!-- JavaScriptでここにシナリオ入力欄が動的に追加されます -->
+            </div>
+            <button type="button" onclick="addScenarioField()">＋ シナリオを追加</button>
+        </details>
+    </div>
+
+    <div class="section">
+        <h2>5. セーブ・ココフォリア出力</h2>
+        <div class="btn-group" style="margin-top: 10px;">
             <button onclick="copyForCcfolia()">ココフォリア用データをコピー (Ctrl+V)</button>
             <button class="sub-btn" onclick="saveEncryptedFile()">暗号化ファイルに保存 (.dat)</button>
             <input type="file" id="loadFileInput" style="display:none" accept=".dat" onchange="loadEncryptedFile(event)">
@@ -112,12 +149,169 @@
 
     <div class="section">
         <h2>ココフォリア出力プレビュー</h2>
-        <pre id="previewArea">ここにプレビューが表示されます</pre>
+        <pre id="previewArea" style="margin-top: 10px;">ここにプレビューが表示されます</pre>
     </div>
 
     <script>
+        // 31種類の全クラスデータ（前中後衛の配置と型を定義）
+        const classData = {
+            "プリンス/プリンセス": { pos: "前衛 / 中衛 / 後衛", type: "万能支援型" },
+            "ソードマン": { pos: "前衛", type: "物理アタッカー型" },
+            "レンジャー": { pos: "後衛", type: "偵察・遠隔攻撃型" },
+            "パラディン": { pos: "前衛", type: "防御・盾役型" },
+            "ダークハンター": { pos: "前衛", type: "拘束・状態異常型" },
+            "メディック": { pos: "中衛 / 後衛", type: "回復・支援型" },
+            "アルケミスト": { pos: "中衛 / 後衛", type: "属性魔法型" },
+            "バード": { pos: "後衛", type: "強化・支援型" },
+            "ブシドー": { pos: "前衛", type: "白兵アタッカー型" },
+            "カースメーカー": { pos: "後衛", type: "呪言・妨害型" },
+            "ガンナー": { pos: "後衛", type: "銃撃アタッカー型" },
+            "ドクトルマグス": { pos: "前衛 / 中衛", type: "近接回復・支援型" },
+            "ウォーリアー": { pos: "前衛", type: "重物理アタッカー型" },
+            "ファランクス": { pos: "前衛", type: "重盾・防御型" },
+            "パイレーツ": { pos: "前衛 / 中衛", type: "変則物理型" },
+            "シノビ": { pos: "前衛 / 中衛", type: "分身・隠密型" },
+            "モンク": { pos: "前衛 / 中衛", type: "格闘回復型" },
+            "ゾディアック": { pos: "後衛", type: "天体魔法型" },
+            "ビーストキング": { pos: "中衛 / 後衛", type: "魔獣使役型" },
+            "バリスタ": { pos: "後衛", type: "重砲撃型" },
+            "ファーマー": { pos: "後衛", type: "採取・探索型" },
+            "ショーグン": { pos: "前衛", type: "二刀・号令型" },
+            "ナイトシーカー": { pos: "前衛", type: "状態異常特化型" },
+            "フォートレス": { pos: "前衛", type: "鉄壁防御型" },
+            "スナイパー": { pos: "後衛", type: "精密射撃型" },
+            "ルーンマスター": { pos: "後衛", type: "ルーン魔法型" },
+            "ダンサー": { pos: "前衛 / 中衛", type: "踊り・バフ型" },
+            "ミスティック": { pos: "中衛 / 後衛", type: "陣術・妨害型" },
+            "モノノフ": { pos: "前衛", type: "捨て身アタッカー型" },
+            "インペリアル": { pos: "前衛", type: "重装騎兵・爆発力型" },
+            "ハイランダー": { pos: "前衛", type: "槍・HP代償型" }
+        };
+
+        // 経験点とレベルの閾値データ (Lv1〜15)
+        const expTable = [
+            { level: 1, cumulative: 0 },
+            { level: 2, cumulative: 15 },
+            { level: 3, cumulative: 35 },
+            { level: 4, cumulative: 60 },
+            { level: 5, cumulative: 90 },
+            { level: 6, cumulative: 125 },
+            { level: 7, cumulative: 165 },
+            { level: 8, cumulative: 210 },
+            { level: 9, cumulative: 260 },
+            { level: 10, cumulative: 315 },
+            { level: 11, cumulative: 375 },
+            { level: 12, cumulative: 440 },
+            { level: 13, cumulative: 510 },
+            { level: 14, cumulative: 585 },
+            { level: 15, cumulative: 665 }
+        ];
+
         function encryptData(str) { return btoa(unescape(encodeURIComponent(str))); }
         function decryptData(base64Str) { return decodeURIComponent(escape(atob(base64Str))); }
+
+        // クラスのセレクトボックスを初期化・更新する
+        function initClassSelectors(selectedMain = "アルケミスト", selectedSub = "－") {
+            const mainSelect = document.getElementById('mainClass');
+            mainSelect.innerHTML = '';
+            Object.keys(classData).forEach(cls => {
+                const opt = document.createElement('option');
+                opt.value = cls;
+                opt.textContent = cls;
+                if (cls === selectedMain) opt.selected = true;
+                mainSelect.appendChild(opt);
+            });
+
+            updateSubClassOptions(selectedSub);
+            updateClassInfo();
+        }
+
+        // メインクラス変更時に配置と型を画面に反映する
+        function updateClassInfo() {
+            const mainSelect = document.getElementById('mainClass');
+            const currentMain = mainSelect.value;
+            const info = classData[currentMain] || { pos: "-", type: "-" };
+
+            document.getElementById('infoPosition').textContent = info.pos;
+            document.getElementById('infoType').textContent = info.type;
+        }
+
+        // メインクラス変更時にサブクラスの選択肢を更新する（メインと同一のものを除外）
+        function updateSubClassOptions(preferredSub = null) {
+            const mainSelect = document.getElementById('mainClass');
+            const subSelect = document.getElementById('subClass');
+            const currentMain = mainSelect.value;
+            const currentSub = preferredSub !== null ? preferredSub : subSelect.value;
+
+            subSelect.innerHTML = '';
+            
+            // 「－」の選択肢を追加
+            const noneOpt = document.createElement('option');
+            noneOpt.value = "－";
+            noneOpt.textContent = "－";
+            subSelect.appendChild(noneOpt);
+
+            // メインクラス以外の30個を追加
+            Object.keys(classData).forEach(cls => {
+                if (cls !== currentMain) {
+                    const opt = document.createElement('option');
+                    opt.value = cls;
+                    opt.textContent = cls;
+                    subSelect.appendChild(opt);
+                }
+            });
+
+            // 以前選んでいたサブクラスが有効なら維持、不整合なら「－」にする
+            const match = Array.from(subSelect.options).some(opt => opt.value === currentSub);
+            if (match) {
+                subSelect.value = currentSub;
+            } else {
+                subSelect.value = "－";
+            }
+            updatePreview();
+        }
+
+        function onMainClassChange() {
+            updateClassInfo();
+            updateSubClassOptions();
+        }
+
+        // レベルと次のレベルまでの必要経験点を算出する
+        function recalculateLevelAndExp() {
+            let totalExp = 0;
+            document.querySelectorAll('.sc-exp').forEach(input => {
+                const val = parseInt(input.value) || 0;
+                totalExp += val;
+            });
+
+            let currentLevel = 1;
+            let nextCumulative = expTable[expTable.length - 1].cumulative;
+
+            for (let i = 0; i < expTable.length; i++) {
+                if (totalExp >= expTable[i].cumulative) {
+                    currentLevel = expTable[i].level;
+                    if (i + 1 < expTable.length) {
+                        nextCumulative = expTable[i + 1].cumulative;
+                    } else {
+                        nextCumulative = expTable[i].cumulative;
+                    }
+                } else {
+                    break;
+                }
+            }
+
+            let needed = 0;
+            if (currentLevel >= expTable[expTable.length - 1].level) {
+                needed = 0;
+            } else {
+                needed = nextCumulative - totalExp;
+            }
+
+            document.getElementById('cumulativeExp').value = totalExp;
+            document.getElementById('nextExpNeeded').value = needed;
+            document.getElementById('charLevel').value = currentLevel;
+            updatePreview();
+        }
 
         // シナリオ入力欄を追加する
         function addScenarioField(data = {}) {
@@ -136,37 +330,15 @@
                     </div>
                     <div>
                         <label style="margin-top:0;">獲得経験点</label>
-                        <input type="number" class="sc-exp" value="${data.exp || 0}" max="999" oninput="updatePreview()">
+                        <input type="number" class="sc-exp" value="${data.exp || 0}" max="999" oninput="recalculateLevelAndExp()">
                     </div>
                 </div>
                 <label style="margin-top:5px;">メモ・感想など</label>
-                <textarea class="sc-memo" placeholder="シナリオ中の出来事やメモ" oninput="updatePreview()">${data.memo || ''}</textarea>
-                <button type="button" class="del-btn" onclick="this.parentElement.remove(); updatePreview();">このシナリオを削除</button>
+                <textarea class="sc-memo scenario-memo-area" placeholder="シナリオ中の出来事やメモ" oninput="updatePreview()">${data.memo || ''}</textarea>
+                <button type="button" class="del-btn" onclick="this.parentElement.remove(); recalculateLevelAndExp();">このシナリオを削除</button>
             `;
             list.appendChild(div);
-            updatePreview();
-        }
-
-        // シナリオデータを組み立ててテキスト化する
-        function buildScenarioMemoText() {
-            const boxes = document.querySelectorAll('.scenario-box');
-            if (boxes.length === 0) return "【シナリオメモ】\nなし";
-
-            let text = "【シナリオメモ】\n";
-            boxes.forEach((box, index) => {
-                const title = box.querySelector('.sc-title').value || "無題のシナリオ";
-                const date = box.querySelector('.sc-date').value || "日付未記入";
-                const exp = box.querySelector('.sc-exp').value || "0";
-                const memo = box.querySelector('.sc-memo').value || "";
-
-                text += `\n■ ${title}\n`;
-                text += `・通過日: ${date}\n`;
-                text += `・獲得経験点: ${exp}点\n`;
-                if (memo) {
-                    text += `・メモ: ${memo}\n`;
-                }
-            });
-            return text.trim();
+            recalculateLevelAndExp();
         }
 
         // ココフォリア用コマデータの生成
@@ -175,16 +347,22 @@
             const mainClass = document.getElementById('mainClass').value;
             const subClass = document.getElementById('subClass').value;
             const level = document.getElementById('charLevel').value;
+            const exp = document.getElementById('cumulativeExp').value;
             const hp = document.getElementById('hp').value;
             const tp = document.getElementById('tp').value;
-            
-            const scenarioText = buildScenarioMemoText();
+            const background = document.getElementById('charBackground').value;
+            const info = classData[mainClass] || { pos: "-", type: "-" };
+
+            let memoContent = `【レベル】${level} (累積経験点: ${exp})\n【メイン】${mainClass} (適正: ${info.pos} / ${info.type})\n【サブ】${subClass}\n`;
+            if (background.trim()) {
+                memoContent += `\n【キャラクター背景】\n${background}\n`;
+            }
 
             const ccfoliaObj = {
                 "kind": "character",
                 "data": {
                     "name": name,
-                    "memo": `【レベル】${level}\n【メイン】${mainClass} / 【サブ】${subClass}\n\n${scenarioText}`,
+                    "memo": memoContent,
                     "initiative": 0,
                     "externalUrl": "",
                     "status": [
@@ -192,6 +370,7 @@
                         { "label": "TP", "value": Number(tp), "max": Number(tp) }
                     ],
                     "params": [
+                        { "label": "レベル", "value": Number(level) },
                         { "label": "メイン", "value": mainClass },
                         { "label": "サブ", "value": subClass }
                     ],
@@ -206,7 +385,7 @@
         }
 
         // 基本情報の変更監視
-        document.querySelectorAll('#charName, #playerName, #mainClass, #subClass, #charLevel, #expPoints, #hp, #tp').forEach(el => {
+        document.querySelectorAll('#charName, #subClass, #hp, #tp').forEach(el => {
             el.addEventListener('input', updatePreview);
             el.addEventListener('change', updatePreview);
         });
@@ -221,7 +400,7 @@
             });
         }
 
-        // 暗号化ファイルの保存（シナリオデータも含めて保存）
+        // 暗号化ファイルの保存
         function saveEncryptedFile() {
             const scenarios = [];
             document.querySelectorAll('.scenario-box').forEach(box => {
@@ -235,13 +414,11 @@
 
             const formData = {
                 charName: document.getElementById('charName').value,
-                playerName: document.getElementById('playerName').value,
                 mainClass: document.getElementById('mainClass').value,
                 subClass: document.getElementById('subClass').value,
-                charLevel: document.getElementById('charLevel').value,
-                expPoints: document.getElementById('expPoints').value,
                 hp: document.getElementById('hp').value,
                 tp: document.getElementById('tp').value,
+                charBackground: document.getElementById('charBackground').value,
                 scenarios: scenarios
             };
             
@@ -264,13 +441,14 @@
                 try {
                     const data = JSON.parse(decryptData(e.target.result));
                     document.getElementById('charName').value = data.charName || '';
-                    document.getElementById('playerName').value = data.playerName || '';
-                    document.getElementById('mainClass').value = data.mainClass || 'アルケミスト';
-                    document.getElementById('subClass').value = data.subClass || 'なし';
-                    document.getElementById('charLevel').value = data.charLevel || '1';
-                    document.getElementById('expPoints').value = data.expPoints || '0';
+                    
+                    const loadedMain = data.mainClass || 'アルケミスト';
+                    const loadedSub = data.subClass || '－';
+                    initClassSelectors(loadedMain, loadedSub);
+
                     document.getElementById('hp').value = data.hp || '50';
                     document.getElementById('tp').value = data.tp || '30';
+                    document.getElementById('charBackground').value = data.charBackground || '';
 
                     // シナリオリストの復元
                     const list = document.getElementById('scenarioList');
@@ -281,7 +459,7 @@
                         addScenarioField();
                     }
 
-                    updatePreview();
+                    recalculateLevelAndExp();
                     alert('データを正常に読み込みました！');
                 } catch (err) {
                     alert('ファイルの読み込みに失敗しました（データ形式が異なります）');
@@ -290,7 +468,8 @@
             reader.readAsText(file);
         }
 
-        // 初期状態で空のシナリオ欄を1つ表示
+        // 初期化実行
+        initClassSelectors();
         addScenarioField();
     </script>
 </body>
