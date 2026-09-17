@@ -17,11 +17,11 @@
             "盾"
         ],
         "states": {
-            "str": "STR",
-            "tec": "TEC",
-            "vit": "VIT",
-            "agi": "AGI",
-            "luc": "LUC"
+            "str": "5",
+            "tec": "6",
+            "vit": "6",
+            "agi": "5",
+            "luc": "6"
         }
     },
     {
@@ -41,11 +41,11 @@
             "盾"
         ],
         "states": {
-            "str": "STR",
-            "tec": "TEC",
-            "vit": "VIT",
-            "agi": "AGI",
-            "luc": "LUC"
+            "str": "7",
+            "tec": "3",
+            "vit": "6",
+            "agi": "5",
+            "luc": "4"
         }
     },
     {
@@ -62,11 +62,11 @@
             "盾"
         ],
         "states": {
-            "str": "STR",
-            "tec": "TEC",
-            "vit": "VIT",
-            "agi": "AGI",
-            "luc": "LUC"
+            "str": "5",
+            "tec": "5",
+            "vit": "5",
+            "agi": "7",
+            "luc": "7"
         }
     },
     {
@@ -87,11 +87,11 @@
             "盾"
         ],
         "states": {
-            "str": "STR",
-            "tec": "TEC",
-            "vit": "VIT",
-            "agi": "AGI",
-            "luc": "LUC"
+            "str": "5",
+            "tec": "5",
+            "vit": "7",
+            "agi": "3",
+            "luc": "5"
         }
     },
     {
@@ -109,11 +109,11 @@
             "服"
         ],
         "states": {
-            "str": "STR",
-            "tec": "TEC",
-            "vit": "VIT",
-            "agi": "AGI",
-            "luc": "LUC"
+            "str": "6",
+            "tec": "5",
+            "vit": "5",
+            "agi": "6",
+            "luc": "6"
         }
     },
     {
@@ -129,11 +129,11 @@
             "服"
         ],
         "states": {
-            "str": "STR",
-            "tec": "TEC",
-            "vit": "VIT",
-            "agi": "AGI",
-            "luc": "LUC"
+            "str": "5",
+            "tec": "6",
+            "vit": "5",
+            "agi": "4",
+            "luc": "4"
         }
     },
     {
@@ -148,11 +148,11 @@
             "服"
         ],
         "states": {
-            "str": "STR",
-            "tec": "TEC",
-            "vit": "VIT",
-            "agi": "AGI",
-            "luc": "LUC"
+            "str": "3",
+            "tec": "7",
+            "vit": "4",
+            "agi": "4",
+            "luc": "5"
         }
     },
     {
@@ -169,11 +169,11 @@
             "服"
         ],
         "states": {
-            "str": "STR",
-            "tec": "TEC",
-            "vit": "VIT",
-            "agi": "AGI",
-            "luc": "LUC"
+            "str": "4",
+            "tec": "5",
+            "vit": "4",
+            "agi": "5",
+            "luc": "6"
         }
     },
     {
@@ -189,11 +189,11 @@
             "服"
         ],
         "states": {
-            "str": "STR",
-            "tec": "TEC",
-            "vit": "VIT",
-            "agi": "AGI",
-            "luc": "LUC"
+            "str": "7",
+            "tec": "3",
+            "vit": "4",
+            "agi": "5",
+            "luc": "4"
         }
     },
     {
@@ -208,11 +208,11 @@
             "服"
         ],
         "states": {
-            "str": "STR",
-            "tec": "TEC",
-            "vit": "VIT",
-            "agi": "AGI",
-            "luc": "LUC"
+            "str": "3",
+            "tec": "6",
+            "vit": "4",
+            "agi": "4",
+            "luc": "6"
         }
     },
     {
@@ -227,11 +227,11 @@
             "服"
         ],
         "states": {
-            "str": "STR",
-            "tec": "TEC",
-            "vit": "VIT",
-            "agi": "AGI",
-            "luc": "LUC"
+            "str": "6",
+            "tec": "5",
+            "vit": "4",
+            "agi": "5",
+            "luc": "6"
         }
     },
     {
@@ -248,11 +248,11 @@
             "服"
         ],
         "states": {
-            "str": "STR",
-            "tec": "TEC",
-            "vit": "VIT",
-            "agi": "AGI",
-            "luc": "LUC"
+            "str": "6",
+            "tec": "6",
+            "vit": "5",
+            "agi": "5",
+            "luc": "6"
         }
     },
     {
@@ -271,11 +271,11 @@
             "盾"
         ],
         "states": {
-            "str": "STR",
-            "tec": "TEC",
-            "vit": "VIT",
-            "agi": "AGI",
-            "luc": "LUC"
+            "str": "7",
+            "tec": "3",
+            "vit": "6",
+            "agi": "4",
+            "luc": "4"
         }
     },
     {
@@ -294,11 +294,11 @@
             "盾"
         ],
         "states": {
-            "str": "STR",
-            "tec": "TEC",
-            "vit": "VIT",
-            "agi": "AGI",
-            "luc": "LUC"
+            "str": "5",
+            "tec": "4",
+            "vit": "7",
+            "agi": "3",
+            "luc": "5"
         }
     },
     {
@@ -315,11 +315,11 @@
             "服"
         ],
         "states": {
-            "str": "STR",
-            "tec": "TEC",
-            "vit": "VIT",
-            "agi": "AGI",
-            "luc": "LUC"
+            "str": "6",
+            "tec": "5",
+            "vit": "5",
+            "agi": "6",
+            "luc": "6"
         }
     },
     {
@@ -334,11 +334,11 @@
             "服"
         ],
         "states": {
-            "str": "STR",
-            "tec": "TEC",
-            "vit": "VIT",
-            "agi": "AGI",
-            "luc": "LUC"
+            "str": "6",
+            "tec": "6",
+            "vit": "3",
+            "agi": "7",
+            "luc": "6"
         }
     },
     {
@@ -355,11 +355,11 @@
             "服"
         ],
         "states": {
-            "str": "STR",
-            "tec": "TEC",
-            "vit": "VIT",
-            "agi": "AGI",
-            "luc": "LUC"
+            "str": "6",
+            "tec": "6",
+            "vit": "5",
+            "agi": "6",
+            "luc": "3"
         }
     },
     {
@@ -374,11 +374,11 @@
             "服"
         ],
         "states": {
-            "str": "STR",
-            "tec": "TEC",
-            "vit": "VIT",
-            "agi": "AGI",
-            "luc": "LUC"
+            "str": "3",
+            "tec": "6",
+            "vit": "4",
+            "agi": "4",
+            "luc": "6"
         }
     },
     {
@@ -394,11 +394,11 @@
             "盾"
         ],
         "states": {
-            "str": "STR",
-            "tec": "TEC",
-            "vit": "VIT",
-            "agi": "AGI",
-            "luc": "LUC"
+            "str": "6",
+            "tec": "5",
+            "vit": "5",
+            "agi": "4",
+            "luc": "7"
         }
     },
     {
@@ -414,11 +414,11 @@
             "服"
         ],
         "states": {
-            "str": "STR",
-            "tec": "TEC",
-            "vit": "VIT",
-            "agi": "AGI",
-            "luc": "LUC"
+            "str": "7",
+            "tec": "3",
+            "vit": "4",
+            "agi": "3",
+            "luc": "5"
         }
     },
     {
@@ -434,11 +434,11 @@
             "服"
         ],
         "states": {
-            "str": "STR",
-            "tec": "TEC",
-            "vit": "VIT",
-            "agi": "AGI",
-            "luc": "LUC"
+            "str": "4",
+            "tec": "3",
+            "vit": "4",
+            "agi": "3",
+            "luc": "7"
         }
     },
     {
@@ -453,11 +453,11 @@
             "服"
         ],
         "states": {
-            "str": "STR",
-            "tec": "TEC",
-            "vit": "VIT",
-            "agi": "AGI",
-            "luc": "LUC"
+            "str": "7",
+            "tec": "5",
+            "vit": "4",
+            "agi": "6",
+            "luc": "4"
         }
     },
     {
@@ -473,11 +473,11 @@
             "服"
         ],
         "states": {
-            "str": "STR",
-            "tec": "TEC",
-            "vit": "VIT",
-            "agi": "AGI",
-            "luc": "LUC"
+            "str": "6",
+            "tec": "5",
+            "vit": "4",
+            "agi": "7",
+            "luc": "6"
         }
     },
     {
@@ -495,11 +495,11 @@
             "盾"
         ],
         "states": {
-            "str": "STR",
-            "tec": "TEC",
-            "vit": "VIT",
-            "agi": "AGI",
-            "luc": "LUC"
+            "str": "5",
+            "tec": "5",
+            "vit": "7",
+            "agi": "3",
+            "luc": "5"
         }
     },
     {
@@ -515,11 +515,11 @@
             "服"
         ],
         "states": {
-            "str": "STR",
-            "tec": "TEC",
-            "vit": "VIT",
-            "agi": "AGI",
-            "luc": "LUC"
+            "str": "6",
+            "tec": "4",
+            "vit": "4",
+            "agi": "5",
+            "luc": "7"
         }
     },
     {
@@ -534,11 +534,11 @@
             "服"
         ],
         "states": {
-            "str": "STR",
-            "tec": "TEC",
-            "vit": "VIT",
-            "agi": "AGI",
-            "luc": "LUC"
+            "str": "3",
+            "tec": "7",
+            "vit": "4",
+            "agi": "4",
+            "luc": "5"
         }
     },
     {
@@ -554,11 +554,11 @@
             "服"
         ],
         "states": {
-            "str": "STR",
-            "tec": "TEC",
-            "vit": "VIT",
-            "agi": "AGI",
-            "luc": "LUC"
+            "str": "5",
+            "tec": "5",
+            "vit": "4",
+            "agi": "7",
+            "luc": "5"
         }
     },
     {
@@ -573,11 +573,11 @@
             "服"
         ],
         "states": {
-            "str": "STR",
-            "tec": "TEC",
-            "vit": "VIT",
-            "agi": "AGI",
-            "luc": "LUC"
+            "str": "3",
+            "tec": "6",
+            "vit": "4",
+            "agi": "4",
+            "luc": "6"
         }
     },
     {
@@ -594,11 +594,11 @@
             "服"
         ],
         "states": {
-            "str": "STR",
-            "tec": "TEC",
-            "vit": "VIT",
-            "agi": "AGI",
-            "luc": "LUC"
+            "str": "7",
+            "tec": "3",
+            "vit": "5",
+            "agi": "5",
+            "luc": "5"
         }
     },
     {
@@ -617,11 +617,11 @@
             "盾"
         ],
         "states": {
-            "str": "STR",
-            "tec": "TEC",
-            "vit": "VIT",
-            "agi": "AGI",
-            "luc": "LUC"
+            "str": "7",
+            "tec": "5",
+            "vit": "7",
+            "agi": "4",
+            "luc": "3"
         }
     },
     {
@@ -639,11 +639,11 @@
             "盾"
         ],
         "states": {
-            "str": "STR",
-            "tec": "TEC",
-            "vit": "VIT",
-            "agi": "AGI",
-            "luc": "LUC"
+            "str": "7",
+            "tec": "3",
+            "vit": "6",
+            "agi": "5",
+            "luc": "4"
         }
     }
 ]
