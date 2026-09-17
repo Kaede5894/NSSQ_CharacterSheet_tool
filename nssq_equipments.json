@@ -1,0 +1,348 @@
+{
+  "weapons": [
+    {
+      "name": "拳",
+      "type": "白兵",
+      "range": "近",
+      "element": "壊",
+      "phys_acc": 0,
+      "elem_acc": 0,
+      "phys_atk": {
+        "base_stat": "Lv",
+        "multiplier": 1,
+        "offset": 0
+      },
+      "elem_atk": null,
+      "speed": 0,
+      "price_multiplier": 0,
+      "materials": []
+    },
+    {
+      "name": "拳(拳マスタリー)",
+      "type": "白兵",
+      "range": "近",
+      "element": "壊",
+      "phys_acc": 0,
+      "elem_acc": 0,
+      "phys_atk": {
+        "base_stat": "Lv",
+        "multiplier": 3,
+        "offset": 4
+      },
+      "elem_atk": null,
+      "speed": 0,
+      "price_multiplier": 0,
+      "materials": []
+    },
+    {
+      "name": "短剣",
+      "type": "白兵",
+      "range": "近",
+      "element": "斬",
+      "phys_acc": 0,
+      "elem_acc": 0,
+      "phys_atk": {
+        "base_stat": "R",
+        "multiplier": 3,
+        "offset": 3
+      },
+      "elem_atk": null,
+      "speed": 0,
+      "price_multiplier": 80,
+      "materials": ["牙", "爪", "針", "刃"]
+    },
+    {
+      "name": "剣",
+      "type": "白兵",
+      "range": "近",
+      "element": "斬",
+      "phys_acc": 0,
+      "elem_acc": 0,
+      "phys_atk": {
+        "base_stat": "R",
+        "multiplier": 3,
+        "offset": 5
+      },
+      "elem_atk": null,
+      "speed": 0,
+      "price_multiplier": 100,
+      "materials": ["牙", "刃", "爪", "金属"]
+    },
+    {
+      "name": "突剣",
+      "type": "白兵",
+      "range": "近",
+      "element": "突",
+      "phys_acc": 1,
+      "elem_acc": 0,
+      "phys_atk": {
+        "base_stat": "R",
+        "multiplier": 3,
+        "offset": 4
+      },
+      "elem_atk": null,
+      "speed": 3,
+      "price_multiplier": 100,
+      "materials": ["角", "針", "金属", "宝石"]
+    },
+    {
+      "name": "槍",
+      "type": "白兵",
+      "range": "近",
+      "element": "突",
+      "phys_acc": 1,
+      "elem_acc": 0,
+      "phys_atk": {
+        "base_stat": "R",
+        "multiplier": 3,
+        "offset": 5
+      },
+      "elem_atk": null,
+      "speed": -3,
+      "price_multiplier": 100,
+      "materials": ["角", "刃", "枝", "金属"]
+    },
+    {
+      "name": "斧",
+      "type": "白兵",
+      "range": "近",
+      "element": "壊",
+      "phys_acc": -1,
+      "elem_acc": 0,
+      "phys_atk": {
+        "base_stat": "R",
+        "multiplier": 3,
+        "offset": 6
+      },
+      "elem_atk": null,
+      "speed": -4,
+      "price_multiplier": 100,
+      "materials": ["骨", "木材", "石材", "金属"]
+    },
+    {
+      "name": "杖",
+      "type": "白兵",
+      "range": "近",
+      "element": "壊",
+      "phys_acc": 0,
+      "elem_acc": 1,
+      "phys_atk": {
+        "base_stat": "R",
+        "multiplier": 3,
+        "offset": 3
+      },
+      "elem_atk": {
+        "base_stat": "R",
+        "multiplier": 1,
+        "offset": 3
+      },
+      "speed": -4,
+      "price_multiplier": 100,
+      "materials": ["角", "結晶", "枝", "宝石"]
+    },
+    {
+      "name": "鎚",
+      "type": "白兵",
+      "range": "近",
+      "element": "壊",
+      "phys_acc": -1,
+      "elem_acc": 0,
+      "phys_atk": {
+        "base_stat": "R",
+        "multiplier": 3,
+        "offset": 6
+      },
+      "elem_atk": null,
+      "speed": -6,
+      "price_multiplier": 100,
+      "materials": ["骨", "殻", "木材", "石材"]
+    },
+    {
+      "name": "鞭",
+      "type": "白兵",
+      "range": "近",
+      "element": "斬",
+      "phys_acc": 0,
+      "elem_acc": 0,
+      "phys_atk": {
+        "base_stat": "R",
+        "multiplier": 3,
+        "offset": 5
+      },
+      "elem_atk": null,
+      "speed": 0,
+      "price_multiplier": 90,
+      "materials": ["皮", "糸", "蔓"]
+    },
+    {
+      "name": "刀",
+      "type": "白兵",
+      "range": "近",
+      "element": "斬",
+      "phys_acc": 0,
+      "elem_acc": 0,
+      "phys_atk": {
+        "base_stat": "R",
+        "multiplier": 3,
+        "offset": 6
+      },
+      "elem_atk": null,
+      "speed": 0,
+      "price_multiplier": 120,
+      "materials": ["爪", "刃", "石材", "金属"]
+    },
+    {
+      "name": "砲剣",
+      "type": "白兵",
+      "range": "近",
+      "element": "斬",
+      "phys_acc": 0,
+      "elem_acc": 0,
+      "phys_atk": {
+        "base_stat": "R",
+        "multiplier": 3,
+        "offset": 5
+      },
+      "elem_atk": null,
+      "speed": 0,
+      "price_multiplier": 110,
+      "materials": ["刃", "石材", "金属"]
+    },
+    {
+      "name": "農具",
+      "type": "白兵",
+      "range": "近",
+      "element": "選択(斬/壊/突)",
+      "phys_acc": 0,
+      "elem_acc": 0,
+      "phys_atk": {
+        "base_stat": "R",
+        "multiplier": 3,
+        "offset": 4
+      },
+      "elem_atk": null,
+      "speed": 0,
+      "price_multiplier": 90,
+      "materials": ["枝", "木材", "石材", "金属"]
+    },
+    {
+      "name": "弓",
+      "type": "射撃",
+      "range": "遠",
+      "element": "突",
+      "phys_acc": 0,
+      "elem_acc": 0,
+      "phys_atk": {
+        "base_stat": "R",
+        "multiplier": 3,
+        "offset": 4
+      },
+      "elem_atk": null,
+      "speed": 0,
+      "price_multiplier": 100,
+      "materials": ["角", "羽", "枝", "蔓"]
+    },
+    {
+      "name": "弩",
+      "type": "射撃",
+      "range": "遠",
+      "element": "突",
+      "phys_acc": -1,
+      "elem_acc": 0,
+      "phys_atk": {
+        "base_stat": "R",
+        "multiplier": 3,
+        "offset": 6
+      },
+      "elem_atk": null,
+      "speed": -8,
+      "price_multiplier": 110,
+      "materials": ["角", "木材", "蔓", "金属"]
+    },
+    {
+      "name": "銃",
+      "type": "射撃",
+      "range": "遠",
+      "element": "突",
+      "phys_acc": 0,
+      "elem_acc": 0,
+      "phys_atk": {
+        "base_stat": "R",
+        "multiplier": 3,
+        "offset": 5
+      },
+      "elem_atk": null,
+      "speed": -4,
+      "price_multiplier": 110,
+      "materials": ["爪", "結晶", "石材", "金属"]
+    }
+  ],
+  "armor": [
+    {
+      "name": "重鎧",
+      "def": {
+        "base_stat": "R",
+        "multiplier": 3,
+        "offset": 3
+      },
+      "evasion": -2,
+      "speed": -6,
+      "price_multiplier": 120,
+      "materials": ["鱗", "甲羅", "石材", "金属"]
+    },
+    {
+      "name": "軽鎧",
+      "def": {
+        "base_stat": "R",
+        "multiplier": 2,
+        "offset": 2
+      },
+      "evasion": 0,
+      "speed": -3,
+      "price_multiplier": 100,
+      "materials": ["皮", "殻", "鱗", "木材", "金属"]
+    },
+    {
+      "name": "服",
+      "def": {
+        "base_stat": "R",
+        "multiplier": 1,
+        "offset": 1
+      },
+      "evasion": 0,
+      "speed": 0,
+      "price_multiplier": 80,
+      "materials": ["皮", "毛皮", "羽", "糸", "草"]
+    },
+    {
+      "name": "盾",
+      "def": {
+        "base_stat": "R",
+        "multiplier": 0.5,
+        "offset": 0.5,
+        "round_down": true
+      },
+      "evasion": -1,
+      "speed": -4,
+      "price_multiplier": 70,
+      "materials": ["殻", "甲羅", "木材", "金属"]
+    }
+  ],
+  "accessories": [
+    { "name": "厚手の手袋", "effect": "【STR】+1", "price": 80 },
+    { "name": "木彫りの髪飾り", "effect": "【TEC】+1", "price": 80 },
+    { "name": "革のベルト", "effect": "【VIT】+1", "price": 80 },
+    { "name": "ストラップシューズ", "effect": "【AGI】+1", "price": 80 },
+    { "name": "花のお守り", "effect": "【LUC】+1", "price": 80 },
+    { "name": "知識の書", "effect": "エネミー識別判定に+1", "price": 150 },
+    { "name": "脱兎のお守り", "effect": "逃走判定に+2", "price": 200 },
+    { "name": "百中ゴーグル", "effect": "【物理命中】+2", "price": 500 },
+    { "name": "命のベルト", "effect": "【HP】+8", "price": 1000 },
+    { "name": "英気のオーブ", "effect": "【TP】+5", "price": 1000 },
+    { "name": "力の指輪", "effect": "【STR】+3", "price": 1000 },
+    { "name": "知恵のピアス", "effect": "【TEC】+3", "price": 1000 },
+    { "name": "耐力の腕輪", "effect": "【VIT】+3", "price": 1000 },
+    { "name": "俊足のお守り", "effect": "【AGI】+3", "price": 1000 },
+    { "name": "運のネックレス", "effect": "【LUC】+3", "price": 1000 }
+  ]
+}
