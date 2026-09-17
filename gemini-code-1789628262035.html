@@ -1,0 +1,35 @@
+<!-- 4. 装備 セクションを追加 -->
+<div class="section">
+  <details open>
+    <summary class="section-summary">4. 装備</summary>
+    <div class="grid-3" style="margin-top: 10px;">
+      <div>
+        <label>武器</label>
+        <select id="equipWeapon" onchange="updatePreview()"></select>
+      </div>
+      <div>
+        <label>防具</label>
+        <select id="equipArmor" onchange="updatePreview()"></select>
+      </div>
+      <div>
+        <label>その他 (盾 / 装飾品)</label>
+        <select id="equipOther" onchange="updatePreview()"></select>
+      </div>
+    </div>
+  </details>
+</div>
+
+<!-- 既存の「4. シナリオメモ」を「5. シナリオメモ」に変更 -->
+<div class="section">
+  <details open>
+    <summary class="section-summary">5. シナリオメモ（通過履歴）</summary>
+    <div id="scenarioList" style="margin-top: 10px;"></div>
+    <button type="button" onclick="addScenarioField()">＋ シナリオを追加</button>
+  </details>
+</div>
+
+<!-- 既存の「5. セーブ・ココフォリア出力」を「6. セーブ・ココフォリア出力」に変更 -->
+<div class="section">
+  <h2>6. セーブ・ココフォリア出力</h2>
+  ...
+</div>
