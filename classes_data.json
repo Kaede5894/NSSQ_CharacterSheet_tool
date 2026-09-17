@@ -1,0 +1,649 @@
+[
+    {
+        "class_id": 1,
+        "class_name": "プリンス/プリンセス",
+        "position_type": "中衛／万能型",
+        "weapons": [
+            "短剣",
+            "剣",
+            "突剣",
+            "杖",
+            "鞭"
+        ],
+        "armors": [
+            "重鎧",
+            "軽鎧",
+            "服",
+            "盾"
+        ],
+        "states": {
+            "str": "STR",
+            "tec": "TEC",
+            "vit": "VIT",
+            "agi": "AGI",
+            "luc": "LUC"
+        }
+    },
+    {
+        "class_id": 2,
+        "class_name": "ソードマン",
+        "position_type": "前衛／物理攻撃型",
+        "weapons": [
+            "短剣",
+            "剣",
+            "突剣",
+            "斧"
+        ],
+        "armors": [
+            "重鎧",
+            "軽鎧",
+            "服",
+            "盾"
+        ],
+        "states": {
+            "str": "STR",
+            "tec": "TEC",
+            "vit": "VIT",
+            "agi": "AGI",
+            "luc": "LUC"
+        }
+    },
+    {
+        "class_id": 3,
+        "class_name": "レンジャー",
+        "position_type": "中衛／万能型",
+        "weapons": [
+            "短剣",
+            "弓"
+        ],
+        "armors": [
+            "軽鎧",
+            "服",
+            "盾"
+        ],
+        "states": {
+            "str": "STR",
+            "tec": "TEC",
+            "vit": "VIT",
+            "agi": "AGI",
+            "luc": "LUC"
+        }
+    },
+    {
+        "class_id": 4,
+        "class_name": "パラディン",
+        "position_type": "前衛／防御特化型",
+        "weapons": [
+            "短剣",
+            "剣",
+            "突剣",
+            "槍",
+            "斧"
+        ],
+        "armors": [
+            "重鎧",
+            "軽鎧",
+            "服",
+            "盾"
+        ],
+        "states": {
+            "str": "STR",
+            "tec": "TEC",
+            "vit": "VIT",
+            "agi": "AGI",
+            "luc": "LUC"
+        }
+    },
+    {
+        "class_id": 5,
+        "class_name": "ダークハンター",
+        "position_type": "前衛／特殊攻撃型",
+        "weapons": [
+            "短剣",
+            "剣",
+            "突剣",
+            "鞭"
+        ],
+        "armors": [
+            "軽鎧",
+            "服"
+        ],
+        "states": {
+            "str": "STR",
+            "tec": "TEC",
+            "vit": "VIT",
+            "agi": "AGI",
+            "luc": "LUC"
+        }
+    },
+    {
+        "class_id": 6,
+        "class_name": "メディック",
+        "position_type": "後衛／回復特化型",
+        "weapons": [
+            "短剣",
+            "杖",
+            "鎚"
+        ],
+        "armors": [
+            "服"
+        ],
+        "states": {
+            "str": "STR",
+            "tec": "TEC",
+            "vit": "VIT",
+            "agi": "AGI",
+            "luc": "LUC"
+        }
+    },
+    {
+        "class_id": 7,
+        "class_name": "アルケミスト",
+        "position_type": "後衛／属性攻撃型",
+        "weapons": [
+            "短剣",
+            "杖"
+        ],
+        "armors": [
+            "服"
+        ],
+        "states": {
+            "str": "STR",
+            "tec": "TEC",
+            "vit": "VIT",
+            "agi": "AGI",
+            "luc": "LUC"
+        }
+    },
+    {
+        "class_id": 8,
+        "class_name": "バード",
+        "position_type": "後衛／支援特化型",
+        "weapons": [
+            "短剣",
+            "剣",
+            "弓"
+        ],
+        "armors": [
+            "軽鎧",
+            "服"
+        ],
+        "states": {
+            "str": "STR",
+            "tec": "TEC",
+            "vit": "VIT",
+            "agi": "AGI",
+            "luc": "LUC"
+        }
+    },
+    {
+        "class_id": 9,
+        "class_name": "ブシドー",
+        "position_type": "前衛／攻撃偏重型",
+        "weapons": [
+            "短剣",
+            "刀"
+        ],
+        "armors": [
+            "軽鎧",
+            "服"
+        ],
+        "states": {
+            "str": "STR",
+            "tec": "TEC",
+            "vit": "VIT",
+            "agi": "AGI",
+            "luc": "LUC"
+        }
+    },
+    {
+        "class_id": 10,
+        "class_name": "カースメーカー",
+        "position_type": "後衛／弱体特化型",
+        "weapons": [
+            "短剣",
+            "杖"
+        ],
+        "armors": [
+            "服"
+        ],
+        "states": {
+            "str": "STR",
+            "tec": "TEC",
+            "vit": "VIT",
+            "agi": "AGI",
+            "luc": "LUC"
+        }
+    },
+    {
+        "class_id": 11,
+        "class_name": "ガンナー",
+        "position_type": "後衛／万能攻撃型",
+        "weapons": [
+            "短剣",
+            "銃"
+        ],
+        "armors": [
+            "服"
+        ],
+        "states": {
+            "str": "STR",
+            "tec": "TEC",
+            "vit": "VIT",
+            "agi": "AGI",
+            "luc": "LUC"
+        }
+    },
+    {
+        "class_id": 12,
+        "class_name": "ドクトルマグス",
+        "position_type": "中衛／万能戦闘型",
+        "weapons": [
+            "短剣",
+            "剣",
+            "杖"
+        ],
+        "armors": [
+            "軽鎧",
+            "服"
+        ],
+        "states": {
+            "str": "STR",
+            "tec": "TEC",
+            "vit": "VIT",
+            "agi": "AGI",
+            "luc": "LUC"
+        }
+    },
+    {
+        "class_id": 13,
+        "class_name": "ウォリアー",
+        "position_type": "前衛／物理攻撃型",
+        "weapons": [
+            "短剣",
+            "剣",
+            "斧",
+            "鎚"
+        ],
+        "armors": [
+            "軽鎧",
+            "服",
+            "盾"
+        ],
+        "states": {
+            "str": "STR",
+            "tec": "TEC",
+            "vit": "VIT",
+            "agi": "AGI",
+            "luc": "LUC"
+        }
+    },
+    {
+        "class_id": 14,
+        "class_name": "ファランクス",
+        "position_type": "中衛／防御特化型",
+        "weapons": [
+            "短剣",
+            "剣",
+            "槍"
+        ],
+        "armors": [
+            "重鎧",
+            "軽鎧",
+            "服",
+            "盾"
+        ],
+        "states": {
+            "str": "STR",
+            "tec": "TEC",
+            "vit": "VIT",
+            "agi": "AGI",
+            "luc": "LUC"
+        }
+    },
+    {
+        "class_id": 15,
+        "class_name": "パイレーツ",
+        "position_type": "中衛／戦闘・探索兼業型",
+        "weapons": [
+            "短剣",
+            "突剣",
+            "銃"
+        ],
+        "armors": [
+            "軽鎧",
+            "服"
+        ],
+        "states": {
+            "str": "STR",
+            "tec": "TEC",
+            "vit": "VIT",
+            "agi": "AGI",
+            "luc": "LUC"
+        }
+    },
+    {
+        "class_id": 16,
+        "class_name": "シノビ",
+        "position_type": "中衛／特殊万能型",
+        "weapons": [
+            "短剣",
+            "刀"
+        ],
+        "armors": [
+            "服"
+        ],
+        "states": {
+            "str": "STR",
+            "tec": "TEC",
+            "vit": "VIT",
+            "agi": "AGI",
+            "luc": "LUC"
+        }
+    },
+    {
+        "class_id": 17,
+        "class_name": "モンク",
+        "position_type": "中衛／戦闘・回復兼業型",
+        "weapons": [
+            "短剣",
+            "杖",
+            "鎚"
+        ],
+        "armors": [
+            "軽鎧",
+            "服"
+        ],
+        "states": {
+            "str": "STR",
+            "tec": "TEC",
+            "vit": "VIT",
+            "agi": "AGI",
+            "luc": "LUC"
+        }
+    },
+    {
+        "class_id": 18,
+        "class_name": "ゾディアック",
+        "position_type": "後衛／属性攻撃型",
+        "weapons": [
+            "短剣",
+            "杖"
+        ],
+        "armors": [
+            "服"
+        ],
+        "states": {
+            "str": "STR",
+            "tec": "TEC",
+            "vit": "VIT",
+            "agi": "AGI",
+            "luc": "LUC"
+        }
+    },
+    {
+        "class_id": 19,
+        "class_name": "ビーストキング",
+        "position_type": "中衛／特殊攻撃型",
+        "weapons": [
+            "短剣",
+            "槍"
+        ],
+        "armors": [
+            "服",
+            "盾"
+        ],
+        "states": {
+            "str": "STR",
+            "tec": "TEC",
+            "vit": "VIT",
+            "agi": "AGI",
+            "luc": "LUC"
+        }
+    },
+    {
+        "class_id": 20,
+        "class_name": "バリスタ",
+        "position_type": "中衛／物理攻撃型",
+        "weapons": [
+            "短剣",
+            "弩"
+        ],
+        "armors": [
+            "軽鎧",
+            "服"
+        ],
+        "states": {
+            "str": "STR",
+            "tec": "TEC",
+            "vit": "VIT",
+            "agi": "AGI",
+            "luc": "LUC"
+        }
+    },
+    {
+        "class_id": 21,
+        "class_name": "ファーマー",
+        "position_type": "後衛／探索特化型",
+        "weapons": [
+            "短剣",
+            "農具"
+        ],
+        "armors": [
+            "軽鎧",
+            "服"
+        ],
+        "states": {
+            "str": "STR",
+            "tec": "TEC",
+            "vit": "VIT",
+            "agi": "AGI",
+            "luc": "LUC"
+        }
+    },
+    {
+        "class_id": 22,
+        "class_name": "ショーグン",
+        "position_type": "前衛／攻撃偏重型",
+        "weapons": [
+            "短剣",
+            "刀"
+        ],
+        "armors": [
+            "服"
+        ],
+        "states": {
+            "str": "STR",
+            "tec": "TEC",
+            "vit": "VIT",
+            "agi": "AGI",
+            "luc": "LUC"
+        }
+    },
+    {
+        "class_id": 23,
+        "class_name": "ナイトシーカー",
+        "position_type": "中衛／特殊攻撃型",
+        "weapons": [
+            "短剣",
+            "剣"
+        ],
+        "armors": [
+            "軽鎧",
+            "服"
+        ],
+        "states": {
+            "str": "STR",
+            "tec": "TEC",
+            "vit": "VIT",
+            "agi": "AGI",
+            "luc": "LUC"
+        }
+    },
+    {
+        "class_id": 24,
+        "class_name": "フォートレス",
+        "position_type": "前衛／防御重視型",
+        "weapons": [
+            "短剣",
+            "鎚"
+        ],
+        "armors": [
+            "重鎧",
+            "軽鎧",
+            "服",
+            "盾"
+        ],
+        "states": {
+            "str": "STR",
+            "tec": "TEC",
+            "vit": "VIT",
+            "agi": "AGI",
+            "luc": "LUC"
+        }
+    },
+    {
+        "class_id": 25,
+        "class_name": "スナイパー",
+        "position_type": "後衛／戦闘・探索兼業型",
+        "weapons": [
+            "短剣",
+            "弓"
+        ],
+        "armors": [
+            "軽鎧",
+            "服"
+        ],
+        "states": {
+            "str": "STR",
+            "tec": "TEC",
+            "vit": "VIT",
+            "agi": "AGI",
+            "luc": "LUC"
+        }
+    },
+    {
+        "class_id": 26,
+        "class_name": "ルーンマスター",
+        "position_type": "後衛／属性攻撃型",
+        "weapons": [
+            "短剣",
+            "杖"
+        ],
+        "armors": [
+            "服"
+        ],
+        "states": {
+            "str": "STR",
+            "tec": "TEC",
+            "vit": "VIT",
+            "agi": "AGI",
+            "luc": "LUC"
+        }
+    },
+    {
+        "class_id": 27,
+        "class_name": "ダンサー",
+        "position_type": "中衛／戦闘・支援兼業型",
+        "weapons": [
+            "短剣",
+            "剣"
+        ],
+        "armors": [
+            "軽鎧",
+            "服"
+        ],
+        "states": {
+            "str": "STR",
+            "tec": "TEC",
+            "vit": "VIT",
+            "agi": "AGI",
+            "luc": "LUC"
+        }
+    },
+    {
+        "class_id": 28,
+        "class_name": "ミスティック",
+        "position_type": "後衛／弱体特化型",
+        "weapons": [
+            "短剣",
+            "杖"
+        ],
+        "armors": [
+            "服"
+        ],
+        "states": {
+            "str": "STR",
+            "tec": "TEC",
+            "vit": "VIT",
+            "agi": "AGI",
+            "luc": "LUC"
+        }
+    },
+    {
+        "class_id": 29,
+        "class_name": "モノノフ",
+        "position_type": "前衛／物理攻撃型",
+        "weapons": [
+            "短剣",
+            "鎚",
+            "刀"
+        ],
+        "armors": [
+            "軽鎧",
+            "服"
+        ],
+        "states": {
+            "str": "STR",
+            "tec": "TEC",
+            "vit": "VIT",
+            "agi": "AGI",
+            "luc": "LUC"
+        }
+    },
+    {
+        "class_id": 30,
+        "class_name": "インペリアル",
+        "position_type": "前衛／爆発力特化攻撃型",
+        "weapons": [
+            "短剣",
+            "剣",
+            "砲剣"
+        ],
+        "armors": [
+            "重鎧",
+            "軽鎧",
+            "服",
+            "盾"
+        ],
+        "states": {
+            "str": "STR",
+            "tec": "TEC",
+            "vit": "VIT",
+            "agi": "AGI",
+            "luc": "LUC"
+        }
+    },
+    {
+        "class_id": 31,
+        "class_name": "ハイランダー",
+        "position_type": "前衛／物理攻撃型",
+        "weapons": [
+            "短剣",
+            "剣",
+            "槍"
+        ],
+        "armors": [
+            "軽鎧",
+            "服",
+            "盾"
+        ],
+        "states": {
+            "str": "STR",
+            "tec": "TEC",
+            "vit": "VIT",
+            "agi": "AGI",
+            "luc": "LUC"
+        }
+    }
+]
