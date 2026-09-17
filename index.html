@@ -153,324 +153,295 @@
     </div>
 
     <script>
-        // 31種類の全クラスデータ（前中後衛の配置と型を定義）
-        const classData = {
-            "プリンス/プリンセス": { pos: "前衛 / 中衛 / 後衛", type: "万能支援型" },
-            "ソードマン": { pos: "前衛", type: "物理アタッカー型" },
-            "レンジャー": { pos: "後衛", type: "偵察・遠隔攻撃型" },
-            "パラディン": { pos: "前衛", type: "防御・盾役型" },
-            "ダークハンター": { pos: "前衛", type: "拘束・状態異常型" },
-            "メディック": { pos: "中衛 / 後衛", type: "回復・支援型" },
-            "アルケミスト": { pos: "中衛 / 後衛", type: "属性魔法型" },
-            "バード": { pos: "後衛", type: "強化・支援型" },
-            "ブシドー": { pos: "前衛", type: "白兵アタッカー型" },
-            "カースメーカー": { pos: "後衛", type: "呪言・妨害型" },
-            "ガンナー": { pos: "後衛", type: "銃撃アタッカー型" },
-            "ドクトルマグス": { pos: "前衛 / 中衛", type: "近接回復・支援型" },
-            "ウォーリアー": { pos: "前衛", type: "重物理アタッカー型" },
-            "ファランクス": { pos: "前衛", type: "重盾・防御型" },
-            "パイレーツ": { pos: "前衛 / 中衛", type: "変則物理型" },
-            "シノビ": { pos: "前衛 / 中衛", type: "分身・隠密型" },
-            "モンク": { pos: "前衛 / 中衛", type: "格闘回復型" },
-            "ゾディアック": { pos: "後衛", type: "天体魔法型" },
-            "ビーストキング": { pos: "中衛 / 後衛", type: "魔獣使役型" },
-            "バリスタ": { pos: "後衛", type: "重砲撃型" },
-            "ファーマー": { pos: "後衛", type: "採取・探索型" },
-            "ショーグン": { pos: "前衛", type: "二刀・号令型" },
-            "ナイトシーカー": { pos: "前衛", type: "状態異常特化型" },
-            "フォートレス": { pos: "前衛", type: "鉄壁防御型" },
-            "スナイパー": { pos: "後衛", type: "精密射撃型" },
-            "ルーンマスター": { pos: "後衛", type: "ルーン魔法型" },
-            "ダンサー": { pos: "前衛 / 中衛", type: "踊り・バフ型" },
-            "ミスティック": { pos: "中衛 / 後衛", type: "陣術・妨害型" },
-            "モノノフ": { pos: "前衛", type: "捨て身アタッカー型" },
-            "インペリアル": { pos: "前衛", type: "重装騎兵・爆発力型" },
-            "ハイランダー": { pos: "前衛", type: "槍・HP代償型" }
-        };
-
-        // 経験点とレベルの閾値データ (Lv1〜15)
-        const expTable = [
-            { level: 1, cumulative: 0 },
-            { level: 2, cumulative: 15 },
-            { level: 3, cumulative: 35 },
-            { level: 4, cumulative: 60 },
-            { level: 5, cumulative: 90 },
-            { level: 6, cumulative: 125 },
-            { level: 7, cumulative: 165 },
-            { level: 8, cumulative: 210 },
-            { level: 9, cumulative: 260 },
-            { level: 10, cumulative: 315 },
-            { level: 11, cumulative: 375 },
-            { level: 12, cumulative: 440 },
-            { level: 13, cumulative: 510 },
-            { level: 14, cumulative: 585 },
-            { level: 15, cumulative: 665 }
-        ];
-
-        function encryptData(str) { return btoa(unescape(encodeURIComponent(str))); }
-        function decryptData(base64Str) { return decodeURIComponent(escape(atob(base64Str))); }
-
-        // クラスのセレクトボックスを初期化・更新する
-        function initClassSelectors(selectedMain = "アルケミスト", selectedSub = "－") {
-            const mainSelect = document.getElementById('mainClass');
-            mainSelect.innerHTML = '';
-            Object.keys(classData).forEach(cls => {
-                const opt = document.createElement('option');
-                opt.value = cls;
-                opt.textContent = cls;
-                if (cls === selectedMain) opt.selected = true;
-                mainSelect.appendChild(opt);
-            });
-
-            updateSubClassOptions(selectedSub);
-            updateClassInfo();
-        }
-
-        // メインクラス変更時に配置と型を画面に反映する
-        function updateClassInfo() {
-            const mainSelect = document.getElementById('mainClass');
-            const currentMain = mainSelect.value;
-            const info = classData[currentMain] || { pos: "-", type: "-" };
-
-            document.getElementById('infoPosition').textContent = info.pos;
-            document.getElementById('infoType').textContent = info.type;
-        }
-
-        // メインクラス変更時にサブクラスの選択肢を更新する（メインと同一のものを除外）
-        function updateSubClassOptions(preferredSub = null) {
-            const mainSelect = document.getElementById('mainClass');
-            const subSelect = document.getElementById('subClass');
-            const currentMain = mainSelect.value;
-            const currentSub = preferredSub !== null ? preferredSub : subSelect.value;
-
-            subSelect.innerHTML = '';
-            
-            // 「－」の選択肢を追加
-            const noneOpt = document.createElement('option');
-            noneOpt.value = "－";
-            noneOpt.textContent = "－";
-            subSelect.appendChild(noneOpt);
-
-            // メインクラス以外の30個を追加
-            Object.keys(classData).forEach(cls => {
-                if (cls !== currentMain) {
-                    const opt = document.createElement('option');
-                    opt.value = cls;
-                    opt.textContent = cls;
-                    subSelect.appendChild(opt);
-                }
-            });
-
-            // 以前選んでいたサブクラスが有効なら維持、不整合なら「－」にする
-            const match = Array.from(subSelect.options).some(opt => opt.value === currentSub);
-            if (match) {
-                subSelect.value = currentSub;
-            } else {
-                subSelect.value = "－";
-            }
-            updatePreview();
-        }
-
-        function onMainClassChange() {
-            updateClassInfo();
-            updateSubClassOptions();
-        }
-
-        // レベルと次のレベルまでの必要経験点を算出する
-        function recalculateLevelAndExp() {
-            let totalExp = 0;
-            document.querySelectorAll('.sc-exp').forEach(input => {
-                const val = parseInt(input.value) || 0;
-                totalExp += val;
-            });
-
-            let currentLevel = 1;
-            let nextCumulative = expTable[expTable.length - 1].cumulative;
-
-            for (let i = 0; i < expTable.length; i++) {
-                if (totalExp >= expTable[i].cumulative) {
-                    currentLevel = expTable[i].level;
-                    if (i + 1 < expTable.length) {
-                        nextCumulative = expTable[i + 1].cumulative;
-                    } else {
-                        nextCumulative = expTable[i].cumulative;
-                    }
-                } else {
-                    break;
-                }
-            }
-
-            let needed = 0;
-            if (currentLevel >= expTable[expTable.length - 1].level) {
-                needed = 0;
-            } else {
-                needed = nextCumulative - totalExp;
-            }
-
-            document.getElementById('cumulativeExp').value = totalExp;
-            document.getElementById('nextExpNeeded').value = needed;
-            document.getElementById('charLevel').value = currentLevel;
-            updatePreview();
-        }
-
-        // シナリオ入力欄を追加する
-        function addScenarioField(data = {}) {
-            const list = document.getElementById('scenarioList');
-            const div = document.createElement('div');
-            div.className = 'scenario-box';
-            div.innerHTML = `
-                <div class="scenario-grid">
-                    <div>
-                        <label style="margin-top:0;">シナリオ名</label>
-                        <input type="text" class="sc-title" value="${data.title || ''}" placeholder="例: はじまりの迷宮" oninput="updatePreview()">
-                    </div>
-                    <div>
-                        <label style="margin-top:0;">通過日 (開始,終了)</label>
-                        <input type="text" class="sc-date" value="${data.date || ''}" placeholder="例: 2026/08/01〜08/02" oninput="updatePreview()">
-                    </div>
-                    <div>
-                        <label style="margin-top:0;">獲得経験点</label>
-                        <input type="number" class="sc-exp" value="${data.exp || 0}" max="999" oninput="recalculateLevelAndExp()">
-                    </div>
-                </div>
-                <label style="margin-top:5px;">メモ・感想など</label>
-                <textarea class="sc-memo scenario-memo-area" placeholder="シナリオ中の出来事やメモ" oninput="updatePreview()">${data.memo || ''}</textarea>
-                <button type="button" class="del-btn" onclick="this.parentElement.remove(); recalculateLevelAndExp();">このシナリオを削除</button>
-            `;
-            list.appendChild(div);
-            recalculateLevelAndExp();
-        }
-
-        // ココフォリア用コマデータの生成
-        function generateCcfoliaData() {
-            const name = document.getElementById('charName').value;
-            const mainClass = document.getElementById('mainClass').value;
-            const subClass = document.getElementById('subClass').value;
-            const level = document.getElementById('charLevel').value;
-            const exp = document.getElementById('cumulativeExp').value;
-            const hp = document.getElementById('hp').value;
-            const tp = document.getElementById('tp').value;
-            const background = document.getElementById('charBackground').value;
-            const info = classData[mainClass] || { pos: "-", type: "-" };
-
-            let memoContent = `【レベル】${level} (累積経験点: ${exp})\n【メイン】${mainClass} (適正: ${info.pos} / ${info.type})\n【サブ】${subClass}\n`;
-            if (background.trim()) {
-                memoContent += `\n【キャラクター背景】\n${background}\n`;
-            }
-
-            const ccfoliaObj = {
-                "kind": "character",
-                "data": {
-                    "name": name,
-                    "memo": memoContent,
-                    "initiative": 0,
-                    "externalUrl": "",
-                    "status": [
-                        { "label": "HP", "value": Number(hp), "max": Number(hp) },
-                        { "label": "TP", "value": Number(tp), "max": Number(tp) }
-                    ],
-                    "params": [
-                        { "label": "レベル", "value": Number(level) },
-                        { "label": "メイン", "value": mainClass },
-                        { "label": "サブ", "value": subClass }
-                    ],
-                    "commands": "3d6+? >= ? 炎術式\n3d6+? >= ? 雷術式\n3d6+? >= ? 氷術式"
-                }
-            };
-            return JSON.stringify(ccfoliaObj, null, 2);
-        }
-
-        function updatePreview() {
-            document.getElementById('previewArea').textContent = generateCcfoliaData();
-        }
-
-        // 基本情報の変更監視
-        document.querySelectorAll('#charName, #subClass, #hp, #tp').forEach(el => {
-            el.addEventListener('input', updatePreview);
-            el.addEventListener('change', updatePreview);
+    // 全クラスデータを保持するオブジェクト
+    let classData = {};
+    
+    // GitHub上の classes_data.json を非同期取得して初期化する関数
+    async function loadClassData() {
+      try {
+        const response = await fetch('classes_data.json');
+        if (!response.ok) throw new Error('HTTPエラー: ' + response.status);
+        
+        const dataList = await response.json();
+        
+        classData = {};
+        dataList.forEach(item => {
+          // position_type ("中衛／万能型" など) を配置と戦闘スタイルに分割
+          let pos = "-";
+          let type = "-";
+          if (item.position_type) {
+            const parts = item.position_type.split(/[／/]/);
+            pos = parts[0] || "-";
+            type = parts[1] || "-";
+          }
+          classData[item.class_name] = { pos, type };
         });
-
-        // クリップボードへコピー
-        function copyForCcfolia() {
-            const data = generateCcfoliaData();
-            navigator.clipboard.writeText(data).then(() => {
-                alert('ココフォリア用のデータをコピーしました！\nココフォリアのルーム画面で Ctrl+V を押してください。');
-            }).catch(err => {
-                alert('コピーに失敗しました: ' + err);
-            });
-        }
-
-        // 暗号化ファイルの保存
-        function saveEncryptedFile() {
-            const scenarios = [];
-            document.querySelectorAll('.scenario-box').forEach(box => {
-                scenarios.push({
-                    title: box.querySelector('.sc-title').value,
-                    date: box.querySelector('.sc-date').value,
-                    exp: box.querySelector('.sc-exp').value,
-                    memo: box.querySelector('.sc-memo').value
-                });
-            });
-
-            const formData = {
-                charName: document.getElementById('charName').value,
-                mainClass: document.getElementById('mainClass').value,
-                subClass: document.getElementById('subClass').value,
-                hp: document.getElementById('hp').value,
-                tp: document.getElementById('tp').value,
-                charBackground: document.getElementById('charBackground').value,
-                scenarios: scenarios
-            };
-            
-            const encryptedStr = encryptData(JSON.stringify(formData));
-            const blob = new Blob([encryptedStr], { type: 'text/plain' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = (formData.charName || 'character') + '.dat';
-            a.click();
-            URL.revokeObjectURL(url);
-        }
-
-        // 暗号化ファイルの読み込み
-        function loadEncryptedFile(event) {
-            const file = event.target.files[0];
-            if (!file) return;
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                try {
-                    const data = JSON.parse(decryptData(e.target.result));
-                    document.getElementById('charName').value = data.charName || '';
-                    
-                    const loadedMain = data.mainClass || 'アルケミスト';
-                    const loadedSub = data.subClass || '－';
-                    initClassSelectors(loadedMain, loadedSub);
-
-                    document.getElementById('hp').value = data.hp || '50';
-                    document.getElementById('tp').value = data.tp || '30';
-                    document.getElementById('charBackground').value = data.charBackground || '';
-
-                    // シナリオリストの復元
-                    const list = document.getElementById('scenarioList');
-                    list.innerHTML = '';
-                    if (data.scenarios && data.scenarios.length > 0) {
-                        data.scenarios.forEach(sc => addScenarioField(sc));
-                    } else {
-                        addScenarioField();
-                    }
-
-                    recalculateLevelAndExp();
-                    alert('データを正常に読み込みました！');
-                } catch (err) {
-                    alert('ファイルの読み込みに失敗しました（データ形式が異なります）');
-                }
-            };
-            reader.readAsText(file);
-        }
-
-        // 初期化実行
+    
+        // データの読み込み完了後にセレクトボックスを初期化
         initClassSelectors();
-        addScenarioField();
+      } catch (error) {
+        console.error('クラスデータの読み込みに失敗しました:', error);
+      }
+    }
+    
+    // 経験点とレベルの閾値データ (Lv1〜15)
+    const expTable = [
+      { level: 1, cumulative: 0 }, { level: 2, cumulative: 15 }, { level: 3, cumulative: 35 },
+      { level: 4, cumulative: 60 }, { level: 5, cumulative: 90 }, { level: 6, cumulative: 125 },
+      { level: 7, cumulative: 165 }, { level: 8, cumulative: 210 }, { level: 9, cumulative: 260 },
+      { level: 10, cumulative: 315 }, { level: 11, cumulative: 375 }, { level: 12, cumulative: 440 },
+      { level: 13, cumulative: 510 }, { level: 14, cumulative: 585 }, { level: 15, cumulative: 665 }
+    ];
+    
+    function encryptData(str) { return btoa(unescape(encodeURIComponent(str))); }
+    function decryptData(base64Str) { return decodeURIComponent(escape(atob(base64Str))); }
+    
+    // クラスのセレクトボックスを初期化・更新する
+    function initClassSelectors(selectedMain = null, selectedSub = "－") {
+      const mainSelect = document.getElementById('mainClass');
+      mainSelect.innerHTML = '';
+      
+      const classNames = Object.keys(classData);
+      if (classNames.length === 0) return;
+    
+      const defaultMain = selectedMain || classNames[0];
+    
+      classNames.forEach(cls => {
+        const opt = document.createElement('option');
+        opt.value = cls;
+        opt.textContent = cls;
+        if (cls === defaultMain) opt.selected = true;
+        mainSelect.appendChild(opt);
+      });
+      
+      updateSubClassOptions(selectedSub);
+      updateClassInfo();
+    }
+    
+    // メインクラス変更時に配置と型を画面に反映する
+    function updateClassInfo() {
+      const mainSelect = document.getElementById('mainClass');
+      const currentMain = mainSelect.value;
+      const info = classData[currentMain] || { pos: "-", type: "-" };
+      document.getElementById('infoPosition').textContent = info.pos;
+      document.getElementById('infoType').textContent = info.type;
+    }
+    
+    // メインクラス変更時にサブクラスの選択肢を更新する
+    function updateSubClassOptions(preferredSub = null) {
+      const mainSelect = document.getElementById('mainClass');
+      const subSelect = document.getElementById('subClass');
+      const currentMain = mainSelect.value;
+      const currentSub = preferredSub !== null ? preferredSub : subSelect.value;
+      subSelect.innerHTML = '';
+    
+      const noneOpt = document.createElement('option');
+      noneOpt.value = "－";
+      noneOpt.textContent = "－";
+      subSelect.appendChild(noneOpt);
+    
+      Object.keys(classData).forEach(cls => {
+        if (cls !== currentMain) {
+          const opt = document.createElement('option');
+          opt.value = cls;
+          opt.textContent = cls;
+          subSelect.appendChild(opt);
+        }
+      });
+    
+      const match = Array.from(subSelect.options).some(opt => opt.value === currentSub);
+      subSelect.value = match ? currentSub : "－";
+      updatePreview();
+    }
+    
+    function onMainClassChange() {
+      updateClassInfo();
+      updateSubClassOptions();
+    }
+    
+    // レベルと次のレベルまでの必要経験点を算出する
+    function recalculateLevelAndExp() {
+      let totalExp = 0;
+      document.querySelectorAll('.sc-exp').forEach(input => {
+        totalExp += parseInt(input.value) || 0;
+      });
+      
+      let currentLevel = 1;
+      let nextCumulative = expTable[expTable.length - 1].cumulative;
+      
+      for (let i = 0; i < expTable.length; i++) {
+        if (totalExp >= expTable[i].cumulative) {
+          currentLevel = expTable[i].level;
+          nextCumulative = (i + 1 < expTable.length) ? expTable[i + 1].cumulative : expTable[i].cumulative;
+        } else {
+          break;
+        }
+      }
+      
+      const needed = (currentLevel >= expTable[expTable.length - 1].level) ? 0 : (nextCumulative - totalExp);
+      document.getElementById('cumulativeExp').value = totalExp;
+      document.getElementById('nextExpNeeded').value = needed;
+      document.getElementById('charLevel').value = currentLevel;
+      updatePreview();
+    }
+    
+    // シナリオ入力欄を追加する
+    function addScenarioField(data = {}) {
+      const list = document.getElementById('scenarioList');
+      const div = document.createElement('div');
+      div.className = 'scenario-box';
+      div.innerHTML = `
+        <div class="scenario-grid">
+          <div>
+            <label style="margin-top:0;">シナリオ名</label>
+            <input type="text" class="sc-title" value="${data.title || ''}" placeholder="例: はじまりの迷宮" oninput="updatePreview()">
+          </div>
+          <div>
+            <label style="margin-top:0;">通過日 (開始,終了)</label>
+            <input type="text" class="sc-date" value="${data.date || ''}" placeholder="例: 2026/08/01〜08/02" oninput="updatePreview()">
+          </div>
+          <div>
+            <label style="margin-top:0;">獲得経験点</label>
+            <input type="number" class="sc-exp" value="${data.exp || 0}" max="999" oninput="recalculateLevelAndExp()">
+          </div>
+        </div>
+        <label style="margin-top:5px;">メモ・感想など</label>
+        <textarea class="sc-memo scenario-memo-area" placeholder="シナリオ中の出来事やメモ" oninput="updatePreview()">${data.memo || ''}</textarea>
+        <button type="button" class="del-btn" onclick="this.parentElement.remove(); recalculateLevelAndExp();">このシナリオを削除</button>
+      `;
+      list.appendChild(div);
+      recalculateLevelAndExp();
+    }
+    
+    // ココフォリア用コマデータの生成
+    function generateCcfoliaData() {
+      const name = document.getElementById('charName').value;
+      const mainClass = document.getElementById('mainClass').value;
+      const subClass = document.getElementById('subClass').value;
+      const level = document.getElementById('charLevel').value;
+      const exp = document.getElementById('cumulativeExp').value;
+      const hp = document.getElementById('hp').value;
+      const tp = document.getElementById('tp').value;
+      const background = document.getElementById('charBackground').value;
+      const info = classData[mainClass] || { pos: "-", type: "-" };
+      
+      let memoContent = `【レベル】${level} (累積経験点: ${exp})\n【メイン】${mainClass} (適正: ${info.pos} / ${info.type})\n【サブ】${subClass}\n`;
+      if (background.trim()) {
+        memoContent += `\n【キャラクター背景】\n${background}\n`;
+      }
+      
+      const ccfoliaObj = {
+        "kind": "character",
+        "data": {
+          "name": name,
+          "memo": memoContent,
+          "initiative": 0,
+          "externalUrl": "",
+          "status": [
+            { "label": "HP", "value": Number(hp), "max": Number(hp) },
+            { "label": "TP", "value": Number(tp), "max": Number(tp) }
+          ],
+          "params": [
+            { "label": "レベル", "value": Number(level) },
+            { "label": "メイン", "value": mainClass },
+            { "label": "サブ", "value": subClass }
+          ],
+          "commands": "3d6+? >= ? 炎術式\n3d6+? >= ? 雷術式\n3d6+? >= ? 氷術式"
+        }
+      };
+      return JSON.stringify(ccfoliaObj, null, 2);
+    }
+    
+    function updatePreview() {
+      document.getElementById('previewArea').textContent = generateCcfoliaData();
+    }
+    
+    // 基本情報の変更監視
+    document.querySelectorAll('#charName, #subClass, #hp, #tp').forEach(el => {
+      el.addEventListener('input', updatePreview);
+      el.addEventListener('change', updatePreview);
+    });
+    
+    // クリップボードへコピー
+    function copyForCcfolia() {
+      const data = generateCcfoliaData();
+      navigator.clipboard.writeText(data).then(() => {
+        alert('ココフォリア用のデータをコピーしました！\nココフォリアのルーム画面で Ctrl+V を押してください。');
+      }).catch(err => {
+        alert('コピーに失敗しました: ' + err);
+      });
+    }
+    
+    // 暗号化ファイルの保存
+    function saveEncryptedFile() {
+      const scenarios = [];
+      document.querySelectorAll('.scenario-box').forEach(box => {
+        scenarios.push({
+          title: box.querySelector('.sc-title').value,
+          date: box.querySelector('.sc-date').value,
+          exp: box.querySelector('.sc-exp').value,
+          memo: box.querySelector('.sc-memo').value
+        });
+      });
+      
+      const formData = {
+        charName: document.getElementById('charName').value,
+        mainClass: document.getElementById('mainClass').value,
+        subClass: document.getElementById('subClass').value,
+        hp: document.getElementById('hp').value,
+        tp: document.getElementById('tp').value,
+        charBackground: document.getElementById('charBackground').value,
+        scenarios: scenarios
+      };
+      
+      const encryptedStr = encryptData(JSON.stringify(formData));
+      const blob = new Blob([encryptedStr], { type: 'text/plain' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = (formData.charName || 'character') + '.dat';
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+    
+    // 暗号化ファイルの読み込み
+    function loadEncryptedFile(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+      
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        try {
+          const data = JSON.parse(decryptData(e.target.result));
+          document.getElementById('charName').value = data.charName || '';
+          const loadedMain = data.mainClass || null;
+          const loadedSub = data.subClass || '－';
+          initClassSelectors(loadedMain, loadedSub);
+          document.getElementById('hp').value = data.hp || '50';
+          document.getElementById('tp').value = data.tp || '30';
+          document.getElementById('charBackground').value = data.charBackground || '';
+          
+          const list = document.getElementById('scenarioList');
+          list.innerHTML = '';
+          if (data.scenarios && data.scenarios.length > 0) {
+            data.scenarios.forEach(sc => addScenarioField(sc));
+          } else {
+            addScenarioField();
+          }
+          recalculateLevelAndExp();
+          alert('データを正常に読み込みました！');
+        } catch (err) {
+          alert('ファイルの読み込みに失敗しました（データ形式が異なります）');
+        }
+      };
+      reader.readAsText(file);
+    }
+    
+    // 画面読み込み開始
+    document.addEventListener('DOMContentLoaded', () => {
+      loadClassData();
+      addScenarioField();
+    });
     </script>
 </body>
 </html>
