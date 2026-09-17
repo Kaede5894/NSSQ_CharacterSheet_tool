@@ -125,19 +125,37 @@
             </div>
         </details>
     </div>
-
+    
     <div class="section">
         <details open>
-            <summary class="section-summary">4. シナリオメモ（通過履歴）</summary>
-            <div id="scenarioList" style="margin-top: 10px;">
-                <!-- JavaScriptでここにシナリオ入力欄が動的に追加されます -->
+            <summary class="section-summary">4. 装備</summary>
+            <div class="grid-3" style="margin-top: 10px;">
+                <div>
+                    <label>武器</label>
+                    <select id="equipWeapon" onchange="updatePreview()"></select>
+                </div>
+                <div>
+                    <label>防具</label>
+                    <select id="equipArmor" onchange="updatePreview()"></select>
+                </div>
+              　<div>
+                    <label>その他 (盾 / 装飾品)</label>
+                    <select id="equipOther" onchange="updatePreview()"></select>
+                </div>
             </div>
+        </details>
+    </div>
+    
+    <div class="section">
+        <details open>
+            <summary class="section-summary">5. シナリオメモ（通過履歴）</summary>
+            <div id="scenarioList" style="margin-top: 10px;"><!-- JavaScriptでここにシナリオ入力欄が動的に追加されます --></div>
             <button type="button" onclick="addScenarioField()">＋ シナリオを追加</button>
         </details>
     </div>
-
+    
     <div class="section">
-        <h2>5. セーブ・ココフォリア出力</h2>
+        <h2>6. セーブ・ココフォリア出力</h2>
         <div class="btn-group" style="margin-top: 10px;">
             <button onclick="copyForCcfolia()">ココフォリア用データをコピー (Ctrl+V)</button>
             <button class="sub-btn" onclick="saveEncryptedFile()">暗号化ファイルに保存 (.dat)</button>
@@ -153,34 +171,101 @@
     </div>
 
     <script>
-    // 全クラスデータを保持するオブジェクト
-    let classData = {};
-    
-    // GitHub上の classes_data.json を非同期取得して初期化する関数
-    async function loadClassData() {
-      try {
-        const response = await fetch('classes_data.json');
-        if (!response.ok) throw new Error('HTTPエラー: ' + response.status);
-        
-        const dataList = await response.json();
-        
-        classData = {};
-        dataList.forEach(item => {
-          let pos = "-";
-          let type = "-";
-          if (item.position_type) {
-            const parts = item.position_type.split(/[／/]/);
-            pos = parts[0] || "-";
-            type = parts[1] || "-";
-          }
-          classData[item.class_name] = { pos, type };
-        });
-    
-        initClassSelectors();
-      } catch (error) {
-        console.error('クラスデータの読み込みに失敗しました:', error);
-      }
+    // グローバル変数にクラスデータと装備データを保持
+  let classData = {};
+  let equipData = { weapons: [], armor: [], accessories: [] };
+
+  // classes_data.json と nssq_equipments.json を両方取得するよう拡張
+  async function loadClassData() {
+    try {
+      const [classRes, equipRes] = await Promise.all([
+        fetch('classes_data.json'),
+        fetch('nssq_equipments.json')
+      ]);
+
+      if (!classRes.ok || !equipRes.ok) throw new Error('データ取得に失敗しました');
+
+      const classList = await classRes.json();
+      equipData = await equipRes.json();
+
+      classData = {};
+      classList.forEach(item => {
+        let pos = "-";
+        let type = "-";
+        if (item.position_type) {
+          const parts = item.position_type.split(/[／/]/);
+          pos = parts[0] || "-";
+          type = parts[1] || "-";
+        }
+        classData[item.class_name] = {
+          pos,
+          type,
+          weapons: item.weapons || [],
+          armors: item.armors || []
+        };
+      });
+
+      initClassSelectors();
+      updateEquipmentOptions(); // 装備選択肢の初期化
+    } catch (error) {
+      console.error('データの読み込みエラー:', error);
     }
+  }
+
+  // メイン職業に合わせて装備の選択肢を動的に更新する関数
+  function updateEquipmentOptions() {
+    const mainSelect = document.getElementById('mainClass');
+    const weaponSelect = document.getElementById('equipWeapon');
+    const armorSelect = document.getElementById('equipArmor');
+    const otherSelect = document.getElementById('equipOther');
+
+    if (!mainSelect || !weaponSelect || !armorSelect || !otherSelect) return;
+
+    const currentMain = mainSelect.value;
+    const currentClassInfo = classData[currentMain] || { weapons: [], armors: [] };
+
+    // 1. 武器枠の更新
+    weaponSelect.innerHTML = '<option value="">(なし)</option>';
+    equipData.weapons.forEach(w => {
+      const isEquippable = currentClassInfo.weapons.some(allowed => 
+        w.name.includes(allowed) || allowed.includes(w.name)
+      );
+      if (isEquippable) {
+        const opt = document.createElement('option');
+        opt.value = w.name;
+        opt.textContent = `${w.name} (${w.element}/${w.range})`;
+        weaponSelect.appendChild(opt);
+      }
+    });
+
+    // 2. 防具枠の更新
+    armorSelect.innerHTML = '<option value="">(なし)</option>';
+    equipData.armor.forEach(a => {
+      if (a.name !== "盾" && currentClassInfo.armors.includes(a.name)) {
+        const opt = document.createElement('option');
+        opt.value = a.name;
+        opt.textContent = a.name;
+        armorSelect.appendChild(opt);
+      }
+    });
+
+    // 3. その他枠の更新（盾＋装飾品）
+    otherSelect.innerHTML = '<option value="">(なし)</option>';
+    if (currentClassInfo.armors.includes("盾")) {
+      const shieldOpt = document.createElement('option');
+      shieldOpt.value = "盾";
+      shieldOpt.textContent = "[防具] 盾";
+      otherSelect.appendChild(shieldOpt);
+    }
+
+    equipData.accessories.forEach(acc => {
+      const opt = document.createElement('option');
+      opt.value = acc.name;
+      opt.textContent = `[装飾] ${acc.name} (${acc.effect})`;
+      otherSelect.appendChild(opt);
+    });
+  }
+    
     
     // 経験点とレベルの閾値データ (Lv1〜15)
     const expTable = [
@@ -271,6 +356,7 @@
     
     function onMainClassChange() {
       updateSubClassOptions();
+    　updateEquipmentOptions();
     }
     
     function onSubClassChange() {
