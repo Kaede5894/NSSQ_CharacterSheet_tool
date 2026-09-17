@@ -1,709 +1,890 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <title>世界樹の迷宮TRPG キャラクター管理ツール</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      max-width: 900px;
-      margin: 20px auto;
-      padding: 20px;
-      background: #f4f6f9;
-      color: #333;
-    }
-    h1 {
-      font-size: 1.4rem;
-      border-bottom: 2px solid #0066cc;
-      padding-bottom: 5px;
-      color: #0066cc;
-    }
-    h2 {
-      font-size: 1.1rem;
-      background: #e2ecf8;
-      padding: 6px 10px;
-      border-radius: 4px;
-      margin-top: 0;
-      display: inline-block;
-      width: 100%;
-      box-sizing: border-box;
-    }
+    <head>
+        <meta charset="UTF-8">
+        <title>世界樹の迷宮TRPG キャラクター管理ツール</title>
+        <style>
+            body { font-family: sans-serif; max-width: 900px; margin: 20px auto; padding: 20px; background: #f4f6f9; color: #333; }
+            h1 { font-size: 1.4rem; border-bottom: 2px solid #0066cc; padding-bottom: 5px; color: #0066cc; }
+            h2 { font-size: 1.1rem; background: #e2ecf8; padding: 6px 10px; border-radius: 4px; margin-top: 0; display: inline-block; width: 100%; box-sizing: border-box; }
 
-    /* セクション共通スタイル */
-    .section {
-      background: #fff;
-      padding: 15px;
-      margin-bottom: 15px;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    }
+            /* セクション共通スタイル */
+            .section { background: #fff; padding: 15px; margin-bottom: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
 
-    /* 折りたたみ（details / summary）のスタイル */
-    details summary.section-summary {
-      font-size: 1.1rem;
-      background: #e2ecf8;
-      padding: 6px 10px;
-      border-radius: 4px;
-      cursor: pointer;
-      font-weight: bold;
-      color: #333;
-      outline: none;
-      user-select: none;
-      transition: background 0.2s;
-    }
-    details summary.section-summary:hover {
-      background: #d0e1f5;
+            /* 折りたたみ（details / summary）のスタイル */
+            details summary.section-summary {
+            font-size: 1.1rem;
+            background: #e2ecf8;
+            padding: 6px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            color: #333;
+            outline: none;
+            user-select: none;
+            transition: background 0.2s;
+        }
+        details summary.section-summary:hover {
+        background: #d0e1f5;
     }
     details[open] summary.section-summary {
-      margin-bottom: 15px;
-    }
+    margin-bottom: 15px;
+}
 
-    .grid-2 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-    }
-    .grid-3 {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 10px;
-    }
-    label {
-      display: block;
-      margin-top: 8px;
-      font-weight: bold;
-      font-size: 0.9rem;
-    }
-    input, select, textarea {
-      width: 100%;
-      padding: 7px;
-      margin-top: 3px;
-      box-sizing: border-box;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 0.95rem;
-    }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+label { display: block; margin-top: 8px; font-weight: bold; font-size: 0.9rem; }
+input, select, textarea { width: 100%; padding: 7px; margin-top: 3px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; font-size: 0.95rem; }
 
-    /* 自動計算項目のスタイル（グレー背景） */
-    input.auto-calc {
-      background: #e9ecef;
-      font-weight: bold;
-      color: #495057;
-    }
+/* 自動計算項目のスタイル（グレー背景） */
+input.auto-calc { background: #e9ecef; font-weight: bold; color: #495057; }
 
-    /* クラス特性インフォメーション */
-    .class-info-box {
-      background: #f8f9fa;
-      border-left: 4px solid #0066cc;
-      padding: 8px 12px;
-      margin-top: 8px;
-      border-radius: 0 4px 4px 0;
-      font-size: 0.9rem;
-      display: flex;
-      gap: 20px;
-    }
-    .class-info-item span {
-      font-weight: normal;
-      color: #495057;
-    }
+/* クラス特性インフォメーション */
+.class-info-box { background: #f8f9fa; border-left: 4px solid #0066cc; padding: 8px 12px; margin-top: 8px; border-radius: 0 4px 4px 0; font-size: 0.9rem; display: flex; gap: 20px; }
+.class-info-item span { font-weight: normal; color: #495057; }
 
-    /* テキストエリアの調整 */
-    textarea.bg-area {
-      height: 100px;
-      resize: vertical;
-    }
+/* テキストエリアの調整 */
+textarea.bg-area { height: 100px; resize: vertical; }
 
-    /* シナリオメモ管理スタイル */
-    .scenario-box {
-      background: #fcfcfc;
-      border: 1px solid #ddd;
-      padding: 10px;
-      margin-bottom: 10px;
-      border-radius: 6px;
-    }
-    .scenario-grid {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr 100px;
-      gap: 10px;
-      align-items: end;
-    }
+/* シナリオメモ管理用スタイル */
+.scenario-box { background: #fcfcfc; border: 1px solid #ddd; padding: 10px; margin-bottom: 10px; border-radius: 6px; }
+.scenario-grid { display: grid; grid-template-columns: 2fr 1fr 100px; gap: 8px; margin-bottom: 5px; }
+.scenario-memo-area { height: 200px; resize: vertical; }
 
-    button {
-      background: #0066cc;
-      color: #fff;
-      border: none;
-      padding: 8px 12px;
-      border-radius: 4px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-    button:hover {
-      background: #0052a3;
-    }
-    .btn-danger {
-      background: #dc3545;
-    }
-    .btn-danger:hover {
-      background: #bd2130;
-    }
-  </style>
+.btn-group { margin-top: 15px; display: flex; gap: 10px; flex-wrap: wrap; }
+button { background: #0066cc; color: white; border: none; padding: 10px 18px; font-size: 0.95rem; border-radius: 4px; cursor: pointer; font-weight: bold; }
+button:hover { background: #004999; }
+button.sub-btn { background: #28a745; }
+button.sub-btn:hover { background: #1e7e34; }
+button.del-btn { background: #dc3545; padding: 5px 10px; font-size: 0.8rem; margin-top: 3px; }
+button.del-btn:hover { background: #a71d2a; }
+
+pre { background: #222; color: #0f0; padding: 12px; border-radius: 4px; overflow-x: auto; font-size: 0.85rem; max-height: 200px; }
+.note { font-size: 0.8rem; color: #666; margin-top: 5px; }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </head>
 <body>
 
-  <h1>世界樹の迷宮TRPG キャラクター管理ツール</h1>
+    <h1>世界樹の迷宮TRPG キャラクター管理ツール</h1>
 
-  <!-- 1. 基本情報 -->
-  <div class="section">
-    <details open>
-      <summary class="section-summary">1. 基本情報</summary>
-      <div class="grid-3" style="margin-top: 10px;">
-        <div>
-          <label>キャラクター名</label>
-          <input type="text" id="pcName" oninput="updatePreview()">
-        </div>
-        <div>
-          <label>メインクラス</label>
-          <select id="mainClass" onchange="onMainClassChange()"></select>
-        </div>
-        <div>
-          <label>サブクラス</label>
-          <select id="subClass" onchange="updatePreview()"></select>
-        </div>
-      </div>
+    <div class="section">
+        <h2>1. 基本情報</h2>
+        <div style="margin-top: 10px;">
+            <label>キャラクター名</label>
+            <input type="text" id="charName" value="">
 
-      <!-- クラス特性インフォメーション -->
-      <div class="class-info-box">
-        <div class="class-info-item">メイン適正: <span id="mainClassInfo">-</span></div>
-        <div class="class-info-item">サブ適正: <span id="subClassInfo">-</span></div>
-      </div>
 
-      <div class="grid-3" style="margin-top: 10px;">
-        <div>
-          <label>レベル</label>
-          <input type="number" id="level" value="1" min="1" max="99" onchange="calculateExpFromLevel()">
-        </div>
-        <div>
-          <label>次のLvまで</label>
-          <input type="number" id="nextExp" class="auto-calc" readonly value="15">
-        </div>
-        <div>
-          <label>累積経験点</label>
-          <input type="number" id="totalExp" value="0" min="0" oninput="calculateLevelFromExp()">
-        </div>
-      </div>
-    </details>
-  </div>
 
-  <!-- 2. キャラクター背景 -->
-  <div class="section">
-    <details open>
-      <summary class="section-summary">2. キャラクター背景</summary>
-      <div style="margin-top: 10px;">
-        <textarea id="background" class="bg-area" placeholder="経歴、パーソナリティ、大惨事表の結果などを記入" oninput="updatePreview()"></textarea>
-      </div>
-    </details>
-  </div>
-
-  <!-- 3. ステータス・能力値 -->
-  <div class="section">
-    <details open>
-      <summary class="section-summary">3. ステータス・能力値</summary>
-      <div class="grid-2" style="margin-top: 10px;">
-        <div>
-          <label>HP</label>
-          <input type="number" id="statHp" value="50" oninput="updatePreview()">
         </div>
-        <div>
-          <label>TP</label>
-          <input type="number" id="statTp" value="30" oninput="updatePreview()">
+        <div class="grid-2">
+            <div>
+                <label>メインクラス</label>
+                <select id="mainClass" onchange="onMainClassChange()"></select>
+            </div>
+            <div>
+                <label>サブクラス</label>
+                <select id="subClass" onchange="onSubClassChange()"></select>
+            </div>
         </div>
-      </div>
-    </details>
-  </div>
-
-  <!-- 4. 装備 -->
-  <div class="section">
-    <details open>
-      <summary class="section-summary">4. 装備</summary>
-      <div style="margin-top: 10px; display: flex; flex-direction: column; gap: 12px;">
-        
-        <!-- 武器枠 -->
-        <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 8px; align-items: end;">
-          <div>
-            <label style="margin-top:0;">武器</label>
-            <select id="equipWeapon" onchange="updatePreview()"></select>
-          </div>
-          <div>
-            <label style="margin-top:0;">レアリティ</label>
-            <select id="equipWeaponRarity" onchange="updatePreview()"></select>
-          </div>
-          <div>
-            <label style="margin-top:0;">鍛冶1</label>
-            <input type="text" id="equipWeaponForge1" placeholder="例: STR" oninput="updatePreview()">
-          </div>
-          <div>
-            <label style="margin-top:0;">鍛冶2</label>
-            <input type="text" id="equipWeaponForge2" placeholder="例: 斬" oninput="updatePreview()">
-          </div>
+        <!-- メイン・サブクラスの適正表示ボックス -->
+        <div class="class-info-box" id="classInfoBox">
+            <div class="class-info-item"><strong>メイン適正:</strong> <span id="mainInfoPosition">-</span>／<span id="mainInfoType">-</span></div>
+            <div class="class-info-item"><strong>サブ適正:</strong> <span id="subInfoPosition">-</span>／<span id="subInfoType">-</span></div>
         </div>
 
-        <!-- 防具枠 -->
-        <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 8px; align-items: end;">
-          <div>
-            <label style="margin-top:0;">防具</label>
-            <select id="equipArmor" onchange="updatePreview()"></select>
-          </div>
-          <div>
-            <label style="margin-top:0;">レアリティ</label>
-            <select id="equipArmorRarity" onchange="updatePreview()"></select>
-          </div>
-          <div>
-            <label style="margin-top:0;">鍛冶1</label>
-            <input type="text" id="equipArmorForge1" placeholder="例: VIT" oninput="updatePreview()">
-          </div>
-          <div>
-            <label style="margin-top:0;">鍛冶2</label>
-            <input type="text" id="equipArmorForge2" placeholder="例: HP" oninput="updatePreview()">
-          </div>
+
+
+
+
+
+
+
+        <div class="grid-3">
+            <div>
+                <label>レベル</label>
+                <input type="text" id="charLevel" class="auto-calc" value="1" readonly>
+            </div>
+            <div>
+                <label>次のLvまで</label>
+                <input type="text" id="nextExpNeeded" class="auto-calc" value="15" readonly>
+            </div>
+            <div>
+                <label>累積経験点</label>
+                <input type="text" id="cumulativeExp" class="auto-calc" value="0" readonly>
+            </div>
         </div>
-
-        <!-- その他枠 -->
-        <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 8px; align-items: end;">
-          <div>
-            <label style="margin-top:0;">その他 (盾 / 装飾品)</label>
-            <select id="equipOther" onchange="updatePreview()"></select>
-          </div>
-          <div>
-            <label style="margin-top:0;">レアリティ</label>
-            <select id="equipOtherRarity" onchange="updatePreview()"></select>
-          </div>
-          <div>
-            <label style="margin-top:0;">鍛冶1</label>
-            <input type="text" id="equipOtherForge1" placeholder="例: DEF" oninput="updatePreview()">
-          </div>
-          <div>
-            <label style="margin-top:0;">鍛冶2</label>
-            <input type="text" id="equipOtherForge2" placeholder="例: AGI" oninput="updatePreview()">
-          </div>
-        </div>
-
-      </div>
-    </details>
-  </div>
-
-  <!-- 5. シナリオメモ -->
-  <div class="section">
-    <details open>
-      <summary class="section-summary">5. シナリオメモ（通過履歴）</summary>
-      <div id="scenarioList" style="margin-top: 10px;"></div>
-      <button type="button" onclick="addScenarioField()">＋ シナリオを追加</button>
-    </details>
-  </div>
-
-  <!-- 6. セーブ・ココフォリア出力 -->
-  <div class="section">
-    <h2>6. セーブ・ココフォリア出力</h2>
-    <div style="display: flex; gap: 10px; margin-top: 10px;">
-      <button type="button" onclick="saveData()">データをブラウザに保存</button>
-      <button type="button" onclick="loadData()">保存データを読み込み</button>
-      <button type="button" onclick="copyCcfoliaText()">ココフォリア用コマ入力をコピー</button>
     </div>
-  </div>
 
-  <script>
-    // グローバル変数にクラスデータと装備データを保持
-    let classData = {};
-    let equipData = { weapons: [], armor: [], accessories: [] };
 
-    // classes_data.json と nssq_equipments.json を両方取得するよう拡張
-    async function loadClassData() {
-      try {
-        const [classRes, equipRes] = await Promise.all([
-          fetch('classes_data.json'),
-          fetch('nssq_equipments.json')
-        ]);
 
-        if (!classRes.ok || !equipRes.ok) throw new Error('データ取得に失敗しました');
 
-        const classList = await classRes.json();
-        equipData = await equipRes.json();
 
-        classData = {};
-        classList.forEach(item => {
-          let pos = "-";
-          let type = "-";
-          if (item.position_type) {
-            const parts = item.position_type.split(/[／/]/);
-            pos = parts[0] || "-";
-            type = parts[1] || "-";
-          }
-          classData[item.class_name] = {
-            pos,
-            type,
-            weapons: item.weapons || [],
-            armors: item.armors || []
-          };
-        });
 
-        initClassSelectors();
-        updateEquipmentOptions(); // 装備選択肢の初期化
-      } catch (error) {
-        console.error('データの読み込みエラー:', error);
-      }
-    }
 
-    // レアリティのドロップダウン（1〜15）を生成する共通関数
+
+
+
+
+    <div class="section">
+        <h2>2. キャラクター背景</h2>
+        <textarea id="charBackground" class="bg-area" style="margin-top: 10px;" placeholder="経歴、パーソナリティ、大惨事表の結果などを記入" oninput="updatePreview()"></textarea>
+    </div>
+
+
+
+
+
+
+    <div class="section">
+        <details open>
+            <summary class="section-summary">3. ステータス・能力値</summary>
+            <div class="grid-2" style="margin-top: 10px;">
+                <div>
+                    <label>HP</label>
+                    <input type="number" id="hp" value="50">
+                </div>
+                <div>
+                    <label>TP</label>
+                    <input type="number" id="tp" value="30">
+                </div>
+            </div>
+        </details>
+    </div>
+
+    <div class="section">
+        <details open>
+            <summary class="section-summary">4. 装備</summary>
+            <div style="margin-top: 10px; display: flex; flex-direction: column; gap: 12px;">
+
+                <!-- 武器枠 -->
+                <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 8px; align-items: end;">
+                    <div>
+                        <label style="margin-top:0;">武器</label>
+                        <select id="equipWeapon" onchange="updatePreview()"></select>
+                    </div>
+                    <div>
+                        <label style="margin-top:0;">レアリティ</label>
+                        <select id="equipWeaponRarity" onchange="updatePreview()"></select>
+                    </div>
+                    <div>
+                        <label style="margin-top:0;">鍛冶1</label>
+                        <input type="text" id="equipWeaponForge1" placeholder="例: STR" oninput="updatePreview()">
+                    </div>
+                    <div>
+                        <label style="margin-top:0;">鍛冶2</label>
+                        <input type="text" id="equipWeaponForge2" placeholder="例: 斬" oninput="updatePreview()">
+                    </div>
+                </div>
+
+                <!-- 防具枠 -->
+                <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 8px; align-items: end;">
+                    <div>
+                        <label style="margin-top:0;">防具</label>
+                        <select id="equipArmor" onchange="updatePreview()"></select>
+                    </div>
+                    <div>
+                        <label style="margin-top:0;">レアリティ</label>
+                        <select id="equipArmorRarity" onchange="updatePreview()"></select>
+                    </div>
+                    <div>
+                        <label style="margin-top:0;">鍛冶1</label>
+                        <input type="text" id="equipArmorForge1" placeholder="例: VIT" oninput="updatePreview()">
+                    </div>
+                    <div>
+                        <label style="margin-top:0;">鍛冶2</label>
+                        <input type="text" id="equipArmorForge2" placeholder="例: HP" oninput="updatePreview()">
+                    </div>
+                </div>
+
+                <!-- その他枠 -->
+                <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 8px; align-items: end;">
+                    <div>
+                        <label style="margin-top:0;">その他 (盾 / 装飾品)</label>
+                        <select id="equipOther" onchange="updatePreview()"></select>
+                    </div>
+                    <div>
+                        <label style="margin-top:0;">レアリティ</label>
+                        <select id="equipOtherRarity" onchange="updatePreview()"></select>
+                    </div>
+                    <div>
+                        <label style="margin-top:0;">鍛冶1</label>
+                        <input type="text" id="equipOtherForge1" placeholder="例: DEF" oninput="updatePreview()">
+                    </div>
+                    <div>
+                        <label style="margin-top:0;">鍛冶2</label>
+                        <input type="text" id="equipOtherForge2" placeholder="例: AGI" oninput="updatePreview()">
+                    </div>
+                </div>
+
+            </div>
+        </details>
+    </div>
+
+    <div class="section">
+        <details open>
+            <summary class="section-summary">5. シナリオメモ（通過履歴）</summary>
+            <div id="scenarioList" style="margin-top: 10px;"><!-- JavaScriptでここにシナリオ入力欄が動的に追加されます --></div>
+            <button type="button" onclick="addScenarioField()">＋ シナリオを追加</button>
+        </details>
+    </div>
+
+    <div class="section">
+        <h2>6. セーブ・ココフォリア出力</h2>
+        <div class="btn-group" style="margin-top: 10px;">
+            <button onclick="copyForCcfolia()">ココフォリア用データをコピー (Ctrl+V)</button>
+            <button class="sub-btn" onclick="saveEncryptedFile()">暗号化ファイルに保存 (.dat)</button>
+            <input type="file" id="loadFileInput" style="display:none" accept=".dat" onchange="loadEncryptedFile(event)">
+            <button class="sub-btn" onclick="document.getElementById('loadFileInput').click()">ファイルを読み込む</button>
+
+
+
+
+
+
+
+
+
+
+        </div>
+        <div class="note">※保存される `.dat` ファイルは暗号化されているため、このツール以外では中身を直接編集できません。</div>
+    </div>
+
+    <div class="section">
+        <h2>ココフォリア出力プレビュー</h2>
+        <pre id="previewArea" style="margin-top: 10px;">ここにプレビューが表示されます</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+    <script>
+        // グローバル変数にクラスデータと装備データを保持
+        let classData = {};
+        let equipData = { weapons: [], armor: [], accessories: [] };
+
+        // classes_data.json と nssq_equipments.json を両方取得するよう拡張
+        async function loadClassData() {
+            try {
+                const [classRes, equipRes] = await Promise.all([
+                fetch('classes_data.json'),
+                fetch('nssq_equipments.json')
+                ]);
+
+                if (!classRes.ok || !equipRes.ok) throw new Error('データ取得に失敗しました');
+
+                const classList = await classRes.json();
+                equipData = await equipRes.json();
+
+                classData = {};
+                classList.forEach(item => {
+                    let pos = "-";
+                    let type = "-";
+                    if (item.position_type) {
+                        const parts = item.position_type.split(/[／/]/);
+                        pos = parts[0] || "-";
+                        type = parts[1] || "-";
+                    }
+                    classData[item.class_name] = {
+                        pos,
+                        type,
+                        weapons: item.weapons || [],
+                        armors: item.armors || []
+                    };
+                });
+
+                initClassSelectors();
+                updateEquipmentOptions(); // 装備選択肢の初期化
+            } catch (error) {
+                console.error('データの読み込みエラー:', error);
+            }
+        }
+
+
+        // レアリティのドロップダウン（1〜15）を生成する共通関数
     function initRaritySelect(selectId) {
-      const select = document.getElementById(selectId);
-      if (!select) return;
-      const currentValue = select.value;
-      select.innerHTML = '<option value="">-</option>';
-      for (let i = 1; i <= 15; i++) {
-        const opt = document.createElement('option');
-        opt.value = i;
-        opt.textContent = i;
-        select.appendChild(opt);
-      }
-      if (currentValue) select.value = currentValue;
+        const select = document.getElementById(selectId);
+        if (!select) return;
+        const currentValue = select.value;
+        select.innerHTML = '<option value="">-</option>';
+        for (let i = 1; i <= 15; i++) {
+            const opt = document.createElement('option');
+            opt.value = i;
+            opt.textContent = i;
+            select.appendChild(opt);
+        }
+        if (currentValue) select.value = currentValue;
     }
 
     // メイン職業に合わせて装備の選択肢を動的に更新する関数
     function updateEquipmentOptions() {
-      const mainSelect = document.getElementById('mainClass');
-      const weaponSelect = document.getElementById('equipWeapon');
-      const armorSelect = document.getElementById('equipArmor');
-      const otherSelect = document.getElementById('equipOther');
+        const mainSelect = document.getElementById('mainClass');
+        const weaponSelect = document.getElementById('equipWeapon');
+        const armorSelect = document.getElementById('equipArmor');
+        const otherSelect = document.getElementById('equipOther');
 
-      if (!mainSelect || !weaponSelect || !armorSelect || !otherSelect) return;
+        if (!mainSelect || !weaponSelect || !armorSelect || !otherSelect) return;
 
-      // レアリティ選択肢（1〜15）をセット
-      initRaritySelect('equipWeaponRarity');
-      initRaritySelect('equipArmorRarity');
-      initRaritySelect('equipOtherRarity');
+        // レアリティ選択肢（1〜15）をセット
+        initRaritySelect('equipWeaponRarity');
+        initRaritySelect('equipArmorRarity');
+        initRaritySelect('equipOtherRarity');
 
-      const currentMain = mainSelect.value;
-      const currentClassInfo = classData[currentMain] || { weapons: [], armors: [] };
+        const currentMain = mainSelect.value;
+        const currentClassInfo = classData[currentMain] || { weapons: [], armors: [] };
 
-      // 1. 武器枠の更新
-      weaponSelect.innerHTML = '<option value="">(なし)</option>';
-      equipData.weapons.forEach(w => {
-        const isEquippable = currentClassInfo.weapons.some(allowed => 
-          w.name.includes(allowed) || allowed.includes(w.name)
-        );
-        if (isEquippable) {
-          const opt = document.createElement('option');
-          opt.value = w.name;
-          opt.textContent = `${w.name} (${w.element}/${w.range})`;
-          weaponSelect.appendChild(opt);
+        // 1. 武器枠の更新
+        weaponSelect.innerHTML = '<option value="">(なし)</option>';
+        equipData.weapons.forEach(w => {
+            const isEquippable = currentClassInfo.weapons.some(allowed =>
+                w.name.includes(allowed) || allowed.includes(w.name)
+            );
+            if (isEquippable) {
+                const opt = document.createElement('option');
+                opt.value = w.name;
+                opt.textContent = `${w.name} (${w.element}/${w.range})`;
+                weaponSelect.appendChild(opt);
+            }
+        });
+
+        // 2. 防具枠の更新
+        armorSelect.innerHTML = '<option value="">(なし)</option>';
+        equipData.armor.forEach(a => {
+            if (a.name !== "盾" && currentClassInfo.armors.includes(a.name)) {
+                const opt = document.createElement('option');
+                opt.value = a.name;
+                opt.textContent = a.name;
+                armorSelect.appendChild(opt);
+            }
+        });
+
+        // 3. その他枠の更新（盾＋装飾品）
+        otherSelect.innerHTML = '<option value="">(なし)</option>';
+        if (currentClassInfo.armors.includes("盾")) {
+            const shieldOpt = document.createElement('option');
+            shieldOpt.value = "盾";
+            shieldOpt.textContent = "[防具] 盾";
+            otherSelect.appendChild(shieldOpt);
         }
-      });
 
-      // 2. 防具枠の更新
-      armorSelect.innerHTML = '<option value="">(なし)</option>';
-      equipData.armor.forEach(a => {
-        if (a.name !== "盾" && currentClassInfo.armors.includes(a.name)) {
-          const opt = document.createElement('option');
-          opt.value = a.name;
-          opt.textContent = a.name;
-          armorSelect.appendChild(opt);
-        }
-      });
-
-      // 3. その他枠の更新（盾＋装飾品）
-      otherSelect.innerHTML = '<option value="">(なし)</option>';
-      if (currentClassInfo.armors.includes("盾")) {
-        const shieldOpt = document.createElement('option');
-        shieldOpt.value = "盾";
-        shieldOpt.textContent = "[防具] 盾";
-        otherSelect.appendChild(shieldOpt);
-      }
-
-      equipData.accessories.forEach(acc => {
-        const opt = document.createElement('option');
-        opt.value = acc.name;
-        opt.textContent = `[装飾] ${acc.name} (${acc.effect})`;
-        otherSelect.appendChild(opt);
-      });
+        equipData.accessories.forEach(acc => {
+            const opt = document.createElement('option');
+            opt.value = acc.name;
+            opt.textContent = `[装飾] ${acc.name} (${acc.effect})`;
+            otherSelect.appendChild(opt);
+        });
     }
 
-    // レベル毎の「次のLvまでに必要な経験点」テーブル (Lv1 -> 15, ..., Lv99 -> 0)
+
+    // 経験点とレベルの閾値データ (Lv1〜15)
     const expTable = [
-      15, 20, 25, 30, 35, 40, 45, 50, 55, 60,
-      70, 80, 90, 100, 110, 120, 130, 140, 150, 160,
-      180, 200, 220, 240, 260, 280, 300, 320, 340, 360,
-      400, 440, 480, 520, 560, 600, 640, 680, 720, 760,
-      820, 880, 940, 1000, 1060, 1120, 1180, 1240, 1300, 1360,
-      1440, 1520, 1600, 1680, 1760, 1840, 1920, 2000, 2080, 2160,
-      2280, 2400, 2520, 2640, 2760, 2880, 3000, 3120, 3240, 3360,
-      3520, 3680, 3840, 4000, 4160, 4320, 4480, 4640, 4800, 4960,
-      5200, 5440, 5680, 5920, 6160, 6400, 6640, 6880, 7120, 7360,
-      7700, 8040, 8380, 8720, 9060, 9400, 9740, 10080, 0
-    ];
+    { level: 1, cumulative: 0 }, { level: 2, cumulative: 15 }, { level: 3, cumulative: 35 },
+    { level: 4, cumulative: 60 }, { level: 5, cumulative: 90 }, { level: 6, cumulative: 125 },
+    { level: 7, cumulative: 165 }, { level: 8, cumulative: 210 }, { level: 9, cumulative: 260 },
+    { level: 10, cumulative: 315 }, { level: 11, cumulative: 375 }, { level: 12, cumulative: 440 },
+    { level: 13, cumulative: 510 }, { level: 14, cumulative: 585 }, { level: 15, cumulative: 665 }
 
-    // 各レベルに到達するために必要な「累計経験点」のテーブルを生成
-    const totalExpTable = [0];
-    for (let i = 0; i < expTable.length - 1; i++) {
-      totalExpTable.push(totalExpTable[i] + expTable[i]);
-    }
 
-    // 職業ドロップダウンの初期化
-    function initClassSelectors() {
-      const mainSelect = document.getElementById('mainClass');
-      mainSelect.innerHTML = '';
-      
-      Object.keys(classData).forEach(className => {
-        const option = document.createElement('option');
-        option.value = className;
-        option.textContent = className;
-        mainSelect.appendChild(option);
-      });
 
-      updateSubClassOptions();
-    }
 
-    // サブクラスの選択肢更新 (メインで選ばれた職業を除外)
-    function updateSubClassOptions() {
-      const mainSelect = document.getElementById('mainClass');
-      const subSelect = document.getElementById('subClass');
-      const currentMain = mainSelect.value;
-      const currentSub = subSelect.value;
 
-      subSelect.innerHTML = '<option value="">(－)</option>';
+];
 
-      Object.keys(classData).forEach(className => {
-        if (className !== currentMain) {
-          const option = document.createElement('option');
-          option.value = className;
-          option.textContent = className;
-          subSelect.appendChild(option);
+function encryptData(str) { return btoa(unescape(encodeURIComponent(str))); }
+function decryptData(base64Str) { return decodeURIComponent(escape(atob(base64Str))); }
+
+// クラスのセレクトボックスを初期化・更新する
+function initClassSelectors(selectedMain = null, selectedSub = "－") {
+
+
+
+    const mainSelect = document.getElementById('mainClass');
+    if (!mainSelect) return;
+    mainSelect.innerHTML = '';
+
+    const classNames = Object.keys(classData);
+    if (classNames.length === 0) return;
+
+    const defaultMain = selectedMain || classNames[0];
+
+    classNames.forEach(cls => {
+        const opt = document.createElement('option');
+        opt.value = cls;
+        opt.textContent = cls;
+        if (cls === defaultMain) opt.selected = true;
+        mainSelect.appendChild(opt);
+    });
+
+    updateSubClassOptions(selectedSub);
+}
+
+// メイン・サブクラスの適正情報を画面に反映する
+function updateClassInfo() {
+    const mainSelect = document.getElementById('mainClass');
+    const subSelect = document.getElementById('subClass');
+    if (!mainSelect) return;
+
+    const currentMain = mainSelect.value;
+    const currentSub = subSelect ? subSelect.value : "－";
+
+    const mainInfo = classData[currentMain] || { pos: "-", type: "-" };
+    const subInfo = classData[currentSub] || { pos: "-", type: "-" };
+
+    const mainPosEl = document.getElementById('mainInfoPosition');
+    const mainTypeEl = document.getElementById('mainInfoType');
+    const subPosEl = document.getElementById('subInfoPosition');
+    const subTypeEl = document.getElementById('subInfoType');
+
+    if (mainPosEl) mainPosEl.textContent = mainInfo.pos;
+    if (mainTypeEl) mainTypeEl.textContent = mainInfo.type;
+    if (subPosEl) subPosEl.textContent = subInfo.pos;
+    if (subTypeEl) subTypeEl.textContent = subInfo.type;
+}
+
+// メインクラス変更時にサブクラスの選択肢を更新する
+function updateSubClassOptions(preferredSub = null) {
+    const mainSelect = document.getElementById('mainClass');
+    const subSelect = document.getElementById('subClass');
+    if (!mainSelect || !subSelect) return;
+    const currentMain = mainSelect.value;
+    const currentSub = preferredSub !== null ? preferredSub : subSelect.value;
+    subSelect.innerHTML = '';
+
+    const noneOpt = document.createElement('option');
+    noneOpt.value = "－";
+    noneOpt.textContent = "－";
+    subSelect.appendChild(noneOpt);
+
+    Object.keys(classData).forEach(cls => {
+        if (cls !== currentMain) {
+            const opt = document.createElement('option');
+            opt.value = cls;
+            opt.textContent = cls;
+            subSelect.appendChild(opt);
         }
-      });
+    });
 
-      if (currentSub && currentSub !== currentMain) {
-        subSelect.value = currentSub;
-      }
+    const match = Array.from(subSelect.options).some(opt => opt.value === currentSub);
+    subSelect.value = match ? currentSub : "－";
 
-      updateClassInfo();
-    }
 
-    // クラス特性の表示更新
-    function updateClassInfo() {
-      const mainVal = document.getElementById('mainClass').value;
-      const subVal = document.getElementById('subClass').value;
+    updateClassInfo();
+    updatePreview();
+}
 
-      const mainInfo = classData[mainVal];
-      const subInfo = classData[subVal];
 
-      document.getElementById('mainClassInfo').textContent = mainInfo 
-        ? `${mainInfo.pos} ／ ${mainInfo.type}` 
-        : '-';
 
-      document.getElementById('subClassInfo').textContent = subInfo 
-        ? `${subInfo.pos} ／ ${subInfo.type}` 
-        : '- ／ -';
-    }
 
-    function onMainClassChange() {
-      updateSubClassOptions();
-      updateEquipmentOptions();
-      updatePreview();
-    }
 
-    // レベル変更から経験点を計算
-    function calculateExpFromLevel() {
-      let lvl = parseInt(document.getElementById('level').value) || 1;
-      if (lvl < 1) lvl = 1;
-      if (lvl > 99) lvl = 99;
-      
-      document.getElementById('level').value = lvl;
-      document.getElementById('nextExp').value = expTable[lvl - 1];
-      document.getElementById('totalExp').value = totalExpTable[lvl - 1];
 
-      updatePreview();
-    }
 
-    // 累積経験点入力からレベルを逆算
-    function calculateLevelFromExp() {
-      let exp = parseInt(document.getElementById('totalExp').value) || 0;
-      if (exp < 0) exp = 0;
 
-      let calculatedLvl = 1;
-      for (let i = 0; i < totalExpTable.length; i++) {
-        if (exp >= totalExpTable[i]) {
-          calculatedLvl = i + 1;
+
+
+
+
+
+
+
+
+
+
+function onMainClassChange() {
+    updateSubClassOptions();
+    updateEquipmentOptions();
+}
+
+function onSubClassChange() {
+    updateClassInfo();
+    updatePreview();
+}
+
+// レベルと次のレベルまでの必要経験点を算出する
+function recalculateLevelAndExp() {
+    let totalExp = 0;
+    document.querySelectorAll('.sc-exp').forEach(input => {
+        totalExp += parseInt(input.value) || 0;
+    });
+
+    let currentLevel = 1;
+    let nextCumulative = expTable[expTable.length - 1].cumulative;
+
+    for (let i = 0; i < expTable.length; i++) {
+        if (totalExp >= expTable[i].cumulative) {
+            currentLevel = expTable[i].level;
+            nextCumulative = (i + 1 < expTable.length) ? expTable[i + 1].cumulative : expTable[i].cumulative;
+
+
+
+
+
+
+
+
+
+
+
+
         } else {
-          break;
+            break;
         }
-      }
-
-      document.getElementById('level').value = calculatedLvl;
-      document.getElementById('nextExp').value = expTable[calculatedLvl - 1];
-
-      updatePreview();
     }
 
-    // シナリオメモのフィールド動的追加
-    function addScenarioField(data = { name: '', exp: '', gm: '', memo: '' }) {
-      const list = document.getElementById('scenarioList');
-      const div = document.createElement('div');
-      div.className = 'scenario-box';
-      div.innerHTML = `
-        <div class="scenario-grid">
-          <div>
+    const needed = (currentLevel >= expTable[expTable.length - 1].level) ? 0 : (nextCumulative - totalExp);
+    const cumEl = document.getElementById('cumulativeExp');
+    const nxtEl = document.getElementById('nextExpNeeded');
+    const lvlEl = document.getElementById('charLevel');
+    if (cumEl) cumEl.value = totalExp;
+    if (nxtEl) nxtEl.value = needed;
+    if (lvlEl) lvlEl.value = currentLevel;
+    updatePreview();
+}
+
+// シナリオ入力欄を追加する
+function addScenarioField(data = {}) {
+    const list = document.getElementById('scenarioList');
+    if (!list) return;
+    const div = document.createElement('div');
+    div.className = 'scenario-box';
+    div.innerHTML = `
+    <div class="scenario-grid">
+        <div>
             <label style="margin-top:0;">シナリオ名</label>
-            <input type="text" class="sc-name" value="${data.name}" placeholder="例: 始まりの樹海" oninput="updatePreview()">
-          </div>
-          <div>
+            <input type="text" class="sc-title" value="${data.title || ''}" placeholder="例: はじまりの迷宮" oninput="updatePreview()">
+        </div>
+        <div>
+            <label style="margin-top:0;">通過日 (開始,終了)</label>
+            <input type="text" class="sc-date" value="${data.date || ''}" placeholder="例: 2026/08/01〜08/02" oninput="updatePreview()">
+        </div>
+        <div>
             <label style="margin-top:0;">獲得経験点</label>
-            <input type="number" class="sc-exp" value="${data.exp}" placeholder="0" oninput="updatePreview()">
-          </div>
-          <div>
-            <label style="margin-top:0;">GM名</label>
-            <input type="text" class="sc-gm" value="${data.gm}" placeholder="例: GM" oninput="updatePreview()">
-          </div>
-          <div>
-            <button type="button" class="btn-danger" onclick="removeScenarioField(this)">削除</button>
-          </div>
+            <input type="number" class="sc-exp" value="${data.exp || 0}" min="0" max="999" oninput="recalculateLevelAndExp()">
         </div>
-        <div style="margin-top: 8px;">
-          <label style="margin-top:0;">メモ・備考</label>
-          <input type="text" class="sc-memo" value="${data.memo}" placeholder="例: ドロップ素材〇〇を入手" oninput="updatePreview()">
-        </div>
-      `;
-      list.appendChild(div);
-      updatePreview();
+
+
+
+
+
+
+
+    </div>
+    <label style="margin-top:5px;">メモ・感想など</label>
+    <textarea class="sc-memo scenario-memo-area" placeholder="シナリオ中の出来事やメモ" oninput="updatePreview()">${data.memo || ''}</textarea>
+    <button type="button" class="del-btn" onclick="this.parentElement.remove(); recalculateLevelAndExp();">このシナリオを削除</button>
+    `;
+    list.appendChild(div);
+    recalculateLevelAndExp();
+}
+
+// ココフォリア用コマデータの生成
+function generateCcfoliaData() {
+    const nameEl = document.getElementById('charName');
+    const mainClassEl = document.getElementById('mainClass');
+    const subClassEl = document.getElementById('subClass');
+    const levelEl = document.getElementById('charLevel');
+    const expEl = document.getElementById('cumulativeExp');
+    const hpEl = document.getElementById('hp');
+    const tpEl = document.getElementById('tp');
+    const bgEl = document.getElementById('charBackground');
+
+    const name = nameEl ? nameEl.value : '';
+    const mainClass = mainClassEl ? mainClassEl.value : '';
+    const subClass = subClassEl ? subClassEl.value : '';
+    const level = levelEl ? levelEl.value : '1';
+    const exp = expEl ? expEl.value : '0';
+    const hp = hpEl ? hpEl.value : '0';
+    const tp = tpEl ? tpEl.value : '0';
+    const background = bgEl ? bgEl.value : '';
+
+    const mainInfo = classData[mainClass] || { pos: "-", type: "-" };
+    const subInfo = classData[subClass] || { pos: "-", type: "-" };
+
+    let memoContent = `【レベル】${level} (累積経験点: ${exp})\n【メイン】${mainClass} (適正: ${mainInfo.pos} / ${mainInfo.type})\n【サブ】${subClass} (適正: ${subInfo.pos} / ${subInfo.type})\n`;
+    if (background.trim()) {
+        memoContent += `\n【キャラクター背景】\n${background}\n`;
     }
 
-    function removeScenarioField(btn) {
-      btn.closest('.scenario-box').remove();
-      updatePreview();
-    }
+    const ccfoliaObj = {
+        "kind": "character",
+        "data": {
+            "name": name,
+            "memo": memoContent,
+            "initiative": 0,
+            "externalUrl": "",
+            "status": [
+            { "label": "HP", "value": Number(hp), "max": Number(hp) },
+            { "label": "TP", "value": Number(tp), "max": Number(tp) }
+        ],
+        "params": [
+        { "label": "レベル", "value": Number(level) },
+        { "label": "メイン", "value": mainClass },
+        { "label": "サブ", "value": subClass }
+    ],
+    "commands": "3d6+? >= ? 炎術式\n3d6+? >= ? 雷術式\n3d6+? >= ? 氷術式"
+}
+};
+return JSON.stringify(ccfoliaObj, null, 2);
+}
 
-    // データ保存
-    function saveData() {
-      const data = {
-        pcName: document.getElementById('pcName').value,
+function updatePreview() {
+    const preview = document.getElementById('previewArea');
+    if (preview) preview.textContent = generateCcfoliaData();
+}
+
+function copyForCcfolia() {
+    const data = generateCcfoliaData();
+    navigator.clipboard.writeText(data).then(() => {
+        alert('ココフォリア用のデータをコピーしました！\nココフォリアのルーム画面で Ctrl+V を押してください。');
+    }).catch(err => alert('コピーに失敗しました: ' + err));
+}
+
+function saveEncryptedFile() {
+    const scenarios = [];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    document.querySelectorAll('.scenario-box').forEach(box => {
+        scenarios.push({
+            title: box.querySelector('.sc-title').value,
+            date: box.querySelector('.sc-date').value,
+            exp: box.querySelector('.sc-exp').value,
+
+            memo: box.querySelector('.sc-memo').value
+        });
+    });
+
+    const formData = {
+        charName: document.getElementById('charName').value,
         mainClass: document.getElementById('mainClass').value,
         subClass: document.getElementById('subClass').value,
-        level: document.getElementById('level').value,
-        totalExp: document.getElementById('totalExp').value,
-        background: document.getElementById('background').value,
-        statHp: document.getElementById('statHp').value,
-        statTp: document.getElementById('statTp').value,
-        equipWeapon: document.getElementById('equipWeapon').value,
-        equipWeaponRarity: document.getElementById('equipWeaponRarity').value,
-        equipWeaponForge1: document.getElementById('equipWeaponForge1').value,
-        equipWeaponForge2: document.getElementById('equipWeaponForge2').value,
-        equipArmor: document.getElementById('equipArmor').value,
-        equipArmorRarity: document.getElementById('equipArmorRarity').value,
-        equipArmorForge1: document.getElementById('equipArmorForge1').value,
-        equipArmorForge2: document.getElementById('equipArmorForge2').value,
-        equipOther: document.getElementById('equipOther').value,
-        equipOtherRarity: document.getElementById('equipOtherRarity').value,
-        equipOtherForge1: document.getElementById('equipOtherForge1').value,
-        equipOtherForge2: document.getElementById('equipOtherForge2').value,
-        scenarios: []
-      };
+        hp: document.getElementById('hp').value,
+        tp: document.getElementById('tp').value,
+        charBackground: document.getElementById('charBackground').value,
+        scenarios: scenarios
+    };
 
-      document.querySelectorAll('.scenario-box').forEach(box => {
-        data.scenarios.push({
-          name: box.querySelector('.sc-name').value,
-          exp: box.querySelector('.sc-exp').value,
-          gm: box.querySelector('.sc-gm').value,
-          memo: box.querySelector('.sc-memo').value
-        });
-      });
+    const encryptedStr = encryptData(JSON.stringify(formData));
+    const blob = new Blob([encryptedStr], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = (formData.charName || 'character') + '.dat';
+    a.click();
+    URL.revokeObjectURL(url);
+}
 
-      localStorage.setItem('nssq_character_data', JSON.stringify(data));
-      alert('データをブラウザに保存しました！');
-    }
+function loadEncryptedFile(event) {
+    const file = event.target.files[0];
+    if (!file) return;
 
-    // データ復元
-    function loadData() {
-      const saved = localStorage.getItem('nssq_character_data');
-      if (!saved) {
-        alert('保存されたデータがありません。');
-        return;
-      }
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        try {
+            const data = JSON.parse(decryptData(e.target.result));
+            document.getElementById('charName').value = data.charName || '';
+            const loadedMain = data.mainClass || null;
+            const loadedSub = data.subClass || '－';
+            initClassSelectors(loadedMain, loadedSub);
+            document.getElementById('hp').value = data.hp || '50';
+            document.getElementById('tp').value = data.tp || '30';
+            document.getElementById('charBackground').value = data.charBackground || '';
 
-      const data = JSON.parse(saved);
-      document.getElementById('pcName').value = data.pcName || '';
-      document.getElementById('mainClass').value = data.mainClass || '';
-      onMainClassChange();
-      document.getElementById('subClass').value = data.subClass || '';
-      document.getElementById('totalExp').value = data.totalExp || 0;
-      calculateLevelFromExp();
+            const list = document.getElementById('scenarioList');
+            list.innerHTML = '';
+            if (data.scenarios && data.scenarios.length > 0) {
+                data.scenarios.forEach(sc => addScenarioField(sc));
+            } else {
+                addScenarioField();
+            }
+            recalculateLevelAndExp();
+            alert('データを正常に読み込みました！');
+        } catch (err) {
+            alert('ファイルの読み込みに失敗しました（データ形式が異なります）');
 
-      document.getElementById('background').value = data.background || '';
-      document.getElementById('statHp').value = data.statHp || 50;
-      document.getElementById('statTp').value = data.statTp || 30;
 
-      // 装備関連復元
-      document.getElementById('equipWeapon').value = data.equipWeapon || '';
-      document.getElementById('equipWeaponRarity').value = data.equipWeaponRarity || '';
-      document.getElementById('equipWeaponForge1').value = data.equipWeaponForge1 || '';
-      document.getElementById('equipWeaponForge2').value = data.equipWeaponForge2 || '';
 
-      document.getElementById('equipArmor').value = data.equipArmor || '';
-      document.getElementById('equipArmorRarity').value = data.equipArmorRarity || '';
-      document.getElementById('equipArmorForge1').value = data.equipArmorForge1 || '';
-      document.getElementById('equipArmorForge2').value = data.equipArmorForge2 || '';
 
-      document.getElementById('equipOther').value = data.equipOther || '';
-      document.getElementById('equipOtherRarity').value = data.equipOtherRarity || '';
-      document.getElementById('equipOtherForge1').value = data.equipOtherForge1 || '';
-      document.getElementById('equipOtherForge2').value = data.equipOtherForge2 || '';
 
-      // シナリオメモ復元
-      document.getElementById('scenarioList').innerHTML = '';
-      if (data.scenarios && data.scenarios.length > 0) {
-        data.scenarios.forEach(sc => addScenarioField(sc));
-      }
 
-      updateClassInfo();
-      updatePreview();
-      alert('データを読み込みました！');
-    }
 
-    // プレビュー／ココフォリア出力用の更新
-    function updatePreview() {
-      updateClassInfo();
-    }
 
-    // ココフォリア用駒データのコピー
-    function copyCcfoliaText() {
-      const pcName = document.getElementById('pcName').value || 'ノンネーム';
-      const mainClass = document.getElementById('mainClass').value;
-      const subClass = document.getElementById('subClass').value;
-      const level = document.getElementById('level').value;
-      const hp = document.getElementById('statHp').value;
-      const tp = document.getElementById('statTp').value;
 
-      const classText = subClass ? `${mainClass} / ${subClass}` : mainClass;
 
-      const ccfoliaData = {
-        kind: "character",
-        data: {
-          name: pcName,
-          memo: `【クラス】${classText}\n【レベル】Lv.${level}`,
-          status: [
-            { label: "HP", value: parseInt(hp), max: parseInt(hp) },
-            { label: "TP", value: parseInt(tp), max: parseInt(tp) }
-          ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         }
-      };
+    };
+    reader.readAsText(file);
+}
 
-      navigator.clipboard.writeText(JSON.stringify(ccfoliaData)).then(() => {
-        alert('ココフォリア用の駒データをクリップボードにコピーしました！\nココフォリア画面で Paste (Ctrl+V) してください。');
-      }).catch(err => {
-        console.error('コピーに失敗しました:', err);
-      });
-    }
-
-    // ページロード時の初期化
-    window.addEventListener('DOMContentLoaded', () => {
-      loadClassData();
+// 画面ロード完了時の初期化
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('#charName, #hp, #tp').forEach(el => {
+        el.addEventListener('input', updatePreview);
+        el.addEventListener('change', updatePreview);
     });
-  </script>
+
+
+
+
+    loadClassData();
+    addScenarioField();
+});
+</script>
 </body>
 </html>
