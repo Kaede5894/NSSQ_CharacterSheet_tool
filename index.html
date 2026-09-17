@@ -80,13 +80,13 @@
             </div>
             <div>
                 <label>サブクラス</label>
-                <select id="subClass"></select>
+                <select id="subClass" onchange="onSubClassChange()"></select>
             </div>
         </div>
-        <!-- メインクラスの配置・型を表示するボックス -->
+        <!-- メイン・サブクラスの適正表示ボックス -->
         <div class="class-info-box" id="classInfoBox">
-            <div class="class-info-item"><strong>適正配置:</strong> <span id="infoPosition">-</span></div>
-            <div class="class-info-item"><strong>戦闘スタイル:</strong> <span id="infoType">-</span></div>
+            <div class="class-info-item"><strong>メイン適正:</strong> <span id="mainInfoPosition">-</span>／<span id="mainInfoType">-</span></div>
+            <div class="class-info-item"><strong>サブ適正:</strong> <span id="subInfoPosition">-</span>／<span id="subInfoType">-</span></div>
         </div>
 
         <div class="grid-3">
