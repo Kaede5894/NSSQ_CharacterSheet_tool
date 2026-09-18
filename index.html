@@ -278,43 +278,43 @@ pre { background: #222; color: #0f0; padding: 12px; border-radius: 4px; overflow
         <pre id="previewArea" style="margin-top: 10px;">ここにプレビューが表示されます</pre>
     </div>
 
-    <script>
-    // グローバル変数にクラスデータと装備データを保持
-    let classData = {};
-    let equipData = { weapons: [], armor: [], accessories: [] };
+<script>
+// グローバル変数にクラスデータと装備データを保持
+let classData = {};
+let equipData = { weapons: [], armor: [], accessories: [] };
 
-    // nssq_classes.json と nssq_equipments.json を両方取得するよう拡張
-    async function loadClassData() {
-        try {
-            const [classRes, equipRes] = await Promise.all([
-            fetch('nssq_classes.json'),
-            fetch('nssq_equipments.json')
-            ]);
-            if (!classRes.ok || !equipRes.ok) throw new Error('データ取得に失敗しました');
-            const classList = await classRes.json();
-            equipData = await equipRes.json();
-            classData = {};
-            classList.forEach(item => {
-                let pos = "-";
-                let type = "-";
-                if (item.position_type) {
-                    const parts = item.position_type.split(/[／/]/);
-                    pos = parts[0] || "-";
-                    type = parts[1] || "-";
-                }
-                classData[item.class_name] = {
-                    pos,
-                    type,
-                    weapons: item.weapons || [],
-                    armors: item.armors || []
-                };
-            });
-            initClassSelectors();
-            updateEquipmentOptions(); // 装備選択肢の初期化
-        } catch (error) {
-            console.error('データの読み込みエラー:', error);
-        }
+// nssq_classes.json と nssq_equipments.json を両方取得するよう拡張
+async function loadClassData() {
+    try {
+        const [classRes, equipRes] = await Promise.all([
+        fetch('nssq_classes.json'),
+        fetch('nssq_equipments.json')
+        ]);
+        if (!classRes.ok || !equipRes.ok) throw new Error('データ取得に失敗しました');
+        const classList = await classRes.json();
+        equipData = await equipRes.json();
+        classData = {};
+        classList.forEach(item => {
+            let pos = "-";
+            let type = "-";
+            if (item.position_type) {
+                const parts = item.position_type.split(/[／/]/);
+                pos = parts[0] || "-";
+                type = parts[1] || "-";
+            }
+            classData[item.class_name] = {
+                pos,
+                type,
+                weapons: item.weapons || [],
+                armors: item.armors || []
+            };
+        });
+        initClassSelectors();
+        updateEquipmentOptions(); // 装備選択肢の初期化
+    } catch (error) {
+        console.error('データの読み込みエラー:', error);
     }
+}
 
 // レアリティのドロップダウン（1〜15）を生成する共通関数
 function initRaritySelect(selectId) {
@@ -418,14 +418,14 @@ function updateEquipmentOptions() {
 }
 
 
-    // 経験点とレベルの閾値データ (Lv1〜15)
-    const expTable = [
-        { level: 1, cumulative: 0 }, { level: 2, cumulative: 15 }, { level: 3, cumulative: 35 },
-        { level: 4, cumulative: 60 }, { level: 5, cumulative: 90 }, { level: 6, cumulative: 125 },
-        { level: 7, cumulative: 165 }, { level: 8, cumulative: 210 }, { level: 9, cumulative: 260 },
-        { level: 10, cumulative: 315 }, { level: 11, cumulative: 375 }, { level: 12, cumulative: 440 },
-        { level: 13, cumulative: 510 }, { level: 14, cumulative: 585 }, { level: 15, cumulative: 665 }
-    ];
+// 経験点とレベルの閾値データ (Lv1〜15)
+const expTable = [
+    { level: 1, cumulative: 0 }, { level: 2, cumulative: 15 }, { level: 3, cumulative: 35 },
+    { level: 4, cumulative: 60 }, { level: 5, cumulative: 90 }, { level: 6, cumulative: 125 },
+    { level: 7, cumulative: 165 }, { level: 8, cumulative: 210 }, { level: 9, cumulative: 260 },
+    { level: 10, cumulative: 315 }, { level: 11, cumulative: 375 }, { level: 12, cumulative: 440 },
+    { level: 13, cumulative: 510 }, { level: 14, cumulative: 585 }, { level: 15, cumulative: 665 }
+];
 
 function encryptData(str) { return btoa(unescape(encodeURIComponent(str))); }
 function decryptData(base64Str) { return decodeURIComponent(escape(atob(base64Str))); }
