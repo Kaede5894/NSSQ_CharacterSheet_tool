@@ -184,25 +184,31 @@ pre { background: #222; color: #0f0; padding: 12px; border-radius: 4px; overflow
             <summary class="section-summary">4. 装備</summary>
             <div style="margin-top: 10px; display: flex; flex-direction: column; gap: 12px;">
 
-                <!-- 武器枠 -->
-                <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 8px; align-items: end;">
-                    <div>
-                        <label style="margin-top:0;">武器</label>
-                        <select id="equipWeapon" onchange="updatePreview()"></select>
-                    </div>
-                    <div>
-                        <label style="margin-top:0;">レアリティ</label>
-                        <select id="equipWeaponRarity" onchange="updatePreview()"></select>
-                    </div>
-                    <div>
-                        <label style="margin-top:0;">鍛冶1</label>
-                        <input type="text" id="equipWeaponForge1" placeholder="例: STR" oninput="updatePreview()">
-                    </div>
-                    <div>
-                        <label style="margin-top:0;">鍛冶2</label>
-                        <input type="text" id="equipWeaponForge2" placeholder="例: 斬" oninput="updatePreview()">
-                    </div>
-                </div>
+    <!-- 武器枠 -->
+    <div>
+        <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 8px; align-items: end;">
+            <div>
+                <label style="margin-top:0;">武器</label>
+                <select id="equipWeapon" onchange="onWeaponChange()"></select>
+            </div>
+            <div>
+                <label style="margin-top:0;">レアリティ</label>
+                <select id="equipWeaponRarity" onchange="onWeaponChange()"></select>
+            </div>
+            <div>
+                <label style="margin-top:0;">鍛冶1</label>
+                <input type="text" id="equipWeaponForge1" placeholder="例: STR" oninput="updatePreview()">
+            </div>
+            <div>
+                <label style="margin-top:0;">鍛冶2</label>
+                <input type="text" id="equipWeaponForge2" placeholder="例: 斬" oninput="updatePreview()">
+            </div>
+        </div>
+        <!-- 武器の効果表示エリア -->
+        <div id="equipWeaponEffect" class="note" style="margin-top: 4px; padding: 6px; background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 4px; font-size: 0.85rem; color: #333;">
+        効果: なし
+        </div>
+    </div>
 
                 <!-- 防具枠 -->
                 <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 8px; align-items: end;">
@@ -542,6 +548,81 @@ function recalculateBonuses() {
     }
 }
 
+// 物理・属性攻撃力の計算（BaseStat × Multiplier + Offset）
+function calcAtkValue(atkObj, level, rarity) {
+  if (!atkObj) return 0;
+  
+  let baseVal = 0;
+  if (atkObj.base_stat === 'Lv') {
+    baseVal = level;
+  } else if (atkObj.base_stat === 'R') {
+    baseVal = rarity;
+  }
+  
+  return (baseVal * atkObj.multiplier) + atkObj.offset;
+}
+
+// 武器変更・レアリティ変更・レベル変更時に呼ばれる関数
+function onWeaponChange() {
+  updateWeaponEffectDisplay();
+  if (typeof updatePreview === 'function') {
+    updatePreview();
+  }
+}
+
+// 武器の効果・ステータステキストを表示する処理
+function updateWeaponEffectDisplay() {
+  const selectedName = document.getElementById('equipWeapon').value;
+  const rarity = parseInt(document.getElementById('equipWeaponRarity').value) || 1;
+  const level = parseInt(document.getElementById('charLevel').value) || 1;
+  const effectEl = document.getElementById('equipWeaponEffect');
+
+  if (!selectedName || !window.equipData || !window.equipData.weapons) {
+    effectEl.textContent = '効果: なし';
+    return;
+  }
+
+  const weapon = window.equipData.weapons.find(w => w.name === selectedName);
+  if (!weapon) {
+    effectEl.textContent = '効果: なし';
+    return;
+  }
+
+  // 1. 物理攻撃力の計算
+  const physAtkVal = calcAtkValue(weapon.phys_atk, level, rarity);
+  const physAtkStr = weapon.phys_atk 
+    ? `${physAtkVal} (${weapon.phys_atk.base_stat}×${weapon.phys_atk.multiplier}+${weapon.phys_atk.offset})` 
+    : '-';
+
+  // 2. 属性攻撃力の計算
+  const elemAtkVal = calcAtkValue(weapon.elem_atk, level, rarity);
+  const elemAtkStr = weapon.elem_atk 
+    ? `${elemAtkVal} (${weapon.elem_atk.base_stat}×${weapon.elem_atk.multiplier}+${weapon.elem_atk.offset})` 
+    : '-';
+
+  // 3. 価格の計算 (レアリティの2乗 × price_multiplier)
+  const priceVal = (rarity * rarity) * (weapon.price_multiplier || 0);
+
+  // 4. 対応素材の整形
+  const materialsStr = weapon.materials && weapon.materials.length > 0 
+    ? weapon.materials.join('/') 
+    : '-';
+
+  // HTMLに反映
+  effectEl.innerHTML = `
+    <strong>[分類]</strong> ${weapon.type || '-'} | 
+    <strong>[射程]</strong> ${weapon.range || '-'} | 
+    <strong>[属性]</strong> ${weapon.element || '-'} | 
+    <strong>[物命]</strong> ${weapon.phys_acc >= 0 ? '+' + weapon.phys_acc : weapon.phys_acc} | 
+    <strong>[属命]</strong> ${weapon.elem_acc >= 0 ? '+' + weapon.elem_acc : weapon.elem_acc} | 
+    <strong>[速度]</strong> ${weapon.speed >= 0 ? '+' + weapon.speed : weapon.speed}<br>
+    <strong>[物攻]</strong> ${physAtkStr} | 
+    <strong>[属攻]</strong> ${elemAtkStr} | 
+    <strong>[価格]</strong> ${priceVal} en | 
+    <strong>[素材]</strong> ${materialsStr}
+  `;
+}
+        
 // シナリオ入力欄を追加する
 function addScenarioField(data = {}) {
     const list = document.getElementById('scenarioList');
@@ -706,6 +787,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loadClassData();
     addScenarioField();
 });
+
 </script>
 </body>
 </html>
