@@ -209,10 +209,44 @@
       "materials": ["刃", "石材", "金属"]
     },
     {
-      "name": "農具",
+      "name": "農具/斬",
       "type": "白兵",
       "range": "近",
-      "element": "選択(斬/壊/突)",
+      "element": "斬",
+      "phys_acc": 0,
+      "elem_acc": 0,
+      "phys_atk": {
+        "base_stat": "R",
+        "multiplier": 3,
+        "offset": 4
+      },
+      "elem_atk": null,
+      "speed": 0,
+      "price_multiplier": 90,
+      "materials": ["枝", "木材", "石材", "金属"]
+    },
+    {
+      "name": "農具/壊",
+      "type": "白兵",
+      "range": "近",
+      "element": "壊",
+      "phys_acc": 0,
+      "elem_acc": 0,
+      "phys_atk": {
+        "base_stat": "R",
+        "multiplier": 3,
+        "offset": 4
+      },
+      "elem_atk": null,
+      "speed": 0,
+      "price_multiplier": 90,
+      "materials": ["枝", "木材", "石材", "金属"]
+    },
+    {
+      "name": "農具/突",
+      "type": "白兵",
+      "range": "近",
+      "element": "突",
       "phys_acc": 0,
       "elem_acc": 0,
       "phys_atk": {
