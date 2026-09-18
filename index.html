@@ -276,11 +276,11 @@ pre { background: #222; color: #0f0; padding: 12px; border-radius: 4px; overflow
         let classData = {};
         let equipData = { weapons: [], armor: [], accessories: [] };
 
-        // classes_data.json と nssq_equipments.json を両方取得するよう拡張
+        // nssq_classes.json と nssq_equipments.json を両方取得するよう拡張
         async function loadClassData() {
             try {
                 const [classRes, equipRes] = await Promise.all([
-                fetch('classes_data.json'),
+                fetch('nssq_classes.json'),
                 fetch('nssq_equipments.json')
                 ]);
                 if (!classRes.ok || !equipRes.ok) throw new Error('データ取得に失敗しました');
