@@ -128,52 +128,52 @@ pre { background: #222; color: #0f0; padding: 12px; border-radius: 4px; overflow
                 </div>
             </div>
 
-            <!-- 能力値（STR, TEC, VIT, AGI, LUC） -->
+    <!-- 能力値（STR, TEC, VIT, AGI, LUC） -->
             <div style="margin-top: 15px;">
-                <label style="margin-bottom: 5px;">能力値</label>
+                <label style="margin-bottom: 5px;">能力値/ボーナスダイス</label>
                 <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px;">
                     <div>
                         <label style="margin-top:0; font-size: 0.8rem;">STR</label>
-                        <input type="number" id="str" value="10" style="text-align: center;">
+                        <input type="number" id="str" value="10" style="text-align: center;" oninput="recalculateBonuses()">
                     </div>
                     <div>
                         <label style="margin-top:0; font-size: 0.8rem;">TEC</label>
-                        <input type="number" id="tec" value="10" style="text-align: center;">
+                        <input type="number" id="tec" value="10" style="text-align: center;" oninput="recalculateBonuses()">
                     </div>
                     <div>
                         <label style="margin-top:0; font-size: 0.8rem;">VIT</label>
-                        <input type="number" id="vit" value="10" style="text-align: center;">
+                        <input type="number" id="vit" value="10" style="text-align: center;" oninput="recalculateBonuses()">
                     </div>
                     <div>
                         <label style="margin-top:0; font-size: 0.8rem;">AGI</label>
-                        <input type="number" id="agi" value="10" style="text-align: center;">
+                        <input type="number" id="agi" value="10" style="text-align: center;" oninput="recalculateBonuses()">
                     </div>
                     <div>
                         <label style="margin-top:0; font-size: 0.8rem;">LUC</label>
-                        <input type="number" id="luc" value="10" style="text-align: center;">
+                        <input type="number" id="luc" value="10" style="text-align: center;" oninput="recalculateBonuses()">
                     </div>
                 </div>
-                <div style="margin-top: 15px;">
-                    <label style="margin-bottom: 5px;">ボーナスダイス</label>
+    
+                <!-- ボーナスダイス欄（自動計算） -->
+                <div style="margin-top: 10px;">
                     <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px;">
                         <div>
-                            <input type="number" id="str" value="10" style="text-align: center;">
+                            <input type="text" id="strBonus" class="auto-calc" value="2" style="text-align: center;" readonly>
                         </div>
                         <div>
-                            <input type="number" id="tec" value="10" style="text-align: center;">
+                            <input type="text" id="tecBonus" class="auto-calc" value="2" style="text-align: center;" readonly>
                         </div>
                         <div>
-                            <input type="number" id="vit" value="10" style="text-align: center;">
+                            <input type="text" id="vitBonus" class="auto-calc" value="2" style="text-align: center;" readonly>
                         </div>
                         <div>
-                            <input type="number" id="agi" value="10" style="text-align: center;">
+                            <input type="text" id="agiBonus" class="auto-calc" value="2" style="text-align: center;" readonly>
                         </div>
                         <div>
-                             <input type="number" id="luc" value="10" style="text-align: center;">
+                            <input type="text" id="lucBonus" class="auto-calc" value="2" style="text-align: center;" readonly>
                         </div>
                     </div>
                 </div>
-                
             </div>
         </details>
     </div>
@@ -503,6 +503,21 @@ function recalculateLevelAndExp() {
     if (nxtEl) nxtEl.value = needed;
     if (lvlEl) lvlEl.value = currentLevel;
     updatePreview();
+}
+
+function recalculateBonuses() {
+    const stats = ['str', 'tec', 'vit', 'agi', 'luc'];
+    stats.forEach(stat => {
+        const valInput = document.getElementById(stat);
+        const bonusInput = document.getElementById(stat + 'Bonus');
+        if (valInput && bonusInput) {
+            const val = parseInt(valInput.value) || 0;
+            bonusInput.value = Math.floor(val * 0.2);
+        }
+    });
+    if (typeof updatePreview === 'function') {
+        updatePreview();
+    }
 }
 
 // シナリオ入力欄を追加する
