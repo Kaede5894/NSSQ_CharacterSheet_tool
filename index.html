@@ -64,94 +64,6 @@ pre { background: #222; color: #0f0; padding: 12px; border-radius: 4px; overflow
 </style>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </head>
 <body>
 
@@ -162,10 +74,8 @@ pre { background: #222; color: #0f0; padding: 12px; border-radius: 4px; overflow
         <div style="margin-top: 10px;">
             <label>キャラクター名</label>
             <input type="text" id="charName" value="">
-
-
-
         </div>
+
         <div class="grid-2">
             <div>
                 <label>メインクラス</label>
@@ -181,13 +91,6 @@ pre { background: #222; color: #0f0; padding: 12px; border-radius: 4px; overflow
             <div class="class-info-item"><strong>メイン適正:</strong> <span id="mainInfoPosition">-</span>／<span id="mainInfoType">-</span></div>
             <div class="class-info-item"><strong>サブ適正:</strong> <span id="subInfoPosition">-</span>／<span id="subInfoType">-</span></div>
         </div>
-
-
-
-
-
-
-
 
         <div class="grid-3">
             <div>
@@ -205,25 +108,10 @@ pre { background: #222; color: #0f0; padding: 12px; border-radius: 4px; overflow
         </div>
     </div>
 
-
-
-
-
-
-
-
-
-
-
     <div class="section">
         <h2>2. キャラクター背景</h2>
         <textarea id="charBackground" class="bg-area" style="margin-top: 10px;" placeholder="経歴、パーソナリティ、大惨事表の結果などを記入" oninput="updatePreview()"></textarea>
     </div>
-
-
-
-
-
 
     <div class="section">
         <details open>
@@ -325,16 +213,6 @@ pre { background: #222; color: #0f0; padding: 12px; border-radius: 4px; overflow
             <button class="sub-btn" onclick="saveEncryptedFile()">暗号化ファイルに保存 (.dat)</button>
             <input type="file" id="loadFileInput" style="display:none" accept=".dat" onchange="loadEncryptedFile(event)">
             <button class="sub-btn" onclick="document.getElementById('loadFileInput').click()">ファイルを読み込む</button>
-
-
-
-
-
-
-
-
-
-
         </div>
         <div class="note">※保存される `.dat` ファイルは暗号化されているため、このツール以外では中身を直接編集できません。</div>
     </div>
@@ -342,45 +220,7 @@ pre { background: #222; color: #0f0; padding: 12px; border-radius: 4px; overflow
     <div class="section">
         <h2>ココフォリア出力プレビュー</h2>
         <pre id="previewArea" style="margin-top: 10px;">ここにプレビューが表示されます</pre>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </div>
-
 
     <script>
         // グローバル変数にクラスデータと装備データを保持
@@ -394,12 +234,9 @@ pre { background: #222; color: #0f0; padding: 12px; border-radius: 4px; overflow
                 fetch('classes_data.json'),
                 fetch('nssq_equipments.json')
                 ]);
-
                 if (!classRes.ok || !equipRes.ok) throw new Error('データ取得に失敗しました');
-
                 const classList = await classRes.json();
                 equipData = await equipRes.json();
-
                 classData = {};
                 classList.forEach(item => {
                     let pos = "-";
@@ -416,7 +253,6 @@ pre { background: #222; color: #0f0; padding: 12px; border-radius: 4px; overflow
                         armors: item.armors || []
                     };
                 });
-
                 initClassSelectors();
                 updateEquipmentOptions(); // 装備選択肢の初期化
             } catch (error) {
@@ -424,8 +260,7 @@ pre { background: #222; color: #0f0; padding: 12px; border-radius: 4px; overflow
             }
         }
 
-
-        // レアリティのドロップダウン（1〜15）を生成する共通関数
+    // レアリティのドロップダウン（1〜15）を生成する共通関数
     function initRaritySelect(selectId) {
         const select = document.getElementById(selectId);
         if (!select) return;
@@ -507,11 +342,6 @@ pre { background: #222; color: #0f0; padding: 12px; border-radius: 4px; overflow
     { level: 7, cumulative: 165 }, { level: 8, cumulative: 210 }, { level: 9, cumulative: 260 },
     { level: 10, cumulative: 315 }, { level: 11, cumulative: 375 }, { level: 12, cumulative: 440 },
     { level: 13, cumulative: 510 }, { level: 14, cumulative: 585 }, { level: 15, cumulative: 665 }
-
-
-
-
-
 ];
 
 function encryptData(str) { return btoa(unescape(encodeURIComponent(str))); }
@@ -519,18 +349,12 @@ function decryptData(base64Str) { return decodeURIComponent(escape(atob(base64St
 
 // クラスのセレクトボックスを初期化・更新する
 function initClassSelectors(selectedMain = null, selectedSub = "－") {
-
-
-
     const mainSelect = document.getElementById('mainClass');
     if (!mainSelect) return;
     mainSelect.innerHTML = '';
-
     const classNames = Object.keys(classData);
     if (classNames.length === 0) return;
-
     const defaultMain = selectedMain || classNames[0];
-
     classNames.forEach(cls => {
         const opt = document.createElement('option');
         opt.value = cls;
@@ -538,7 +362,6 @@ function initClassSelectors(selectedMain = null, selectedSub = "－") {
         if (cls === defaultMain) opt.selected = true;
         mainSelect.appendChild(opt);
     });
-
     updateSubClassOptions(selectedSub);
 }
 
@@ -590,28 +413,9 @@ function updateSubClassOptions(preferredSub = null) {
 
     const match = Array.from(subSelect.options).some(opt => opt.value === currentSub);
     subSelect.value = match ? currentSub : "－";
-
-
     updateClassInfo();
     updatePreview();
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 function onMainClassChange() {
     updateSubClassOptions();
@@ -637,18 +441,6 @@ function recalculateLevelAndExp() {
         if (totalExp >= expTable[i].cumulative) {
             currentLevel = expTable[i].level;
             nextCumulative = (i + 1 < expTable.length) ? expTable[i + 1].cumulative : expTable[i].cumulative;
-
-
-
-
-
-
-
-
-
-
-
-
         } else {
             break;
         }
@@ -684,13 +476,6 @@ function addScenarioField(data = {}) {
             <label style="margin-top:0;">獲得経験点</label>
             <input type="number" class="sc-exp" value="${data.exp || 0}" min="0" max="999" oninput="recalculateLevelAndExp()">
         </div>
-
-
-
-
-
-
-
     </div>
     <label style="margin-top:5px;">メモ・感想など</label>
     <textarea class="sc-memo scenario-memo-area" placeholder="シナリオ中の出来事やメモ" oninput="updatePreview()">${data.memo || ''}</textarea>
@@ -764,23 +549,6 @@ function copyForCcfolia() {
 
 function saveEncryptedFile() {
     const scenarios = [];
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     document.querySelectorAll('.scenario-box').forEach(box => {
         scenarios.push({
             title: box.querySelector('.sc-title').value,
@@ -838,35 +606,6 @@ function loadEncryptedFile(event) {
             alert('データを正常に読み込みました！');
         } catch (err) {
             alert('ファイルの読み込みに失敗しました（データ形式が異なります）');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         }
     };
     reader.readAsText(file);
@@ -878,10 +617,6 @@ document.addEventListener('DOMContentLoaded', () => {
         el.addEventListener('input', updatePreview);
         el.addEventListener('change', updatePreview);
     });
-
-
-
-
     loadClassData();
     addScenarioField();
 });
