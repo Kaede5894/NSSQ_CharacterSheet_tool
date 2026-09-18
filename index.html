@@ -556,7 +556,6 @@ function calcAtkValue(atkObj, level, rarity) {
   } else if (atkObj.base_stat === 'R') {
     baseVal = rarity;
   }
-  
   return (baseVal * atkObj.multiplier) + atkObj.offset;
 }
 
@@ -575,12 +574,12 @@ function updateWeaponEffectDisplay() {
   const level = parseInt(document.getElementById('charLevel').value) || 1;
   const effectEl = document.getElementById('equipWeaponEffect');
 
-  if (!selectedName || !window.equipData || !window.equipData.weapons) {
+  if (!selectedName || !equipData || !equipData.weapons) {
     effectEl.textContent = '効果: なし';
     return;
   }
 
-  const weapon = window.equipData.weapons.find(w => w.name === selectedName);
+  const weapon = equipData.weapons.find(w => w.name === selectedName);
   if (!weapon) {
     effectEl.textContent = '効果: なし';
     return;
