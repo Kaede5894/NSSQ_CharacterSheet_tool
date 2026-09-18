@@ -279,124 +279,153 @@ pre { background: #222; color: #0f0; padding: 12px; border-radius: 4px; overflow
     </div>
 
     <script>
-        // グローバル変数にクラスデータと装備データを保持
-        let classData = {};
-        let equipData = { weapons: [], armor: [], accessories: [] };
+    // グローバル変数にクラスデータと装備データを保持
+    let classData = {};
+    let equipData = { weapons: [], armor: [], accessories: [] };
 
-        // nssq_classes.json と nssq_equipments.json を両方取得するよう拡張
-        async function loadClassData() {
-            try {
-                const [classRes, equipRes] = await Promise.all([
-                fetch('nssq_classes.json'),
-                fetch('nssq_equipments.json')
-                ]);
-                if (!classRes.ok || !equipRes.ok) throw new Error('データ取得に失敗しました');
-                const classList = await classRes.json();
-                equipData = await equipRes.json();
-                classData = {};
-                classList.forEach(item => {
-                    let pos = "-";
-                    let type = "-";
-                    if (item.position_type) {
-                        const parts = item.position_type.split(/[／/]/);
-                        pos = parts[0] || "-";
-                        type = parts[1] || "-";
-                    }
-                    classData[item.class_name] = {
-                        pos,
-                        type,
-                        weapons: item.weapons || [],
-                        armors: item.armors || []
-                    };
-                });
-                initClassSelectors();
-                updateEquipmentOptions(); // 装備選択肢の初期化
-            } catch (error) {
-                console.error('データの読み込みエラー:', error);
-            }
+    // nssq_classes.json と nssq_equipments.json を両方取得するよう拡張
+    async function loadClassData() {
+        try {
+            const [classRes, equipRes] = await Promise.all([
+            fetch('nssq_classes.json'),
+            fetch('nssq_equipments.json')
+            ]);
+            if (!classRes.ok || !equipRes.ok) throw new Error('データ取得に失敗しました');
+            const classList = await classRes.json();
+            equipData = await equipRes.json();
+            classData = {};
+            classList.forEach(item => {
+                let pos = "-";
+                let type = "-";
+                if (item.position_type) {
+                    const parts = item.position_type.split(/[／/]/);
+                    pos = parts[0] || "-";
+                    type = parts[1] || "-";
+                }
+                classData[item.class_name] = {
+                    pos,
+                    type,
+                    weapons: item.weapons || [],
+                    armors: item.armors || []
+                };
+            });
+            initClassSelectors();
+            updateEquipmentOptions(); // 装備選択肢の初期化
+        } catch (error) {
+            console.error('データの読み込みエラー:', error);
         }
-
-    // レアリティのドロップダウン（1〜15）を生成する共通関数
-    function initRaritySelect(selectId) {
-        const select = document.getElementById(selectId);
-        if (!select) return;
-        const currentValue = select.value;
-        select.innerHTML = '<option value="">-</option>';
-        for (let i = 1; i <= 15; i++) {
-            const opt = document.createElement('option');
-            opt.value = i;
-            opt.textContent = i;
-            select.appendChild(opt);
-        }
-        if (currentValue) select.value = currentValue;
     }
 
-    // メイン職業に合わせて装備の選択肢を動的に更新する関数
-    function updateEquipmentOptions() {
-        const mainSelect = document.getElementById('mainClass');
-        const weaponSelect = document.getElementById('equipWeapon');
-        const armorSelect = document.getElementById('equipArmor');
-        const otherSelect = document.getElementById('equipOther');
-
-        if (!mainSelect || !weaponSelect || !armorSelect || !otherSelect) return;
-
-        // レアリティ選択肢（1〜15）をセット
-        initRaritySelect('equipWeaponRarity');
-        initRaritySelect('equipArmorRarity');
-        initRaritySelect('equipOtherRarity');
-
-        const currentMain = mainSelect.value;
-        const currentClassInfo = classData[currentMain] || { weapons: [], armors: [] };
-
-        // 1. 武器枠の更新
-        weaponSelect.innerHTML = '<option value="">(なし)</option>';
-        equipData.weapons.forEach(w => {
-            const isEquippable = currentClassInfo.weapons.includes(w.name);
-            if (isEquippable) {
-                const opt = document.createElement('option');
-                opt.value = w.name;
-                opt.textContent = `${w.name} (${w.element}/${w.range})`;
-                weaponSelect.appendChild(opt);
-            }
-        });
-
-        // 2. 防具枠の更新
-        armorSelect.innerHTML = '<option value="">(なし)</option>';
-        equipData.armor.forEach(a => {
-            if (a.name !== "盾" && currentClassInfo.armors.includes(a.name)) {
-                const opt = document.createElement('option');
-                opt.value = a.name;
-                opt.textContent = a.name;
-                armorSelect.appendChild(opt);
-            }
-        });
-
-        // 3. その他枠の更新（盾＋装飾品）
-        otherSelect.innerHTML = '<option value="">(なし)</option>';
-        if (currentClassInfo.armors.includes("盾")) {
-            const shieldOpt = document.createElement('option');
-            shieldOpt.value = "盾";
-            shieldOpt.textContent = "[防具] 盾";
-            otherSelect.appendChild(shieldOpt);
-        }
-
-        equipData.accessories.forEach(acc => {
-            const opt = document.createElement('option');
-            opt.value = acc.name;
-            opt.textContent = `[装飾] ${acc.name} (${acc.effect})`;
-            otherSelect.appendChild(opt);
-        });
+// レアリティのドロップダウン（1〜15）を生成する共通関数
+function initRaritySelect(selectId) {
+    const select = document.getElementById(selectId);
+    if (!select) return;
+    const currentValue = select.value;
+    select.innerHTML = '<option value="">-</option>';
+    for (let i = 1; i <= 15; i++) {
+        const opt = document.createElement('option');
+        opt.value = i;
+        opt.textContent = i;
+        select.appendChild(opt);
     }
+    if (currentValue) select.value = currentValue;
+}
+
+// メイン職業に合わせて装備の選択肢を動的に更新する関数
+function updateEquipmentOptions() {
+    const mainSelect = document.getElementById('mainClass');
+    const subSelect = document.getElementById('subClass');
+    const weaponSelect = document.getElementById('equipWeapon');
+    const armorSelect = document.getElementById('equipArmor');
+    const otherSelect = document.getElementById('equipOther');
+
+    if (!mainSelect || !subSelect || !weaponSelect || !armorSelect || !otherSelect) return;
+
+    // レアリティ選択肢（1〜15）
+    initRaritySelect('equipWeaponRarity');
+    initRaritySelect('equipArmorRarity');
+    initRaritySelect('equipOtherRarity');
+
+    const currentMain = mainSelect.value;
+    const currentSub = subSelect.value;
+
+    const mainClassInfo = classData[currentMain] || { weapons: [], armors: [] };
+    const subClassInfo = classData[currentSub] || { weapons: [], armors: [] };
+
+    // ========================================
+    // 1. 武器：メイン＋サブの和集合
+    // ========================================
+    const availableWeapons = [
+        ...new Set([
+            ...(mainClassInfo.weapons || []),
+            ...(subClassInfo.weapons || [])
+        ])
+    ];
+
+    weaponSelect.innerHTML = '<option value="">(なし)</option>';
+
+    equipData.weapons.forEach(w => {
+        if (availableWeapons.includes(w.name)) {
+            const opt = document.createElement('option');
+            opt.value = w.name;
+            opt.textContent = `${w.name} (${w.element}/${w.range})`;
+            weaponSelect.appendChild(opt);
+        }
+    });
+
+    // ========================================
+    // 2. 防具：メインクラスのみ
+    // ========================================
+    const availableArmors = mainClassInfo.armors || [];
+
+    armorSelect.innerHTML = '<option value="">(なし)</option>';
+
+    equipData.armor.forEach(a => {
+        if (a.name !== '盾' && availableArmors.includes(a.name)) {
+            const opt = document.createElement('option');
+            opt.value = a.name;
+            opt.textContent = a.name;
+            armorSelect.appendChild(opt);
+        }
+    });
+
+    // ========================================
+    // 3. その他：メイン or サブで盾が装備可能なら盾を追加
+    // ========================================
+    otherSelect.innerHTML = '<option value="">(なし)</option>';
+
+    const canUseShield =
+        (mainClassInfo.armors || []).includes('盾') ||
+        (subClassInfo.armors || []).includes('盾');
+
+    if (canUseShield) {
+        const shieldOpt = document.createElement('option');
+        shieldOpt.value = '盾';
+        shieldOpt.textContent = '[防具] 盾';
+        otherSelect.appendChild(shieldOpt);
+    }
+
+    // 装飾品
+    equipData.accessories.forEach(acc => {
+        const opt = document.createElement('option');
+        opt.value = acc.name;
+        opt.textContent = `[装飾] ${acc.name} (${acc.effect})`;
+        otherSelect.appendChild(opt);
+    });
+
+    // 装備表示を更新
+    updateWeaponEffectDisplay();
+}
 
 
     // 経験点とレベルの閾値データ (Lv1〜15)
     const expTable = [
-    { level: 1, cumulative: 0 }, { level: 2, cumulative: 15 }, { level: 3, cumulative: 35 },
-    { level: 4, cumulative: 60 }, { level: 5, cumulative: 90 }, { level: 6, cumulative: 125 },
-    { level: 7, cumulative: 165 }, { level: 8, cumulative: 210 }, { level: 9, cumulative: 260 },
-    { level: 10, cumulative: 315 }, { level: 11, cumulative: 375 }, { level: 12, cumulative: 440 },
-    { level: 13, cumulative: 510 }, { level: 14, cumulative: 585 }, { level: 15, cumulative: 665 }
-];
+        { level: 1, cumulative: 0 }, { level: 2, cumulative: 15 }, { level: 3, cumulative: 35 },
+        { level: 4, cumulative: 60 }, { level: 5, cumulative: 90 }, { level: 6, cumulative: 125 },
+        { level: 7, cumulative: 165 }, { level: 8, cumulative: 210 }, { level: 9, cumulative: 260 },
+        { level: 10, cumulative: 315 }, { level: 11, cumulative: 375 }, { level: 12, cumulative: 440 },
+        { level: 13, cumulative: 510 }, { level: 14, cumulative: 585 }, { level: 15, cumulative: 665 }
+    ];
 
 function encryptData(str) { return btoa(unescape(encodeURIComponent(str))); }
 function decryptData(base64Str) { return decodeURIComponent(escape(atob(base64Str))); }
@@ -474,10 +503,12 @@ function updateSubClassOptions(preferredSub = null) {
 function onMainClassChange() {
     updateSubClassOptions();
     updateEquipmentOptions();
+    updateWeaponEffectDisplay();
 }
 
 function onSubClassChange() {
     updateClassInfo();
+    updateEquipmentOptions();
     updatePreview();
 }
 
@@ -509,6 +540,7 @@ function recalculateLevelAndExp() {
     if (lvlEl) lvlEl.value = currentLevel;
     recalculateBonuses();
     updatePreview();
+    updateWeaponEffectDisplay();
 }
 
 // 能力値ボーナスおよびHP・TPの自動計算関数
