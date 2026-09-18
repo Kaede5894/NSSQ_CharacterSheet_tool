@@ -13,58 +13,56 @@
 
             /* 折りたたみ（details / summary）のスタイル */
             details summary.section-summary {
-            font-size: 1.1rem;
-            background: #e2ecf8;
-            padding: 6px 10px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: bold;
-            color: #333;
-            outline: none;
-            user-select: none;
-            transition: background 0.2s;
-        }
+                font-size: 1.1rem;
+                background: #e2ecf8;
+                padding: 6px 10px;
+                border-radius: 4px;
+                cursor: pointer;
+                font-weight: bold;
+                color: #333;
+                outline: none;
+                user-select: none;
+                transition: background 0.2s;
+            }
         details summary.section-summary:hover {
         background: #d0e1f5;
-    }
-    details[open] summary.section-summary {
-    margin-bottom: 15px;
-}
-
-.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
-label { display: block; margin-top: 8px; font-weight: bold; font-size: 0.9rem; }
-input, select, textarea { width: 100%; padding: 7px; margin-top: 3px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; font-size: 0.95rem; }
-
-/* 自動計算項目のスタイル（グレー背景） */
-input.auto-calc { background: #e9ecef; font-weight: bold; color: #495057; }
-
-/* クラス特性インフォメーション */
-.class-info-box { background: #f8f9fa; border-left: 4px solid #0066cc; padding: 8px 12px; margin-top: 8px; border-radius: 0 4px 4px 0; font-size: 0.9rem; display: flex; gap: 20px; }
-.class-info-item span { font-weight: normal; color: #495057; }
-
-/* テキストエリアの調整 */
-textarea.bg-area { height: 100px; resize: vertical; }
-
-/* シナリオメモ管理用スタイル */
-.scenario-box { background: #fcfcfc; border: 1px solid #ddd; padding: 10px; margin-bottom: 10px; border-radius: 6px; }
-.scenario-grid { display: grid; grid-template-columns: 2fr 1fr 100px; gap: 8px; margin-bottom: 5px; }
-.scenario-memo-area { height: 200px; resize: vertical; }
-
-.btn-group { margin-top: 15px; display: flex; gap: 10px; flex-wrap: wrap; }
-button { background: #0066cc; color: white; border: none; padding: 10px 18px; font-size: 0.95rem; border-radius: 4px; cursor: pointer; font-weight: bold; }
-button:hover { background: #004999; }
-button.sub-btn { background: #28a745; }
-button.sub-btn:hover { background: #1e7e34; }
-button.del-btn { background: #dc3545; padding: 5px 10px; font-size: 0.8rem; margin-top: 3px; }
-button.del-btn:hover { background: #a71d2a; }
-
-pre { background: #222; color: #0f0; padding: 12px; border-radius: 4px; overflow-x: auto; font-size: 0.85rem; max-height: 200px; }
-.note { font-size: 0.8rem; color: #666; margin-top: 5px; }
-</style>
-
-
-</head>
+        }
+        details[open] summary.section-summary {
+        margin-bottom: 15px;
+        }
+        
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+        label { display: block; margin-top: 8px; font-weight: bold; font-size: 0.9rem; }
+        input, select, textarea { width: 100%; padding: 7px; margin-top: 3px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; font-size: 0.95rem; }
+        
+        /* 自動計算項目のスタイル（グレー背景） */
+        input.auto-calc { background: #e9ecef; font-weight: bold; color: #495057; }
+        
+        /* クラス特性インフォメーション */
+        .class-info-box { background: #f8f9fa; border-left: 4px solid #0066cc; padding: 8px 12px; margin-top: 8px; border-radius: 0 4px 4px 0; font-size: 0.9rem; display: flex; gap: 20px; }
+        .class-info-item span { font-weight: normal; color: #495057; }
+        
+        /* テキストエリアの調整 */
+        textarea.bg-area { height: 100px; resize: vertical; }
+        
+        /* シナリオメモ管理用スタイル */
+        .scenario-box { background: #fcfcfc; border: 1px solid #ddd; padding: 10px; margin-bottom: 10px; border-radius: 6px; }
+        .scenario-grid { display: grid; grid-template-columns: 2fr 1fr 100px; gap: 8px; margin-bottom: 5px; }
+        .scenario-memo-area { height: 200px; resize: vertical; }
+        
+        .btn-group { margin-top: 15px; display: flex; gap: 10px; flex-wrap: wrap; }
+        button { background: #0066cc; color: white; border: none; padding: 10px 18px; font-size: 0.95rem; border-radius: 4px; cursor: pointer; font-weight: bold; }
+        button:hover { background: #004999; }
+        button.sub-btn { background: #28a745; }
+        button.sub-btn:hover { background: #1e7e34; }
+        button.del-btn { background: #dc3545; padding: 5px 10px; font-size: 0.8rem; margin-top: 3px; }
+        button.del-btn:hover { background: #a71d2a; }
+        
+        pre { background: #222; color: #0f0; padding: 12px; border-radius: 4px; overflow-x: auto; font-size: 0.85rem; max-height: 200px; }
+        .note { font-size: 0.8rem; color: #666; margin-top: 5px; }
+        </style>
+    </head>
 <body>
 
     <h1>世界樹の迷宮TRPG キャラクター管理ツール</h1>
