@@ -184,31 +184,31 @@ pre { background: #222; color: #0f0; padding: 12px; border-radius: 4px; overflow
             <summary class="section-summary">4. 装備</summary>
             <div style="margin-top: 10px; display: flex; flex-direction: column; gap: 12px;">
 
-    <!-- 武器枠 -->
-    <div>
-        <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 8px; align-items: end;">
-            <div>
-                <label style="margin-top:0;">武器</label>
-                <select id="equipWeapon" onchange="onWeaponChange()"></select>
-            </div>
-            <div>
-                <label style="margin-top:0;">レアリティ</label>
-                <select id="equipWeaponRarity" onchange="onWeaponChange()"></select>
-            </div>
-            <div>
-                <label style="margin-top:0;">鍛冶1</label>
-                <input type="text" id="equipWeaponForge1" placeholder="例: STR" oninput="updatePreview()">
-            </div>
-            <div>
-                <label style="margin-top:0;">鍛冶2</label>
-                <input type="text" id="equipWeaponForge2" placeholder="例: 斬" oninput="updatePreview()">
-            </div>
-        </div>
-        <!-- 武器の効果表示エリア -->
-        <div id="equipWeaponEffect" class="note" style="margin-top: 4px; padding: 6px; background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 4px; font-size: 0.85rem; color: #333;">
-        効果: なし
-        </div>
-    </div>
+                <!-- 武器枠 -->
+                <div>
+                    <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 8px; align-items: end;">
+                        <div>
+                            <label style="margin-top:0;">武器</label>
+                            <select id="equipWeapon" onchange="onWeaponChange()"></select>
+                        </div>
+                        <div>
+                            <label style="margin-top:0;">レアリティ</label>
+                            <select id="equipWeaponRarity" onchange="onWeaponChange()"></select>
+                        </div>
+                        <div>
+                            <label style="margin-top:0;">鍛冶1</label>
+                            <input type="text" id="equipWeaponForge1" placeholder="例: STR" oninput="updatePreview()">
+                        </div>
+                        <div>
+                            <label style="margin-top:0;">鍛冶2</label>
+                            <input type="text" id="equipWeaponForge2" placeholder="例: 斬" oninput="updatePreview()">
+                        </div>
+                    </div>
+                    <!-- 武器の効果表示エリア -->
+                    <div id="equipWeaponEffect" class="note" style="margin-top: 4px; padding: 6px; background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 4px; font-size: 0.85rem; color: #333;">
+                    効果: なし
+                    </div>
+                </div>
 
                 <!-- 防具枠 -->
                 <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 8px; align-items: end;">
