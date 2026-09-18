@@ -351,9 +351,7 @@ pre { background: #222; color: #0f0; padding: 12px; border-radius: 4px; overflow
         // 1. 武器枠の更新
         weaponSelect.innerHTML = '<option value="">(なし)</option>';
         equipData.weapons.forEach(w => {
-            const isEquippable = currentClassInfo.weapons.some(allowed =>
-                w.name.includes(allowed) || allowed.includes(w.name)
-            );
+            const isEquippable = currentClassInfo.weapons.includes(w.name);
             if (isEquippable) {
                 const opt = document.createElement('option');
                 opt.value = w.name;
