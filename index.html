@@ -254,25 +254,52 @@ pre { background: #222; color: #0f0; padding: 12px; border-radius: 4px; overflow
 
     <div class="section">
         <details open>
-            <summary class="section-summary">5. シナリオメモ（通過履歴）</summary>
+            <summary class="section-summary">5. スキル</summary>
+
+            <div id="skillMainSection" style="margin-top: 10px;">
+                <details open>
+                    <summary class="section-summary">クラススキル（メイン）</summary>
+                    <div id="mainClassSkills" style="margin-top: 10px;"></div>
+                </details>
+            </div>
+
+            <div id="skillSubSection" style="margin-top: 10px;">
+                <details open>
+                    <summary class="section-summary">クラススキル（サブ）</summary>
+                    <div id="subClassSkills" style="margin-top: 10px;"></div>
+                </details>
+            </div>
+
+            <div style="margin-top: 10px;">
+                <details open>
+                    <summary class="section-summary">コモンスキル</summary>
+                    <div id="commonSkills" style="margin-top: 10px;"></div>
+                </details>
+            </div>
+        </details>
+    </div>
+
+    <div class="section">
+        <details open>
+            <summary class="section-summary">6. シナリオメモ（通過履歴）</summary>
             <div id="scenarioList" style="margin-top: 10px;"><!-- JavaScriptでここにシナリオ入力欄が動的に追加されます --></div>
             <button type="button" onclick="addScenarioField()">＋ シナリオを追加</button>
         </details>
     </div>
 
     <div class="section">
-        <h2>6. セーブ・ココフォリア出力</h2>
+        <h2>7. セーブ・ココフォリア出力</h2>
         <div class="btn-group" style="margin-top: 10px;">
             <button onclick="copyForCcfolia()">ココフォリア用データをコピー (Ctrl+V)</button>
-            <button class="sub-btn" onclick="saveEncryptedFile()">ファイルに保存 (.dat)</button>
+            <button class="sub-btn" onclick="saveEncryptedFile()">暗号化ファイルに保存 (.dat)</button>
             <input type="file" id="loadFileInput" style="display:none" accept=".dat" onchange="loadEncryptedFile(event)">
             <button class="sub-btn" onclick="document.getElementById('loadFileInput').click()">ファイルを読み込む</button>
         </div>
-        <div class="note">※保存されるファイルはテキスト形式（JSON）です。</div>
+        <div class="note">※保存される `.dat` ファイルは暗号化されているため、このツール以外では中身を直接編集できません。</div>
     </div>
 
     <div class="section">
-        <h2>ココフォリア出力プレビュー</h2>
+        <h2>8. ココフォリア出力プレビュー</h2>
         <pre id="previewArea" style="margin-top: 10px;">ここにプレビューが表示されます</pre>
     </div>
 
@@ -309,6 +336,7 @@ async function loadClassData() {
         });
         initClassSelectors();
         updateEquipmentOptions(); // 装備選択肢の初期化
+        updateSkillSections();
     } catch (error) {
         console.error('データの読み込みエラー:', error);
     }
@@ -425,6 +453,9 @@ const expTable = [
 { level: 13, cumulative: 510 }, { level: 14, cumulative: 585 }, { level: 15, cumulative: 665 }
 ];
 
+function encryptData(str) { return btoa(unescape(encodeURIComponent(str))); }
+function decryptData(base64Str) { return decodeURIComponent(escape(atob(base64Str))); }
+
 // クラスのセレクトボックスを初期化・更新する
 function initClassSelectors(selectedMain = null, selectedSub = "－") {
     const mainSelect = document.getElementById('mainClass');
@@ -504,6 +535,7 @@ function onMainClassChange() {
 function onSubClassChange() {
     updateClassInfo();
     updateEquipmentOptions();
+    updateSkillSections();
     updatePreview();
 }
 
@@ -726,6 +758,15 @@ function generateCcfoliaData() {
     return JSON.stringify(ccfoliaObj, null, 2);
 }
 
+function updateSkillSections() {
+    const subSelect = document.getElementById('subClass');
+    const subSection = document.getElementById('skillSubSection');
+    if (!subSelect || !subSection) return;
+
+    // サブクラス未選択時は「クラススキル（サブ）」を非表示
+    subSection.style.display = subSelect.value === '－' ? 'none' : '';
+}
+
 function updatePreview() {
     const preview = document.getElementById('previewArea');
     if (preview) preview.textContent = generateCcfoliaData();
@@ -760,8 +801,8 @@ function saveEncryptedFile() {
         scenarios: scenarios
     };
 
-    const jsonStr = JSON.stringify(formData, null, 2);
-    const blob = new Blob([jsonStr], { type: 'application/json' });
+    const encryptedStr = encryptData(JSON.stringify(formData));
+    const blob = new Blob([encryptedStr], { type: 'text/plain' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
@@ -777,7 +818,7 @@ function loadEncryptedFile(event) {
     const reader = new FileReader();
     reader.onload = function(e) {
         try {
-            const data = JSON.parse(e.target.result);
+            const data = JSON.parse(decryptData(e.target.result));
             document.getElementById('charName').value = data.charName || '';
             const loadedMain = data.mainClass || null;
             const loadedSub = data.subClass || '－';
