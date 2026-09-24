@@ -3,66 +3,66 @@
     <head>
         <meta charset="UTF-8">
         <title>世界樹の迷宮TRPG キャラクター管理ツール</title>
-        <style>
-            body { font-family: sans-serif; max-width: 900px; margin: 20px auto; padding: 20px; background: #f4f6f9; color: #333; }
-            h1 { font-size: 1.4rem; border-bottom: 2px solid #0066cc; padding-bottom: 5px; color: #0066cc; }
-            h2 { font-size: 1.1rem; background: #e2ecf8; padding: 6px 10px; border-radius: 4px; margin-top: 0; display: inline-block; width: 100%; box-sizing: border-box; }
+    <style>
+body { font-family: sans-serif; max-width: 900px; margin: 20px auto; padding: 20px; background: #f4f6f9; color: #333; }
+h1 { font-size: 1.4rem; border-bottom: 2px solid #0066cc; padding-bottom: 5px; color: #0066cc; }
+h2 { font-size: 1.1rem; background: #e2ecf8; padding: 6px 10px; border-radius: 4px; margin-top: 0; display: inline-block; width: 100%; box-sizing: border-box; }
 
-            /* セクション共通スタイル */
-            .section { background: #fff; padding: 15px; margin-bottom: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+/* セクション共通スタイル */
+.section { background: #fff; padding: 15px; margin-bottom: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
 
-            /* 折りたたみ（details / summary）のスタイル */
-            details summary.section-summary {
-                font-size: 1.1rem;
-                background: #e2ecf8;
-                padding: 6px 10px;
-                border-radius: 4px;
-                cursor: pointer;
-                font-weight: bold;
-                color: #333;
-                outline: none;
-                user-select: none;
-                transition: background 0.2s;
-            }
-        details summary.section-summary:hover {
-        background: #d0e1f5;
-        }
-        details[open] summary.section-summary {
-        margin-bottom: 15px;
-        }
-        
-        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-        .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
-        label { display: block; margin-top: 8px; font-weight: bold; font-size: 0.9rem; }
-        input, select, textarea { width: 100%; padding: 7px; margin-top: 3px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; font-size: 0.95rem; }
-        
-        /* 自動計算項目のスタイル（グレー背景） */
-        input.auto-calc { background: #e9ecef; font-weight: bold; color: #495057; }
-        
-        /* クラス特性インフォメーション */
-        .class-info-box { background: #f8f9fa; border-left: 4px solid #0066cc; padding: 8px 12px; margin-top: 8px; border-radius: 0 4px 4px 0; font-size: 0.9rem; display: flex; gap: 20px; }
-        .class-info-item span { font-weight: normal; color: #495057; }
-        
-        /* テキストエリアの調整 */
-        textarea.bg-area { height: 100px; resize: vertical; }
-        
-        /* シナリオメモ管理用スタイル */
-        .scenario-box { background: #fcfcfc; border: 1px solid #ddd; padding: 10px; margin-bottom: 10px; border-radius: 6px; }
-        .scenario-grid { display: grid; grid-template-columns: 2fr 1fr 100px; gap: 8px; margin-bottom: 5px; }
-        .scenario-memo-area { height: 200px; resize: vertical; }
-        
-        .btn-group { margin-top: 15px; display: flex; gap: 10px; flex-wrap: wrap; }
-        button { background: #0066cc; color: white; border: none; padding: 10px 18px; font-size: 0.95rem; border-radius: 4px; cursor: pointer; font-weight: bold; }
-        button:hover { background: #004999; }
-        button.sub-btn { background: #28a745; }
-        button.sub-btn:hover { background: #1e7e34; }
-        button.del-btn { background: #dc3545; padding: 5px 10px; font-size: 0.8rem; margin-top: 3px; }
-        button.del-btn:hover { background: #a71d2a; }
-        
-        pre { background: #222; color: #0f0; padding: 12px; border-radius: 4px; overflow-x: auto; font-size: 0.85rem; max-height: 200px; }
-        .note { font-size: 0.8rem; color: #666; margin-top: 5px; }
-        </style>
-    </head>
+/* 折りたたみ（details / summary）のスタイル */
+details summary.section-summary {
+    font-size: 1.1rem;
+    background: #e2ecf8;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #333;
+    outline: none;
+    user-select: none;
+    transition: background 0.2s;
+}
+details summary.section-summary:hover {
+    background: #d0e1f5;
+}
+details[open] summary.section-summary {
+    margin-bottom: 15px;
+}
+
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+label { display: block; margin-top: 8px; font-weight: bold; font-size: 0.9rem; }
+input, select, textarea { width: 100%; padding: 7px; margin-top: 3px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; font-size: 0.95rem; }
+
+/* 自動計算項目のスタイル（グレー背景） */
+input.auto-calc { background: #e9ecef; font-weight: bold; color: #495057; }
+
+/* クラス特性インフォメーション */
+.class-info-box { background: #f8f9fa; border-left: 4px solid #0066cc; padding: 8px 12px; margin-top: 8px; border-radius: 0 4px 4px 0; font-size: 0.9rem; display: flex; gap: 20px; }
+.class-info-item span { font-weight: normal; color: #495057; }
+
+/* テキストエリアの調整 */
+textarea.bg-area { height: 100px; resize: vertical; }
+
+/* シナリオメモ管理用スタイル */
+.scenario-box { background: #fcfcfc; border: 1px solid #ddd; padding: 10px; margin-bottom: 10px; border-radius: 6px; }
+.scenario-grid { display: grid; grid-template-columns: 2fr 1fr 100px; gap: 8px; margin-bottom: 5px; }
+.scenario-memo-area { height: 200px; resize: vertical; }
+
+.btn-group { margin-top: 15px; display: flex; gap: 10px; flex-wrap: wrap; }
+button { background: #0066cc; color: white; border: none; padding: 10px 18px; font-size: 0.95rem; border-radius: 4px; cursor: pointer; font-weight: bold; }
+button:hover { background: #004999; }
+button.sub-btn { background: #28a745; }
+button.sub-btn:hover { background: #1e7e34; }
+button.del-btn { background: #dc3545; padding: 5px 10px; font-size: 0.8rem; margin-top: 3px; }
+button.del-btn:hover { background: #a71d2a; }
+
+pre { background: #222; color: #0f0; padding: 12px; border-radius: 4px; overflow-x: auto; font-size: 0.85rem; max-height: 200px; }
+.note { font-size: 0.8rem; color: #666; margin-top: 5px; }
+    </style>
+</head>
 <body>
 
     <h1>世界樹の迷宮TRPG キャラクター管理ツール</h1>
@@ -114,8 +114,8 @@
                     <input type="text" id="cumulativeExp" class="auto-calc" value="0" readonly>
                 </div>
             </div>
-            
-<!-- HP / TP（自動計算） -->
+
+            <!-- HP / TP（自動計算） -->
             <div class="grid-2" style="margin-top: 10px;">
                 <div>
                     <label>HP</label>
@@ -127,7 +127,7 @@
                 </div>
             </div>
 
-    <!-- 能力値（STR, TEC, VIT, AGI, LUC） -->
+            <!-- 能力値（STR, TEC, VIT, AGI, LUC） -->
             <div style="margin-top: 15px;">
                 <label style="margin-bottom: 5px;">能力値/ボーナスダイス</label>
                 <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px;">
@@ -152,7 +152,7 @@
                         <input type="number" id="luc" value="10" style="text-align: center;" oninput="recalculateBonuses()">
                     </div>
                 </div>
-    
+
                 <!-- ボーナスダイス欄（自動計算） -->
                 <div style="margin-top: 10px;">
                     <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px;">
@@ -204,7 +204,7 @@
                     </div>
                     <!-- 武器の効果表示エリア -->
                     <div id="equipWeaponEffect" class="note" style="margin-top: 4px; padding: 6px; background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 4px; font-size: 0.85rem; color: #333;">
-                    効果: なし
+                        効果: なし
                     </div>
                 </div>
 
@@ -276,7 +276,7 @@
         <pre id="previewArea" style="margin-top: 10px;">ここにプレビューが表示されます</pre>
     </div>
 
-<script>
+    <script>
 // グローバル変数にクラスデータと装備データを保持
 let classData = {};
 let equipData = { weapons: [], armor: [], accessories: [] };
@@ -354,10 +354,10 @@ function updateEquipmentOptions() {
     // 1. 武器：メイン＋サブの和集合
     // ========================================
     const availableWeapons = [
-        ...new Set([
-            ...(mainClassInfo.weapons || []),
-            ...(subClassInfo.weapons || [])
-        ])
+    ...new Set([
+    ...(mainClassInfo.weapons || []),
+    ...(subClassInfo.weapons || [])
+    ])
     ];
 
     weaponSelect.innerHTML = '<option value="">(なし)</option>';
@@ -393,8 +393,8 @@ function updateEquipmentOptions() {
     otherSelect.innerHTML = '<option value="">(なし)</option>';
 
     const canUseShield =
-        (mainClassInfo.armors || []).includes('盾') ||
-        (subClassInfo.armors || []).includes('盾');
+    (mainClassInfo.armors || []).includes('盾') ||
+    (subClassInfo.armors || []).includes('盾');
 
     if (canUseShield) {
         const shieldOpt = document.createElement('option');
@@ -418,11 +418,11 @@ function updateEquipmentOptions() {
 
 // 経験点とレベルの閾値データ (Lv1〜15)
 const expTable = [
-    { level: 1, cumulative: 0 }, { level: 2, cumulative: 15 }, { level: 3, cumulative: 35 },
-    { level: 4, cumulative: 60 }, { level: 5, cumulative: 90 }, { level: 6, cumulative: 125 },
-    { level: 7, cumulative: 165 }, { level: 8, cumulative: 210 }, { level: 9, cumulative: 260 },
-    { level: 10, cumulative: 315 }, { level: 11, cumulative: 375 }, { level: 12, cumulative: 440 },
-    { level: 13, cumulative: 510 }, { level: 14, cumulative: 585 }, { level: 15, cumulative: 665 }
+{ level: 1, cumulative: 0 }, { level: 2, cumulative: 15 }, { level: 3, cumulative: 35 },
+{ level: 4, cumulative: 60 }, { level: 5, cumulative: 90 }, { level: 6, cumulative: 125 },
+{ level: 7, cumulative: 165 }, { level: 8, cumulative: 210 }, { level: 9, cumulative: 260 },
+{ level: 10, cumulative: 315 }, { level: 11, cumulative: 375 }, { level: 12, cumulative: 440 },
+{ level: 13, cumulative: 510 }, { level: 14, cumulative: 585 }, { level: 15, cumulative: 665 }
 ];
 
 function encryptData(str) { return btoa(unescape(encodeURIComponent(str))); }
@@ -544,7 +544,7 @@ function recalculateLevelAndExp() {
 // 能力値ボーナスおよびHP・TPの自動計算関数
 function recalculateBonuses() {
     const stats = ['str', 'tec', 'vit', 'agi', 'luc'];
-    
+
     // 1. 各能力値のボーナスダイス（0.2倍 / 5で割った切り捨て）を計算
     stats.forEach(stat => {
         const valInput = document.getElementById(stat);
@@ -578,78 +578,78 @@ function recalculateBonuses() {
 
 // 物理・属性攻撃力の計算（BaseStat × Multiplier + Offset）
 function calcAtkValue(atkObj, level, rarity) {
-  if (!atkObj) return 0;
-  
-  let baseVal = 0;
-  if (atkObj.base_stat === 'Lv') {
-    baseVal = level;
-  } else if (atkObj.base_stat === 'R') {
-    baseVal = rarity;
-  }
-  return (baseVal * atkObj.multiplier) + atkObj.offset;
+    if (!atkObj) return 0;
+
+    let baseVal = 0;
+    if (atkObj.base_stat === 'Lv') {
+        baseVal = level;
+    } else if (atkObj.base_stat === 'R') {
+        baseVal = rarity;
+    }
+    return (baseVal * atkObj.multiplier) + atkObj.offset;
 }
 
 // 武器変更・レアリティ変更・レベル変更時に呼ばれる関数
 function onWeaponChange() {
-  updateWeaponEffectDisplay();
-  if (typeof updatePreview === 'function') {
-    updatePreview();
-  }
+    updateWeaponEffectDisplay();
+    if (typeof updatePreview === 'function') {
+        updatePreview();
+    }
 }
 
 // 武器の効果・ステータステキストを表示する処理
 function updateWeaponEffectDisplay() {
-  const selectedName = document.getElementById('equipWeapon').value;
-  const rarity = parseInt(document.getElementById('equipWeaponRarity').value) || 1;
-  const level = parseInt(document.getElementById('charLevel').value) || 1;
-  const effectEl = document.getElementById('equipWeaponEffect');
+    const selectedName = document.getElementById('equipWeapon').value;
+    const rarity = parseInt(document.getElementById('equipWeaponRarity').value) || 1;
+    const level = parseInt(document.getElementById('charLevel').value) || 1;
+    const effectEl = document.getElementById('equipWeaponEffect');
 
-  if (!selectedName || !equipData || !equipData.weapons) {
-    effectEl.textContent = '効果: なし';
-    return;
-  }
+    if (!selectedName || !equipData || !equipData.weapons) {
+        effectEl.textContent = '効果: なし';
+        return;
+    }
 
-  const weapon = equipData.weapons.find(w => w.name === selectedName);
-  if (!weapon) {
-    effectEl.textContent = '効果: なし';
-    return;
-  }
+    const weapon = equipData.weapons.find(w => w.name === selectedName);
+    if (!weapon) {
+        effectEl.textContent = '効果: なし';
+        return;
+    }
 
-  // 1. 物理攻撃力の計算
-  const physAtkVal = calcAtkValue(weapon.phys_atk, level, rarity);
-  const physAtkStr = weapon.phys_atk 
-    ? `${physAtkVal} (${weapon.phys_atk.base_stat}×${weapon.phys_atk.multiplier}+${weapon.phys_atk.offset})` 
+    // 1. 物理攻撃力の計算
+    const physAtkVal = calcAtkValue(weapon.phys_atk, level, rarity);
+    const physAtkStr = weapon.phys_atk
+    ? `${physAtkVal} (${weapon.phys_atk.base_stat}×${weapon.phys_atk.multiplier}+${weapon.phys_atk.offset})`
     : '-';
 
-  // 2. 属性攻撃力の計算
-  const elemAtkVal = calcAtkValue(weapon.elem_atk, level, rarity);
-  const elemAtkStr = weapon.elem_atk 
-    ? `${elemAtkVal} (${weapon.elem_atk.base_stat}×${weapon.elem_atk.multiplier}+${weapon.elem_atk.offset})` 
+    // 2. 属性攻撃力の計算
+    const elemAtkVal = calcAtkValue(weapon.elem_atk, level, rarity);
+    const elemAtkStr = weapon.elem_atk
+    ? `${elemAtkVal} (${weapon.elem_atk.base_stat}×${weapon.elem_atk.multiplier}+${weapon.elem_atk.offset})`
     : '-';
 
-  // 3. 価格の計算 (レアリティの2乗 × price_multiplier)
-  const priceVal = (rarity * rarity) * (weapon.price_multiplier || 0);
+    // 3. 価格の計算 (レアリティの2乗 × price_multiplier)
+    const priceVal = (rarity * rarity) * (weapon.price_multiplier || 0);
 
-  // 4. 対応素材の整形
-  const materialsStr = weapon.materials && weapon.materials.length > 0 
-    ? weapon.materials.join('/') 
+    // 4. 対応素材の整形
+    const materialsStr = weapon.materials && weapon.materials.length > 0
+    ? weapon.materials.join('/')
     : '-';
 
-  // HTMLに反映
-  effectEl.innerHTML = `
-    <strong>[分類]</strong> ${weapon.type || '-'} | 
-    <strong>[射程]</strong> ${weapon.range || '-'} | 
-    <strong>[属性]</strong> ${weapon.element || '-'} | 
-    <strong>[物命]</strong> ${weapon.phys_acc >= 0 ? '+' + weapon.phys_acc : weapon.phys_acc} | 
-    <strong>[属命]</strong> ${weapon.elem_acc >= 0 ? '+' + weapon.elem_acc : weapon.elem_acc} | 
+    // HTMLに反映
+    effectEl.innerHTML = `
+    <strong>[分類]</strong> ${weapon.type || '-'} |
+    <strong>[射程]</strong> ${weapon.range || '-'} |
+    <strong>[属性]</strong> ${weapon.element || '-'} |
+    <strong>[物命]</strong> ${weapon.phys_acc >= 0 ? '+' + weapon.phys_acc : weapon.phys_acc} |
+    <strong>[属命]</strong> ${weapon.elem_acc >= 0 ? '+' + weapon.elem_acc : weapon.elem_acc} |
     <strong>[速度]</strong> ${weapon.speed >= 0 ? '+' + weapon.speed : weapon.speed}<br>
-    <strong>[物攻]</strong> ${physAtkStr} | 
-    <strong>[属攻]</strong> ${elemAtkStr} | 
-    <strong>[価格]</strong> ${priceVal} en | 
+    <strong>[物攻]</strong> ${physAtkStr} |
+    <strong>[属攻]</strong> ${elemAtkStr} |
+    <strong>[価格]</strong> ${priceVal} en |
     <strong>[素材]</strong> ${materialsStr}
   `;
 }
-        
+
 // シナリオ入力欄を追加する
 function addScenarioField(data = {}) {
     const list = document.getElementById('scenarioList');
@@ -717,16 +717,16 @@ function generateCcfoliaData() {
             "status": [
             { "label": "HP", "value": Number(hp), "max": Number(hp) },
             { "label": "TP", "value": Number(tp), "max": Number(tp) }
-        ],
-        "params": [
-        { "label": "レベル", "value": Number(level) },
-        { "label": "メイン", "value": mainClass },
-        { "label": "サブ", "value": subClass }
-    ],
-    "commands": "3d6+? >= ? 炎術式\n3d6+? >= ? 雷術式\n3d6+? >= ? 氷術式"
-}
-};
-return JSON.stringify(ccfoliaObj, null, 2);
+            ],
+            "params": [
+            { "label": "レベル", "value": Number(level) },
+            { "label": "メイン", "value": mainClass },
+            { "label": "サブ", "value": subClass }
+            ],
+            "commands": "3d6+? >= ? 炎術式\n3d6+? >= ? 雷術式\n3d6+? >= ? 氷術式"
+        }
+    };
+    return JSON.stringify(ccfoliaObj, null, 2);
 }
 
 function updatePreview() {
@@ -815,6 +815,6 @@ document.addEventListener('DOMContentLoaded', () => {
     addScenarioField();
 });
 
-</script>
+    </script>
 </body>
 </html>
