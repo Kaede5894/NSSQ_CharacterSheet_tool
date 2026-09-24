@@ -291,11 +291,11 @@ pre { background: #222; color: #0f0; padding: 12px; border-radius: 4px; overflow
         <h2>7. セーブ・ココフォリア出力</h2>
         <div class="btn-group" style="margin-top: 10px;">
             <button onclick="copyForCcfolia()">ココフォリア用データをコピー (Ctrl+V)</button>
-            <button class="sub-btn" onclick="saveEncryptedFile()">暗号化ファイルに保存 (.dat)</button>
-            <input type="file" id="loadFileInput" style="display:none" accept=".dat" onchange="loadEncryptedFile(event)">
+            <button class="sub-btn" onclick="saveCharacterFile()">ファイルに保存 (.json)</button>
+            <input type="file" id="loadFileInput" style="display:none" accept=".json" onchange="loadCharacterFile(event)">
             <button class="sub-btn" onclick="document.getElementById('loadFileInput').click()">ファイルを読み込む</button>
         </div>
-        <div class="note">※保存される `.dat` ファイルは暗号化されているため、このツール以外では中身を直接編集できません。</div>
+        <div class="note">※保存される `.json` ファイルにはキャラクターシートのデータが保存されます。</div>
     </div>
 
     <div class="section">
@@ -452,9 +452,6 @@ const expTable = [
 { level: 10, cumulative: 315 }, { level: 11, cumulative: 375 }, { level: 12, cumulative: 440 },
 { level: 13, cumulative: 510 }, { level: 14, cumulative: 585 }, { level: 15, cumulative: 665 }
 ];
-
-function encryptData(str) { return btoa(unescape(encodeURIComponent(str))); }
-function decryptData(base64Str) { return decodeURIComponent(escape(atob(base64Str))); }
 
 // クラスのセレクトボックスを初期化・更新する
 function initClassSelectors(selectedMain = null, selectedSub = "－") {
@@ -873,7 +870,7 @@ function copyForCcfolia() {
     }).catch(err => alert('コピーに失敗しました: ' + err));
 }
 
-function saveEncryptedFile() {
+function saveCharacterFile() {
     const scenarios = [];
     document.querySelectorAll('.scenario-box').forEach(box => {
         scenarios.push({
@@ -895,24 +892,24 @@ function saveEncryptedFile() {
         scenarios: scenarios
     };
 
-    const encryptedStr = encryptData(JSON.stringify(formData));
-    const blob = new Blob([encryptedStr], { type: 'text/plain' });
+    const jsonStr = JSON.stringify(formData, null, 2);
+    const blob = new Blob([jsonStr], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = (formData.charName || 'character') + '.dat';
+    a.download = (formData.charName || 'character') + '.json';
     a.click();
     URL.revokeObjectURL(url);
 }
 
-function loadEncryptedFile(event) {
+function loadCharacterFile(event) {
     const file = event.target.files[0];
     if (!file) return;
 
     const reader = new FileReader();
     reader.onload = function(e) {
         try {
-            const data = JSON.parse(decryptData(e.target.result));
+            const data = JSON.parse(e.target.result);
             document.getElementById('charName').value = data.charName || '';
             const loadedMain = data.mainClass || null;
             const loadedSub = data.subClass || '－';
