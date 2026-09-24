@@ -758,6 +758,100 @@ function generateCcfoliaData() {
     return JSON.stringify(ccfoliaObj, null, 2);
 }
 
+// コモンスキルデータ
+let commonSkillData = [];
+
+// コモンスキルをJSONから読み込む
+async function loadCommonSkills() {
+    try {
+        const response = await fetch('skills/common_skills.json');
+        if (!response.ok) {
+            throw new Error(`HTTP ${response.status}`);
+        }
+
+        const data = await response.json();
+        commonSkillData = data.skills || [];
+
+        renderCommonSkills();
+    } catch (error) {
+        console.error('コモンスキルの読み込みに失敗しました:', error);
+
+        const container = document.getElementById('commonSkills');
+        if (container) {
+            container.textContent = 'コモンスキルの読み込みに失敗しました。';
+        }
+    }
+}
+
+// コモンスキルを画面に表示
+function renderCommonSkills() {
+    const container = document.getElementById('commonSkills');
+    if (!container) return;
+
+    container.innerHTML = '';
+
+    commonSkillData.forEach((skill, index) => {
+        const skillBox = document.createElement('div');
+        skillBox.style.cssText = `
+            background: #fcfcfc;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 8px;
+            border-radius: 6px;
+        `;
+
+        skillBox.innerHTML = `
+            <div style="display: grid; grid-template-columns: 2fr 1fr 100px; gap: 8px; align-items: end;">
+                <div>
+                    <label style="margin-top:0;">スキル名</label>
+                    <input type="text" value="${skill.name || ''}" readonly>
+                </div>
+
+                <div>
+                    <label style="margin-top:0;">対象</label>
+                    <input type="text" value="${skill.target || ''}" readonly>
+                </div>
+
+                <div>
+                    <label style="margin-top:0;">レベル</label>
+                    <input
+                        type="number"
+                        min="0"
+                        max="1"
+                        step="1"
+                        value="0"
+                        class="common-skill-level"
+                        data-skill-index="${index}"
+                        oninput="validateSkillLevel(this); updatePreview()"
+                    >
+                </div>
+            </div>
+
+            <div style="margin-top: 8px;">
+                <label style="margin-top:0;">解説</label>
+                <textarea
+                    readonly
+                    style="height: 70px; resize: vertical;"
+                >${skill.description || ''}</textarea>
+            </div>
+        `;
+
+        container.appendChild(skillBox);
+    });
+}
+
+// スキルレベルを0～1の整数に制限
+function validateSkillLevel(input) {
+    let value = parseInt(input.value, 10);
+
+    if (isNaN(value)) {
+        value = 0;
+    }
+
+    value = Math.max(0, Math.min(1, value));
+    input.value = value;
+}
+        
 function updateSkillSections() {
     const subSelect = document.getElementById('subClass');
     const subSection = document.getElementById('skillSubSection');
@@ -850,6 +944,7 @@ document.addEventListener('DOMContentLoaded', () => {
         el.addEventListener('change', updatePreview);
     });
     loadClassData();
+    loadCommonSkills();
     addScenarioField();
 });
 
