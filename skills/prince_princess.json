@@ -1,5 +1,6 @@
 {
-  "class_name": "",
+  "class_id": 1,
+  "class_name": "プリンス/プリンセス",
   "skills": [
     {
       "name": "《★名君の才》",
@@ -11,9 +12,9 @@
       "target": "自身",
       "cost": "FP：1",
       "max_sl_main": 1,
-      "max_sl_sub": 1,
+      "max_sl_sub": 0,
       "prerequisites": [],
-      "description": ""
+      "description": "分類『号令』のスキルをひとつ、開幕フェイズで使用できる。(使用するスキル分の【TP】は通常通り消費する)"
     },
     {
       "name": "《王家の血統》",
@@ -27,7 +28,7 @@
       "max_sl_main": 3,
       "max_sl_sub": 2,
       "prerequisites": [],
-      "description": ""
+      "description": "何らかの強化効果を得た際に使用を宣言する。【TP】が(SL)に等しいだけ回復する。1回の戦闘につき一度だけ使用可能。"
     },
     {
       "name": "《攻撃の号令》",
@@ -41,7 +42,7 @@
       "max_sl_main": 3,
       "max_sl_sub": 2,
       "prerequisites": [],
-      "description": ""
+      "description": "『物理攻撃上昇：(SL×2)』および『属性攻撃上昇：(SL×2)』の強化効果を付与する。3ターン持続する。"
     },
     {
       "name": "《追撃の号令》",
@@ -55,16 +56,10 @@
       "max_sl_main": 2,
       "max_sl_sub": 0,
       "prerequisites": [
-        {
-          "name": "攻撃の号令",
-          "sl": 3
-        },
-        {
-          "name": "王家の血統",
-          "sl": 2
-        }
+        { "name": "攻撃の号令", "sl": 3},
+        { "name": "王家の血統", "sl": 2}
       ],
-      "description": ""
+      "description": "『追撃：(スキル使用者)』の強化効果を付与する。(SL+1)ターン持続する。"
     },
     {
       "name": "《防御の号令》",
@@ -78,7 +73,7 @@
       "max_sl_main": 3,
       "max_sl_sub": 2,
       "prerequisites": [],
-      "description": ""
+      "description": "『物理防御上昇：(SL×2)』の強化効果を付与する。3ターン持続する。"
     },
     {
       "name": "《予防の号令》",
@@ -101,7 +96,7 @@
           "sl": 1
         }
       ],
-      "description": ""
+      "description": "『抑制防御上昇：(SL)』の強化効果を付与する。3ターン持続する。"
     },
     {
       "name": "《庇護の号令》",
@@ -124,7 +119,7 @@
           "sl": 2
         }
       ],
-      "description": ""
+      "description": "『HPリジェネ：(SL)』の強化効果を付与する。3ターン持続する。"
     },
     {
       "name": "《リインフォース》",
@@ -138,7 +133,7 @@
       "max_sl_main": 3,
       "max_sl_sub": 2,
       "prerequisites": [],
-      "description": ""
+      "description": "分類『号令』のスキルに、対象の【HP】を(SL)だけ回復する効果が付随する。"
     },
     {
       "name": "《勝利への誓い》",
@@ -157,7 +152,7 @@
           "sl": 3
         }
       ],
-      "description": ""
+      "description": "そのターンの間、分類『号令』のスキルの効果範囲を『味方全』に拡大する。"
     },
     {
       "name": "《リンクオーダー》",
@@ -176,7 +171,7 @@
           "sl": 1
         }
       ],
-      "description": ""
+      "description": "対象を宣言して使用し、自身は待機状態となる。待機状態中、対象に〈炎〉〈氷〉〈雷〉いずれかを含む攻撃が行われると自身はそれと同じ属性の属性攻撃で追撃を行う。この際、ダメージダイス+(SL)個を得る。待機状態は1回追撃を行うか、ターン終了で解除される。"
     },
     {
       "name": "《三色アームズ》",
@@ -195,7 +190,7 @@
           "sl": 1
         }
       ],
-      "description": ""
+      "description": "このスキルを使用する際は、下記いずれかの名称で宣言する。《ファイアアームズ》《フリーズアームズ》《ショックアームズ》それぞれ『属性付与：炎』『属性付与：氷』『属性付与：雷』の強化効果を付与する。3ターン持続する。"
     },
     {
       "name": "《三色サークル》",
@@ -214,7 +209,7 @@
           "sl": 2
         }
       ],
-      "description": ""
+      "description": "そのターンの間、〈炎〉〈氷〉〈雷〉耐性+1を得る。"
     },
     {
       "name": "《エミットウェポン》",
@@ -237,7 +232,7 @@
           "sl": 3
         }
       ],
-      "description": ""
+      "description": "味方一人の『属性付与：●』の強化効果を解除し、解除したものに等しい属性で、敵全体を対象に属性攻撃を行う。"
     },
     {
       "name": "《リセットウェポン》",
@@ -256,7 +251,7 @@
           "sl": 2
         }
       ],
-      "description": ""
+      "description": "対象の強化効果を最大で(SL)個まで消滅させる。"
     },
     {
       "name": "《キャスリング》",
@@ -270,7 +265,7 @@
       "max_sl_main": 1,
       "max_sl_sub": 1,
       "prerequisites": [],
-      "description": ""
+      "description": "そのターンの間、自身が攻撃ロールの対象となった際、攻撃ロールの対象をこのスキルの対象者に変更する。"
     },
     {
       "name": "《クイックオーダー》",
@@ -293,7 +288,7 @@
           "sl": 1
         }
       ],
-      "description": ""
+      "description": "対象のメインフェイズの行動を、最速行動で行わせる。"
     },
     {
       "name": "《ロイヤルベール》",
@@ -307,7 +302,7 @@
       "max_sl_main": 3,
       "max_sl_sub": 2,
       "prerequisites": [],
-      "description": ""
+      "description": "戦闘中、自身が【HP】全快で終了フェイズを迎えると味方全員の【HP】が(SL)回復する。"
     },
     {
       "name": "《王者の凱歌》",
@@ -326,7 +321,7 @@
           "sl": 2
         }
       ],
-      "description": ""
+      "description": "自身が戦闘不能でない状態で戦闘に勝利すると、味方全員の【HP】が(SL+1)回復する。"
     },
     {
       "name": "《王者の激励》",
@@ -340,7 +335,7 @@
       "max_sl_main": 1,
       "max_sl_sub": 0,
       "prerequisites": [],
-      "description": ""
+      "description": "自分以外の者が戦闘以外の一般行為判定を行う際に使用する。対象の達成値に+1を上乗せする。"
     },
     {
       "name": "《王たる証》",
@@ -354,7 +349,7 @@
       "max_sl_main": 1,
       "max_sl_sub": 1,
       "prerequisites": [],
-      "description": ""
+      "description": "交渉や第一印象に関係する判定に+2を得る。"
     },
     {
       "name": "《拝受すべき王命》",
@@ -377,7 +372,7 @@
           "sl": 1
         }
       ],
-      "description": ""
+      "description": "言葉の通じるNPCと【TEC】による対抗判定を行い、これに勝利すると、何らかの指示を与えて従わせる事ができる。ただし、永続的な内容や、NPC側に全く利益のない内容は不可。"
     },
     {
       "name": "《HPブースト》",
@@ -391,7 +386,7 @@
       "max_sl_main": 3,
       "max_sl_sub": 2,
       "prerequisites": [],
-      "description": ""
+      "description": "【HP】に+(SL×2)を得る。"
     },
     {
       "name": "《TPブースト》",
@@ -405,7 +400,7 @@
       "max_sl_main": 3,
       "max_sl_sub": 2,
       "prerequisites": [],
-      "description": ""
+      "description": "【TP】に+(SL×2)を得る。"
     },
     {
       "name": "《物理防御ブースト》",
@@ -419,7 +414,7 @@
       "max_sl_main": 3,
       "max_sl_sub": 2,
       "prerequisites": [],
-      "description": ""
+      "description": "【防御】に+(SL)を得る。"
     },
     {
       "name": "《抑制防御ブースト》",
@@ -433,7 +428,7 @@
       "max_sl_main": 4,
       "max_sl_sub": 2,
       "prerequisites": [],
-      "description": ""
+      "description": "【抑制防御】に+(SL/2)を得る。"
     }
   ]
 }
