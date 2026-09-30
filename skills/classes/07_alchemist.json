@@ -1,5 +1,6 @@
 {
-  "class_name": "",
+  "class_id": 7,
+  "class_name": "アルケミスト",
   "skills": [
     {
       "name": "《★禁断の術式》",
@@ -11,7 +12,7 @@
       "target": "自身",
       "cost": "FP：3",
       "max_sl_main": 1,
-      "max_sl_sub": 1,
+      "max_sl_sub": 0,
       "prerequisites": [],
       "description": "属性攻撃が命中した際に使用を宣言する。ダメージのダイスに+10個を得る。"
     },
