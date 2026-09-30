@@ -11,7 +11,7 @@
       "target": "味方全",
       "cost": "FP：3",
       "max_sl_main": 1,
-      "max_sl_sub": 1,
+      "max_sl_sub": 0,
       "prerequisites": [],
       "description": "一度だけ、あらゆる攻撃のダメージを0にする。状態異常付与などの追加効果も全て無効化する。"
     },
