@@ -13,7 +13,7 @@
       "max_sl_main": 1,
       "max_sl_sub": 1,
       "prerequisites": [],
-      "description": ""
+      "description": "敵からの攻撃ロールでダメージを受けた際、自身のTPを1回復する。"
     },
     {
       "name": "《鎚マスタリー》",
@@ -27,7 +27,7 @@
       "max_sl_main": 5,
       "max_sl_sub": 3,
       "prerequisites": [],
-      "description": ""
+      "description": "鎚による物理命中に+(SL/2)を得る。"
     },
     {
       "name": "《盾マスタリー》",
@@ -41,7 +41,7 @@
       "max_sl_main": 5,
       "max_sl_sub": 3,
       "prerequisites": [],
-      "description": ""
+      "description": "分類『防御』のスキルを使用した際の効果発動回数に+(SL/2)を得る。"
     },
     {
       "name": "《ボルトストライク》",
@@ -60,7 +60,7 @@
           "sl": 1
         }
       ],
-      "description": ""
+      "description": "〈壊〉+〈雷〉属性の物理攻撃ロールを行う。この際、ダメージダイス+(SL)個を得る。"
     },
     {
       "name": "《ホーリーバッシュ》",
@@ -79,7 +79,7 @@
           "sl": 2
         }
       ],
-      "description": ""
+      "description": "物理攻撃ロールを行う。この際、ダメージダイス+(SL)個を得る。また、この際に与えたダメージの半分だけ、自身の【HP】を回復する。"
     },
     {
       "name": "《リベンジスマイト》",
@@ -98,7 +98,7 @@
           "sl": 3
         }
       ],
-      "description": ""
+      "description": "自身はスキル使用時に待機状態となる。メインフェイズ終了時、後発行動扱いで敵単体への物理攻撃ロールを行う。この際、(待機状態中に受けたダメージ+(SL×2))個のダメージダイスを得る。"
     },
     {
       "name": "《アースブレイク》",
@@ -117,7 +117,7 @@
           "sl": 5
         }
       ],
-      "description": ""
+      "description": "物理攻撃ロールを行う。この際、ダメージダイス+(SL×2)個を得る。ただし、自身は攻撃ロール終了後に[麻痺]を受ける。"
     },
     {
       "name": "《攻防一体》",
@@ -136,7 +136,7 @@
           "sl": 3
         }
       ],
-      "description": ""
+      "description": "分類『防御』のスキルによる待機状態であっても、後発行動扱いで通常攻撃を行う事ができる。"
     },
     {
       "name": "《ディバイドガード》",
@@ -155,7 +155,7 @@
           "sl": 1
         }
       ],
-      "description": ""
+      "description": "自身はスキル使用時に待機状態となる。待機状態中、対象が何らかの攻撃ロールの対象となった際、自身がその攻撃ロールを肩代わりして受ける。待機状態は述べ(SL)回のダメージ肩代わりを行うか、ターン終了で解除される。"
     },
     {
       "name": "《ラインディバイド》",
@@ -178,7 +178,7 @@
           "sl": 2
         }
       ],
-      "description": ""
+      "description": "自身はスキル使用時に待機状態となる。待機状態中、対象列の者が何らかの攻撃ロールの対象となった際、自身がその攻撃ロールを肩代わりして受ける。待機状態は述べ(SL)回のダメージ肩代わりを行うか、ターン終了で解除される。"
     },
     {
       "name": "《オールディバイド》",
@@ -201,7 +201,7 @@
           "sl": 2
         }
       ],
-      "description": ""
+      "description": "自身はスキル使用時に待機状態となる。待機状態中、味方が何らかの攻撃ロールの対象となった際、自身がその攻撃ロールを肩代わりして受ける。待機状態は述べ(SL)回のダメージ肩代わりを行うか、ターン終了で解除される。"
     },
     {
       "name": "《ディバイドモード》",
@@ -224,7 +224,7 @@
           "sl": 2
         }
       ],
-      "description": ""
+      "description": "自身はスキル使用時に待機状態となる。待機状態中、味方が何らかの攻撃ロールの対象となった際、自身がその攻撃ロールを肩代わりして受けるかどうか選択できる。待機状態は述べ(SL)回のダメージ肩代わりを行うか、ターン終了で解除される。"
     },
     {
       "name": "《挑発》",
@@ -238,7 +238,7 @@
       "max_sl_main": 3,
       "max_sl_sub": 2,
       "prerequisites": [],
-      "description": ""
+      "description": "そのターンの間、単体を対象とした敵からの攻撃ロールの対象を述べ(SL+1)回まで、強制的に自身に変更する。"
     },
     {
       "name": "《パリィ》",
@@ -252,7 +252,7 @@
       "max_sl_main": 3,
       "max_sl_sub": 2,
       "prerequisites": [],
-      "description": ""
+      "description": "物理攻撃ロールに対して、【VIT】による能動回避を行う。また、その際の達成値に+(SL-1)を得る。"
     },
     {
       "name": "《マテリアルパリィ》",
@@ -266,7 +266,7 @@
       "max_sl_main": 3,
       "max_sl_sub": 2,
       "prerequisites": [],
-      "description": ""
+      "description": "属性攻撃ロールに対して、【VIT】による能動回避を行う。また、その際の達成値に+(SL-1)を得る。"
     },
     {
       "name": "《騎士道の加護》",
@@ -280,7 +280,7 @@
       "max_sl_main": 3,
       "max_sl_sub": 2,
       "prerequisites": [],
-      "description": ""
+      "description": "『抑制防御上昇：(SL)』の強化効果を付与する。3ターン持続する。"
     },
     {
       "name": "《渾身ディフェンス》",
@@ -294,7 +294,7 @@
       "max_sl_main": 3,
       "max_sl_sub": 2,
       "prerequisites": [],
-      "description": ""
+      "description": "『物理防御上昇：(SL)』の強化効果を付与する。3ターン持続する。"
     },
     {
       "name": "《防御陣形》",
@@ -308,7 +308,7 @@
       "max_sl_main": 3,
       "max_sl_sub": 2,
       "prerequisites": [],
-      "description": ""
+      "description": "『防御上昇：(SL×2)』の強化効果を付与する。3ターン持続する。"
     },
     {
       "name": "《守護陣形》",
@@ -327,7 +327,7 @@
           "sl": 2
         }
       ],
-      "description": ""
+      "description": "『耐性付与：炎氷雷』の強化効果を付与する。3ターン持続する。"
     },
     {
       "name": "《全力逃走》",
@@ -341,7 +341,7 @@
       "max_sl_main": 1,
       "max_sl_sub": 0,
       "prerequisites": [],
-      "description": ""
+      "description": "逃走判定の際に使用を宣言する。逃走判定の達成値に+3を得る。"
     },
     {
       "name": "《聖なる加護》",
@@ -360,7 +360,7 @@
           "sl": 2
         }
       ],
-      "description": ""
+      "description": "『抑制防御上昇：(SL)』の強化効果を付与する。3ターン持続する。"
     },
     {
       "name": "《ランパート》",
@@ -374,7 +374,7 @@
       "max_sl_main": 3,
       "max_sl_sub": 2,
       "prerequisites": [],
-      "description": ""
+      "description": "『物理防御上昇：(SL)』および『耐性上昇：炎氷雷』の強化効果を付与する。3ターン持続する。"
     },
     {
       "name": "《HPブースト》",
@@ -388,7 +388,7 @@
       "max_sl_main": 3,
       "max_sl_sub": 2,
       "prerequisites": [],
-      "description": ""
+      "description": "【HP】に+(SL×2)を得る。"
     },
     {
       "name": "《TPブースト》",
@@ -402,7 +402,7 @@
       "max_sl_main": 3,
       "max_sl_sub": 2,
       "prerequisites": [],
-      "description": ""
+      "description": "【TP】に+(SL×2)を得る。"
     },
     {
       "name": "《物理防御ブースト》",
@@ -416,7 +416,7 @@
       "max_sl_main": 3,
       "max_sl_sub": 2,
       "prerequisites": [],
-      "description": ""
+      "description": "【防御】に+(SL)を得る。"
     },
     {
       "name": "《抑制防御ブースト》",
@@ -430,7 +430,7 @@
       "max_sl_main": 4,
       "max_sl_sub": 2,
       "prerequisites": [],
-      "description": ""
+      "description": "【抑制防御】に+(SL/2)を得る。"
     }
   ]
 }

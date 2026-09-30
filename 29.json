@@ -13,7 +13,7 @@
       "max_sl_main": 1,
       "max_sl_sub": 1,
       "prerequisites": [],
-      "description": ""
+      "description": "通常攻撃を命中させた際、自身のTPを1回復する。"
     },
     {
       "name": "《鎚マスタリー》",
@@ -27,7 +27,7 @@
       "max_sl_main": 5,
       "max_sl_sub": 3,
       "prerequisites": [],
-      "description": ""
+      "description": "鎚による物理命中に+(SL/2)を得る。"
     },
     {
       "name": "《刀マスタリー》",
@@ -41,7 +41,7 @@
       "max_sl_main": 5,
       "max_sl_sub": 3,
       "prerequisites": [],
-      "description": ""
+      "description": "刀による物理命中に+(SL/2)を得る。"
     },
     {
       "name": "《峰打》",
@@ -60,7 +60,7 @@
           "sl": 1
         }
       ],
-      "description": ""
+      "description": "〈壊〉属性の物理攻撃ロールを行う。命中すると、対象は(攻撃者の【抑制攻撃】+(7+SL))を目標値とした抑制防御ロールを行い、これに失敗すると[麻痺]を受ける。"
     },
     {
       "name": "《氷刹》",
@@ -79,7 +79,7 @@
           "sl": 1
         }
       ],
-      "description": ""
+      "description": "〈斬〉+〈氷〉属性の物理攻撃ロールを行う。この際、ダメージダイス+(SL)個を得る。"
     },
     {
       "name": "《弧月》",
@@ -98,7 +98,7 @@
           "sl": 2
         }
       ],
-      "description": ""
+      "description": "物理攻撃ロールを行う。この際、ダメージダイス+(SL×2)個を得る。"
     },
     {
       "name": "《閃刃》",
@@ -117,7 +117,7 @@
           "sl": 4
         }
       ],
-      "description": ""
+      "description": "物理攻撃ロールを行う。この際、ダメージダイス+((SL+1)×3)個を得る。"
     },
     {
       "name": "《無双神楽》",
@@ -136,7 +136,7 @@
           "sl": 5
         }
       ],
-      "description": ""
+      "description": "3回の物理攻撃ロールを行う。この際、対象は攻撃1回ごとに、敵の中からランダムで選択する。また、この際のダメージダイスを-(4-SL)個する。"
     },
     {
       "name": "《衝破》",
@@ -159,7 +159,7 @@
           "sl": 2
         }
       ],
-      "description": ""
+      "description": "物理攻撃ロールを行う。この際、ダメージダイス+(SL)個を得る。"
     },
     {
       "name": "《頭砕》",
@@ -178,7 +178,7 @@
           "sl": 1
         }
       ],
-      "description": ""
+      "description": "物理攻撃ロールを行う。命中すると、対象は(攻撃者の【抑制攻撃】+(7+SL))を目標値とした抑制防御ロールを行い、これに失敗すると[頭]封じを受ける。"
     },
     {
       "name": "《鉄火》",
@@ -197,7 +197,7 @@
           "sl": 2
         }
       ],
-      "description": ""
+      "description": "〈壊〉+〈炎〉属性の物理攻撃ロールを行う。この際、ダメージダイス+(SL)個を得る。"
     },
     {
       "name": "《流墜衝》",
@@ -216,7 +216,7 @@
           "sl": 4
         }
       ],
-      "description": ""
+      "description": "物理攻撃ロールを行う。この際、ダメージダイス+(SL)個を得る。"
     },
     {
       "name": "《乾坤一擲》",
@@ -235,7 +235,7 @@
           "sl": 5
         }
       ],
-      "description": ""
+      "description": "物理攻撃ロールを行う。この際、ダメージダイス+((SL+1)×4)個を得る。使用後、自身は[麻痺]を受ける。その深度は自身の【物理命中】+7とする。"
     },
     {
       "name": "《食いしばり》",
@@ -249,7 +249,7 @@
       "max_sl_main": 3,
       "max_sl_sub": 2,
       "prerequisites": [],
-      "description": ""
+      "description": "戦闘不能になった際、1D6を振る。この出目が(SL)以下の値であれば戦闘不能状態にならず、【HP】1で踏み留まる事ができる。"
     },
     {
       "name": "《羅刹》",
@@ -263,7 +263,7 @@
       "max_sl_main": 3,
       "max_sl_sub": 2,
       "prerequisites": [],
-      "description": ""
+      "description": "その戦闘の間、【物理攻撃】【属性攻撃】+(SL+1)を得る。(これは強化効果としては扱わず、解除させられる事は無い)ただしこの効果を受けている間は、自身が攻撃ロールを行うごとに自身のダメージのダイスで『1』の目が出た数に等しいダメージを【HP】に受け、さらに【TP】を1消耗する。なお、この効果は終了フェイズでのダメージ処理をした直後に任意解除が可能。"
     },
     {
       "name": "《咆哮》",
@@ -282,7 +282,7 @@
           "sl": 2
         }
       ],
-      "description": ""
+      "description": "対象の強化効果を最大で(SL)個まで消滅させる。"
     },
     {
       "name": "《獅子奮迅》",
@@ -301,7 +301,7 @@
           "sl": 3
         }
       ],
-      "description": ""
+      "description": "自身の攻撃ロールが命中した際、自身の【HP】が(SL)だけ回復する。"
     },
     {
       "name": "《士道の覚悟》",
@@ -315,7 +315,7 @@
       "max_sl_main": 1,
       "max_sl_sub": 1,
       "prerequisites": [],
-      "description": ""
+      "description": "『武器』『その他』の両スロットに武器を装備していると【物理攻撃】+1を得る。"
     },
     {
       "name": "《HPブースト》",
@@ -329,7 +329,7 @@
       "max_sl_main": 3,
       "max_sl_sub": 2,
       "prerequisites": [],
-      "description": ""
+      "description": "【HP】に+(SL×2)を得る。"
     },
     {
       "name": "《TPブースト》",
@@ -343,7 +343,7 @@
       "max_sl_main": 3,
       "max_sl_sub": 2,
       "prerequisites": [],
-      "description": ""
+      "description": "【TP】に+(SL×2)を得る。"
     },
     {
       "name": "《物理攻撃ブースト》",
@@ -357,7 +357,7 @@
       "max_sl_main": 3,
       "max_sl_sub": 2,
       "prerequisites": [],
-      "description": ""
+      "description": "【物理攻撃】に+(SL)を得る。"
     }
   ]
 }
