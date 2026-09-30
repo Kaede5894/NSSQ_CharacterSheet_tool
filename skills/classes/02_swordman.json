@@ -12,7 +12,7 @@
       "target": "自身",
       "cost": "FP：3",
       "max_sl_main": 1,
-      "max_sl_sub": 1,
+      "max_sl_sub": 0,
       "prerequisites": [],
       "description": "物理攻撃が命中した際に使用を宣言する。ダメージのダイスに+10個を得る。"
     },
