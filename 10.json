@@ -1,0 +1,535 @@
+{
+  "class_name": "",
+  "skills": [
+    {
+      "name": "《★呪いの鈴音》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "呪言",
+      "timing": "特殊",
+      "range": "-",
+      "target": "自身",
+      "cost": "FP：3",
+      "max_sl_main": 1,
+      "max_sl_sub": 1,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《呪言マスタリー》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 5,
+      "max_sl_sub": 3,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《力祓いの呪言》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "呪言",
+      "timing": "主行動",
+      "range": "-",
+      "target": "敵全",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "呪言マスタリー",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《軟身の呪言》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "呪言",
+      "timing": "主行動",
+      "range": "-",
+      "target": "敵全",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "呪言マスタリー",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《脚違えの呪言》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "呪言",
+      "timing": "主行動",
+      "range": "-",
+      "target": "敵全",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "呪言マスタリー",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《封の呪言》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "呪言",
+      "timing": "主行動",
+      "range": "-",
+      "target": "敵単",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "呪言マスタリー",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《幻惑の呪言》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "呪言",
+      "timing": "主行動",
+      "range": "-",
+      "target": "敵全",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "呪言マスタリー",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《痺縛の呪言》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "呪言",
+      "timing": "主行動",
+      "range": "-",
+      "target": "敵全",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "呪言マスタリー",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《狂乱の呪言》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "呪言",
+      "timing": "主行動",
+      "range": "-",
+      "target": "敵全",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "呪言マスタリー",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《睡眠の呪言》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "呪言",
+      "timing": "主行動",
+      "range": "-",
+      "target": "敵全",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "呪言マスタリー",
+          "sl": 3
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《病毒の呪言》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "呪言",
+      "timing": "主行動",
+      "range": "-",
+      "target": "敵全",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "呪言マスタリー",
+          "sl": 3
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《罪咎の呪言》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "呪言",
+      "timing": "主行動",
+      "range": "-",
+      "target": "敵全",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "呪言マスタリー",
+          "sl": 4
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《死の呪言》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "呪言",
+      "timing": "主行動",
+      "range": "-",
+      "target": "敵単",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "呪言マスタリー",
+          "sl": 5
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《畏れよ、我を》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "呪言",
+      "timing": "主行動",
+      "range": "-",
+      "target": "敵全",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "呪言マスタリー",
+          "sl": 3
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《命ず、言動能わず》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "呪言",
+      "timing": "主行動",
+      "range": "-",
+      "target": "敵単",
+      "cost": "TP：1",
+      "max_sl_main": 1,
+      "max_sl_sub": 1,
+      "prerequisites": [
+        {
+          "name": "畏れよ、我を",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《命ず、輩を喰らえ》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "呪言",
+      "timing": "主行動",
+      "range": "-",
+      "target": "敵単",
+      "cost": "TP：1",
+      "max_sl_main": 1,
+      "max_sl_sub": 1,
+      "prerequisites": [
+        {
+          "name": "畏れよ、我を",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《命ず、主を庇え》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "呪言",
+      "timing": "主行動",
+      "range": "-",
+      "target": "敵単",
+      "cost": "TP：1",
+      "max_sl_main": 1,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "畏れよ、我を",
+          "sl": 3
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《命ず、自ら滅せよ》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "呪言",
+      "timing": "主行動",
+      "range": "-",
+      "target": "敵単",
+      "cost": "TP：1",
+      "max_sl_main": 1,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "畏れよ、我を",
+          "sl": 3
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《ペイントレード》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "呪言",
+      "timing": "主行動",
+      "range": "-",
+      "target": "敵単",
+      "cost": "TP：3",
+      "max_sl_main": 1,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "呪言マスタリー",
+          "sl": 4
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《虚弱の呪言》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "呪言",
+      "timing": "主行動",
+      "range": "-",
+      "target": "敵全",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "呪言マスタリー",
+          "sl": 3
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《呪いの浸食》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "呪言",
+      "timing": "開幕",
+      "range": "-",
+      "target": "自身",
+      "cost": "TP：2",
+      "max_sl_main": 2,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "呪言マスタリー",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《呪鎖の恩恵》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 1,
+      "max_sl_sub": 0,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《博識》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 1,
+      "max_sl_sub": 0,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《思念送信》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "呪言",
+      "timing": "主行動",
+      "range": "-",
+      "target": "敵単",
+      "cost": "TP：1",
+      "max_sl_main": 1,
+      "max_sl_sub": 1,
+      "prerequisites": [
+        {
+          "name": "呪言マスタリー",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《忘却の呪言》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "呪言",
+      "timing": "主行動",
+      "range": "-",
+      "target": "敵単",
+      "cost": "TP：1",
+      "max_sl_main": 1,
+      "max_sl_sub": 1,
+      "prerequisites": [
+        {
+          "name": "呪言マスタリー",
+          "sl": 3
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《ギアス》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "呪言",
+      "timing": "主行動",
+      "range": "-",
+      "target": "敵単",
+      "cost": "TP：2",
+      "max_sl_main": 1,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "呪言マスタリー",
+          "sl": 5
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《HPブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《TPブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《抑制攻撃ブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 4,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《抑制防御ブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 4,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    }
+  ]
+}

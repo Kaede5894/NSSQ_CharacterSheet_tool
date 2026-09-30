@@ -1,0 +1,361 @@
+{
+  "class_name": "",
+  "skills": [
+    {
+      "name": "《★帝国騎士の極意》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 1,
+      "max_sl_sub": 1,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《砲剣マスタリー》",
+      "weapon": "砲剣",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 5,
+      "max_sl_sub": 3,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《アサルトドライブ》",
+      "weapon": "砲剣",
+      "part": "腕",
+      "category": "白兵",
+      "timing": "主行動",
+      "range": "近",
+      "target": "敵単",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "砲剣マスタリー",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《三色ドライブ》",
+      "weapon": "砲剣",
+      "part": "腕",
+      "category": "白兵",
+      "timing": "主行動",
+      "range": "近",
+      "target": "敵単",
+      "cost": "TP：4",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "砲剣マスタリー",
+          "sl": 3
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《アクセルドライブ》",
+      "weapon": "砲剣",
+      "part": "腕",
+      "category": "白兵",
+      "timing": "主行動",
+      "range": "近",
+      "target": "敵単",
+      "cost": "TP：5",
+      "max_sl_main": 3,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "砲剣マスタリー",
+          "sl": 4
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《オーバードライブ》",
+      "weapon": "砲剣",
+      "part": "腕",
+      "category": "白兵",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "敵全",
+      "cost": "TP：7",
+      "max_sl_main": 3,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "砲剣マスタリー",
+          "sl": 5
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《シャープエッジ》",
+      "weapon": "砲剣",
+      "part": "腕",
+      "category": "白兵",
+      "timing": "主行動",
+      "range": "近",
+      "target": "敵単",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "砲剣マスタリー",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《インパルスエッジ》",
+      "weapon": "砲剣",
+      "part": "腕",
+      "category": "白兵",
+      "timing": "主行動",
+      "range": "近",
+      "target": "敵単",
+      "cost": "TP：0",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "砲剣マスタリー",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《クールエッジ》",
+      "weapon": "砲剣",
+      "part": "腕",
+      "category": "白兵",
+      "timing": "主行動",
+      "range": "近",
+      "target": "敵単",
+      "cost": "TP：2",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "砲剣マスタリー",
+          "sl": 3
+        },
+        {
+          "name": "シャープエッジ",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《チャージエッジ》",
+      "weapon": "砲剣",
+      "part": "腕",
+      "category": "白兵",
+      "timing": "主行動",
+      "range": "近",
+      "target": "敵単",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "砲剣マスタリー",
+          "sl": 3
+        },
+        {
+          "name": "インパルスエッジ",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《強制排熱》",
+      "weapon": "砲剣",
+      "part": "腕",
+      "category": "-",
+      "timing": "主行動",
+      "range": "-",
+      "target": "自身",
+      "cost": "TP：2",
+      "max_sl_main": 1,
+      "max_sl_sub": 1,
+      "prerequisites": [
+        {
+          "name": "砲剣マスタリー",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《ワイドエフェクト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 1,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "物理攻撃ブースト",
+          "sl": 2
+        },
+        {
+          "name": "TPブースト",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《リアガード》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "-",
+      "timing": "開幕",
+      "range": "-",
+      "target": "自身",
+      "cost": "TP：1",
+      "max_sl_main": 1,
+      "max_sl_sub": 0,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《フィニッシャー》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "砲剣マスタリー",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《リミットオーバー》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "-",
+      "timing": "開幕",
+      "range": "-",
+      "target": "自身",
+      "cost": "TP：4",
+      "max_sl_main": 1,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "砲剣マスタリー",
+          "sl": 5
+        },
+        {
+          "name": "チャージエッジ",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《狩猟者の嗅覚》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《HPブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《TPブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《物理攻撃ブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《物理防御ブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    }
+  ]
+}

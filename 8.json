@@ -1,0 +1,386 @@
+{
+  "class_name": "",
+  "skills": [
+    {
+      "name": "《★最終決戦の軍歌》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "呪歌",
+      "timing": "主行動",
+      "range": "-",
+      "target": "自身",
+      "cost": "FP：3",
+      "max_sl_main": 1,
+      "max_sl_sub": 1,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《呪歌マスタリー》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 5,
+      "max_sl_sub": 3,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《猛き戦いの舞曲》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "呪歌",
+      "timing": "主行動",
+      "range": "-",
+      "target": "味方全",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "呪歌マスタリー",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《三色序曲》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "呪歌",
+      "timing": "主行動",
+      "range": "-",
+      "target": "味方全",
+      "cost": "TP：3",
+      "max_sl_main": 1,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "猛き戦いの舞曲",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《三色幻想曲》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "呪歌",
+      "timing": "主行動",
+      "range": "-",
+      "target": "味方全",
+      "cost": "TP：3",
+      "max_sl_main": 1,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "呪歌マスタリー",
+          "sl": 3
+        },
+        {
+          "name": "三色序曲",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《聖なる守護の舞曲》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "呪歌",
+      "timing": "主行動",
+      "range": "-",
+      "target": "味方全",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "呪歌マスタリー",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《破邪の鎮魂歌》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "呪歌",
+      "timing": "主行動",
+      "range": "-",
+      "target": "味方全",
+      "cost": "TP：3",
+      "max_sl_main": 2,
+      "max_sl_sub": 1,
+      "prerequisites": [
+        {
+          "name": "呪歌マスタリー",
+          "sl": 3
+        },
+        {
+          "name": "聖なる守護の舞曲",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《韋駄天の舞曲》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "呪歌",
+      "timing": "主行動",
+      "range": "-",
+      "target": "味方全",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "呪歌マスタリー",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《慧眼の旋律》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "呪歌",
+      "timing": "主行動",
+      "range": "-",
+      "target": "味方全",
+      "cost": "TP：3",
+      "max_sl_main": 2,
+      "max_sl_sub": 1,
+      "prerequisites": [
+        {
+          "name": "呪歌マスタリー",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《軽快の旋律》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "呪歌",
+      "timing": "主行動",
+      "range": "-",
+      "target": "味方全",
+      "cost": "TP：3",
+      "max_sl_main": 2,
+      "max_sl_sub": 1,
+      "prerequisites": [
+        {
+          "name": "呪歌マスタリー",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《癒しの子守唄》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "呪歌",
+      "timing": "主行動",
+      "range": "-",
+      "target": "味方全",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "呪歌マスタリー",
+          "sl": 3
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《安らぎの子守唄》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "呪歌",
+      "timing": "主行動",
+      "range": "-",
+      "target": "味方全",
+      "cost": "TP：4",
+      "max_sl_main": 2,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "呪歌マスタリー",
+          "sl": 4
+        },
+        {
+          "name": "癒しの子守唄",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《沈静なる奇想曲》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "呪歌",
+      "timing": "主行動",
+      "range": "-",
+      "target": "敵全",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "呪歌マスタリー",
+          "sl": 4
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《終わり無き円舞曲》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "呪歌",
+      "timing": "主行動",
+      "range": "-",
+      "target": "味方単",
+      "cost": "TP：4",
+      "max_sl_main": 1,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "呪歌マスタリー",
+          "sl": 5
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《招引の奏鳴曲》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "呪歌",
+      "timing": "主行動",
+      "range": "-",
+      "target": "特殊",
+      "cost": "TP：3",
+      "max_sl_main": 1,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "呪歌マスタリー",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《魅惑の小夜曲》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "呪歌",
+      "timing": "主行動",
+      "range": "-",
+      "target": "特殊",
+      "cost": "TP：3",
+      "max_sl_main": 1,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "呪歌マスタリー",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《全てへの子守唄》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "呪歌",
+      "timing": "主行動",
+      "range": "-",
+      "target": "特殊",
+      "cost": "TP：3",
+      "max_sl_main": 1,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "呪歌マスタリー",
+          "sl": 3
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《ホーリーギフト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 1,
+      "max_sl_sub": 0,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《HPブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《TPブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《速度ブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    }
+  ]
+}

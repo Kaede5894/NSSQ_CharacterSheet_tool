@@ -1,0 +1,483 @@
+{
+  "class_name": "",
+  "skills": [
+    {
+      "name": "《★百獣の王気》",
+      "weapon": "-",
+      "part": "-",
+      "category": "招獣",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 1,
+      "max_sl_sub": 1,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《獣王マスタリー》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 5,
+      "max_sl_sub": 3,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《三種小獣招来》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "招獣",
+      "timing": "主行動",
+      "range": "-",
+      "target": "特殊",
+      "cost": "TP：2",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "獣王マスタリー",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《火炎トカゲ招来》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "招獣",
+      "timing": "主行動",
+      "range": "-",
+      "target": "特殊",
+      "cost": "TP：2",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "獣王マスタリー",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《雪ウサギ招来》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "招獣",
+      "timing": "主行動",
+      "range": "-",
+      "target": "特殊",
+      "cost": "TP：2",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "獣王マスタリー",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《白狐招来》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "招獣",
+      "timing": "主行動",
+      "range": "-",
+      "target": "特殊",
+      "cost": "TP：2",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "獣王マスタリー",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《毒アゲハ招来》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "招獣",
+      "timing": "主行動",
+      "range": "-",
+      "target": "特殊",
+      "cost": "TP：4",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "獣王マスタリー",
+          "sl": 3
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《催眠梟招来》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "招獣",
+      "timing": "主行動",
+      "range": "-",
+      "target": "特殊",
+      "cost": "TP：4",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "獣王マスタリー",
+          "sl": 3
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《暴れ野牛招来》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "招獣",
+      "timing": "主行動",
+      "range": "-",
+      "target": "特殊",
+      "cost": "TP：5",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "獣王マスタリー",
+          "sl": 3
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《巨像招来》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "招獣",
+      "timing": "主行動",
+      "range": "-",
+      "target": "特殊",
+      "cost": "TP：5",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "獣王マスタリー",
+          "sl": 3
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《不定形生物招来》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "招獣",
+      "timing": "主行動",
+      "range": "-",
+      "target": "特殊",
+      "cost": "TP：4",
+      "max_sl_main": 3,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "獣王マスタリー",
+          "sl": 4
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《剣虎招来》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "招獣",
+      "timing": "主行動",
+      "range": "-",
+      "target": "特殊",
+      "cost": "TP：6",
+      "max_sl_main": 3,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "獣王マスタリー",
+          "sl": 4
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《獅子王招来》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "招獣",
+      "timing": "主行動",
+      "range": "-",
+      "target": "特殊",
+      "cost": "TP：7",
+      "max_sl_main": 3,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "獣王マスタリー",
+          "sl": 5
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《ビースト送還》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "招獣",
+      "timing": "主行動",
+      "range": "-",
+      "target": "特殊",
+      "cost": "-",
+      "max_sl_main": 2,
+      "max_sl_sub": 1,
+      "prerequisites": [
+        {
+          "name": "獣王マスタリー",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《獣の友情》",
+      "weapon": "-",
+      "part": "-",
+      "category": "招獣",
+      "timing": "受動",
+      "range": "-",
+      "target": "特殊",
+      "cost": "TP：1",
+      "max_sl_main": 1,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "獣王マスタリー",
+          "sl": 4
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《ビーストロア》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "-",
+      "timing": "主行動",
+      "range": "-",
+      "target": "敵列",
+      "cost": "TP：2",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "獣王マスタリー",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《ドラミング》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "-",
+      "timing": "主行動",
+      "range": "-",
+      "target": "敵列",
+      "cost": "TP：2",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "獣王マスタリー",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《伝書鳩》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "招獣",
+      "timing": "特殊",
+      "range": "-",
+      "target": "特殊",
+      "cost": "TP：1",
+      "max_sl_main": 1,
+      "max_sl_sub": 1,
+      "prerequisites": [
+        {
+          "name": "獣王マスタリー",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《駄載獣》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 1,
+      "max_sl_sub": 1,
+      "prerequisites": [
+        {
+          "name": "獣王マスタリー",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《陸上騎獣》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 1,
+      "max_sl_sub": 1,
+      "prerequisites": [
+        {
+          "name": "獣王マスタリー",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《水上騎獣》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 1,
+      "max_sl_sub": 1,
+      "prerequisites": [
+        {
+          "name": "獣王マスタリー",
+          "sl": 3
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《空中騎獣》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 1,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "獣王マスタリー",
+          "sl": 5
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《獣の警戒》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 1,
+      "max_sl_sub": 1,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《HPブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《TPブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《物理攻撃ブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《抑制攻撃ブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 4,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    }
+  ]
+}

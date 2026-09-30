@@ -1,0 +1,477 @@
+{
+  "class_name": "",
+  "skills": [
+    {
+      "name": "《★トランス》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 1,
+      "max_sl_sub": 1,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《剣マスタリー》",
+      "weapon": "剣",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 5,
+      "max_sl_sub": 3,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《突剣マスタリー》",
+      "weapon": "突剣",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 5,
+      "max_sl_sub": 3,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《鞭マスタリー》",
+      "weapon": "鞭",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 5,
+      "max_sl_sub": 3,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《三種ボンデージ》",
+      "weapon": "鞭",
+      "part": "腕",
+      "category": "白兵",
+      "timing": "主行動",
+      "range": "近",
+      "target": "敵単",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "鞭マスタリー",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《アナコンダ》",
+      "weapon": "鞭",
+      "part": "腕",
+      "category": "白兵",
+      "timing": "主行動",
+      "range": "近",
+      "target": "敵単",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "鞭マスタリー",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《ハートバインド》",
+      "weapon": "鞭",
+      "part": "腕",
+      "category": "白兵",
+      "timing": "主行動",
+      "range": "近",
+      "target": "敵単",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "鞭マスタリー",
+          "sl": 3
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《エクスタシー》",
+      "weapon": "鞭",
+      "part": "腕",
+      "category": "白兵",
+      "timing": "主行動",
+      "range": "近",
+      "target": "敵単",
+      "cost": "TP：2",
+      "max_sl_main": 3,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "鞭マスタリー",
+          "sl": 4
+        },
+        {
+          "name": "三色ボンデージ",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《ジエンド》",
+      "weapon": "鞭",
+      "part": "腕",
+      "category": "白兵",
+      "timing": "主行動",
+      "range": "近",
+      "target": "敵単",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "鞭マスタリー",
+          "sl": 5
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《ヒュプノバイト》",
+      "weapon": "剣突剣",
+      "part": "腕",
+      "category": "白兵",
+      "timing": "主行動",
+      "range": "近",
+      "target": "敵単",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "剣マスタリー",
+          "sl": 1
+        },
+        {
+          "name": "突剣マスタリー",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《ショックバイト》",
+      "weapon": "剣突剣",
+      "part": "腕",
+      "category": "白兵",
+      "timing": "主行動",
+      "range": "近",
+      "target": "敵単",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "剣マスタリー",
+          "sl": 1
+        },
+        {
+          "name": "突剣マスタリー",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《ミラージュバイト》",
+      "weapon": "剣突剣",
+      "part": "腕",
+      "category": "白兵",
+      "timing": "主行動",
+      "range": "近",
+      "target": "敵単",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "剣マスタリー",
+          "sl": 1
+        },
+        {
+          "name": "突剣マスタリー",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《ドレインバイト》",
+      "weapon": "剣突剣",
+      "part": "腕",
+      "category": "白兵",
+      "timing": "主行動",
+      "range": "近",
+      "target": "敵単",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "剣マスタリー",
+          "sl": 3
+        },
+        {
+          "name": "突剣マスタリー",
+          "sl": 3
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《ソウルリベレイト》",
+      "weapon": "剣突剣",
+      "part": "腕",
+      "category": "白兵",
+      "timing": "主行動",
+      "range": "近",
+      "target": "敵単",
+      "cost": "TP：2",
+      "max_sl_main": 3,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "剣マスタリー",
+          "sl": 4
+        },
+        {
+          "name": "突剣マスタリー",
+          "sl": 4
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《カタストロフ》",
+      "weapon": "剣突剣",
+      "part": "腕",
+      "category": "白兵",
+      "timing": "主行動",
+      "range": "近",
+      "target": "敵単",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "剣マスタリー",
+          "sl": 5
+        },
+        {
+          "name": "突剣マスタリー",
+          "sl": 5
+        },
+        {
+          "name": "ドレインバイト",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《トラッピング》",
+      "weapon": "剣突剣鞭",
+      "part": "腕",
+      "category": "-",
+      "timing": "開幕",
+      "range": "-",
+      "target": "特殊",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "剣マスタリー",
+          "sl": 3
+        },
+        {
+          "name": "突剣マスタリー",
+          "sl": 3
+        },
+        {
+          "name": "鞭マスタリー",
+          "sl": 3
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《トラッピングII》",
+      "weapon": "剣突剣鞭",
+      "part": "腕",
+      "category": "-",
+      "timing": "開幕",
+      "range": "-",
+      "target": "特殊",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "剣マスタリー",
+          "sl": 3
+        },
+        {
+          "name": "突剣マスタリー",
+          "sl": 3
+        },
+        {
+          "name": "鞭マスタリー",
+          "sl": 3
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《シャドウエントリ》",
+      "weapon": "-",
+      "part": "脚",
+      "category": "-",
+      "timing": "開幕",
+      "range": "-",
+      "target": "自身",
+      "cost": "TP：1",
+      "max_sl_main": 2,
+      "max_sl_sub": 1,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《パニッシュモア》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 1,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "物理攻撃ブースト",
+          "sl": 2
+        },
+        {
+          "name": "抑制攻撃ブースト",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《ホットスタート》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "特殊",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 1,
+      "max_sl_sub": 0,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《ワイヤースタント》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "特殊",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 1,
+      "max_sl_sub": 0,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《HPブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《TPブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《物理攻撃ブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《抑制攻撃ブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 4,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    }
+  ]
+}

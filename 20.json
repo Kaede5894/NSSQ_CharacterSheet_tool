@@ -1,0 +1,393 @@
+{
+  "class_name": "",
+  "skills": [
+    {
+      "name": "《★ジャイアントキル》",
+      "weapon": "-",
+      "part": "-",
+      "category": "射撃",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 1,
+      "max_sl_sub": 1,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《弩マスタリー》",
+      "weapon": "弩",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 5,
+      "max_sl_sub": 3,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《ヘビーショット》",
+      "weapon": "弩",
+      "part": "腕",
+      "category": "射撃",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "敵単",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "弩マスタリー",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《バインドスナイプ》",
+      "weapon": "弓弩",
+      "part": "腕",
+      "category": "射撃",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "特殊",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "弓マスタリー",
+          "sl": 2
+        },
+        {
+          "name": "弩マスタリー",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《バッドスナイプ》",
+      "weapon": "弓弩",
+      "part": "腕",
+      "category": "射撃",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "特殊",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "弓マスタリー",
+          "sl": 2
+        },
+        {
+          "name": "弩マスタリー",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《ランダムショット》",
+      "weapon": "弩",
+      "part": "腕",
+      "category": "射撃",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "特殊",
+      "cost": "TP：2",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "弩マスタリー",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《ファイアバラージ》",
+      "weapon": "弩",
+      "part": "腕",
+      "category": "射撃",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "敵列",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "弩マスタリー",
+          "sl": 3
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《アイスバラージ》",
+      "weapon": "弩",
+      "part": "腕",
+      "category": "射撃",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "敵列",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "弩マスタリー",
+          "sl": 3
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《サンダーバラージ》",
+      "weapon": "弩",
+      "part": "腕",
+      "category": "射撃",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "敵列",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "弩マスタリー",
+          "sl": 3
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《高速徹甲弾》",
+      "weapon": "弩",
+      "part": "腕",
+      "category": "射撃",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "敵単",
+      "cost": "TP：2",
+      "max_sl_main": 3,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "弩マスタリー",
+          "sl": 4
+        },
+        {
+          "name": "ヘビーショット",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《レインフォール》",
+      "weapon": "弩",
+      "part": "腕",
+      "category": "射撃",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "特殊",
+      "cost": "TP：4",
+      "max_sl_main": 3,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "弩マスタリー",
+          "sl": 5
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《前陣迫撃砲術》",
+      "weapon": "弩",
+      "part": "腕",
+      "category": "射撃",
+      "timing": "主行動",
+      "range": "近",
+      "target": "敵単",
+      "cost": "TP：4",
+      "max_sl_main": 3,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "弩マスタリー",
+          "sl": 5
+        },
+        {
+          "name": "物理攻撃ブースト",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《ウィークショット》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 1,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "銃マスタリー",
+          "sl": 4
+        },
+        {
+          "name": "弓マスタリー",
+          "sl": 4
+        },
+        {
+          "name": "弩マスタリー",
+          "sl": 4
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《ダブルアクション》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 1,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "ウィークショット",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《ナイトビジョン》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 1,
+      "max_sl_sub": 1,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《ペネトレイター》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 1,
+      "max_sl_sub": 1,
+      "prerequisites": [
+        {
+          "name": "弩マスタリー",
+          "sl": 3
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《照明弾》",
+      "weapon": "弩銃",
+      "part": "腕",
+      "category": "射撃",
+      "timing": "主行動",
+      "range": "-",
+      "target": "味方全",
+      "cost": "TP：2",
+      "max_sl_main": 1,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "弩マスタリー",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《危険感知》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 1,
+      "max_sl_sub": 0,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《HPブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《TPブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《物理攻撃ブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    }
+  ]
+}

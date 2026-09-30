@@ -1,0 +1,463 @@
+{
+  "class_name": "",
+  "skills": [
+    {
+      "name": "《★聖印の加護》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "特殊",
+      "range": "-",
+      "target": "味方列",
+      "cost": "FP:1",
+      "max_sl_main": 1,
+      "max_sl_sub": 1,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《印術マスタリー》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 5,
+      "max_sl_sub": 3,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《三色初級印術》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "術式",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "敵単",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "印術マスタリー",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《火球の印術》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "術式",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "特殊",
+      "cost": "TP：2",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "三色初級印術",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《氷槍の印術》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "術式",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "敵貫通",
+      "cost": "TP：2",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "三色初級印術",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《雷撃の印術》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "術式",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "敵列",
+      "cost": "TP：2",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "三色初級印術",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《爆炎の印術》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "術式",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "敵列",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "印術マスタリー",
+          "sl": 3
+        },
+        {
+          "name": "火球の印術",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《凍牙の印術》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "術式",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "特殊",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "印術マスタリー",
+          "sl": 3
+        },
+        {
+          "name": "氷槍の印術",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《稲妻の印術》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "術式",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "敵単",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "印術マスタリー",
+          "sl": 3
+        },
+        {
+          "name": "雷撃の印術",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《劫火の大印術》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "術式",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "敵単",
+      "cost": "TP：5",
+      "max_sl_main": 3,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "印術マスタリー",
+          "sl": 5
+        },
+        {
+          "name": "火球の印術",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《吹雪の大印術》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "術式",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "敵全",
+      "cost": "TP：5",
+      "max_sl_main": 3,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "印術マスタリー",
+          "sl": 5
+        },
+        {
+          "name": "氷槍の印術",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《天雷の大印術》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "術式",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "特殊",
+      "cost": "TP：5",
+      "max_sl_main": 3,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "印術マスタリー",
+          "sl": 5
+        },
+        {
+          "name": "雷撃の印術",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《始原の印術》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "術式",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "敵全",
+      "cost": "TP：6",
+      "max_sl_main": 3,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "印術マスタリー",
+          "sl": 5
+        },
+        {
+          "name": "ルーンの導き",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《三色聖印》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "-",
+      "timing": "主行動",
+      "range": "-",
+      "target": "味方列",
+      "cost": "TP：2",
+      "max_sl_main": 1,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "印術マスタリー",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《ルーンの輝き》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "-",
+      "timing": "開幕",
+      "range": "-",
+      "target": "自身",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "印術マスタリー",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《ルーンの盾》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "-",
+      "timing": "受動",
+      "range": "-",
+      "target": "自身",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "印術マスタリー",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《ルーンの導き》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 1,
+      "max_sl_sub": 1,
+      "prerequisites": [
+        {
+          "name": "印術マスタリー",
+          "sl": 3
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《ルーンの障壁》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "-",
+      "timing": "開幕",
+      "range": "-",
+      "target": "味方全",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "印術マスタリー",
+          "sl": 4
+        },
+        {
+          "name": "ルーンの盾",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《博識》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 1,
+      "max_sl_sub": 0,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《ルーンの鍵》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "-",
+      "timing": "特殊",
+      "range": "-",
+      "target": "特殊",
+      "cost": "TP：1",
+      "max_sl_main": 1,
+      "max_sl_sub": 1,
+      "prerequisites": [
+        {
+          "name": "印術マスタリー",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《ルーンの結界》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "-",
+      "timing": "特殊",
+      "range": "-",
+      "target": "特殊",
+      "cost": "TP：3",
+      "max_sl_main": 1,
+      "max_sl_sub": 1,
+      "prerequisites": [
+        {
+          "name": "印術マスタリー",
+          "sl": 3
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《HPブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《TPブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《属性攻撃ブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    }
+  ]
+}

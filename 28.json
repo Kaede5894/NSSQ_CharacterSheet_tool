@@ -1,0 +1,392 @@
+{
+  "class_name": "",
+  "skills": [
+    {
+      "name": "《★多重方陣》",
+      "weapon": "-",
+      "part": "-",
+      "category": "方陣",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 1,
+      "max_sl_sub": 1,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《方陣マスタリー》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 5,
+      "max_sl_sub": 3,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《毒の方陣》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "方陣",
+      "timing": "主行動",
+      "range": "-",
+      "target": "特殊",
+      "cost": "TP：4",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "方陣マスタリー",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《麻痺の方陣》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "方陣",
+      "timing": "主行動",
+      "range": "-",
+      "target": "特殊",
+      "cost": "TP：4",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "方陣マスタリー",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《封の方陣》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "方陣",
+      "timing": "主行動",
+      "range": "-",
+      "target": "特殊",
+      "cost": "TP：4",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "方陣マスタリー",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《幻惑の方陣》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "方陣",
+      "timing": "主行動",
+      "range": "-",
+      "target": "特殊",
+      "cost": "TP：4",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "方陣マスタリー",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《催眠の方陣》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "方陣",
+      "timing": "主行動",
+      "range": "-",
+      "target": "特殊",
+      "cost": "TP：4",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "方陣マスタリー",
+          "sl": 3
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《陣回復》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "特殊",
+      "range": "-",
+      "target": "味方全",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "方陣マスタリー",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《破陣：命脈活性》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "回復",
+      "timing": "主行動",
+      "range": "-",
+      "target": "味方全",
+      "cost": "TP：2",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "方陣マスタリー",
+          "sl": 2
+        },
+        {
+          "name": "陣回復",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《破陣：亜空絞破》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "術式",
+      "timing": "主行動",
+      "range": "-",
+      "target": "敵単",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "方陣マスタリー",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《破陣：亜空鳴動》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "術式",
+      "timing": "主行動",
+      "range": "-",
+      "target": "敵全",
+      "cost": "TP：4",
+      "max_sl_main": 3,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "方陣マスタリー",
+          "sl": 4
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《陣還元》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 1,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "方陣マスタリー",
+          "sl": 5
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《魅了の邪眼》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "-",
+      "timing": "主行動",
+      "range": "-",
+      "target": "敵単",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "方陣マスタリー",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《衰身の邪眼》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "-",
+      "timing": "主行動",
+      "range": "-",
+      "target": "敵単",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "方陣マスタリー",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《解魔の札》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "-",
+      "timing": "主行動",
+      "range": "-",
+      "target": "敵単",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "方陣マスタリー",
+          "sl": 3
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《退魔の霧》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "-",
+      "timing": "主行動",
+      "range": "-",
+      "target": "味方全",
+      "cost": "TP：4",
+      "max_sl_main": 2,
+      "max_sl_sub": 1,
+      "prerequisites": [
+        {
+          "name": "方陣マスタリー",
+          "sl": 3
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《博識》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 1,
+      "max_sl_sub": 0,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《地脈操作》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "-",
+      "timing": "特殊",
+      "range": "-",
+      "target": "味方全",
+      "cost": "TP：5",
+      "max_sl_main": 1,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "方陣マスタリー",
+          "sl": 3
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《HPブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《TPブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《抑制攻撃ブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 4,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《抑制防御ブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 4,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    }
+  ]
+}

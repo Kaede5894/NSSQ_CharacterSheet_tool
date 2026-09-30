@@ -1,0 +1,371 @@
+{
+  "class_name": "",
+  "skills": [
+    {
+      "name": "《★大自然の恵み》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "特殊",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 1,
+      "max_sl_sub": 1,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《エフィシエント》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 2,
+      "max_sl_sub": 1,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《簡易蘇生》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 1,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "エフィシエント",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《子守唄》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "呪歌",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "敵単",
+      "cost": "TP：2",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《鳴かずば討たれず》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "-",
+      "timing": "受動",
+      "range": "-",
+      "target": "特殊",
+      "cost": "TP：1",
+      "max_sl_main": 1,
+      "max_sl_sub": 1,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《弱り目に祟り目》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "-",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "敵単",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "鳴かずば討たれず",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《怪我の功名》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "-",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "敵単",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "弱り目に祟り目",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《不思議な種》",
+      "weapon": "-",
+      "part": "腕",
+      "category": "-",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "敵列",
+      "cost": "TP：2",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "子守唄",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《危険感知》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 1,
+      "max_sl_sub": 0,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《採集マスター》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《解体マスター》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "特殊",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 2,
+      "max_sl_sub": 1,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《野生の嗅覚》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "特殊",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 2,
+      "max_sl_sub": 1,
+      "prerequisites": [
+        {
+          "name": "採集マスター",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《大きな籠》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "特殊",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 1,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "採集マスター",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《二毛作》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "特殊",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 1,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "採集マスター",
+          "sl": 3
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《キャンプマスター》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《狩猟者の嗅覚》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《収穫者の嗅覚》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《カモフラージュ》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 1,
+      "max_sl_sub": 1,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《アメニモマケズ》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "特殊",
+      "range": "-",
+      "target": "自身",
+      "cost": "TP：3",
+      "max_sl_main": 1,
+      "max_sl_sub": 0,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《豊作祈願》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "特殊",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 1,
+      "max_sl_sub": 1,
+      "prerequisites": [
+        {
+          "name": "解体マスター",
+          "sl": 1
+        },
+        {
+          "name": "野生の嗅覚",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《先制ブロック》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "特殊",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《HPブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《TPブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    }
+  ]
+}

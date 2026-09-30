@@ -1,0 +1,424 @@
+{
+  "class_name": "",
+  "skills": [
+    {
+      "name": "《★美しき舞い》",
+      "weapon": "-",
+      "part": "脚",
+      "category": "舞踊",
+      "timing": "開幕",
+      "range": "-",
+      "target": "自身",
+      "cost": "FP：1",
+      "max_sl_main": 1,
+      "max_sl_sub": 1,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《剣マスタリー》",
+      "weapon": "剣",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 5,
+      "max_sl_sub": 3,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《舞踊マスタリー》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 5,
+      "max_sl_sub": 3,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《アタックタンゴ》",
+      "weapon": "-",
+      "part": "脚",
+      "category": "舞踊",
+      "timing": "主行動",
+      "range": "-",
+      "target": "味方列",
+      "cost": "TP：2",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "舞踊マスタリー",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《ガードタンゴ》",
+      "weapon": "-",
+      "part": "脚",
+      "category": "舞踊",
+      "timing": "主行動",
+      "range": "-",
+      "target": "味方列",
+      "cost": "TP：2",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "舞踊マスタリー",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《リジェネワルツ》",
+      "weapon": "-",
+      "part": "脚",
+      "category": "舞踊",
+      "timing": "主行動",
+      "range": "-",
+      "target": "味方列",
+      "cost": "TP：2",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "舞踊マスタリー",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《ヒーリングワルツ》",
+      "weapon": "-",
+      "part": "脚",
+      "category": "舞踊",
+      "timing": "主行動",
+      "range": "-",
+      "target": "味方列",
+      "cost": "TP：2",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "舞踊マスタリー",
+          "sl": 2
+        },
+        {
+          "name": "リジェネワルツ",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《フレッシュワルツ》",
+      "weapon": "-",
+      "part": "脚",
+      "category": "舞踊",
+      "timing": "主行動",
+      "range": "-",
+      "target": "味方列",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "舞踊マスタリー",
+          "sl": 2
+        },
+        {
+          "name": "リジェネワルツ",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《リカバリワルツ》",
+      "weapon": "-",
+      "part": "脚",
+      "category": "舞踊",
+      "timing": "主行動",
+      "range": "-",
+      "target": "味方列",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "舞踊マスタリー",
+          "sl": 2
+        },
+        {
+          "name": "リジェネワルツ",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《エナジーワルツ》",
+      "weapon": "-",
+      "part": "脚",
+      "category": "舞踊",
+      "timing": "主行動",
+      "range": "-",
+      "target": "味方列",
+      "cost": "TP：4",
+      "max_sl_main": 3,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "舞踊マスタリー",
+          "sl": 4
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《カウンターサンバ》",
+      "weapon": "剣",
+      "part": "脚",
+      "category": "舞踊",
+      "timing": "開幕",
+      "range": "-",
+      "target": "特殊",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "剣マスタリー",
+          "sl": 1
+        },
+        {
+          "name": "舞踊マスタリー",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《チェイスサンバ》",
+      "weapon": "剣",
+      "part": "脚",
+      "category": "舞踊",
+      "timing": "開幕",
+      "range": "-",
+      "target": "特殊",
+      "cost": "TP：2",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "剣マスタリー",
+          "sl": 2
+        },
+        {
+          "name": "舞踊マスタリー",
+          "sl": 3
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《トリックサンバ》",
+      "weapon": "-",
+      "part": "脚",
+      "category": "舞踊",
+      "timing": "開幕",
+      "range": "-",
+      "target": "特殊",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "剣マスタリー",
+          "sl": 2
+        },
+        {
+          "name": "舞踊マスタリー",
+          "sl": 4
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《ラッシュダンス》",
+      "weapon": "剣",
+      "part": "脚",
+      "category": "舞踊",
+      "timing": "開幕",
+      "range": "-",
+      "target": "特殊",
+      "cost": "TP：4",
+      "max_sl_main": 3,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "チェイスサンバ",
+          "sl": 2
+        },
+        {
+          "name": "舞踊マスタリー",
+          "sl": 5
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《扇の舞》",
+      "weapon": "-",
+      "part": "脚",
+      "category": "舞踊",
+      "timing": "受動",
+      "range": "-",
+      "target": "特殊",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "舞踊マスタリー",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《剣の舞》",
+      "weapon": "剣",
+      "part": "脚",
+      "category": "舞踊",
+      "timing": "受動",
+      "range": "-",
+      "target": "特殊",
+      "cost": "TP：2",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "剣マスタリー",
+          "sl": 3
+        },
+        {
+          "name": "扇の舞",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《霞の舞》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 1,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "舞踊マスタリー",
+          "sl": 4
+        },
+        {
+          "name": "扇の舞",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《ホットスタート》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "特殊",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 1,
+      "max_sl_sub": 0,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《魅惑の舞》",
+      "weapon": "-",
+      "part": "脚",
+      "category": "舞踊",
+      "timing": "主行動",
+      "range": "-",
+      "target": "特殊",
+      "cost": "TP：3",
+      "max_sl_main": 1,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "舞踊マスタリー",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《HPブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《TPブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《速度ブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    }
+  ]
+}

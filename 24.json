@@ -1,0 +1,436 @@
+{
+  "class_name": "",
+  "skills": [
+    {
+      "name": "《★城塞騎士の心得》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 1,
+      "max_sl_sub": 1,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《鎚マスタリー》",
+      "weapon": "鎚",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 5,
+      "max_sl_sub": 3,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《盾マスタリー》",
+      "weapon": "盾",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 5,
+      "max_sl_sub": 3,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《ボルトストライク》",
+      "weapon": "鎚",
+      "part": "腕",
+      "category": "白兵",
+      "timing": "主行動",
+      "range": "近",
+      "target": "敵単",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "鎚マスタリー",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《ホーリーバッシュ》",
+      "weapon": "鎚",
+      "part": "腕",
+      "category": "白兵",
+      "timing": "主行動",
+      "range": "近",
+      "target": "敵単",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "鎚マスタリー",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《リベンジスマイト》",
+      "weapon": "鎚",
+      "part": "腕",
+      "category": "白兵",
+      "timing": "開幕",
+      "range": "-",
+      "target": "特殊",
+      "cost": "TP：2",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "鎚マスタリー",
+          "sl": 3
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《アースブレイク》",
+      "weapon": "鎚",
+      "part": "腕",
+      "category": "白兵",
+      "timing": "主行動",
+      "range": "近",
+      "target": "敵列",
+      "cost": "TP：4",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "鎚マスタリー",
+          "sl": 5
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《攻防一体》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 1,
+      "max_sl_sub": 1,
+      "prerequisites": [
+        {
+          "name": "盾マスタリー",
+          "sl": 3
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《ディバイドガード》",
+      "weapon": "盾",
+      "part": "腕",
+      "category": "防御",
+      "timing": "開幕",
+      "range": "-",
+      "target": "味方単",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "盾マスタリー",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《ラインディバイド》",
+      "weapon": "盾",
+      "part": "腕",
+      "category": "防御",
+      "timing": "開幕",
+      "range": "-",
+      "target": "味方列",
+      "cost": "TP：2",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "盾マスタリー",
+          "sl": 3
+        },
+        {
+          "name": "ディバイドガード",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《オールディバイド》",
+      "weapon": "盾",
+      "part": "腕",
+      "category": "防御",
+      "timing": "開幕",
+      "range": "-",
+      "target": "味方全",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "盾マスタリー",
+          "sl": 4
+        },
+        {
+          "name": "ラインディバイド",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《ディバイドモード》",
+      "weapon": "盾",
+      "part": "腕",
+      "category": "防御",
+      "timing": "開幕",
+      "range": "-",
+      "target": "味方全",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "盾マスタリー",
+          "sl": 5
+        },
+        {
+          "name": "オールディバイド",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《挑発》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "-",
+      "timing": "開幕",
+      "range": "-",
+      "target": "特殊",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《パリィ》",
+      "weapon": "-",
+      "part": "腕",
+      "category": "-",
+      "timing": "受動",
+      "range": "-",
+      "target": "自身",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《マテリアルパリィ》",
+      "weapon": "-",
+      "part": "腕",
+      "category": "-",
+      "timing": "受動",
+      "range": "-",
+      "target": "自身",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《騎士道の加護》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "-",
+      "timing": "開幕",
+      "range": "-",
+      "target": "自身",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《渾身ディフェンス》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "-",
+      "timing": "開幕",
+      "range": "-",
+      "target": "自身",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《防御陣形》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "号令",
+      "timing": "主行動",
+      "range": "-",
+      "target": "味方全",
+      "cost": "TP：4",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《守護陣形》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "号令",
+      "timing": "主行動",
+      "range": "-",
+      "target": "味方全",
+      "cost": "TP：4",
+      "max_sl_main": 1,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "防御陣形",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《全力逃走》",
+      "weapon": "-",
+      "part": "脚",
+      "category": "-",
+      "timing": "特殊",
+      "range": "-",
+      "target": "自身",
+      "cost": "TP：1",
+      "max_sl_main": 1,
+      "max_sl_sub": 0,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《聖なる加護》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "-",
+      "timing": "主行動",
+      "range": "-",
+      "target": "味方列",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "騎士道の加護",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《ランパート》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "-",
+      "timing": "開幕",
+      "range": "-",
+      "target": "自身",
+      "cost": "TP：2",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《HPブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《TPブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《物理防御ブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《抑制防御ブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 4,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    }
+  ]
+}

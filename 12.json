@@ -1,0 +1,411 @@
+{
+  "class_name": "",
+  "skills": [
+    {
+      "name": "《★巫剣の力》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "開幕",
+      "range": "-",
+      "target": "自身",
+      "cost": "FP：1",
+      "max_sl_main": 1,
+      "max_sl_sub": 1,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《剣マスタリー》",
+      "weapon": "剣",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 5,
+      "max_sl_sub": 3,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《回復マスタリー》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 5,
+      "max_sl_sub": 3,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《キュア》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "回復",
+      "timing": "主行動",
+      "range": "-",
+      "target": "味方単",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "回復マスタリー",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《エリアキュア》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "回復",
+      "timing": "主行動",
+      "range": "-",
+      "target": "味方全",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "回復マスタリー",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《ヒーリング》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "回復",
+      "timing": "主行動",
+      "range": "-",
+      "target": "味方単",
+      "cost": "TP：2",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "回復マスタリー",
+          "sl": 3
+        },
+        {
+          "name": "キュア",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《パーティヒール》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "回復",
+      "timing": "主行動",
+      "range": "-",
+      "target": "味方全",
+      "cost": "TP：5",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "回復マスタリー",
+          "sl": 3
+        },
+        {
+          "name": "エリアキュア",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《フルヒーリング》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "回復",
+      "timing": "主行動",
+      "range": "-",
+      "target": "味方単",
+      "cost": "TP：3",
+      "max_sl_main": 1,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "回復マスタリー",
+          "sl": 4
+        },
+        {
+          "name": "ヒーリング",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《巫剣：霊封斬》",
+      "weapon": "剣杖",
+      "part": "腕",
+      "category": "白兵",
+      "timing": "主行動",
+      "range": "近",
+      "target": "敵単",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "剣マスタリー",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《巫剣：霊攻衰斬》",
+      "weapon": "剣杖",
+      "part": "腕",
+      "category": "白兵",
+      "timing": "主行動",
+      "range": "近",
+      "target": "敵単",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "剣マスタリー",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《巫剣：霊防衰斬》",
+      "weapon": "剣杖",
+      "part": "腕",
+      "category": "白兵",
+      "timing": "主行動",
+      "range": "近",
+      "target": "敵単",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "剣マスタリー",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《巫剣：霊吸命斬》",
+      "weapon": "剣杖",
+      "part": "腕",
+      "category": "白兵",
+      "timing": "主行動",
+      "range": "近",
+      "target": "敵単",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "剣マスタリー",
+          "sl": 3
+        },
+        {
+          "name": "巫剣：霊攻衰斬",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《巫剣：霊吸心斬》",
+      "weapon": "剣杖",
+      "part": "腕",
+      "category": "白兵",
+      "timing": "主行動",
+      "range": "近",
+      "target": "敵単",
+      "cost": "TP：2",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "剣マスタリー",
+          "sl": 3
+        },
+        {
+          "name": "巫剣：霊防衰斬",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《巫剣：霊攻大斬》",
+      "weapon": "剣杖",
+      "part": "腕",
+      "category": "白兵",
+      "timing": "主行動",
+      "range": "近",
+      "target": "敵単",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "剣マスタリー",
+          "sl": 5
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《巫術：鬼力化》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "-",
+      "timing": "主行動",
+      "range": "-",
+      "target": "味方単",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《巫術：皮硬化》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "-",
+      "timing": "主行動",
+      "range": "-",
+      "target": "味方単",
+      "cost": "TP：2",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《巫術：俊足化》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "-",
+      "timing": "主行動",
+      "range": "-",
+      "target": "味方単",
+      "cost": "TP：2",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《巫術：祓化》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "-",
+      "timing": "主行動",
+      "range": "-",
+      "target": "敵単",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《巫術：転化》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "-",
+      "timing": "主行動",
+      "range": "-",
+      "target": "味方単",
+      "cost": "TP：5",
+      "max_sl_main": 3,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "回復マスタリー",
+          "sl": 5
+        },
+        {
+          "name": "巫術：祓化",
+          "sl": 3
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《HPブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《TPブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《物理攻撃ブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《抑制防御ブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 4,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    }
+  ]
+}

@@ -1,0 +1,441 @@
+{
+  "class_name": "",
+  "skills": [
+    {
+      "name": "《★フルゲイン》",
+      "weapon": "-",
+      "part": "腕",
+      "category": "白兵",
+      "timing": "特殊",
+      "range": "-",
+      "target": "自身",
+      "cost": "FP：3",
+      "max_sl_main": 1,
+      "max_sl_sub": 1,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《剣マスタリー》",
+      "weapon": "剣",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 5,
+      "max_sl_sub": 3,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《突剣マスタリー》",
+      "weapon": "突剣",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 5,
+      "max_sl_sub": 3,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《斧マスタリー》",
+      "weapon": "斧",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 5,
+      "max_sl_sub": 3,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《ソニックレイド》",
+      "weapon": "剣突剣砲剣",
+      "part": "腕",
+      "category": "白兵",
+      "timing": "特殊",
+      "range": "近",
+      "target": "敵単",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "剣マスタリー",
+          "sl": 1
+        },
+        {
+          "name": "突剣マスタリー",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《ダブルストライク》",
+      "weapon": "剣突剣砲剣",
+      "part": "腕",
+      "category": "白兵",
+      "timing": "主行動",
+      "range": "近",
+      "target": "敵単",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "剣マスタリー",
+          "sl": 3
+        },
+        {
+          "name": "突剣マスタリー",
+          "sl": 3
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《三色セイバー》",
+      "weapon": "剣砲剣",
+      "part": "腕",
+      "category": "白兵",
+      "timing": "主行動",
+      "range": "近",
+      "target": "敵単",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "剣マスタリー",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《トルネード》",
+      "weapon": "剣砲剣",
+      "part": "腕",
+      "category": "白兵",
+      "timing": "主行動",
+      "range": "近",
+      "target": "敵列",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "剣マスタリー",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《三色チェイス(剣)》",
+      "weapon": "剣砲剣",
+      "part": "腕",
+      "category": "-",
+      "timing": "開幕",
+      "range": "-",
+      "target": "特殊",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "剣マスタリー",
+          "sl": 3
+        },
+        {
+          "name": "三色セイバー",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《ソードテンペスト》",
+      "weapon": "剣砲剣",
+      "part": "腕",
+      "category": "白兵",
+      "timing": "特殊",
+      "range": "近",
+      "target": "敵単",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "剣マスタリー",
+          "sl": 5
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《ペネトレイト》",
+      "weapon": "突剣",
+      "part": "腕",
+      "category": "白兵",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "敵貫通",
+      "cost": "TP：2",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "突剣マスタリー",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《ハヤブサ突き》",
+      "weapon": "突剣",
+      "part": "腕",
+      "category": "白兵",
+      "timing": "主行動",
+      "range": "近",
+      "target": "特殊",
+      "cost": "TP：4",
+      "max_sl_main": 3,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "ダブルストライク",
+          "sl": 2
+        },
+        {
+          "name": "ペネトレイト",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《リンクエフェクト》",
+      "weapon": "剣砲剣",
+      "part": "頭",
+      "category": "-",
+      "timing": "開幕",
+      "range": "-",
+      "target": "特殊",
+      "cost": "TP：1",
+      "max_sl_main": 1,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "三色セイバー",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《ブーメランアクス》",
+      "weapon": "斧",
+      "part": "腕",
+      "category": "白兵",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "敵単",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "斧マスタリー",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《パワーゲイン》",
+      "weapon": "斧鎚",
+      "part": "腕",
+      "category": "白兵",
+      "timing": "主行動",
+      "range": "近",
+      "target": "敵単",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "斧マスタリー",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《ヘッドバッシュ》",
+      "weapon": "斧鎚",
+      "part": "腕",
+      "category": "白兵",
+      "timing": "主行動",
+      "range": "近",
+      "target": "敵単",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "斧マスタリー",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《スタンスマッシュ》",
+      "weapon": "斧鎚",
+      "part": "腕",
+      "category": "白兵",
+      "timing": "主行動",
+      "range": "近",
+      "target": "敵単",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "斧マスタリー",
+          "sl": 3
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《デスバウンド》",
+      "weapon": "斧鎚",
+      "part": "腕",
+      "category": "白兵",
+      "timing": "主行動",
+      "range": "近",
+      "target": "敵単",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "斧マスタリー",
+          "sl": 5
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《ヴァンガード》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "-",
+      "timing": "開幕",
+      "range": "-",
+      "target": "自身",
+      "cost": "TP：1",
+      "max_sl_main": 1,
+      "max_sl_sub": 0,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《先駆けの功名》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《切り込み隊長》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 2,
+      "max_sl_sub": 1,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《HPブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《TPブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《物理攻撃ブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《物理防御ブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    }
+  ]
+}

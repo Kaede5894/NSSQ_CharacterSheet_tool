@@ -1,0 +1,368 @@
+{
+  "class_name": "",
+  "skills": [
+    {
+      "name": "《★エーテルマスター》",
+      "weapon": "-",
+      "part": "-",
+      "category": "術式",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 1,
+      "max_sl_sub": 1,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《星術マスタリー》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 5,
+      "max_sl_sub": 3,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《三色初級星術》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "術式",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "敵単",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "星術マスタリー",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《炎の連星術》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "術式",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "敵列",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "星術マスタリー",
+          "sl": 3
+        },
+        {
+          "name": "三色初級星術",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《氷の連星術》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "術式",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "敵列",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "星術マスタリー",
+          "sl": 3
+        },
+        {
+          "name": "三色初級星術",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《雷の連星術》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "術式",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "敵列",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "星術マスタリー",
+          "sl": 3
+        },
+        {
+          "name": "三色初級星術",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《炎の先見術》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "術式",
+      "timing": "開幕",
+      "range": "遠",
+      "target": "特殊",
+      "cost": "TP：4",
+      "max_sl_main": 3,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "星術マスタリー",
+          "sl": 4
+        },
+        {
+          "name": "炎の連星術",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《氷の先見術》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "術式",
+      "timing": "開幕",
+      "range": "遠",
+      "target": "特殊",
+      "cost": "TP：4",
+      "max_sl_main": 3,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "星術マスタリー",
+          "sl": 4
+        },
+        {
+          "name": "氷の連星術",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《雷の先見術》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "術式",
+      "timing": "開幕",
+      "range": "遠",
+      "target": "特殊",
+      "cost": "TP：4",
+      "max_sl_main": 3,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "星術マスタリー",
+          "sl": 4
+        },
+        {
+          "name": "雷の連星術",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《メテオ》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "術式",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "特殊",
+      "cost": "TP：5",
+      "max_sl_main": 3,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "星術マスタリー",
+          "sl": 5
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《特異点定理》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 1,
+      "max_sl_sub": 1,
+      "prerequisites": [
+        {
+          "name": "星術マスタリー",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《リターンエーテル》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "星術マスタリー",
+          "sl": 3
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《エーテル圧縮》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "-",
+      "timing": "開幕",
+      "range": "-",
+      "target": "自身",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "星術マスタリー",
+          "sl": 3
+        },
+        {
+          "name": "TPブースト",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《博識》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 1,
+      "max_sl_sub": 0,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《六分儀観測》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "-",
+      "timing": "特殊",
+      "range": "-",
+      "target": "自身",
+      "cost": "TP：1",
+      "max_sl_main": 1,
+      "max_sl_sub": 1,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《天変占星術》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "-",
+      "timing": "特殊",
+      "range": "-",
+      "target": "自身",
+      "cost": "TP：1",
+      "max_sl_main": 1,
+      "max_sl_sub": 1,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《星詠み》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "-",
+      "timing": "特殊",
+      "range": "-",
+      "target": "自身",
+      "cost": "TP：2",
+      "max_sl_main": 1,
+      "max_sl_sub": 1,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《HPブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《TPブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《属性攻撃ブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    }
+  ]
+}

@@ -1,0 +1,422 @@
+{
+  "class_name": "",
+  "skills": [
+    {
+      "name": "《★至高の魔弾》",
+      "weapon": "銃",
+      "part": "腕",
+      "category": "射撃",
+      "timing": "特殊",
+      "range": "-",
+      "target": "自身",
+      "cost": "FP：3",
+      "max_sl_main": 1,
+      "max_sl_sub": 1,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《銃マスタリー》",
+      "weapon": "銃",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 5,
+      "max_sl_sub": 3,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《三色バレット》",
+      "weapon": "銃",
+      "part": "腕",
+      "category": "射撃",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "敵単",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "銃マスタリー",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《三種スナイプ》",
+      "weapon": "弓銃",
+      "part": "腕",
+      "category": "射撃",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "敵単",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "銃マスタリー",
+          "sl": 2
+        },
+        {
+          "name": "弓マスタリー",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《キュアバレット》",
+      "weapon": "銃",
+      "part": "腕",
+      "category": "回復",
+      "timing": "主行動",
+      "range": "-",
+      "target": "味方単",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "銃マスタリー",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《ドラッグバレット》",
+      "weapon": "銃",
+      "part": "腕",
+      "category": "回復",
+      "timing": "主行動",
+      "range": "-",
+      "target": "味方単",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "キュアバレット",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《チャージフレイム》",
+      "weapon": "銃",
+      "part": "腕",
+      "category": "射撃",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "敵単",
+      "cost": "TP：2",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "三色バレット",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《チャージアイス》",
+      "weapon": "銃",
+      "part": "腕",
+      "category": "射撃",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "敵単",
+      "cost": "TP：2",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "三色バレット",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《チャージサンダー》",
+      "weapon": "銃",
+      "part": "腕",
+      "category": "射撃",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "敵単",
+      "cost": "TP：2",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "三色バレット",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《精密射撃》",
+      "weapon": "銃",
+      "part": "腕",
+      "category": "射撃",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "敵単",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "銃マスタリー",
+          "sl": 3
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《ブレイクショット》",
+      "weapon": "銃",
+      "part": "腕",
+      "category": "射撃",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "敵単",
+      "cost": "TP：2",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "銃マスタリー",
+          "sl": 3
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《跳弾》",
+      "weapon": "銃",
+      "part": "腕",
+      "category": "射撃",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "特殊",
+      "cost": "TP：4",
+      "max_sl_main": 3,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "銃マスタリー",
+          "sl": 5
+        },
+        {
+          "name": "精密射撃",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《ライフルフォーム》",
+      "weapon": "-",
+      "part": "腕",
+      "category": "-",
+      "timing": "開幕",
+      "range": "-",
+      "target": "自身",
+      "cost": "TP：2",
+      "max_sl_main": 1,
+      "max_sl_sub": 1,
+      "prerequisites": [
+        {
+          "name": "銃マスタリー",
+          "sl": 3
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《ライアットフォーム》",
+      "weapon": "-",
+      "part": "腕",
+      "category": "-",
+      "timing": "開幕",
+      "range": "-",
+      "target": "自身",
+      "cost": "TP：2",
+      "max_sl_main": 1,
+      "max_sl_sub": 1,
+      "prerequisites": [
+        {
+          "name": "銃マスタリー",
+          "sl": 3
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《バルカンフォーム》",
+      "weapon": "-",
+      "part": "腕",
+      "category": "-",
+      "timing": "開幕",
+      "range": "-",
+      "target": "自身",
+      "cost": "TP：4",
+      "max_sl_main": 1,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "銃マスタリー",
+          "sl": 5
+        },
+        {
+          "name": "ライアットフォーム",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《クイックアクト》",
+      "weapon": "-",
+      "part": "脚",
+      "category": "-",
+      "timing": "開幕",
+      "range": "-",
+      "target": "自身",
+      "cost": "TP：1",
+      "max_sl_main": 1,
+      "max_sl_sub": 1,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《ウィークショット》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 1,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "銃マスタリー",
+          "sl": 4
+        },
+        {
+          "name": "弓マスタリー",
+          "sl": 4
+        },
+        {
+          "name": "弩マスタリー",
+          "sl": 4
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《ダブルアクション》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 1,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "ウィークショット",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《オウルアイ》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 1,
+      "max_sl_sub": 0,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《HPブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《TPブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《物理攻撃ブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《抑制攻撃ブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 4,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    }
+  ]
+}

@@ -1,0 +1,463 @@
+{
+  "class_name": "",
+  "skills": [
+    {
+      "name": "《★禁断の術式》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "術式",
+      "timing": "特殊",
+      "range": "-",
+      "target": "自身",
+      "cost": "FP：3",
+      "max_sl_main": 1,
+      "max_sl_sub": 1,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《錬金マスタリー》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 5,
+      "max_sl_sub": 3,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《三色初級術式》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "術式",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "敵単",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "錬金マスタリー",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《火炎の術式》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "術式",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "敵単",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "錬金マスタリー",
+          "sl": 3
+        },
+        {
+          "name": "三色初級術式",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《氷結の術式》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "術式",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "敵単",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "錬金マスタリー",
+          "sl": 3
+        },
+        {
+          "name": "三色初級術式",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《雷撃の術式》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "術式",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "敵単",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "錬金マスタリー",
+          "sl": 3
+        },
+        {
+          "name": "三色初級術式",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《爆炎の術式》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "術式",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "敵列",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "錬金マスタリー",
+          "sl": 3
+        },
+        {
+          "name": "三色初級術式",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《氷嵐の術式》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "術式",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "敵列",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "錬金マスタリー",
+          "sl": 3
+        },
+        {
+          "name": "三色初級術式",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《雷光の術式》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "術式",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "敵列",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "錬金マスタリー",
+          "sl": 3
+        },
+        {
+          "name": "三色初級術式",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《大爆炎の術式》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "術式",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "敵全",
+      "cost": "TP：5",
+      "max_sl_main": 3,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "錬金マスタリー",
+          "sl": 5
+        },
+        {
+          "name": "爆炎の術式",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《大氷嵐の術式》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "術式",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "敵全",
+      "cost": "TP：5",
+      "max_sl_main": 3,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "錬金マスタリー",
+          "sl": 5
+        },
+        {
+          "name": "氷嵐の術式",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《大雷光の術式》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "術式",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "敵全",
+      "cost": "TP：5",
+      "max_sl_main": 3,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "錬金マスタリー",
+          "sl": 5
+        },
+        {
+          "name": "雷光の術式",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《三色物理術式》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "術式",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "敵単",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "錬金マスタリー",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《強斬の術式》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "術式",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "敵列",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "錬金マスタリー",
+          "sl": 3
+        },
+        {
+          "name": "三色物理術式",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《圧壊の術式》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "術式",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "敵列",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "錬金マスタリー",
+          "sl": 3
+        },
+        {
+          "name": "三色物理術式",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《貫殺の術式》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "術式",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "敵列",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "錬金マスタリー",
+          "sl": 3
+        },
+        {
+          "name": "三色物理術式",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《定量分析》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "-",
+      "timing": "開幕",
+      "range": "-",
+      "target": "自身",
+      "cost": "TP：2",
+      "max_sl_main": 1,
+      "max_sl_sub": 1,
+      "prerequisites": [
+        {
+          "name": "錬金マスタリー",
+          "sl": 2
+        },
+        {
+          "name": "TPブースト",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《核熱の術式》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "術式",
+      "timing": "主行動",
+      "range": "遠",
+      "target": "敵単",
+      "cost": "TP：5",
+      "max_sl_main": 3,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "錬金マスタリー",
+          "sl": 5
+        },
+        {
+          "name": "TPブースト",
+          "sl": 3
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《樹海錬金の知識》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "-",
+      "timing": "特殊",
+      "range": "-",
+      "target": "特殊",
+      "cost": "-",
+      "max_sl_main": 1,
+      "max_sl_sub": 0,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《博識》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 1,
+      "max_sl_sub": 0,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《HPブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《TPブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《属性攻撃ブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    }
+  ]
+}

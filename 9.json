@@ -1,0 +1,473 @@
+{
+  "class_name": "",
+  "skills": [
+    {
+      "name": "《★一刀必殺》",
+      "weapon": "刀",
+      "part": "-",
+      "category": "白兵",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 1,
+      "max_sl_sub": 1,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《刀マスタリー》",
+      "weapon": "刀",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 5,
+      "max_sl_sub": 3,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《上段の構え》",
+      "weapon": "刀",
+      "part": "腕",
+      "category": "-",
+      "timing": "開幕",
+      "range": "-",
+      "target": "自身",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "刀マスタリー",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《斬馬》",
+      "weapon": "刀",
+      "part": "腕",
+      "category": "白兵",
+      "timing": "主行動",
+      "range": "近",
+      "target": "敵単",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "上段の構え",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《卸し焔》",
+      "weapon": "刀",
+      "part": "腕",
+      "category": "白兵",
+      "timing": "主行動",
+      "range": "近",
+      "target": "敵単",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "上段の構え",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《鬼炎斬》",
+      "weapon": "刀",
+      "part": "腕",
+      "category": "白兵",
+      "timing": "主行動",
+      "range": "近",
+      "target": "敵単",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "刀マスタリー",
+          "sl": 3
+        },
+        {
+          "name": "卸し焔",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《ツバメ返し》",
+      "weapon": "刀",
+      "part": "腕",
+      "category": "白兵",
+      "timing": "主行動",
+      "range": "近",
+      "target": "敵単",
+      "cost": "TP：4",
+      "max_sl_main": 3,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "刀マスタリー",
+          "sl": 5
+        },
+        {
+          "name": "上段の構え",
+          "sl": 3
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《青眼の構え》",
+      "weapon": "刀",
+      "part": "腕",
+      "category": "-",
+      "timing": "開幕",
+      "range": "-",
+      "target": "自身",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "刀マスタリー",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《小手打ち》",
+      "weapon": "刀",
+      "part": "腕",
+      "category": "白兵",
+      "timing": "主行動",
+      "range": "近",
+      "target": "敵単",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "青眼の構え",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《一寸の見切り》",
+      "weapon": "刀",
+      "part": "脚",
+      "category": "-",
+      "timing": "受動",
+      "range": "-",
+      "target": "自身",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "青眼の構え",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《雷耀突き》",
+      "weapon": "刀",
+      "part": "腕",
+      "category": "白兵",
+      "timing": "主行動",
+      "range": "近",
+      "target": "敵単",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "青眼の構え",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《月影》",
+      "weapon": "刀",
+      "part": "腕",
+      "category": "白兵",
+      "timing": "主行動",
+      "range": "近",
+      "target": "敵単",
+      "cost": "TP：2",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "刀マスタリー",
+          "sl": 3
+        },
+        {
+          "name": "小手打ち",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《夢想剣》",
+      "weapon": "刀",
+      "part": "腕",
+      "category": "-",
+      "timing": "開幕",
+      "range": "-",
+      "target": "自身",
+      "cost": "TP：4",
+      "max_sl_main": 3,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "刀マスタリー",
+          "sl": 5
+        },
+        {
+          "name": "青眼の構え",
+          "sl": 3
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《居合の構え》",
+      "weapon": "刀",
+      "part": "腕",
+      "category": "-",
+      "timing": "開幕",
+      "range": "-",
+      "target": "自身",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "刀マスタリー",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《早討ち》",
+      "weapon": "刀",
+      "part": "腕",
+      "category": "白兵",
+      "timing": "特殊",
+      "range": "近",
+      "target": "敵単",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "居合の構え",
+          "sl": 1
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《抜刀氷雪》",
+      "weapon": "刀",
+      "part": "腕",
+      "category": "白兵",
+      "timing": "主行動",
+      "range": "近",
+      "target": "敵単",
+      "cost": "TP：1",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "居合の構え",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《鎌鼬》",
+      "weapon": "刀",
+      "part": "腕",
+      "category": "白兵",
+      "timing": "特殊",
+      "range": "遠",
+      "target": "敵単",
+      "cost": "TP：2",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [
+        {
+          "name": "刀マスタリー",
+          "sl": 3
+        },
+        {
+          "name": "早討ち",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《細雪》",
+      "weapon": "刀",
+      "part": "腕",
+      "category": "白兵",
+      "timing": "主行動",
+      "range": "近",
+      "target": "敵列",
+      "cost": "TP：3",
+      "max_sl_main": 3,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "刀マスタリー",
+          "sl": 4
+        },
+        {
+          "name": "抜刀氷雪",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《一閃》",
+      "weapon": "刀",
+      "part": "腕",
+      "category": "白兵",
+      "timing": "主行動",
+      "range": "近",
+      "target": "敵列",
+      "cost": "TP：4",
+      "max_sl_main": 3,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "刀マスタリー",
+          "sl": 5
+        },
+        {
+          "name": "居合の構え",
+          "sl": 3
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《死人の法》",
+      "weapon": "-",
+      "part": "頭",
+      "category": "-",
+      "timing": "開幕",
+      "range": "-",
+      "target": "自身",
+      "cost": "TP：1",
+      "max_sl_main": 2,
+      "max_sl_sub": 1,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《不惜身命》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 2,
+      "max_sl_sub": 1,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《一意専心》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 1,
+      "max_sl_sub": 0,
+      "prerequisites": [
+        {
+          "name": "死人の法",
+          "sl": 2
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "《HPブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《TPブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    },
+    {
+      "name": "《物理攻撃ブースト》",
+      "weapon": "-",
+      "part": "-",
+      "category": "-",
+      "timing": "常時",
+      "range": "-",
+      "target": "自身",
+      "cost": "-",
+      "max_sl_main": 3,
+      "max_sl_sub": 2,
+      "prerequisites": [],
+      "description": ""
+    }
+  ]
+}
