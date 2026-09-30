@@ -125,6 +125,10 @@ pre { background: #222; color: #0f0; padding: 12px; border-radius: 4px; overflow
                     <label>TP</label>
                     <input type="text" id="tp" class="auto-calc" value="0" readonly>
                 </div>
+                <div>
+                    <label>FP</label>
+                    <input type="number" id="fp" value="0" oninput="updatePreview()">
+                </div>
             </div>
 
             <!-- 能力値（STR, TEC, VIT, AGI, LUC） -->
@@ -714,6 +718,7 @@ function generateCcfoliaData() {
     const expEl = document.getElementById('cumulativeExp');
     const hpEl = document.getElementById('hp');
     const tpEl = document.getElementById('tp');
+    const fpEl = document.getElementById('fp');
     const bgEl = document.getElementById('charBackground');
 
     const name = nameEl ? nameEl.value : '';
@@ -723,6 +728,7 @@ function generateCcfoliaData() {
     const exp = expEl ? expEl.value : '0';
     const hp = hpEl ? hpEl.value : '0';
     const tp = tpEl ? tpEl.value : '0';
+    const fp = fpEl ? fpEl.value : '0';
     const background = bgEl ? bgEl.value : '';
 
     const mainInfo = classData[mainClass] || { pos: "-", type: "-" };
@@ -742,10 +748,11 @@ function generateCcfoliaData() {
             "externalUrl": "",
             "status": [
             { "label": "HP", "value": Number(hp), "max": Number(hp) },
-            { "label": "TP", "value": Number(tp), "max": Number(tp) }
+            { "label": "TP", "value": Number(tp), "max": Number(tp) },
+            { "label": "FP", "value": Number(fp), "max": Number(fp) }
             ],
             "params": [
-            { "label": "レベル", "value": Number(level) },
+            { "label": "Lv", "value": Number(level) },
             { "label": "メイン", "value": mainClass },
             { "label": "サブ", "value": subClass }
             ],
@@ -888,6 +895,7 @@ function saveCharacterFile() {
         subClass: document.getElementById('subClass').value,
         hp: document.getElementById('hp').value,
         tp: document.getElementById('tp').value,
+        fp: document.getElementById('fp').value,
         charBackground: document.getElementById('charBackground').value,
         scenarios: scenarios
     };
@@ -914,8 +922,9 @@ function loadCharacterFile(event) {
             const loadedMain = data.mainClass || null;
             const loadedSub = data.subClass || '－';
             initClassSelectors(loadedMain, loadedSub);
-            document.getElementById('hp').value = data.hp || '50';
-            document.getElementById('tp').value = data.tp || '30';
+            document.getElementById('hp').value = data.hp || '1';
+            document.getElementById('tp').value = data.tp || '1';
+            document.getElementById('fp').value = data.tp || '1';
             document.getElementById('charBackground').value = data.charBackground || '';
 
             const list = document.getElementById('scenarioList');
