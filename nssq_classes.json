@@ -3,383 +3,145 @@
         "class_id": 1,
         "class_name": "プリンス/プリンセス",
         "position_type": "中衛／万能型",
-        "weapons": [
-            "短剣",
-            "剣",
-            "突剣",
-            "杖",
-            "鞭"
-        ],
-        "armors": [
-            "重鎧",
-            "軽鎧",
-            "服",
-            "盾"
-        ],
-        "states": {
-            "str": "5",
-            "tec": "6",
-            "vit": "6",
-            "agi": "5",
-            "luc": "6"
-        }
+        "weapons": ["短剣","剣","突剣","杖","鞭"],
+        "armors": ["重鎧","軽鎧","服","盾"],
+        "states": {"str": "5","tec": "6","vit": "6","agi": "5","luc": "6"}
     },
     {
         "class_id": 2,
         "class_name": "ソードマン",
         "position_type": "前衛／物理攻撃型",
-        "weapons": [
-            "短剣",
-            "剣",
-            "突剣",
-            "斧"
-        ],
-        "armors": [
-            "重鎧",
-            "軽鎧",
-            "服",
-            "盾"
-        ],
-        "states": {
-            "str": "7",
-            "tec": "3",
-            "vit": "6",
-            "agi": "5",
-            "luc": "4"
-        }
+        "weapons": ["短剣","剣","突剣","斧"],
+        "armors": ["重鎧","軽鎧","服","盾"],
+        "states": {"str": "7","tec": "3","vit": "6","agi": "5","luc": "4"}
     },
     {
         "class_id": 3,
         "class_name": "レンジャー",
         "position_type": "中衛／万能型",
-        "weapons": [
-            "短剣",
-            "弓"
-        ],
-        "armors": [
-            "軽鎧",
-            "服",
-            "盾"
-        ],
-        "states": {
-            "str": "5",
-            "tec": "5",
-            "vit": "5",
-            "agi": "7",
-            "luc": "7"
-        }
+        "weapons": ["短剣","弓"],
+        "armors": ["軽鎧","服","盾"],
+        "states": {"str": "5","tec": "5","vit": "5","agi": "7","luc": "7"}
     },
     {
         "class_id": 4,
         "class_name": "パラディン",
         "position_type": "前衛／防御特化型",
-        "weapons": [
-            "短剣",
-            "剣",
-            "突剣",
-            "槍",
-            "斧"
-        ],
-        "armors": [
-            "重鎧",
-            "軽鎧",
-            "服",
-            "盾"
-        ],
-        "states": {
-            "str": "5",
-            "tec": "5",
-            "vit": "7",
-            "agi": "3",
-            "luc": "5"
-        }
+        "weapons": ["短剣","剣","突剣","槍","斧"],
+        "armors": ["重鎧","軽鎧","服","盾"],
+        "states": {"str": "5","tec": "5","vit": "7","agi": "3","luc": "5"}
     },
     {
         "class_id": 5,
         "class_name": "ダークハンター",
         "position_type": "前衛／特殊攻撃型",
-        "weapons": [
-            "短剣",
-            "剣",
-            "突剣",
-            "鞭"
-        ],
-        "armors": [
-            "軽鎧",
-            "服"
-        ],
-        "states": {
-            "str": "6",
-            "tec": "5",
-            "vit": "5",
-            "agi": "6",
-            "luc": "6"
-        }
+        "weapons": ["短剣","剣","突剣","鞭"],
+        "armors": ["軽鎧","服"],
+        "states": {"str": "6","tec": "5","vit": "5","agi": "6","luc": "6"}
     },
     {
         "class_id": 6,
         "class_name": "メディック",
         "position_type": "後衛／回復特化型",
-        "weapons": [
-            "短剣",
-            "杖",
-            "鎚"
-        ],
-        "armors": [
-            "服"
-        ],
-        "states": {
-            "str": "5",
-            "tec": "6",
-            "vit": "5",
-            "agi": "4",
-            "luc": "4"
-        }
+        "weapons": ["短剣","杖","鎚"],
+        "armors": ["服"],
+        "states": {"str": "5","tec": "6","vit": "5","agi": "4","luc": "4"}
     },
     {
         "class_id": 7,
         "class_name": "アルケミスト",
         "position_type": "後衛／属性攻撃型",
-        "weapons": [
-            "短剣",
-            "杖"
-        ],
-        "armors": [
-            "服"
-        ],
-        "states": {
-            "str": "3",
-            "tec": "7",
-            "vit": "4",
-            "agi": "4",
-            "luc": "5"
-        }
+        "weapons": ["短剣","杖"],
+        "armors": ["服"],
+        "states": {"str": "3","tec": "7","vit": "4","agi": "4","luc": "5"}        
     },
     {
         "class_id": 8,
         "class_name": "バード",
         "position_type": "後衛／支援特化型",
-        "weapons": [
-            "短剣",
-            "剣",
-            "弓"
-        ],
-        "armors": [
-            "軽鎧",
-            "服"
-        ],
-        "states": {
-            "str": "4",
-            "tec": "5",
-            "vit": "4",
-            "agi": "5",
-            "luc": "6"
-        }
+        "weapons": ["短剣","剣","弓"],
+        "armors": ["軽鎧","服"],
+        "states": {"str": "4","tec": "5","vit": "4,"agi": "5","luc": "6"}
     },
     {
         "class_id": 9,
         "class_name": "ブシドー",
         "position_type": "前衛／攻撃偏重型",
-        "weapons": [
-            "短剣",
-            "刀"
-        ],
-        "armors": [
-            "軽鎧",
-            "服"
-        ],
-        "states": {
-            "str": "7",
-            "tec": "3",
-            "vit": "4",
-            "agi": "5",
-            "luc": "4"
-        }
+        "weapons": ["短剣","刀"],
+        "armors": ["軽鎧","服"],
+        "states": {"str": "7","tec": "3","vit": "4","agi": "5","luc": "4"}
     },
     {
         "class_id": 10,
         "class_name": "カースメーカー",
         "position_type": "後衛／弱体特化型",
-        "weapons": [
-            "短剣",
-            "杖"
-        ],
-        "armors": [
-            "服"
-        ],
-        "states": {
-            "str": "3",
-            "tec": "6",
-            "vit": "4",
-            "agi": "4",
-            "luc": "6"
-        }
+        "weapons": ["短剣","杖"],
+        "armors": ["服"],
+        "states": {"str": "3","tec": "6","vit": "4","agi": "4","luc": "6"}
     },
     {
         "class_id": 11,
         "class_name": "ガンナー",
         "position_type": "後衛／万能攻撃型",
-        "weapons": [
-            "短剣",
-            "銃"
-        ],
-        "armors": [
-            "服"
-        ],
-        "states": {
-            "str": "6",
-            "tec": "5",
-            "vit": "4",
-            "agi": "5",
-            "luc": "6"
-        }
+        "weapons": ["短剣","銃"],
+        "armors": ["服"],
+        "states": {"str": "6","tec": "5","vit": "4","agi": "5","luc": "6"}
     },
     {
         "class_id": 12,
         "class_name": "ドクトルマグス",
         "position_type": "中衛／万能戦闘型",
-        "weapons": [
-            "短剣",
-            "剣",
-            "杖"
-        ],
-        "armors": [
-            "軽鎧",
-            "服"
-        ],
-        "states": {
-            "str": "6",
-            "tec": "6",
-            "vit": "5",
-            "agi": "5",
-            "luc": "6"
-        }
+        "weapons": ["短剣","剣","杖"],
+        "armors": ["軽鎧","服"],
+        "states": {"str": "6","tec": "6","vit": "5","agi": "5","luc": "6"}
     },
     {
         "class_id": 13,
         "class_name": "ウォリアー",
         "position_type": "前衛／物理攻撃型",
-        "weapons": [
-            "短剣",
-            "剣",
-            "斧",
-            "鎚"
-        ],
-        "armors": [
-            "軽鎧",
-            "服",
-            "盾"
-        ],
-        "states": {
-            "str": "7",
-            "tec": "3",
-            "vit": "6",
-            "agi": "4",
-            "luc": "4"
-        }
+        "weapons": ["短剣","剣","斧","鎚"],
+        "armors": ["軽鎧","服","盾"],
+        "states": {"str": "7","tec": "3","vit": "6","agi": "4","luc": "4"}
     },
     {
         "class_id": 14,
         "class_name": "ファランクス",
         "position_type": "中衛／防御特化型",
-        "weapons": [
-            "短剣",
-            "剣",
-            "槍"
-        ],
-        "armors": [
-            "重鎧",
-            "軽鎧",
-            "服",
-            "盾"
-        ],
-        "states": {
-            "str": "5",
-            "tec": "4",
-            "vit": "7",
-            "agi": "3",
-            "luc": "5"
-        }
+        "weapons": ["短剣","剣","槍"],
+        "armors": ["重鎧","軽鎧","服","盾"],
+        "states": {"str": "5","tec": "4","vit": "7","agi": "3","luc": "5"}
     },
     {
         "class_id": 15,
         "class_name": "パイレーツ",
         "position_type": "中衛／戦闘・探索兼業型",
-        "weapons": [
-            "短剣",
-            "突剣",
-            "銃"
-        ],
-        "armors": [
-            "軽鎧",
-            "服"
-        ],
-        "states": {
-            "str": "6",
-            "tec": "5",
-            "vit": "5",
-            "agi": "6",
-            "luc": "6"
-        }
+        "weapons": ["短剣","突剣","銃"],
+        "armors": ["軽鎧","服"],
+        "states": {"str": "6","tec": "5","vit": "5","agi": "6","luc": "6"}
     },
     {
         "class_id": 16,
         "class_name": "シノビ",
         "position_type": "中衛／特殊万能型",
-        "weapons": [
-            "短剣",
-            "刀"
-        ],
-        "armors": [
-            "服"
-        ],
-        "states": {
-            "str": "6",
-            "tec": "6",
-            "vit": "3",
-            "agi": "7",
-            "luc": "6"
-        }
+        "weapons": ["短剣","刀"],
+        "armors": ["服"],
+        "states": {"str": "6","tec": "6","vit": "3","agi": "7","luc": "6"}
     },
     {
         "class_id": 17,
         "class_name": "モンク",
         "position_type": "中衛／戦闘・回復兼業型",
-        "weapons": [
-            "短剣",
-            "杖",
-            "鎚"
-        ],
-        "armors": [
-            "軽鎧",
-            "服"
-        ],
-        "states": {
-            "str": "6",
-            "tec": "6",
-            "vit": "5",
-            "agi": "6",
-            "luc": "3"
-        }
+        "weapons": ["短剣","杖","鎚"],
+        "armors": ["軽鎧","服"],
+        "states": {"str": "6","tec": "6","vit": "5","agi": "6","luc": "3"}
     },
     {
         "class_id": 18,
         "class_name": "ゾディアック",
         "position_type": "後衛／属性攻撃型",
-        "weapons": [
-            "短剣",
-            "杖"
-        ],
-        "armors": [
-            "服"
-        ],
-        "states": {
-            "str": "3",
-            "tec": "6",
-            "vit": "4",
-            "agi": "4",
-            "luc": "6"
-        }
+        "weapons": ["短剣","杖"],
+        "armors": ["服"],
+        "states": {"str": "3","tec": "6","vit": "4","agi": "4","luc": "6"}
     },
     {
         "class_id": 19,
