@@ -12,7 +12,7 @@
       "target": "味方全",
       "cost": "FP：3",
       "max_sl_main": 1,
-      "max_sl_sub": 1,
+      "max_sl_sub": 0,
       "prerequisites": [],
       "description": "味方全員のHPと封じ・状態異常を完全回復する。戦闘不能からも復活する。"
     },
