@@ -11,7 +11,7 @@
       "range": "-",
       "target": "自身",
       "cost": "FP：1",
-      "max_sl_main": 1,
+      "max_sl_main": -1,
       "max_sl_sub": 0,
       "prerequisites": [],
       "description": "分類『号令』のスキルをひとつ、開幕フェイズで使用できる。(使用するスキル分の【TP】は通常通り消費する)"
