@@ -11,7 +11,7 @@
       "range": "-",
       "target": "自身",
       "cost": "-",
-      "max_sl_main": 1,
+      "max_sl_main": -1,
       "max_sl_sub": 0,
       "prerequisites": [],
       "description": "何らかの封じが付与されている対象への攻撃ロールでのダメージのダイスに+5個を得る。"
