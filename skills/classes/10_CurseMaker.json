@@ -11,7 +11,7 @@
       "range": "-",
       "target": "自身",
       "cost": "FP：3",
-      "max_sl_main": 1,
+      "max_sl_main": -1,
       "max_sl_sub": 0,
       "prerequisites": [],
       "description": "分類『呪言』のスキルを使用する際に宣言する。抑制攻撃の達成値を+5する。"
