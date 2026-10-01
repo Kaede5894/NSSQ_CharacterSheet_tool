@@ -11,7 +11,7 @@
       "range": "-",
       "target": "自身",
       "cost": "FP：1",
-      "max_sl_main": 1,
+      "max_sl_main": -1,
       "max_sl_sub": 0,
       "prerequisites": [],
       "description": "一般行為判定を行った際、成否を確認した上で1D6をさらに振り足す事ができる。"
