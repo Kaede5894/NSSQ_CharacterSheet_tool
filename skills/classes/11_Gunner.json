@@ -11,7 +11,7 @@
       "range": "-",
       "target": "自身",
       "cost": "FP：3",
-      "max_sl_main": 1,
+      "max_sl_main": -1,
       "max_sl_sub": 0,
       "prerequisites": [],
       "description": "物理攻撃が命中した際に使用を宣言する。ダメージのダイスに+7個を得る。さらに、対象を[スタン]させる。この[スタン]効果には、抵抗する手段は無い。"
