@@ -11,7 +11,7 @@
       "range": "-",
       "target": "自身",
       "cost": "-",
-      "max_sl_main": 1,
+      "max_sl_main": -1,
       "max_sl_sub": 0,
       "prerequisites": [],
       "description": "物理攻撃ロールのダメージのダイスに常に+2個を得る。"
