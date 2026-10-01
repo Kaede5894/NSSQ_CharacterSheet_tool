@@ -11,7 +11,7 @@
       "range": "-",
       "target": "自身",
       "cost": "-",
-      "max_sl_main": 1,
+      "max_sl_main": -1,
       "max_sl_sub": 0,
       "prerequisites": [],
       "description": "クリティカルヒット発生時のダメージダイスに通常のクリティカル効果に加えて、さらに+4個を得る。"
