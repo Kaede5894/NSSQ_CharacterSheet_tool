@@ -61,7 +61,7 @@
         "position_type": "後衛／支援特化型",
         "weapons": ["短剣","剣","弓"],
         "armors": ["軽鎧","服"],
-        "states": {"str": "4","tec": "5","vit": "4,"agi": "5","luc": "6"}
+        "states": {"str": "4","tec": "5","vit": "4","agi": "5","luc": "6"}
     },
     {
         "class_id": 9,
