@@ -11,7 +11,7 @@
       "range": "-",
       "target": "自身",
       "cost": "FP：3",
-      "max_sl_main": 1,
+      "max_sl_main": -1,
       "max_sl_sub": 0,
       "prerequisites": [],
       "description": "タイミング『主行動』かつ種別『呪歌』のスキルを最大3つまで、一度の行動で一斉に使用できる。この際、TPは消費しない。"
