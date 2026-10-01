@@ -11,7 +11,7 @@
       "range": "-",
       "target": "味方列",
       "cost": "FP:1",
-      "max_sl_main": 1,
+      "max_sl_main": -1,
       "max_sl_sub": 0,
       "prerequisites": [],
       "description": "このスキルは開幕フェイズで使用を宣言するが、タイミング『開幕』のスキルと併用する事もできる。自身と同列の味方はターン終了まで〈斬〉〈壊〉〈突〉耐性+1を得る。"
