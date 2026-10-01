@@ -11,8 +11,8 @@
       "range": "-",
       "target": "自身",
       "cost": "-",
-      "max_sl_main": 1,
-      "max_sl_sub": 1,
+      "max_sl_main": -1,
+      "max_sl_sub": 0,
       "prerequisites": [],
       "description": "通常攻撃を命中させた際、自身のTPを1回復する。"
     },
