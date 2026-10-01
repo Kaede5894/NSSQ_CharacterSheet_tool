@@ -11,7 +11,7 @@
       "range": "-",
       "target": "自身",
       "cost": "FP：1",
-      "max_sl_main": 1,
+      "max_sl_main": -1,
       "max_sl_sub": 0,
       "prerequisites": [],
       "description": "そのターン、状態異常が付与されていない対象にも巫剣スキルの追加効果が発動するようになる。"
