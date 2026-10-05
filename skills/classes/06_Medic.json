@@ -56,7 +56,7 @@
       "max_sl_main": 3,
       "max_sl_sub": 2,
       "prerequisites": [
-        {"name": "回復マスタリー","sl": 1}
+        {"name": "《回復マスタリー》","sl": 1}
       ],
       "description": "回復ロールを行う。この際、回復量のダイスに+(SL+3)を得る。"
     },
@@ -72,7 +72,7 @@
       "max_sl_main": 3,
       "max_sl_sub": 2,
       "prerequisites": [
-        {"name": "回復マスタリー","sl": 2}
+        {"name": "《回復マスタリー》","sl": 2}
       ],
       "description": "回復ロールを行う。この際、回復量のダイスに+(SL+3)を得る。"
     },
@@ -88,8 +88,8 @@
       "max_sl_main": 3,
       "max_sl_sub": 2,
       "prerequisites": [
-        {"name": "回復マスタリー","sl": 3},
-        {"name": "キュア","sl": 1}
+        {"name": "《回復マスタリー》","sl": 3},
+        {"name": "《キュア》","sl": 1}
       ],
       "description": "回復ロールを行う。この際、回復量のダイスに+((SL+1)×3)を得る。"
     },
@@ -105,8 +105,8 @@
       "max_sl_main": 3,
       "max_sl_sub": 2,
       "prerequisites": [
-        {"name": "回復マスタリー","sl": 3},
-        {"name": "エリアキュア","sl": 1}
+        {"name": "《回復マスタリー》","sl": 3},
+        {"name": "《エリアキュア》","sl": 1}
       ],
       "description": "回復ロールを行う。この際、回復量のダイスに+((SL+1)×3)を得る。"
     },
@@ -122,8 +122,8 @@
       "max_sl_main": 1,
       "max_sl_sub": 0,
       "prerequisites": [
-        {"name": "回復マスタリー","sl": 4},
-        {"name": "ヒーリング","sl": 2}
+        {"name": "《回復マスタリー》","sl": 4},
+        {"name": "《ヒーリング》","sl": 2}
       ],
       "description": "【HP】を全回復する。"
     },
@@ -139,8 +139,8 @@
       "max_sl_main": 1,
       "max_sl_sub": 0,
       "prerequisites": [
-        {"name": "回復マスタリー","sl": 5},
-        {"name": "パーティヒール","sl": 2}
+        {"name": "《回復マスタリー》","sl": 5},
+        {"name": "《パーティヒール》","sl": 2}
       ],
       "description": "【HP】を全回復する。"
     },
@@ -156,7 +156,7 @@
       "max_sl_main": 3,
       "max_sl_sub": 2,
       "prerequisites": [
-        {"name": "回復マスタリー","sl": 1}
+        {"name": "《回復マスタリー》","sl": 1}
       ],
       "description": "対象の状態異常を(SL)個まで解除する。"
     },
@@ -172,7 +172,7 @@
       "max_sl_main": 3,
       "max_sl_sub": 2,
       "prerequisites": [
-        {"name": "回復マスタリー","sl": 1}
+        {"name": "《回復マスタリー》","sl": 1}
       ],
       "description": "対象の封じを(SL)個まで解除する。"
     },
@@ -188,7 +188,7 @@
       "max_sl_main": 3,
       "max_sl_sub": 2,
       "prerequisites": [
-        {"name": "回復マスタリー","sl": 1}
+        {"name": "《回復マスタリー》","sl": 1}
       ],
       "description": "対象の弱体効果を(SL)個まで解除する。"
     },
@@ -204,7 +204,7 @@
       "max_sl_main": 1,
       "max_sl_sub": 0,
       "prerequisites": [
-        {"name": "回復マスタリー","sl": 4}
+        {"name": "《回復マスタリー》","sl": 4}
       ],
       "description": "[戦闘不能]状態を回復する。この際、対象の【HP】現在値は1になる。"
     },
@@ -220,7 +220,7 @@
       "max_sl_main": 3,
       "max_sl_sub": 2,
       "prerequisites": [
-        {"name": "回復マスタリー","sl": 3}
+        {"name": "《回復マスタリー》","sl": 3}
       ],
       "description": "『HPリジェネ：(SL+1)』の強化効果を付与する。3ターン持続する。"
     },
@@ -236,7 +236,7 @@
       "max_sl_main": 3,
       "max_sl_sub": 2,
       "prerequisites": [
-        {"name": "回復マスタリー","sl": 2}
+        {"name": "《回復マスタリー》","sl": 2}
       ],
       "description": "『抑制防御上昇：(SL)』の強化効果を付与する。3ターン持続する。"
     },
@@ -252,7 +252,7 @@
       "max_sl_main": 1,
       "max_sl_sub": 1,
       "prerequisites": [
-        {"name": "回復マスタリー","sl": 3}
+        {"name": "《回復マスタリー》","sl": 3}
       ],
       "description": "そのターンの間、回復ロールを行う際、3以上の出目の個数が【HP】回復量とみなされるようになる。"
     },
@@ -268,8 +268,8 @@
       "max_sl_main": 1,
       "max_sl_sub": 0,
       "prerequisites": [
-        {"name": "リフレッシュ","sl": 2},
-        {"name": "バインドリカバリ","sl": 2}
+        {"name": "《リフレッシュ》","sl": 2},
+        {"name": "《バインドリカバリ》","sl": 2}
       ],
       "description": "そのターンの間、分類『回復』、効果範囲『味方単』のスキルの効果範囲を『味方列』に拡大する。"
     },
@@ -285,7 +285,7 @@
       "max_sl_main": 3,
       "max_sl_sub": 2,
       "prerequisites": [
-        {"name": "杖マスタリー","sl": 1}
+        {"name": "《杖マスタリー》","sl": 1}
       ],
       "description": "〈壊〉属性の物理攻撃ロールを行う。この際、ダメージダイス+((SL+1)×2)個を得る。"
     },
@@ -301,7 +301,7 @@
       "max_sl_main": 3,
       "max_sl_sub": 2,
       "prerequisites": [
-        {"name": "杖マスタリー","sl": 3}
+        {"name": "《杖マスタリー》","sl": 3}
       ],
       "description": "〈壊〉属性の物理攻撃ロールを行う。この際、ダメージダイス+((SL+1)×2)個を得る。命中すると、対象は(攻撃者の【抑制攻撃】+(7+SL))を目標値とした抑制防御ロールを行い、これに失敗すると[睡眠]を受ける。"
     },
@@ -317,7 +317,7 @@
       "max_sl_main": 3,
       "max_sl_sub": 0,
       "prerequisites": [
-        {"name": "杖マスタリー","sl": 5}
+        {"name": "《杖マスタリー》","sl": 5}
       ],
       "description": "〈壊〉属性の物理攻撃ロールを行う。この際、ダメージダイス+((SL+1)×2)個を得る。命中すると、対象は『物理防御低下：2』を受ける。この効果は3ターン持続する。"
     },
