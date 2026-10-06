@@ -61,6 +61,16 @@ button.del-btn:hover { background: #a71d2a; }
 
 pre { background: #222; color: #0f0; padding: 12px; border-radius: 4px; overflow-x: auto; font-size: 0.85rem; max-height: 200px; }
 .note { font-size: 0.8rem; color: #666; margin-top: 5px; }
+
+/* クラススキル */
+.class-skill-item { background: #fcfcfc; border: 1px solid #ddd; padding: 10px; margin-bottom: 8px; border-radius: 6px; }
+.class-skill-item.inactive { opacity: 0.55; background: #f1f1f1; }
+.class-skill-header { display: grid; grid-template-columns: 1fr 90px; gap: 8px; align-items: end; }
+.class-skill-name { font-weight: bold; }
+.class-skill-level { text-align: center; }
+.class-skill-meta { margin-top: 6px; font-size: 0.8rem; color: #555; }
+.class-skill-description { margin-top: 6px; font-size: 0.85rem; white-space: pre-wrap; }
+.class-skill-status { margin-top: 6px; font-size: 0.8rem; font-weight: bold; }
     </style>
 </head>
 <body>
@@ -312,6 +322,11 @@ pre { background: #222; color: #0f0; padding: 12px; border-radius: 4px; overflow
 let classData = {};
 let equipData = { weapons: [], armor: [], accessories: [] };
 
+/* クラススキル */
+let classSkillCache = {};
+let characterSkillLevels = {};
+let skillRenderVersion = 0;
+
 // nssq_classes.json と nssq_equipments.json を両方取得するよう拡張
 async function loadClassData() {
     try {
@@ -332,6 +347,7 @@ async function loadClassData() {
                 type = parts[1] || "-";
             }
             classData[item.class_name] = {
+                classId: item.class_id,
                 pos,
                 type,
                 weapons: item.weapons || [],
