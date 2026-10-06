@@ -42,7 +42,7 @@
       "max_sl_main": 1,
       "max_sl_sub": 0,
       "prerequisites": [
-        {"name": "エフィシエント","sl": 2}
+        {"name": "《エフィシエント》","sl": 2}
       ],
       "description": "HP回復系アイテム使用時、戦闘不能からの回復効果が付随する。"
     },
@@ -86,7 +86,7 @@
       "max_sl_main": 3,
       "max_sl_sub": 2,
       "prerequisites": [
-        {"name": "鳴かずば討たれず","sl": 1}
+        {"name": "《鳴かずば討たれず》","sl": 1}
       ],
       "description": "何らかの状態異常を受けている対象にのみ有効。『物理攻撃低下：(SL)』の弱体効果を付与する。3ターン持続する。"
     },
@@ -102,7 +102,7 @@
       "max_sl_main": 3,
       "max_sl_sub": 2,
       "prerequisites": [
-        {"name": "弱り目に祟り目","sl": 2}
+        {"name": "《弱り目に祟り目》","sl": 2}
       ],
       "description": "自身が何らかの状態異常を受けている時のみ使用可能。対象に、自身の状態異常を(SL)個まで伝染させる。"
     },
@@ -118,7 +118,7 @@
       "max_sl_main": 3,
       "max_sl_sub": 2,
       "prerequisites": [
-        {"name": "子守唄","sl": 2}
+        {"name": "《子守唄》","sl": 2}
       ],
       "description": "自身の【抑制攻撃】と対象の【抑制防御】で対抗判定を行い、勝利すると、対象に[頭][腕][脚]いずれかにランダムで封じを与える。また、この際の判定に+(SL-2)を得る。"
     },
@@ -176,7 +176,7 @@
       "max_sl_main": 2,
       "max_sl_sub": 1,
       "prerequisites": [
-        {"name": "採集マスター","sl": 2}
+        {"name": "《採集マスター》","sl": 2}
       ],
       "description": "採集判定の達成値を±(SL)の範囲で自由に操作できる。"
     },
@@ -192,7 +192,7 @@
       "max_sl_main": 1,
       "max_sl_sub": 0,
       "prerequisites": [
-        {"name": "採集マスター","sl": 2}
+        {"name": "《採集マスター》","sl": 2}
       ],
       "description": "アイテムの所持上限数+10を得る。"
     },
@@ -208,7 +208,7 @@
       "max_sl_main": 1,
       "max_sl_sub": 0,
       "prerequisites": [
-        {"name": "採集マスター","sl": 3}
+        {"name": "《採集マスター》","sl": 3}
       ],
       "description": "採集判定でゾロ目が出た場合、該当の素材を1個多く入手する。"
     },
@@ -294,8 +294,8 @@
       "max_sl_main": 1,
       "max_sl_sub": 1,
       "prerequisites": [
-        {"name": "解体マスター","sl": 1},
-        {"name": "野生の嗅覚","sl": 1}
+        {"name": "《解体マスター》","sl": 1},
+        {"name": "《野生の嗅覚》","sl": 1}
       ],
       "description": "採集判定およびドロップ判定でゾロ目が発生した場合、入手できるアイテムのランクに+1を得る。"
     },
