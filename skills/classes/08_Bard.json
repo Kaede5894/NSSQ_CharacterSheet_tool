@@ -13,7 +13,6 @@
       "cost": "FP：3",
       "max_sl_main": -1,
       "max_sl_sub": 0,
-      "prerequisites": [],
       "description": "タイミング『主行動』かつ種別『呪歌』のスキルを最大3つまで、一度の行動で一斉に使用できる。この際、TPは消費しない。"
     },
     {
@@ -27,7 +26,6 @@
       "cost": "-",
       "max_sl_main": 5,
       "max_sl_sub": 3,
-      "prerequisites": [],
       "description": "分類『呪歌』のスキルによる強化効果の持続ターン数に+(SL/2)を得る。"
     },
     {
@@ -41,9 +39,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《呪歌マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《呪歌マスタリー》","sl": 1}]
+      },
       "description": "『物理攻撃上昇：(SL×2)』および『属性攻撃上昇：(SL×2)』の強化効果を付与する。3ターン持続する。"
     },
     {
@@ -57,9 +56,10 @@
       "cost": "TP：3",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《猛き戦いの舞曲》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《猛き戦いの舞曲》","sl": 1}]
+      },
       "description": "このスキルを使用する際は、下記いずれかの名称で宣言する。《火劇の序曲》《氷劇の序曲》《雷劇の序曲》それぞれ『属性付与：炎』『属性付与：氷』『属性付与：雷』の強化効果を付与する。3ターン持続する。"
     },
     {
@@ -73,10 +73,10 @@
       "cost": "TP：3",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《呪歌マスタリー》","sl": 3},
-        {"name": "《三色序曲》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《呪歌マスタリー》","sl": 3},{"name": "《三色序曲》","sl": 1}]
+      },
       "description": "このスキルを使用する際は、下記いずれかの名称で宣言する。《火幕の幻想曲》《氷幕の幻想曲》《雷幕の幻想曲》それぞれ『耐性上昇：炎』『耐性上昇：氷』『耐性上昇：雷』の強化効果を付与する。3ターン持続する。"
     },
     {
@@ -90,9 +90,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《呪歌マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《呪歌マスタリー》","sl": 1}]
+      },
       "description": "『物理防御上昇：(SL×2)』の強化効果を付与する。3ターン持続する。"
     },
     {
@@ -106,10 +107,10 @@
       "cost": "TP：3",
       "max_sl_main": 2,
       "max_sl_sub": 1,
-      "prerequisites": [
-        {"name": "《呪歌マスタリー》","sl": 3},
-        {"name": "《聖なる守護の舞曲》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《呪歌マスタリー》","sl": 3},{"name": "《聖なる守護の舞曲》","sl": 2}]
+      },
       "description": "『抑制防御上昇：(SL)』の強化効果を付与する。3ターン持続する。"
     },
     {
@@ -123,9 +124,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《呪歌マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《呪歌マスタリー》","sl": 1}]
+      },
       "description": "『速度上昇：(SL×3)』の強化効果を付与する。3ターン持続する。"
     },
     {
@@ -139,9 +141,10 @@
       "cost": "TP：3",
       "max_sl_main": 2,
       "max_sl_sub": 1,
-      "prerequisites": [
-        {"name": "《呪歌マスタリー》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《呪歌マスタリー》","sl": 2}]
+      },
       "description": "『物理命中上昇：(SL)』の強化効果を付与する。3ターン持続する。"
     },
     {
@@ -155,9 +158,10 @@
       "cost": "TP：3",
       "max_sl_main": 2,
       "max_sl_sub": 1,
-      "prerequisites": [
-        {"name": "《呪歌マスタリー》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《呪歌マスタリー》","sl": 2}]
+      },
       "description": "『回避上昇：(SL)』の強化効果を付与する。3ターン持続する。"
     },
     {
@@ -171,9 +175,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《呪歌マスタリー》","sl": 3}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《呪歌マスタリー》","sl": 3}]
+      },
       "description": "『HPリジェネ：(SL)』の強化効果を付与する。3ターン持続する。"
     },
     {
@@ -187,10 +192,10 @@
       "cost": "TP：4",
       "max_sl_main": 2,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《呪歌マスタリー》","sl": 4},
-        {"name": "《癒しの子守唄》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《呪歌マスタリー》","sl": 4},{"name": "《癒しの子守唄》","sl": 2}]
+      },
       "description": "『TPリジェネ：(SL)』の強化効果を付与する。3ターン持続する。"
     },
     {
@@ -204,9 +209,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《呪歌マスタリー》","sl": 4}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《呪歌マスタリー》","sl": 4}]
+      },
       "description": "敵全体の強化効果を消滅させる。1体につき(SL)個まで消滅させる事ができる。"
     },
     {
@@ -220,9 +226,10 @@
       "cost": "TP：4",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《呪歌マスタリー》","sl": 5}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《呪歌マスタリー》","sl": 5}]
+      },
       "description": "このスキルは後発行動として使用する。メインフェイズ行動済みの味方一人を、後発行動扱いで再度行動させる事ができる。"
     },
     {
@@ -236,9 +243,10 @@
       "cost": "TP：3",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《呪歌マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《呪歌マスタリー》","sl": 1}]
+      },
       "description": "音が聞こえる範囲の全員に強い好奇心を抱かせ、注目を集める事ができる。ただし、5分程度継続して聞こえている相手にしか効果がなく、原則として戦闘中の使用はできない。"
     },
     {
@@ -252,9 +260,10 @@
       "cost": "TP：3",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《呪歌マスタリー》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《呪歌マスタリー》","sl": 2}]
+      },
       "description": "音が聞こえる範囲の全員に友好的な感情を抱かせる事ができる。ただし、5分程度継続して聞こえている相手にしか効果がなく、原則として戦闘中の使用はできない。"
     },
     {
@@ -268,9 +277,10 @@
       "cost": "TP：3",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《呪歌マスタリー》","sl": 3}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《呪歌マスタリー》","sl": 3}]
+      },
       "description": "音が聞こえる範囲の全員に強い眠気を抱かせる事ができる。ただし、5分程度継続して聞こえている相手にしか効果がなく、原則として戦闘中の使用はできない。"
     },
     {
@@ -284,7 +294,6 @@
       "cost": "-",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [],
       "description": "採集判定の達成値を±1の範囲で自由に操作できる。"
     },
     {
@@ -298,7 +307,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【HP】に+(SL×2)を得る。"
     },
     {
@@ -312,7 +320,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【TP】に+(SL×2)を得る。"
     },
     {
@@ -326,7 +333,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【速度】に+(SL×3)を得る。"
     }
   ]
