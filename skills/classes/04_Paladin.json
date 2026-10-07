@@ -13,7 +13,6 @@
       "cost": "FP：3",
       "max_sl_main": -1,
       "max_sl_sub": 0,
-      "prerequisites": [],
       "description": "一度だけ、あらゆる攻撃のダメージを0にする。状態異常付与などの追加効果も全て無効化する。"
     },
     {
@@ -27,7 +26,6 @@
       "cost": "-",
       "max_sl_main": 5,
       "max_sl_sub": 3,
-      "prerequisites": [],
       "description": "分類『防御』のスキルを使用した際の効果発動回数に+(SL/2)を得る。"
     },
     {
@@ -41,9 +39,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《盾マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《盾マスタリー》","sl": 1}]
+      },
       "description": "自身はスキル使用時に待機状態となる。待機状態中、敵からの物理攻撃ロールによって味方前衛が受けるダメージを半減する。待機状態は述べ(SL)回のダメージ半減を行うか、ターン終了で解除される。"
     },
     {
@@ -57,9 +56,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《盾マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《盾マスタリー》","sl": 1}]
+      },
       "description": "自身はスキル使用時に待機状態となる。待機状態中、敵からの物理攻撃ロールによって味方後衛が受けるダメージを半減する。待機状態は述べ(SL)回のダメージ半減を行うか、ターン終了で解除される。"
     },
     {
@@ -73,9 +73,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《盾マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《盾マスタリー》","sl": 1}]
+      },
       "description": "自身はスキル使用時に待機状態となる。待機状態中、対象が何らかの攻撃ロールの対象となった際、自身がその攻撃ロールを肩代わりして受ける。待機状態は述べ(SL)回のダメージ肩代わりを行うか、ターン終了で解除される。"
     },
     {
@@ -89,9 +90,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《盾マスタリー》","sl": 3}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《盾マスタリー》","sl": 3}]
+      },
       "description": "このスキルを使用する際は、下記いずれかの名称で宣言する。《ファイアガード》《フリーズガード》《ショックガード》自身はスキル使用時に待機状態となる。待機状態中、味方全体の〈炎〉〈氷〉〈雷〉いずれかの【耐性】を(+SL)する。待機状態はターン終了で解除される。"
     },
     {
@@ -105,9 +107,10 @@
       "cost": "TP：2",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《盾マスタリー》","sl": 3}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《盾マスタリー》","sl": 3}]
+      },
       "description": "〈壊〉属性の物理攻撃ロールを行う。この際、ダメージダイス+3個を得る。命中すると、対象は(攻撃者の【抑制攻撃】+(7+SL))を目標値とした抑制防御ロールを行い、これに失敗すると[スタン]を受ける。"
     },
     {
@@ -121,9 +124,10 @@
       "cost": "TP：4",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《シールドスマイト》","sl": 3}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《シールドスマイト》","sl": 3}]
+      },
       "description": "〈壊〉属性の物理攻撃ロールを行う。この際、ダメージダイス+3個を得る。命中すると、対象は(攻撃者の【抑制攻撃】+(7+SL))を目標値とした抑制防御ロールを行い、これに失敗すると[スタン]を受ける。"
     },
     {
@@ -137,9 +141,10 @@
       "cost": "TP：2",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《盾マスタリー》","sl": 4}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《盾マスタリー》","sl": 4}]
+      },
       "description": "自身はスキル使用時に待機状態となる。待機状態中、対象の防御力をスキル使用者のものと等しい値にする。待機状態は述べ(SL)回のダメージ減少を行うか、ターン終了で解除される。"
     },
     {
@@ -153,9 +158,10 @@
       "cost": "TP：4",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《盾マスタリー》","sl": 5}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《盾マスタリー》","sl": 5}]
+      },
       "description": "自身はスキル使用時に待機状態となる。待機状態中、敵からの物理攻撃ロールによって味方全員が受けるダメージを半減する。待機状態は述べ(SL)回のダメージ半減を行うか、ターン終了で解除される。"
     },
     {
@@ -169,7 +175,6 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "そのターンの間、単体を対象とした敵からの攻撃ロールの対象を述べ(SL+1)回まで、強制的に自身に変更する。"
     },
     {
@@ -183,7 +188,6 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "物理攻撃ロールに対して、【VIT】による能動回避を行う。また、その際の達成値に+(SL-1)を得る。"
     },
     {
@@ -197,7 +201,6 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "属性攻撃ロールに対して、【VIT】による能動回避を行う。また、その際の達成値に+(SL-1)を得る。"
     },
     {
@@ -211,7 +214,6 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "『抑制防御上昇：(SL)』の強化効果を付与する。3ターン持続する。"
     },
     {
@@ -225,7 +227,6 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "『物理防御上昇：(SL)』の強化効果を付与する。3ターン持続する。"
     },
     {
@@ -239,7 +240,6 @@
       "cost": "TP：4",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "『防御上昇：(SL×2)』の強化効果を付与する。3ターン持続する。"
     },
     {
@@ -253,9 +253,10 @@
       "cost": "TP：4",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《防御陣形》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《防御陣形》","sl": 2}]
+      },
       "description": "『耐性付与：炎氷雷』の強化効果を付与する。3ターン持続する。"
     },
     {
@@ -269,7 +270,6 @@
       "cost": "TP：1",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [],
       "description": "逃走判定の際に使用を宣言する。逃走判定の達成値に+3を得る。"
     },
     {
@@ -283,7 +283,6 @@
       "cost": "-",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [],
       "description": "アイテムの所持数に+4を得る。"
     },
     {
@@ -297,7 +296,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【HP】に+(SL×2)を得る。"
     },
     {
@@ -311,7 +309,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【TP】に+(SL×2)を得る。"
     },
     {
@@ -325,7 +322,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【防御】に+(SL)を得る。"
     },
     {
@@ -339,7 +335,6 @@
       "cost": "-",
       "max_sl_main": 4,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【抑制防御】に+(SL/2)を得る。"
     }
   ]
