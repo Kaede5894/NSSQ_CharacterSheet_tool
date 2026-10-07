@@ -13,7 +13,6 @@
       "cost": "FP:1",
       "max_sl_main": -1,
       "max_sl_sub": 0,
-      "prerequisites": [],
       "description": "このスキルは開幕フェイズで使用を宣言するが、タイミング『開幕』のスキルと併用する事もできる。自身と同列の味方はターン終了まで〈斬〉〈壊〉〈突〉耐性+1を得る。"
     },
     {
@@ -27,7 +26,6 @@
       "cost": "-",
       "max_sl_main": 5,
       "max_sl_sub": 3,
-      "prerequisites": [],
       "description": "槍による物理命中に+(SL/2)を得る。"
     },
     {
@@ -41,7 +39,6 @@
       "cost": "-",
       "max_sl_main": 5,
       "max_sl_sub": 3,
-      "prerequisites": [],
       "description": "分類『防御』のスキルを使用した際の効果発動回数に+(SL/2)を得る。"
     },
     {
@@ -55,9 +52,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《槍マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《槍マスタリー》","sl": 1}]
+      },
       "description": "物理攻撃ロールを行う。この際、ダメージダイスに+(SL)個を得る。"
     },
     {
@@ -71,9 +69,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《槍マスタリー》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《槍マスタリー》","sl": 2}]
+      },
       "description": "〈突〉+〈雷〉属性の物理攻撃ロールを行う。この際、ダメージダイス+(SL)個を得る。"
     },
     {
@@ -87,9 +86,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《槍マスタリー》","sl": 4}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《槍マスタリー》","sl": 4}]
+      },
       "description": "物理攻撃ロールを行う。この際、ダメージダイスに+(SL)個を得る。また、自身が後列にいればさらにダメージダイス+(SL)個を得る。"
     },
     {
@@ -103,9 +103,10 @@
       "cost": "TP：1",
       "max_sl_main": 1,
       "max_sl_sub": 1,
-      "prerequisites": [
-        {"name": "《ラインガード》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《ラインガード》","sl": 1}]
+      },
       "description": "戦闘中、任意のタイミングで自身の配置を変更できる。自身が前衛から後衛へ、または後衛から前衛へ移動する事ができ、その際、仲間一人と入れ替わる事も可能。"
     },
     {
@@ -119,9 +120,10 @@
       "cost": "TP：1",
       "max_sl_main": 1,
       "max_sl_sub": 1,
-      "prerequisites": [
-        {"name": "《ディバイドガード》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《ディバイドガード》","sl": 1}]
+      },
       "description": "《ディバイドガード》による待機状態中、任意のタイミングで《ディバイドガード》の対象を変更する事ができる。"
     },
     {
@@ -135,9 +137,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《盾マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《盾マスタリー》","sl": 1}]
+      },
       "description": "自身はスキル使用時に待機状態となる。待機状態中、対象が何らかの攻撃ロールの対象となった際、自身がその攻撃ロールを肩代わりして受ける。待機状態は述べ(SL)回のダメージ肩代わりを行うか、ターン終了で解除される。"
     },
     {
@@ -151,9 +154,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《盾マスタリー》","sl": 3}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《盾マスタリー》","sl": 3}]
+      },
       "description": "このスキルを使用する際は、下記いずれかの名称で宣言する。《ファイアガード》《フリーズガード》《ショックガード》自身はスキル使用時に待機状態となる。待機状態中、味方全体の〈炎〉〈氷〉〈雷〉いずれかの【耐性】を(+SL)する。待機状態はターン終了で解除される。"
     },
     {
@@ -167,9 +171,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《盾マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《盾マスタリー》","sl": 1}]
+      },
       "description": "自身はスキル使用時に待機状態となる。待機状態中、自身が存在している列の味方が敵からの物理攻撃ロールによって受けるダメージを半減する。待機状態は述べ(SL)回のダメージ半減を行うか、ターン終了で解除される。"
     },
     {
@@ -183,7 +188,6 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "そのターンの間、単体を対象とした敵からの攻撃ロールの対象を述べ(SL+1)回まで、強制的に自身に変更する。"
     },
     {
@@ -197,7 +201,6 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "物理攻撃ロールに対して、【VIT】による能動回避を行う。また、その際の達成値に+(SL-1)を得る。"
     },
     {
@@ -211,7 +214,6 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "属性攻撃ロールに対して、【VIT】による能動回避を行う。また、その際の達成値に+(SL-1)を得る。"
     },
     {
@@ -225,7 +227,6 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "『物理防御上昇：(SL)』の強化効果を付与する。3ターン持続する。"
     },
     {
@@ -239,7 +240,6 @@
       "cost": "TP：1",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [],
       "description": "逃走判定の際に使用を宣言する。逃走判定の達成値に+3を得る。"
     },
     {
@@ -253,10 +253,10 @@
       "cost": "-",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《パリィ》","sl": 1},
-        {"name": "《マテリアルパリィ》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《パリィ》","sl": 1},{"name": "《マテリアルパリィ》","sl": 1}]
+      },
       "description": "自分と同列の味方が何らかの攻撃ロールを受けた際、《パリィ》《マテリアルパリィ》を用いて、代理で能動回避の判定を行う事ができる。ただし、その味方がまだ能動回避の判定をしていない場合のみ可能。"
     },
     {
@@ -270,7 +270,6 @@
       "cost": "-",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [],
       "description": "アイテムの所持数に+4を得る。"
     },
     {
@@ -284,7 +283,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【HP】に+(SL×2)を得る。"
     },
     {
@@ -298,7 +296,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【TP】に+(SL×2)を得る。"
     },
     {
@@ -312,7 +309,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【防御】に+(SL)を得る。"
     },
     {
@@ -326,7 +322,6 @@
       "cost": "-",
       "max_sl_main": 4,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【抑制防御】に+(SL/2)を得る。"
     }
   ]
