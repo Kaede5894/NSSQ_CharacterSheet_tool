@@ -13,7 +13,6 @@
       "cost": "FP：1",
       "max_sl_main": -1,
       "max_sl_sub": 0,
-      "prerequisites": [],
       "description": "そのターン、状態異常が付与されていない対象にも巫剣スキルの追加効果が発動するようになる。"
     },
     {
@@ -27,7 +26,6 @@
       "cost": "-",
       "max_sl_main": 5,
       "max_sl_sub": 3,
-      "prerequisites": [],
       "description": "剣による物理命中に+(SL/2)を得る。"
     },
     {
@@ -41,7 +39,6 @@
       "cost": "-",
       "max_sl_main": 5,
       "max_sl_sub": 3,
-      "prerequisites": [],
       "description": "分類『回復』のスキル使用時の回復量のダイスに+(SL/2)を得る。"
     },
     {
@@ -55,9 +52,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《回復マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《回復マスタリー》","sl": 1}]
+      },
       "description": "回復ロールを行う。この際、回復量のダイスに+(SL+3)を得る。"
     },
     {
@@ -71,9 +69,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《回復マスタリー》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《回復マスタリー》","sl": 2}]
+      },
       "description": "回復ロールを行う。この際、回復量のダイスに+(SL+3)を得る。"
     },
     {
@@ -87,10 +86,10 @@
       "cost": "TP：2",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《回復マスタリー》","sl": 3},
-        {"name": "《キュア》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《回復マスタリー》","sl": 3},{"name": "《キュア》","sl": 1}]
+      },
       "description": "回復ロールを行う。この際、回復量のダイスに+((SL+1)×3)を得る。"
     },
     {
@@ -104,10 +103,10 @@
       "cost": "TP：5",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《回復マスタリー》","sl": 3},
-        {"name": "《エリアキュア》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《回復マスタリー》","sl": 3},{"name": "《エリアキュア》","sl": 1}]
+      },
       "description": "回復ロールを行う。この際、回復量のダイスに+((SL+1)×3)を得る。"
     },
     {
@@ -121,10 +120,10 @@
       "cost": "TP：3",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《回復マスタリー》","sl": 4},
-        {"name": "《ヒーリング》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《回復マスタリー》","sl": 4},{"name": "《ヒーリング》","sl": 2}]
+      },
       "description": "【HP】を全回復する。"
     },
     {
@@ -138,9 +137,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《剣マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《剣マスタリー》","sl": 1}]
+      },
       "description": "このスキルを使用する際は、下記いずれかの名称で宣言する。《巫剣：霊封頭斬》《巫剣：霊封腕斬》《巫剣：霊封脚斬》物理攻撃ロールを行う。命中した際、対象が何らかの状態異常を受けていると、対象は(攻撃者の【抑制攻撃】+(8+SL))を目標値とした抑制防御ロールを行い、これに失敗すると[頭][腕][脚]いずれかの封じを受ける。"
     },
     {
@@ -154,9 +154,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《剣マスタリー》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《剣マスタリー》","sl": 2}]
+      },
       "description": "物理攻撃ロールを行う。命中した際、対象が何らかの状態異常を受けていると、対象は『物理攻撃低下：(SL)』の弱体効果を受ける。"
     },
     {
@@ -170,9 +171,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《剣マスタリー》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《剣マスタリー》","sl": 2}]
+      },
       "description": "物理攻撃ロールを行う。命中した際、対象が何らかの状態異常を受けていると、対象は『物理防御低下：(SL)』の弱体効果を受ける。"
     },
     {
@@ -186,10 +188,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《剣マスタリー》","sl": 3},
-        {"name": "《巫剣：霊攻衰斬》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《剣マスタリー》","sl": 3},{"name": "《巫剣：霊攻衰斬》","sl": 1}]
+      },
       "description": "物理攻撃ロールを行う。この際、ダメージダイス+(SL)個を得る。また命中した際、対象が何らかの状態異常を受けていると、与えたダメージの半分だけ、自身の【HP】を回復する。"
     },
     {
@@ -203,10 +205,10 @@
       "cost": "TP：2",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《剣マスタリー》","sl": 3},
-        {"name": "《巫剣：霊防衰斬》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《剣マスタリー》","sl": 3},{"name": "《巫剣：霊攻衰斬》","sl": 1}]
+      },
       "description": "物理攻撃ロールを行う。この際、ダメージダイス+(SL)個を得る。また命中した際、対象が何らかの状態異常を受けていると、ダメージダイスで6の目が出た数だけ、自身の【TP】を回復する。"
     },
     {
@@ -220,9 +222,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《剣マスタリー》","sl": 5}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《剣マスタリー》","sl": 5}]
+      },
       "description": "物理攻撃ロールを行う。命中した際、対象が何らかの状態異常を受けていると、攻撃が無属性扱いになり、さらにこの攻撃について【物理攻撃】を+(SL)して扱う。"
     },
     {
@@ -236,7 +239,6 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "『物理攻撃上昇：(SL×2)』の強化効果を付与する。3ターン持続する。"
     },
     {
@@ -250,7 +252,6 @@
       "cost": "TP：2",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "『物理防御上昇：(SL+2)』の強化効果を付与する。3ターン持続する。"
     },
     {
@@ -264,7 +265,6 @@
       "cost": "TP：2",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "『速度上昇：((SL+1)×4)』の強化効果を付与する。3ターン持続する。"
     },
     {
@@ -278,7 +278,6 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "対象の強化効果を(SL)個まで解除する。"
     },
     {
@@ -292,10 +291,10 @@
       "cost": "TP：5",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《回復マスタリー》","sl": 5},
-        {"name": "《巫術：祓化》","sl": 3}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《回復マスタリー》","sl": 5},{"name": "《巫術：祓化》","sl": 3}]
+      },
       "description": "対象の【TP】を(SL+2)回復する。"
     },
     {
@@ -309,7 +308,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【HP】に+(SL×2)を得る。"
     },
     {
@@ -323,7 +321,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【TP】に+(SL×2)を得る。"
     },
     {
@@ -337,7 +334,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【物理攻撃】に+(SL)を得る。"
     },
     {
@@ -351,7 +347,6 @@
       "cost": "-",
       "max_sl_main": 4,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【抑制防御】に+(SL/2)を得る。"
     }
   ]
