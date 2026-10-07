@@ -13,7 +13,6 @@
       "cost": "-",
       "max_sl_main": -1,
       "max_sl_sub": 0,
-      "prerequisites": [],
       "description": "属性攻撃のダメージダイスに常に+2個を得る。"
     },
     {
@@ -27,7 +26,6 @@
       "cost": "-",
       "max_sl_main": 5,
       "max_sl_sub": 3,
-      "prerequisites": [],
       "description": "分類『術式』のスキルを使用した攻撃ロールの属性命中に+(SL/2)を得る。"
     },
     {
@@ -41,9 +39,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《星術マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《星術マスタリー》","sl": 1}]
+      },
       "description": "このスキルを使用する際は、下記いずれかの名称で宣言する。《火の星術》《氷の星術》《雷の星術》〈炎〉〈氷〉〈雷〉いずれかの属性の属性攻撃を行う。またこの際、ダメージダイス+(SL)個を得る。"
     },
     {
@@ -57,10 +56,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《星術マスタリー》","sl": 3},
-        {"name": "《三色初級星術》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《星術マスタリー》","sl": 3},{"name": "《三色初級星術》","sl": 2}]
+      },
       "description": "〈炎〉属性の属性攻撃を行う。この際、ダメージダイス+(SL)個を得る。"
     },
     {
@@ -74,10 +73,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《星術マスタリー》","sl": 3},
-        {"name": "《三色初級星術》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《星術マスタリー》","sl": 3},{"name": "《三色初級星術》","sl": 2}]
+      },
       "description": "〈氷〉属性の属性攻撃を行う。この際、ダメージダイス+(SL)個を得る。"
     },
     {
@@ -91,10 +90,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《星術マスタリー》","sl": 3},
-        {"name": "《三色初級星術》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《星術マスタリー》","sl": 3},{"name": "《三色初級星術》","sl": 2}]
+      },
       "description": "〈雷〉属性の属性攻撃を行う。この際、ダメージダイス+(SL)個を得る。"
     },
     {
@@ -108,10 +107,10 @@
       "cost": "TP：4",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《星術マスタリー》","sl": 4},
-        {"name": "《炎の連星術》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《星術マスタリー》","sl": 4},{"name": "《炎の連星術》","sl": 2}]
+      },
       "description": "自身はスキル使用時に待機状態となる。待機状態中は、味方への〈炎〉単属性の攻撃を攻撃者へ反射する。ただし、範囲攻撃は1回分の攻撃のみ反射し、あとは無効化とする。待機状態は述べ(SL)回の反射を行うか、ターン終了で解除される。"
     },
     {
@@ -125,10 +124,10 @@
       "cost": "TP：4",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《星術マスタリー》","sl": 4},
-        {"name": "《氷の連星術》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《星術マスタリー》","sl": 4},{"name": "《氷の連星術》","sl": 2}]
+      },
       "description": "自身はスキル使用時に待機状態となる。待機状態中は、味方への〈氷〉単属性の攻撃を攻撃者へ反射する。ただし、範囲攻撃は1回分の攻撃のみ反射し、あとは無効化とする。待機状態は述べ(SL)回の反射を行うか、ターン終了で解除される。"
     },
     {
@@ -142,10 +141,10 @@
       "cost": "TP：4",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《星術マスタリー》","sl": 4},
-        {"name": "《雷の連星術》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《星術マスタリー》","sl": 4},{"name": "《雷の連星術》","sl": 2}]
+      },
       "description": "自身はスキル使用時に待機状態となる。待機状態中は、味方への〈雷〉単属性の攻撃を攻撃者へ反射する。ただし、範囲攻撃は1回分の攻撃のみ反射し、あとは無効化とする。待機状態は述べ(SL)回の反射を行うか、ターン終了で解除される。"
     },
     {
@@ -159,9 +158,10 @@
       "cost": "TP：5",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《星術マスタリー》","sl": 5}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《星術マスタリー》","sl": 5}]
+      },
       "description": "3回の〈壊〉属性の属性攻撃ロールを行う。この際、対象は攻撃1回ごとに、敵の中からランダムで選択する。また、この際のダメージを+(SL)する。"
     },
     {
@@ -175,9 +175,10 @@
       "cost": "-",
       "max_sl_main": 1,
       "max_sl_sub": 1,
-      "prerequisites": [
-        {"name": "《星術マスタリー》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《星術マスタリー》","sl": 2}]
+      },
       "description": "自身の攻撃に際して、敵の【耐性】2は1として、1は0として扱う。【耐性】3以上に対しては効果は無い。"
     },
     {
@@ -191,9 +192,10 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《星術マスタリー》","sl": 3}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《星術マスタリー》","sl": 3}]
+      },
       "description": "自身の攻撃で敵を戦闘不能にした際、自身の【TP】を(SL)だけ回復する。"
     },
     {
@@ -207,10 +209,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《星術マスタリー》","sl": 3},
-        {"name": "《TPブースト》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《星術マスタリー》","sl": 3},{"name": "《TPブースト》","sl": 1}]
+      },
       "description": "そのターン、自身が術式攻撃ロールを行う場合、ダメージダイスを+(SL×2)個得る。ただし、その術式攻撃は後発行動扱いとなる。"
     },
     {
@@ -224,7 +226,6 @@
       "cost": "-",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [],
       "description": "知識に関係する判定に+3を得る。"
     },
     {
@@ -238,7 +239,6 @@
       "cost": "TP：1",
       "max_sl_main": 1,
       "max_sl_sub": 1,
-      "prerequisites": [],
       "description": "視力を用いた判定を【TEC】で行うことができる。また、その達成値に+3を得る。"
     },
     {
@@ -252,7 +252,6 @@
       "cost": "TP：1",
       "max_sl_main": 1,
       "max_sl_sub": 1,
-      "prerequisites": [],
       "description": "危険が迫っている事に気づくための判定を【TEC】で行うことができる。また、その達成値に+3を得る。"
     },
     {
@@ -266,7 +265,6 @@
       "cost": "TP：2",
       "max_sl_main": 1,
       "max_sl_sub": 1,
-      "prerequisites": [],
       "description": "自分以外の者が戦闘以外の一般行為判定を行う際に使用する。対象の達成値に+1を上乗せする。"
     },
     {
@@ -280,7 +278,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【HP】に+(SL×2)を得る。"
     },
     {
@@ -294,7 +291,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【TP】に+(SL×2)を得る。"
     },
     {
@@ -308,7 +304,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【属性攻撃】に+(SL)を得る。"
     }
   ]
