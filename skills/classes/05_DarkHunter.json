@@ -13,7 +13,6 @@
       "cost": "-",
       "max_sl_main": -1,
       "max_sl_sub": 0,
-      "prerequisites": [],
       "description": "何らかの封じが付与されている対象への攻撃ロールでのダメージのダイスに+5個を得る。"
     },
     {
@@ -27,7 +26,6 @@
       "cost": "-",
       "max_sl_main": 5,
       "max_sl_sub": 3,
-      "prerequisites": [],
       "description": "剣による物理命中に+(SL/2)を得る。"
     },
     {
@@ -41,7 +39,6 @@
       "cost": "-",
       "max_sl_main": 5,
       "max_sl_sub": 3,
-      "prerequisites": [],
       "description": "突剣による物理命中に+(SL/2)を得る。"
     },
     {
@@ -55,7 +52,6 @@
       "cost": "-",
       "max_sl_main": 5,
       "max_sl_sub": 3,
-      "prerequisites": [],
       "description": "鞭による物理命中に+(SL/2)を得る。"
     },
     {
@@ -69,9 +65,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《鞭マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《鞭マスタリー》","sl": 1}]
+      },
       "description": "このスキルを使用する際は、下記いずれかの名称で宣言する。《ヘッドボンデージ》《アームボンデージ》《レッグボンデージ》物理攻撃ロールを行う。命中すると、対象は(攻撃者の【抑制攻撃】+(7+SL))を目標値とした抑制防御ロールを行い、これに失敗すると[頭][腕][脚]いずれかの封じを受ける。"
     },
     {
@@ -85,9 +82,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《鞭マスタリー》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《鞭マスタリー》","sl": 2}]
+      },
       "description": "物理攻撃ロールを行う。命中すると、対象は(攻撃者の【抑制攻撃】+(7+SL))を目標値とした抑制防御ロールを行い、これに失敗すると[毒]を受ける。"
     },
     {
@@ -101,9 +99,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《鞭マスタリー》","sl": 3}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《鞭マスタリー》","sl": 3}]
+      },
       "description": "物理攻撃ロールを行う。命中すると、対象に『速度低下：(SL×4)』の弱体効果を与える。3ターン持続する。"
     },
     {
@@ -117,10 +116,10 @@
       "cost": "TP：2",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《鞭マスタリー》","sl": 4},
-        {"name": "《三種ボンデージ》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《鞭マスタリー》","sl": 4},{"name": "《三種ボンデージ》","sl": 2}]
+      },
       "description": "物理攻撃ロールを行う。この際、ダメージダイス+(対象の封じの個数×(SL+1))個を得る。"
     },
     {
@@ -134,9 +133,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《鞭マスタリー》","sl": 5}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《鞭マスタリー》","sl": 5}]
+      },
       "description": "物理攻撃ロールを行う。命中した際、この攻撃によってダメージを与える前の対象のHP残量が最大値の半分未満であれば、対象は(攻撃者の【抑制攻撃】+(7+SL))を目標値とした抑制防御ロールを行い、これに失敗すると即死する。"
     },
     {
@@ -150,10 +150,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《剣マスタリー》","sl": 1},
-        {"name": "《突剣マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "OR",
+        "conditions": [{"name": "《剣マスタリー》","sl": 1},{"name": "《突剣マスタリー》","sl": 1}]
+      },
       "description": "物理攻撃ロールを行う。命中すると、対象は(攻撃者の【抑制攻撃】+(7+SL))を目標値とした抑制防御ロールを行い、これに失敗すると[睡眠]を受ける。"
     },
     {
@@ -167,10 +167,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《剣マスタリー》","sl": 1},
-        {"name": "《突剣マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "OR",
+        "conditions": [{"name": "《剣マスタリー》","sl": 1},{"name": "《突剣マスタリー》","sl": 1}]
+      },
       "description": "物理攻撃ロールを行う。命中すると、対象は(攻撃者の【抑制攻撃】+(7+SL))を目標値とした抑制防御ロールを行い、これに失敗すると[麻痺]を受ける。"
     },
     {
@@ -184,10 +184,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《剣マスタリー》","sl": 1},
-        {"name": "《突剣マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "OR",
+        "conditions": [{"name": "《剣マスタリー》","sl": 1},{"name": "《突剣マスタリー》","sl": 1}]
+      },
       "description": "物理攻撃ロールを行う。命中すると、対象は(攻撃者の【抑制攻撃】+(7+SL))を目標値とした抑制防御ロールを行い、これに失敗すると[混乱]を受ける。"
     },
     {
@@ -201,10 +201,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《剣マスタリー》","sl": 3},
-        {"name": "《突剣マスタリー》","sl": 3}
-      ],
+      "prerequisites": {
+        "type": "OR",
+        "conditions": [{"name": "《剣マスタリー》","sl": 3},{"name": "《突剣マスタリー》","sl": 3}]
+      },
       "description": "物理攻撃ロールを行う。この際、ダメージダイス+(SL)個を得る。また、この際に与えたダメージの半分だけ、自身の【HP】を回復する。"
     },
     {
@@ -218,10 +218,10 @@
       "cost": "TP：2",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《剣マスタリー》","sl": 4},
-        {"name": "《突剣マスタリー》","sl": 4}
-      ],
+      "prerequisites": {
+        "type": "OR",
+        "conditions": [{"name": "《剣マスタリー》","sl": 4},{"name": "《突剣マスタリー》","sl": 4}]
+      },
       "description": "物理攻撃ロールを行う。この際、ダメージダイス+(SL)個を得る。対象が何らかの状態異常を受けていると、さらにダメージダイス+(SL×2)個を得る。"
     },
     {
@@ -235,11 +235,16 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《剣マスタリー》","sl": 5},
-        {"name": "《突剣マスタリー》","sl": 5},
-        {"name": "《ドレインバイト》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [
+          {
+            "type": "OR",
+            "conditions": [{"name": "《剣マスタリー》","sl": 5},{"name": "《突剣マスタリー》","sl": 5}]
+          },
+          {"name": "《ドレインバイト》","sl": 2}
+        ]
+      },
       "description": "物理攻撃ロールを行う。命中すると、対象は(攻撃者の【抑制攻撃】+(6+SL))を目標値とした抑制防御ロールを行い、これに失敗すると[石化]を受ける。"
     },
     {
@@ -253,11 +258,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《剣マスタリー》","sl": 3},
-        {"name": "《突剣マスタリー》","sl": 3},
-        {"name": "《鞭マスタリー》","sl": 3}
-      ],
+      "prerequisites": {
+        "type": "OR",
+        "conditions": [{"name": "《剣マスタリー》","sl": 3},{"name": "《突剣マスタリー》","sl": 3},{"name": "《鞭マスタリー》","sl": 3}]
+      },
       "description": "自身はスキル使用時に待機状態となる。待機状態中、自身を含む列に物理攻撃が行われると自身は攻撃者に対して物理攻撃で反撃を行う。ただし、この際のダメージダイスを-(4-SL)個する。待機状態は述べ3回の反撃を行うか、ターン終了で解除される。"
     },
     {
@@ -271,11 +275,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《剣マスタリー》","sl": 3},
-        {"name": "《突剣マスタリー》","sl": 3},
-        {"name": "《鞭マスタリー》","sl": 3}
-      ],
+      "prerequisites": {
+        "type": "OR",
+        "conditions": [{"name": "《剣マスタリー》","sl": 3},{"name": "《突剣マスタリー》","sl": 3},{"name": "《鞭マスタリー》","sl": 3}]
+      },
       "description": "自身はスキル使用時に待機状態となる。待機状態中、自身を含む列に属性攻撃が行われると自身は攻撃者に対して物理攻撃で反撃を行う。ただし、この際のダメージダイスを-(4-SL)個する。待機状態は述べ3回の反撃を行うか、ターン終了で解除される。"
     },
     {
@@ -289,7 +292,6 @@
       "cost": "TP：1",
       "max_sl_main": 2,
       "max_sl_sub": 1,
-      "prerequisites": [],
       "description": "『回避上昇：(SL)』の強化効果を付与する。3ターン持続する。"
     },
     {
@@ -303,10 +305,10 @@
       "cost": "-",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《物理攻撃ブースト》","sl": 2},
-        {"name": "《抑制攻撃ブースト》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《物理攻撃ブースト》","sl": 2},{"name": "《抑制攻撃ブースト》","sl": 2}]
+      },
       "description": "自身の主行動によって封じを与えた場合、自身が装備している武器が『白兵』分類の武器であればその対象に通常攻撃で追撃を行う。"
     },
     {
@@ -320,7 +322,6 @@
       "cost": "-",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [],
       "description": "シナリオ開始時点で保有しているFPに+1を得る。"
     },
     {
@@ -334,7 +335,6 @@
       "cost": "-",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [],
       "description": "ロープや鎖を使った判定全般に+3を得る。"
     },
     {
@@ -348,7 +348,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【HP】に+(SL×2)を得る。"
     },
     {
@@ -362,7 +361,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【TP】に+(SL×2)を得る。"
     },
     {
@@ -376,7 +374,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【物理攻撃】に+(SL)を得る。"
     },
     {
@@ -390,7 +387,6 @@
       "cost": "-",
       "max_sl_main": 4,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【抑制攻撃】に+(SL/2)を得る。"
     }
   ]
