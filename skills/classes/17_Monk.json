@@ -13,7 +13,6 @@
       "cost": "-",
       "max_sl_main": -1,
       "max_sl_sub": 0,
-      "prerequisites": [],
       "description": "素手で分類『回復』のスキルを使用する場合、回復量のダイスに+6を得る。"
     },
     {
@@ -27,7 +26,6 @@
       "cost": "-",
       "max_sl_main": 5,
       "max_sl_sub": 3,
-      "prerequisites": [],
       "description": "素手攻撃の武器データが、『素手(拳マスタリー)』の物になる。また、これによる物理命中に+(SL/2)を得る。"
     },
     {
@@ -41,7 +39,6 @@
       "cost": "-",
       "max_sl_main": 5,
       "max_sl_sub": 3,
-      "prerequisites": [],
       "description": "分類『回復』のスキル使用時の回復量のダイスに+(SL/2)を得る。"
     },
     {
@@ -55,9 +52,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《回復マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《回復マスタリー》","sl": 1}]
+      },
       "description": "回復ロールを行う。この際、回復量のダイスに+(SL+3)を得る。"
     },
     {
@@ -71,9 +69,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《回復マスタリー》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《回復マスタリー》","sl": 2}]
+      },
       "description": "回復ロールを行う。この際、回復量のダイスに+(SL+3)を得る。"
     },
     {
@@ -87,10 +86,10 @@
       "cost": "TP：2",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《回復マスタリー》","sl": 3},
-        {"name": "《キュア》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《回復マスタリー》","sl": 3},{"name": "《キュア》","sl": 1}]
+      },
       "description": "回復ロールを行う。この際、回復量のダイスに+((SL+1)×3)を得る。"
     },
     {
@@ -104,10 +103,10 @@
       "cost": "TP：5",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《回復マスタリー》","sl": 3},
-        {"name": "《エリアキュア》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《回復マスタリー》","sl": 3},{"name": "《エリアキュア》","sl": 1}]
+      },
       "description": "回復ロールを行う。この際、回復量のダイスに+((SL+1)×3)を得る。"
     },
     {
@@ -121,10 +120,10 @@
       "cost": "TP：3",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《回復マスタリー》","sl": 4},
-        {"name": "《ヒーリング》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《回復マスタリー》","sl": 4},{"name": "《ヒーリング》","sl": 2}]
+      },
       "description": "【HP】を全回復する。"
     },
     {
@@ -138,9 +137,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《回復マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《回復マスタリー》","sl": 1}]
+      },
       "description": "対象の状態異常を(SL)個まで解除する。"
     },
     {
@@ -154,9 +154,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《回復マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《回復マスタリー》","sl": 1}]
+      },
       "description": "対象の封じを(SL)個まで解除する。"
     },
     {
@@ -170,9 +171,10 @@
       "cost": "TP：3",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《回復マスタリー》","sl": 4}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《回復マスタリー》","sl": 4}]
+      },
       "description": "[戦闘不能]状態を回復する。この際、対象の【HP】現在値は1になる。"
     },
     {
@@ -186,9 +188,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《拳マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《拳マスタリー》","sl": 1}]
+      },
       "description": "物理攻撃ロールを行う。命中すると、対象は(攻撃者の【抑制攻撃】+(7+SL))を目標値とした抑制防御ロールを行い、これに失敗すると[麻痺]を受ける。"
     },
     {
@@ -202,9 +205,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《拳マスタリー》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《拳マスタリー》","sl": 2}]
+      },
       "description": "〈壊〉+〈雷〉属性の物理攻撃ロールを行う。この際、ダメージダイス+(SL)個を得る。"
     },
     {
@@ -218,9 +222,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《拳マスタリー》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《拳マスタリー》","sl": 2}]
+      },
       "description": "〈壊〉+〈火〉属性の物理攻撃ロールを行う。この際、ダメージダイス+(SL)個を得る。"
     },
     {
@@ -234,9 +239,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《拳マスタリー》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《拳マスタリー》","sl": 2}]
+      },
       "description": "無属性の物理攻撃ロールを行う。この際、【物理攻撃】を+(SL)した上で半分として扱う。"
     },
     {
@@ -250,9 +256,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《拳マスタリー》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《拳マスタリー》","sl": 2}]
+      },
       "description": "〈斬〉+〈突〉属性の物理攻撃ロールを行う。この際、ダメージダイス+(SL)個を得る。"
     },
     {
@@ -266,9 +273,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《拳マスタリー》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《拳マスタリー》","sl": 2}]
+      },
       "description": "〈壊〉+〈氷〉属性の物理攻撃ロールを行う。この際、ダメージダイス+(SL)個を得る。"
     },
     {
@@ -282,9 +290,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《拳マスタリー》","sl": 3}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《拳マスタリー》","sl": 3}]
+      },
       "description": "物理攻撃ロールを行う。命中すると、対象は(攻撃者の【抑制攻撃】+(7+SL))を目標値とした抑制防御ロールを行い、これに失敗すると[呪い]を受ける。"
     },
     {
@@ -298,9 +307,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《拳マスタリー》","sl": 4}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《拳マスタリー》","sl": 4}]
+      },
       "description": "自身はスキル使用時に待機状態となる。待機状態中、自身に物理攻撃が行われると自身は攻撃者に対して物理攻撃で反撃を行う。ただし、この際のダメージダイスを-(4-SL)個する。待機状態は述べ3回の反撃を行うか、ターン終了で解除される。"
     },
     {
@@ -314,9 +324,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《拳マスタリー》","sl": 4}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《拳マスタリー》","sl": 4}]
+      },
       "description": "自身はスキル使用時に待機状態となる。待機状態中、自身に属性攻撃が行われると自身は攻撃者に対して物理攻撃で反撃を行う。ただし、この際のダメージダイスを-(4-SL)個する。待機状態は述べ3回の反撃を行うか、ターン終了で解除される。"
     },
     {
@@ -330,9 +341,10 @@
       "cost": "TP：4",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《拳マスタリー》","sl": 5},
-        {"name": "《チャクラの覚醒》","sl": 2}
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《拳マスタリー》","sl": 5},{"name": "《チャクラの覚醒》","sl": 2}]
+      },
       ],
       "description": "〈壊〉+〈炎〉属性の、3回の物理攻撃ロールを行う。この際、対象は攻撃1回ごとに、敵の中からランダムで選択する。また、ダメージダイスを-(4-SL)個する。"
     },
@@ -347,7 +359,6 @@
       "cost": "-",
       "max_sl_main": 2,
       "max_sl_sub": 1,
-      "prerequisites": [],
       "description": "【抑制防御】+(SL)を得る。"
     },
     {
@@ -361,9 +372,10 @@
       "cost": "TP：3",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《チャクラの覚醒》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《チャクラの覚醒》","sl": 2}]
+      },
       "description": "およそ5分間、溶岩や針の山などの上を無傷で歩けるようになる。"
     },
     {
@@ -377,7 +389,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【HP】に+(SL×2)を得る。"
     },
     {
@@ -391,7 +402,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【TP】に+(SL×2)を得る。"
     },
     {
@@ -405,7 +415,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【物理攻撃】に+(SL)を得る。"
     },
     {
@@ -419,7 +428,6 @@
       "cost": "-",
       "max_sl_main": 4,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【抑制防御】に+(SL/2)を得る。"
     }
   ]
