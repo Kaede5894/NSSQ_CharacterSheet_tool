@@ -13,7 +13,6 @@
       "cost": "FP：1",
       "max_sl_main": -1,
       "max_sl_sub": 0,
-      "prerequisites": [],
       "description": "一般行為判定を行った際、成否を確認した上で1D6をさらに振り足す事ができる。"
     },
     {
@@ -27,7 +26,6 @@
       "cost": "-",
       "max_sl_main": 5,
       "max_sl_sub": 3,
-      "prerequisites": [],
       "description": "弓による物理命中に+(SL/2)を得る。"
     },
     {
@@ -41,9 +39,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《弓マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《弓マスタリー》","sl": 1}]
+      },
       "description": "物理攻撃ロールを行う。この際、ダメージダイス+(SL+1)個を得る。"
     },
     {
@@ -57,9 +56,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《弓マスタリー》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《弓マスタリー》","sl": 2}]
+      },
       "description": "物理攻撃ロールを行う。命中すると、対象は(攻撃者の【抑制攻撃】+(7+SL))を目標値とした抑制防御ロールを行い、これに失敗すると[盲目]を受ける。"
     },
     {
@@ -73,9 +73,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《弓マスタリー》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《弓マスタリー》","sl": 2}]
+      },
       "description": "物理攻撃ロールを行う。命中すると、対象は(攻撃者の【抑制攻撃】+(7+SL))を目標値とした抑制防御ロールを行い、これに失敗すると[毒]を受ける。"
     },
     {
@@ -89,9 +90,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《弓マスタリー》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《弓マスタリー》","sl": 2}]
+      },
       "description": "物理攻撃ロールを行う。命中すると、対象は(攻撃者の【抑制攻撃】+(7+SL))を目標値とした抑制防御ロールを行い、これに失敗すると[睡眠]を受ける。"
     },
     {
@@ -105,9 +107,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《弓マスタリー》","sl": 3}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《弓マスタリー》","sl": 3}]
+      },
       "description": "対象に2回の物理攻撃ロールを行う。ただし、この際のダメージダイスを-(4-SL)個する。"
     },
     {
@@ -121,9 +124,10 @@
       "cost": "TP：2",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《弓マスタリー》","sl": 3}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《弓マスタリー》","sl": 3}]
+      },
       "description": "物理攻撃ロールを行う。この際、ダメージダイス+(SL+1)個を得る。また、敵が後衛にいれば、さらにダメージダイス+(SL)個を得る。"
     },
     {
@@ -137,10 +141,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《弓マスタリー》","sl": 5},
-        {"name": "《ドロップショット》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《弓マスタリー》","sl": 5},{"name": "《ドロップショット》","sl": 2}]
+      },
       "description": "次のターンの後発行動タイミングでの遅発攻撃を予約する。この攻撃は通常攻撃にダメージダイス+((SL+1)×3)個した物理攻撃ロールとする。"
     },
     {
@@ -154,7 +158,6 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "『速度上昇：(SL×3)』の強化効果を付与する。3ターン持続する。"
     },
     {
@@ -168,7 +171,6 @@
       "cost": "TP：2",
       "max_sl_main": 2,
       "max_sl_sub": 1,
-      "prerequisites": [],
       "description": "『命中低下：(SL)』の弱体効果を付与する。3ターン持続する。"
     },
     {
@@ -182,9 +184,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《トリックステップ》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《トリックステップ》","sl": 2}]
+      },
       "description": "【AGI】での能動回避を行う。また、その際の達成値に+(SL-1)を得る。"
     },
     {
@@ -198,10 +201,10 @@
       "cost": "TP：4",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《ソニックステップ》","sl": 3},
-        {"name": "《チェインダンス》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《ソニックステップ》","sl": 3},{"name": "《チェインダンス》","sl": 2}]
+      },
       "description": "対象のメインフェイズの行動を、最速行動で行わせる。"
     },
     {
@@ -215,10 +218,10 @@
       "cost": "TP：4",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《弓マスタリー》","sl": 4},
-        {"name": "《ソニックステップ》","sl": 3}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《弓マスタリー》","sl": 4},{"name": "《ソニックステップ》","sl": 3}]
+      },
       "description": "『追撃：(自分)』の強化効果を付与する。(SL)ターン持続する。"
     },
     {
@@ -232,7 +235,6 @@
       "cost": "-",
       "max_sl_main": 2,
       "max_sl_sub": 1,
-      "prerequisites": [],
       "description": "アイテムによる回復効果に常に+(SL)を得る。"
     },
     {
@@ -246,9 +248,10 @@
       "cost": "-",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《エフィシエント》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《エフィシエント》","sl": 2}]
+      },
       "description": "HP回復系アイテム使用時、戦闘不能からの回復効果が付随する。"
     },
     {
@@ -262,7 +265,6 @@
       "cost": "TP：1",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [],
       "description": "逃走判定の際に使用を宣言する。逃走判定の達成値に+3を得る。"
     },
     {
@@ -276,7 +278,6 @@
       "cost": "-",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [],
       "description": "シナリオ開始時点で保有しているFPに+1を得る。"
     },
     {
@@ -290,7 +291,6 @@
       "cost": "-",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [],
       "description": "危険が迫っている事に気づくための判定に+3を得る。"
     },
     {
@@ -304,7 +304,6 @@
       "cost": "-",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [],
       "description": "視力を用いた判定全般に+3を得る。"
     },
     {
@@ -318,7 +317,6 @@
       "cost": "-",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [],
       "description": "全身運動の判定全般に+3を得る。"
     },
     {
@@ -332,7 +330,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "伐採・採掘・採取イベントにおいて、通常の回数に加えてさらに採集判定を(SL)回、追加で行うことができる。この追加分は、ああっと値を0として扱う。"
     },
     {
@@ -346,7 +343,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "ああっと！発生時など、不意討ちを受けた状況において(1D6-1)を振り、結果がSL以下であれば、不意討ちによる1ターン分の行動ロスを防ぐ事ができる。"
     },
     {
@@ -360,7 +356,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【HP】に+(SL×2)を得る。"
     },
     {
@@ -374,7 +369,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【TP】に+(SL×2)を得る。"
     },
     {
@@ -388,7 +382,6 @@
       "cost": "-",
       "max_sl_main": 4,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【抑制攻撃】に+(SL/2)を得る。"
     },
     {
@@ -402,7 +395,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【速度】に+(SL×3)を得る。"
     }
   ]
