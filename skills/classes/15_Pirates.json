@@ -13,7 +13,6 @@
       "cost": "FP：1",
       "max_sl_main": -1,
       "max_sl_sub": 0,
-      "prerequisites": [],
       "description": "一般行為判定を行った際、成否を確認した上でダイスの出目を逆転させる事ができる。(1→6、2→5、3→4、4→3、5→2、6→1になる)逆転は、判定の2つのダイスに対して一斉に行う。"
     },
     {
@@ -27,7 +26,6 @@
       "cost": "-",
       "max_sl_main": 5,
       "max_sl_sub": 3,
-      "prerequisites": [],
       "description": "突剣による物理命中に+(SL/2)を得る。"
     },
     {
@@ -41,7 +39,6 @@
       "cost": "-",
       "max_sl_main": 5,
       "max_sl_sub": 3,
-      "prerequisites": [],
       "description": "銃による物理命中に+(SL/2)を得る。"
     },
     {
@@ -55,9 +52,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《突剣マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《突剣マスタリー》","sl": 1}]
+      },
       "description": "物理攻撃ロールを行う。命中すると、対象は(攻撃者の【抑制攻撃】+(7+SL))を目標値とした抑制防御ロールを行い、これに失敗すると[盲目]を受ける。"
     },
     {
@@ -71,9 +69,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《突剣マスタリー》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《突剣マスタリー》","sl": 2}]
+      },
       "description": "物理攻撃ロールを行う。命中すると、対象は(攻撃者の【抑制攻撃】+(7+SL))を目標値とした抑制防御ロールを行い、これに失敗すると[頭]封じを受ける。"
     },
     {
@@ -87,9 +86,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《突剣マスタリー》","sl": 3}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《突剣マスタリー》","sl": 3}]
+      },
       "description": "このスキルを使用する際は、下記いずれかの名称で宣言する。《チェイスセーバー》《チェイスブロー》《チェイススラスト》スキル使用時に待機状態となる。待機状態中、敵に〈斬〉〈壊〉〈突〉いずれかを含む攻撃が行われると自身はその対象に物理攻撃で追撃を行う。ただし、この際のダメージダイスを-(4-SL)個する。待機状態は述べ3体への追撃を行うか、ターン終了で解除される。"
     },
     {
@@ -103,9 +103,10 @@
       "cost": "TP：4",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《突剣マスタリー》","sl": 5}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《突剣マスタリー》","sl": 5}]
+      },
       "description": "3回の物理攻撃ロールを行う。この際、ダメージダイスを-(5-SL)個する。また、攻撃対象は攻撃1回ごとに、敵前列の中からランダムで選択する。"
     },
     {
@@ -119,9 +120,10 @@
       "cost": "TP：2",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《銃マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《銃マスタリー》","sl": 1}]
+      },
       "description": "3回の物理攻撃ロールを行う。この際、対象は攻撃1回ごとに、敵の中からランダムで選択する。ただし、同一のエネミーには1回しか攻撃できない。また、この際の【物理命中】を-3、ダメージを-(3-(SL))する。"
     },
     {
@@ -135,9 +137,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《銃マスタリー》","sl": 3}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《銃マスタリー》","sl": 3}]
+      },
       "description": "対象に2回の物理攻撃ロールを行う。ただし、この際のダメージダイスを-(4-SL)個する。"
     },
     {
@@ -151,9 +154,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《銃マスタリー》","sl": 3}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《銃マスタリー》","sl": 3}]
+      },
       "description": "このスキルを使用する際は、下記いずれかの名称で宣言する。《チェイスファイア》《チェイスアイス》《チェイスサンダー》スキル使用時に待機状態となる。待機状態中、敵に〈炎〉〈氷〉〈雷〉いずれかを含む攻撃が行われると自身はその対象に物理攻撃で追撃を行う。ただし、この際のダメージダイスを-(4-SL)個する。待機状態は述べ3体への追撃を行うか、ターン終了で解除される。"
     },
     {
@@ -167,9 +171,10 @@
       "cost": "TP：4",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《銃マスタリー》","sl": 5}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《銃マスタリー》","sl": 5}]
+      },
       "description": "3回の物理攻撃ロールを行う。この際、ダメージダイスを-(5-SL)個する。また、攻撃対象は攻撃1回ごとに、敵全体の中からランダムで選択する。"
     },
     {
@@ -183,10 +188,10 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《突剣マスタリー》","sl": 1},
-        {"name": "《銃マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《突剣マスタリー》","sl": 1},{"name": "《銃マスタリー》","sl": 1}]
+      },
       "description": "種別『突剣』と『銃』の武器を武器スロットとその他スロットに装備し、通常攻撃においてそれぞれの武器で1回ずつ攻撃できるようになる。ただし、それぞれの【物理命中】に-3、【物理攻撃】に-(3-SL)を受ける。"
     },
     {
@@ -200,7 +205,6 @@
       "cost": "TP：1",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [],
       "description": "逃走判定の際に使用を宣言する。逃走判定の達成値に+3を得る。"
     },
     {
@@ -214,10 +218,10 @@
       "cost": "-",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《突剣マスタリー》","sl": 2},
-        {"name": "《銃マスタリー》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《突剣マスタリー》","sl": 2},{"name": "《銃マスタリー》","sl": 2}]
+      },
       "description": "クリティカルヒット発生時、物理攻撃で自ら追撃を行う。この効果は1回の主行動につき一度しか発生しない。"
     },
     {
@@ -231,7 +235,6 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "『物理防御低下：(SL+1)』の弱体効果を付与する。3ターン持続する。"
     },
     {
@@ -245,7 +248,6 @@
       "cost": "-",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [],
       "description": "シナリオ開始時点で保有しているFPに+1を得る。"
     },
     {
@@ -259,7 +261,6 @@
       "cost": "-",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [],
       "description": "危険が迫っている事に気づくための判定に+3を得る。"
     },
     {
@@ -273,7 +274,6 @@
       "cost": "-",
       "max_sl_main": 2,
       "max_sl_sub": 1,
-      "prerequisites": [],
       "description": "ドロップ判定の達成値を±(SL)の範囲で自由に操作できる。"
     },
     {
@@ -287,7 +287,6 @@
       "cost": "-",
       "max_sl_main": 1,
       "max_sl_sub": 1,
-      "prerequisites": [],
       "description": "採集判定でゾロ目が発生した場合、入手できるアイテムのランクに+1を得る。"
     },
     {
@@ -301,7 +300,6 @@
       "cost": "-",
       "max_sl_main": 1,
       "max_sl_sub": 1,
-      "prerequisites": [],
       "description": "【FP】を用いて一般行為判定を振り直す際、達成値+1を得る。"
     },
     {
@@ -315,7 +313,6 @@
       "cost": "-",
       "max_sl_main": 1,
       "max_sl_sub": 1,
-      "prerequisites": [],
       "description": "水で溺れなくなる。"
     },
     {
@@ -329,7 +326,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【HP】に+(SL×2)を得る。"
     },
     {
@@ -343,7 +339,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【TP】に+(SL×2)を得る。"
     },
     {
@@ -357,7 +352,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【物理攻撃】に+(SL)を得る。"
     },
     {
@@ -371,7 +365,6 @@
       "cost": "-",
       "max_sl_main": 4,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【抑制攻撃】に+(SL/2)を得る。"
     }
   ]
