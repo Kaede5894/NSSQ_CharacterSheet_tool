@@ -13,7 +13,6 @@
       "cost": "-",
       "max_sl_main": -1,
       "max_sl_sub": 0,
-      "prerequisites": [],
       "description": "あらゆる武器の射程が『遠』扱いになる。その武器を用いたスキル攻撃も同様の効果を受ける。"
     },
     {
@@ -27,7 +26,6 @@
       "cost": "-",
       "max_sl_main": 5,
       "max_sl_sub": 3,
-      "prerequisites": [],
       "description": "短剣による物理命中に+(SL/2)を得る。"
     },
     {
@@ -41,7 +39,6 @@
       "cost": "-",
       "max_sl_main": 5,
       "max_sl_sub": 3,
-      "prerequisites": [],
       "description": "分類『忍法』のスキルによる攻撃ロールの物理および属性命中に+(SL/2)を得る。"
     },
     {
@@ -55,9 +52,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《短剣マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《短剣マスタリー》","sl": 1}]
+      },
       "description": "物理攻撃ロールを行う。命中すると、対象は(攻撃者の【抑制攻撃】+(7+SL))を目標値とした抑制防御ロールを行い、これに失敗すると[脚]封じを受ける。"
     },
     {
@@ -71,9 +69,10 @@
       "cost": "TP：2",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《短剣マスタリー》","sl": 3}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《短剣マスタリー》","sl": 3}]
+      },
       "description": "物理攻撃ロールを行う。命中すると、対象は(攻撃者の【抑制攻撃】+(5+SL))を目標値とした抑制防御ロールを行い、これに失敗すると[石化]を受ける。"
     },
     {
@@ -87,9 +86,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《短剣マスタリー》","sl": 3}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《短剣マスタリー》","sl": 3}]
+      },
       "description": "対象に2回の物理攻撃ロールを行う。ただし、この際のダメージダイスを-(4-SL)個する。"
     },
     {
@@ -103,9 +103,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《短剣マスタリー》","sl": 3}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《短剣マスタリー》","sl": 3}]
+      },
       "description": "3回の物理攻撃ロールを行う。この際、対象は攻撃1回ごとに、敵の中からランダムで選択する。ただし、同一のエネミーには1回しか攻撃できない。また、この際のダメージダイスを-(3-SL)個する。"
     },
     {
@@ -119,10 +120,10 @@
       "cost": "TP：4",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《短剣マスタリー》","sl": 5},
-        {"name": "《忍法：分身》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《短剣マスタリー》","sl": 5},{"name": "《忍法：分身》","sl": 1}]
+      },
       "description": "《忍法：分身》を使用したターンでのみ使用可能。また使用時は、主行動2回ともこのスキルを使用しなくてはならない。物理攻撃ロールを行う。この際、ダメージダイス+((SL+2)×3)個を得る。"
     },
     {
@@ -136,9 +137,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《忍法マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《短剣マスタリー》","sl": 1}]
+      },
       "description": "〈突〉属性の物理攻撃ロールを行う。この際、最終的な実ダメージを半分扱いとしてダメージを算出する。命中すると、対象は(攻撃者の【抑制攻撃】+(7+SL))を目標値とした抑制防御ロールを行い、これに失敗すると[睡眠]を受ける。"
     },
     {
@@ -152,9 +154,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《忍法マスタリー》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《短剣マスタリー》","sl": 2}]
+      },
       "description": "何らかの状態異常を受けている敵1体を選んで使用を宣言する。自身の【抑制攻撃】と対象の【抑制防御】で対抗判定を行い、勝利すると、対象が受けている状態異常を、対象と同列の敵全てに伝染させる。"
     },
     {
@@ -168,9 +171,10 @@
       "cost": "TP：2",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《忍法マスタリー》","sl": 3}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《短剣マスタリー》","sl": 3}]
+      },
       "description": "自身はスキル使用時に待機状態となる。待機状態中、味方前列に物理攻撃が行われると、自身は攻撃者に対して物理攻撃で反撃を行う。ただし、この際の最終的な実ダメージは半分扱いとする。加えて、敵は(シノビの【抑制攻撃】+(7+SL))を目標値とした抑制防御ロールを行い、これに失敗すると[毒]状態を受ける。待機状態は述べ3回の反撃を行うか、ターン終了で解除される。"
     },
     {
@@ -184,9 +188,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《忍法マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《短剣マスタリー》","sl": 1}]
+      },
       "description": "そのターンの間、全ての敵は物理攻撃に関して、命中判定のダイスの出目が(SL+3)以下で絶対失敗となる。"
     },
     {
@@ -200,10 +205,10 @@
       "cost": "TP：2",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《忍法マスタリー》","sl": 3},
-        {"name": "《忍法：陽炎》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《短剣マスタリー》","sl": 3},{"name": "《忍法：陽炎》","sl": 2}]
+      },
       "description": "そのターン、自身は2回の主行動ができるようになる。"
     },
     {
@@ -217,9 +222,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《忍法マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《短剣マスタリー》","sl": 1}]
+      },
       "description": "味方一人を対象として使用を宣言する。そのターンの間、単体を対象とした敵からの攻撃ロールの対象を述べ(SL+1)回まで、強制的に宣言時の対象に変更する。"
     },
     {
@@ -233,9 +239,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《忍法マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《短剣マスタリー》","sl": 1}]
+      },
       "description": "【AGI】での能動回避を行う。また、その際の達成値に+(SL-1)を得る。"
     },
     {
@@ -249,10 +256,10 @@
       "cost": "TP：2",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《忍法マスタリー》","sl": 4},
-        {"name": "《忍法：空蝉》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《短剣マスタリー》","sl": 4},{"name": "《忍法：空蝉》","sl": 2}]
+      },
       "description": "『回避上昇：(SL)』の強化効果を得る。3ターン持続する。"
     },
     {
@@ -266,7 +273,6 @@
       "cost": "TP：1",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [],
       "description": "逃走判定の際に使用を宣言する。逃走判定の達成値に+3を得る。"
     },
     {
@@ -280,10 +286,10 @@
       "cost": "-",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《短剣マスタリー》","sl": 3},
-        {"name": "《忍法マスタリー》","sl": 3}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《短剣マスタリー》","sl": 3},{"name": "《忍法マスタリー》","sl": 3}]
+      },
       "description": "クリティカルヒット発生時、対象を即死させる。ただし、F.O.E.及びGMの指定するボスエネミーには効果が無い。"
     },
     {
@@ -297,7 +303,6 @@
       "cost": "-",
       "max_sl_main": 1,
       "max_sl_sub": 1,
-      "prerequisites": [],
       "description": "水の上を歩けるようになる。"
     },
     {
@@ -311,7 +316,6 @@
       "cost": "-",
       "max_sl_main": 1,
       "max_sl_sub": 1,
-      "prerequisites": [],
       "description": "時間制限なく水の中に潜り続ける事ができるようになる。"
     },
     {
@@ -325,7 +329,6 @@
       "cost": "-",
       "max_sl_main": 1,
       "max_sl_sub": 1,
-      "prerequisites": [],
       "description": "高所から飛び降りても怪我等をしないようになる。"
     },
     {
@@ -339,7 +342,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【HP】に+(SL×2)を得る。"
     },
     {
@@ -353,7 +355,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【TP】に+(SL×2)を得る。"
     },
     {
@@ -367,7 +368,6 @@
       "cost": "-",
       "max_sl_main": 4,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【抑制攻撃】に+(SL/2)を得る。"
     },
     {
@@ -381,7 +381,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【速度】に+(SL×3)を得る。"
     }
   ]
