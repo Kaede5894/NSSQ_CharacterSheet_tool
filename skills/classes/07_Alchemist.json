@@ -13,7 +13,6 @@
       "cost": "FP：3",
       "max_sl_main": -1,
       "max_sl_sub": 0,
-      "prerequisites": [],
       "description": "属性攻撃が命中した際に使用を宣言する。ダメージのダイスに+10個を得る。"
     },
     {
@@ -27,7 +26,6 @@
       "cost": "-",
       "max_sl_main": 5,
       "max_sl_sub": 3,
-      "prerequisites": [],
       "description": "分類『術式』のスキルを使用した攻撃ロールの属性命中に+(SL/2)を得る。"
     },
     {
@@ -41,9 +39,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《錬金マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《錬金マスタリー》","sl": 1}]
+      },
       "description": "このスキルを使用する際は、下記いずれかの名称で宣言する。《火の術式》《氷の術式》《雷の術式》〈炎〉〈氷〉〈雷〉いずれかの属性の属性攻撃を行う。またこの際、ダメージダイス+(SL)個を得る。"
     },
     {
@@ -57,10 +56,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《錬金マスタリー》","sl": 3},
-        {"name": "《三色初級術式》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《錬金マスタリー》","sl": 3},{"name": "《三色初級術式》","sl": 1}]
+      },
       "description": "〈炎〉属性の属性攻撃を行う。この際、ダメージダイス+((SL+1)×2)個を得る。"
     },
     {
@@ -74,10 +73,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《錬金マスタリー》","sl": 3},
-        {"name": "《三色初級術式》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《錬金マスタリー》","sl": 3},{"name": "《三色初級術式》","sl": 1}]
+      },
       "description": "〈氷〉属性の属性攻撃を行う。この際、ダメージダイス+((SL+1)×2)個を得る。"
     },
     {
@@ -91,10 +90,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《錬金マスタリー》","sl": 3},
-        {"name": "《三色初級術式》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《錬金マスタリー》","sl": 3},{"name": "《三色初級術式》","sl": 1}]
+      },
       "description": "〈雷〉属性の属性攻撃を行う。この際、ダメージダイス+((SL+1)×2)個を得る。"
     },
     {
@@ -108,10 +107,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《錬金マスタリー》","sl": 3},
-        {"name": "《三色初級術式》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《錬金マスタリー》","sl": 3},{"name": "《三色初級術式》","sl": 2}]
+      },
       "description": "〈炎〉属性の属性攻撃を行う。この際、ダメージダイス+(SL)個を得る。"
     },
     {
@@ -125,10 +124,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《錬金マスタリー》","sl": 3},
-        {"name": "《三色初級術式》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《錬金マスタリー》","sl": 3},{"name": "《三色初級術式》","sl": 2}]
+      },
       "description": "〈氷〉属性の属性攻撃を行う。この際、ダメージダイス+(SL)個を得る。"
     },
     {
@@ -142,10 +141,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《錬金マスタリー》","sl": 3},
-        {"name": "《三色初級術式》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《錬金マスタリー》","sl": 3},{"name": "《三色初級術式》","sl": 2}]
+      },
       "description": "〈雷〉属性の属性攻撃を行う。この際、ダメージダイス+(SL)個を得る。"
     },
     {
@@ -159,10 +158,10 @@
       "cost": "TP：5",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《錬金マスタリー》","sl": 5},
-        {"name": "《爆炎の術式》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《錬金マスタリー》","sl": 5},{"name": "《爆炎の術式》","sl": 2}]
+      },
       "description": "〈炎〉属性の属性攻撃を行う。この際、ダメージダイス+(SL)個を得る。"
     },
     {
@@ -176,10 +175,10 @@
       "cost": "TP：5",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《錬金マスタリー》","sl": 5},
-        {"name": "《氷嵐の術式》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《錬金マスタリー》","sl": 5},{"name": "《氷嵐の術式》","sl": 2}]
+      },
       "description": "〈氷〉属性の属性攻撃を行う。この際、ダメージダイス+(SL)個を得る。"
     },
     {
@@ -193,10 +192,10 @@
       "cost": "TP：5",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《錬金マスタリー》","sl": 5},
-        {"name": "《雷光の術式》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《錬金マスタリー》","sl": 5},{"name": "《雷光の術式》","sl": 2}]
+      },
       "description": "〈雷〉属性の属性攻撃を行う。この際、ダメージダイス+(SL)個を得る。"
     },
     {
@@ -210,9 +209,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《錬金マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《錬金マスタリー》","sl": 1}]
+      },
       "description": "このスキルを使用する際は、下記いずれかの名称で宣言する。《斬の術式》《壊の術式》《突の術式》〈斬〉〈壊〉〈突〉いずれかの属性の属性攻撃を行う。またこの際、ダメージダイス+(SL)個を得る。"
     },
     {
@@ -226,10 +226,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《錬金マスタリー》","sl": 3},
-        {"name": "《三色物理術式》","sl": 1}  
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《錬金マスタリー》","sl": 3},{"name": "《三色物理術式》","sl": 2}]
+      },
       "description": "〈斬〉属性の属性攻撃を行う。この際、ダメージダイス+(SL)個を得る。"
     },
     {
@@ -243,10 +243,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《錬金マスタリー》","sl": 3},
-        {"name": "《三色物理術式》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《錬金マスタリー》","sl": 3},{"name": "《三色物理術式》","sl": 2}]
+      },
       "description": "〈壊〉属性の属性攻撃を行う。この際、ダメージダイス+(SL)個を得る。"
     },
     {
@@ -260,10 +260,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《錬金マスタリー》","sl": 3},
-        {"name": "《三色物理術式》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《錬金マスタリー》","sl": 3},{"name": "《三色物理術式》","sl": 2}]
+      },
       "description": "〈突〉属性の属性攻撃を行う。この際、ダメージダイス+(SL)個を得る。"
     },
     {
@@ -277,10 +277,10 @@
       "cost": "TP：2",
       "max_sl_main": 1,
       "max_sl_sub": 1,
-      "prerequisites": [
-        {"name": "《錬金マスタリー》","sl": 2},
-        {"name": "《TPブースト》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《錬金マスタリー》","sl": 2},{"name": "《TPブースト》","sl": 2}]
+      },
       "description": "そのターン、自身の行う攻撃ロールは、敵の【耐性】を-1扱いとする。"
     },
     {
@@ -294,10 +294,10 @@
       "cost": "TP：5",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《錬金マスタリー》","sl": 5},
-        {"name": "《TPブースト》","sl": 3}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《錬金マスタリー》","sl": 5},{"name": "《TPブースト》","sl": 3}]
+      },
       "description": "無属性の属性攻撃を行う。この際、【属性攻撃】を+(SL×2)して扱う。"
     },
     {
@@ -311,7 +311,6 @@
       "cost": "-",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [],
       "description": "アイテムをひとつ消滅させ、アイテム売買ルールに基づく売値の半額に相当するenを得る。なお、この対象にできるのはGMが許可するアイテムに限る。"
     },
     {
@@ -325,7 +324,6 @@
       "cost": "-",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [],
       "description": "知識に関係する判定に+3を得る。"
     },
     {
@@ -339,7 +337,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【HP】に+(SL×2)を得る。"
     },
     {
@@ -353,7 +350,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【TP】に+(SL×2)を得る。"
     },
     {
@@ -367,7 +363,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【属性攻撃】に+(SL)を得る。"
     }
   ]
