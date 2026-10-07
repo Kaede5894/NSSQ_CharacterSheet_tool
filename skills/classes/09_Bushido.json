@@ -13,7 +13,6 @@
       "cost": "-",
       "max_sl_main": -1,
       "max_sl_sub": 0,
-      "prerequisites": [],
       "description": "クリティカルヒット発生時のダメージダイスに通常のクリティカル効果に加えて、さらに+4個を得る。"
     },
     {
@@ -27,7 +26,6 @@
       "cost": "-",
       "max_sl_main": 5,
       "max_sl_sub": 3,
-      "prerequisites": [],
       "description": "刀による物理命中に+(SL/2)を得る。"
     },
     {
@@ -41,9 +39,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《刀マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《刀マスタリー》","sl": 1}]
+      },
       "description": "その戦闘の間、上段系の刀スキルが使用できるようになる。加えて、【物理攻撃】に+(SL)を得る。(これは強化効果としては扱わず、解除される事は無い)"
     },
     {
@@ -57,9 +56,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《上段の構え》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《上段の構え》","sl": 1}]
+      },
       "description": "《上段の構え》状態でのみ使用可能。物理攻撃ロールを行う。この際、ダメージダイス+((SL+1)×2)個を得る。"
     },
     {
@@ -73,9 +73,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《上段の構え》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《上段の構え》","sl": 2}]
+      },
       "description": "《上段の構え》状態でのみ使用可能。〈斬〉+〈炎〉属性の物理攻撃ロールを行う。この際、ダメージダイス+(SL+1)個を得る。"
     },
     {
@@ -89,10 +90,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《刀マスタリー》","sl": 3},
-        {"name": "《卸し焔》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《刀マスタリー》","sl": 3},{"name": "《卸し焔》","sl": 1}]
+      },
       "description": "《上段の構え》状態でのみ使用可能。〈斬〉+〈炎〉属性の物理攻撃ロールを行う。この際、ダメージダイス+((SL+1)×2)個を得る。"
     },
     {
@@ -106,10 +107,10 @@
       "cost": "TP：4",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《刀マスタリー》","sl": 5},
-        {"name": "《上段の構え》","sl": 3}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《刀マスタリー》","sl": 5},{"name": "《上段の構え》","sl": 3}]
+      },
       "description": "《上段の構え》状態でのみ使用可能。2回の物理攻撃ロールを行う。この際、ダメージダイス+(SL×2)個を得る。"
     },
     {
@@ -123,9 +124,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《刀マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《刀マスタリー》","sl": 1}]
+      },
       "description": "その戦闘の間、青眼系の刀スキルが使用できるようになる。加えて、【物理防御】に+(SL)を得る。(これは強化効果としては扱わず、解除される事は無い)"
     },
     {
@@ -139,9 +141,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《青眼の構え》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《青眼の構え》","sl": 1}]
+      },
       "description": "《青眼の構え》状態でのみ使用可能。〈突〉属性の物理攻撃ロールを行う。命中すると、対象は(攻撃者の【抑制攻撃】+(7+SL))を目標値とした抑制防御ロールを行い、これに失敗すると[腕]封じを受ける。"
     },
     {
@@ -155,9 +158,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《青眼の構え》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《青眼の構え》","sl": 1}]
+      },
       "description": "《青眼の構え》状態でのみ使用可能。【AGI】での能動回避を行う。また、その際の達成値に+(SL-1)を得る。"
     },
     {
@@ -171,9 +175,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《青眼の構え》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《青眼の構え》","sl": 2}]
+      },
       "description": "《青眼の構え》状態でのみ使用可能。〈突〉+〈雷〉属性の物理攻撃ロールを行う。この際、ダメージダイス+(SL+1)個を得る。"
     },
     {
@@ -187,10 +192,10 @@
       "cost": "TP：2",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《刀マスタリー》","sl": 3},
-        {"name": "《小手打ち》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《刀マスタリー》","sl": 3},{"name": "《小手打ち》","sl": 2}]
+      },
       "description": "《青眼の構え》状態でのみ使用可能。〈突〉属性の物理攻撃ロールを行う。この際、ダメージダイス+((SL+1)×2)個を得る。"
     },
     {
@@ -204,10 +209,10 @@
       "cost": "TP：4",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《刀マスタリー》","sl": 5},
-        {"name": "《青眼の構え》","sl": 3}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《刀マスタリー》","sl": 5},{"name": "《青眼の構え》","sl": 3}]
+      },
       "description": "《青眼の構え》状態でのみ使用可能。自身はスキル使用時に待機状態となる。待機状態中、自身をに物理攻撃が行われると【AGI】での能動回避を行う。また、その際の達成値に+(SL-1)を得る。加えて、回避に成功した場合、自身は攻撃者に対して物理攻撃で反撃を行う。待機状態はターン終了で解除される。"
     },
     {
@@ -221,9 +226,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《刀マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《刀マスタリー》","sl": 1}]
+      },
       "description": "その戦闘の間、居合系の刀スキルが使用できるようになる。加えて、【速度】に+(SL×2)を得る。(これは強化効果としては扱わず、解除される事は無い)"
     },
     {
@@ -237,9 +243,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《居合の構え》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《居合の構え》","sl": 1}]
+      },
       "description": "《居合の構え》状態でのみ使用可能。戦闘ターンのメインフェイズ開始時に使用を宣言する。最速行動で物理攻撃ロールを行う。この際、ダメージダイス+(SL)個を得る。"
     },
     {
@@ -253,9 +260,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《居合の構え》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《居合の構え》","sl": 2}]
+      },
       "description": "《居合の構え》状態でのみ使用可能。〈斬〉+〈氷〉属性の物理攻撃ロールを行う。この際、ダメージダイス+(SL+1)個を得る。"
     },
     {
@@ -269,10 +277,10 @@
       "cost": "TP：2",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《刀マスタリー》","sl": 3},
-        {"name": "《早討ち》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《刀マスタリー》","sl": 3},{"name": "《早討ち》","sl": 2}]
+      },
       "description": "《居合の構え》状態でのみ使用可能。物理攻撃ロールを行う。この際、ダメージダイス+((SL+1)×2)個を得る。"
     },
     {
@@ -286,10 +294,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《刀マスタリー》","sl": 4},
-        {"name": "《抜刀氷雪》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《刀マスタリー》","sl": 4},{"name": "《抜刀氷雪》","sl": 2}]
+      },
       "description": "《居合の構え》状態でのみ使用可能。〈斬〉+〈氷〉属性の物理攻撃ロールを行う。この際、ダメージダイス+(SL+1)個を得る。"
     },
     {
@@ -303,10 +311,10 @@
       "cost": "TP：4",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《刀マスタリー》","sl": 5},
-        {"name": "《居合の構え》","sl": 3}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《刀マスタリー》","sl": 5},{"name": "《居合の構え》","sl": 3}]
+      },
       "description": "《居合の構え》状態でのみ使用可能。物理攻撃ロールを行う。この際、ダメージダイス+(SL×2)個を得る。命中すると、対象は(攻撃者の【抑制攻撃】+(6+SL))を目標値とした抑制防御ロールを行い、これに失敗すると即死する。"
     },
     {
@@ -320,7 +328,6 @@
       "cost": "TP：1",
       "max_sl_main": 2,
       "max_sl_sub": 1,
-      "prerequisites": [],
       "description": "『物理攻撃上昇：(SL+1)』の強化効果と、『物理防御低下：(SL)』の弱体効果を付与する。3ターン持続する。"
     },
     {
@@ -334,7 +341,6 @@
       "cost": "-",
       "max_sl_main": 2,
       "max_sl_sub": 1,
-      "prerequisites": [],
       "description": "自身の【HP】残量が半分以下の際、自身の【物理攻撃】に+(SL)を得る。"
     },
     {
@@ -348,9 +354,10 @@
       "cost": "-",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《死人の法》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《死人の法》","sl": 2}]
+      },
       "description": "分類『白兵』の攻撃が、常に『クリティカルアップ』状態扱いとなる。なお、この効果は強化効果とはみなさない。"
     },
     {
@@ -364,7 +371,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【HP】に+(SL×2)を得る。"
     },
     {
@@ -378,7 +384,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【TP】に+(SL×2)を得る。"
     },
     {
@@ -392,7 +397,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【物理攻撃】に+(SL)を得る。"
     }
   ]
