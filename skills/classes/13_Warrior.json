@@ -13,7 +13,6 @@
       "cost": "-",
       "max_sl_main": -1,
       "max_sl_sub": 0,
-      "prerequisites": [],
       "description": "物理攻撃ロールのダメージのダイスに常に+2個を得る。"
     },
     {
@@ -27,7 +26,6 @@
       "cost": "-",
       "max_sl_main": 5,
       "max_sl_sub": 3,
-      "prerequisites": [],
       "description": "剣による物理命中に+(SL/2)を得る。"
     },
     {
@@ -41,7 +39,6 @@
       "cost": "-",
       "max_sl_main": 5,
       "max_sl_sub": 3,
-      "prerequisites": [],
       "description": "鎚による物理命中に+(SL/2)を得る。"
     },
     {
@@ -55,9 +52,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《剣マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《剣マスタリー》","sl": 1}]
+      },
       "description": "物理攻撃ロールを行う。この際、ダメージダイス+(SL×2)個を得る。"
     },
     {
@@ -71,9 +69,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《剣マスタリー》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《剣マスタリー》","sl": 2}]
+      },
       "description": "3回の物理攻撃ロールを行う。この際、対象は攻撃1回ごとに、敵の中からランダムで選択する。ただし、同一のエネミーには1回しか攻撃できない。また、この際のダメージダイスを-(3-SL)個する。"
     },
     {
@@ -87,9 +86,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《剣マスタリー》","sl": 3}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《剣マスタリー》","sl": 3}]
+      },
       "description": "敵列を対象とした物理攻撃ロールを行う。また、この際のダメージダイスを-(3-SL)個する。"
     },
     {
@@ -103,10 +103,10 @@
       "cost": "TP：2",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《剣マスタリー》","sl": 4},
-        {"name": "《ブレイク》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《剣マスタリー》","sl": 4},{"name": "《ブレイク》","sl": 2}]
+      },
       "description": "物理攻撃ロールを行う。この際、ダメージダイス+(SL)個を得る。対象が何らかの封じを受けていると、さらにダメージダイス+(SL×2)個を得る。"
     },
     {
@@ -120,10 +120,10 @@
       "cost": "TP：4",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《剣マスタリー》","sl": 5},
-        {"name": "《ラッシュ》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《剣マスタリー》","sl": 5},{"name": "《ラッシュ》","sl": 2}]
+      },
       "description": "3回の物理攻撃ロールを行う。この際、対象は攻撃1回ごとに、敵の中からランダムで選択する。また、この際のダメージダイスを-(4-SL)個する。"
     },
     {
@@ -137,9 +137,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《鎚マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《鎚マスタリー》","sl": 1}]
+      },
       "description": "物理攻撃ロールを行う。命中すると、対象は(攻撃者の【抑制攻撃】+(7+SL))を目標値とした抑制防御ロールを行い、これに失敗すると[混乱]を受ける。"
     },
     {
@@ -153,9 +154,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《鎚マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《鎚マスタリー》","sl": 1}]
+      },
       "description": "物理攻撃ロールを行う。命中すると、対象は(攻撃者の【抑制攻撃】+(7+SL))を目標値とした抑制防御ロールを行い、これに失敗すると[腕]封じを受ける。"
     },
     {
@@ -169,9 +171,10 @@
       "cost": "TP：2",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《鎚マスタリー》","sl": 3}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《鎚マスタリー》","sl": 3}]
+      },
       "description": "〈氷〉属性を付加した物理攻撃ロールを行う。また、この際のダメージダイス+((SL+1)×2)個を得る。"
     },
     {
@@ -185,9 +188,10 @@
       "cost": "TP：4",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《鎚マスタリー》","sl": 5}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《鎚マスタリー》","sl": 5}]
+      },
       "description": "9回の物理攻撃ロールを行う。ただし、このスキルの命中判定は7以下の出目を絶対失敗とする。また、この際の命中判定の達成値に-5、ダメージダイスを-(4-(SL))個する。"
     },
     {
@@ -201,9 +205,10 @@
       "cost": "-",
       "max_sl_main": 1,
       "max_sl_sub": 1,
-      "prerequisites": [
-        {"name": "《物理攻撃ブースト》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《物理攻撃ブースト》","sl": 1}]
+      },
       "description": "クリティカルヒット発生時、攻撃対象に[スタン]を与える。"
     },
     {
@@ -217,10 +222,10 @@
       "cost": "-",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《物理攻撃ブースト》","sl": 2},
-        {"name": "《TPブースト》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《物理攻撃ブースト》","sl": 1},{"name": "《TPブースト》","sl": 2}]
+      },
       "description": "対象が『敵単』の攻撃でのクリティカルヒット発生時、攻撃対象と同じ列にいる全ての敵に対しても同様の攻撃を行う事ができる。この際、TPの追加消費は無い。"
     },
     {
@@ -234,7 +239,6 @@
       "cost": "TP：2",
       "max_sl_main": 2,
       "max_sl_sub": 1,
-      "prerequisites": [],
       "description": "『物理攻撃低下：(SL)』の弱体効果を付与する。3ターン持続する。"
     },
     {
@@ -248,7 +252,6 @@
       "cost": "TP：1",
       "max_sl_main": 2,
       "max_sl_sub": 1,
-      "prerequisites": [],
       "description": "『物理攻撃上昇：(SL+1)』の強化効果と、『物理防御低下：(SL)』の弱体効果を付与する。3ターン持続する。"
     },
     {
@@ -262,9 +265,10 @@
       "cost": "TP：2",
       "max_sl_main": 1,
       "max_sl_sub": 1,
-      "prerequisites": [
-        {"name": "《TPブースト》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《TPブースト》","sl": 1}]
+      },
       "description": "自身に何らかの状態異常が付与された瞬間に使用を宣言し、その状態異常を打ち消す。"
     },
     {
@@ -278,9 +282,10 @@
       "cost": "TP：2",
       "max_sl_main": 1,
       "max_sl_sub": 1,
-      "prerequisites": [
-        {"name": "《TPブースト》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《TPブースト》","sl": 2}]
+      },
       "description": "自身に[腕]封じが付与された瞬間に使用を宣言し、その[腕]封じを打ち消す。"
     },
     {
@@ -294,7 +299,6 @@
       "cost": "-",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [],
       "description": "アイテムの所持数に+4を得る。"
     },
     {
@@ -308,7 +312,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【HP】に+(SL×2)を得る。"
     },
     {
@@ -322,7 +325,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【TP】に+(SL×2)を得る。"
     },
     {
@@ -336,7 +338,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【物理攻撃】に+(SL)を得る。"
     },
     {
@@ -350,7 +351,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【防御】に+(SL)を得る。"
     }
   ]
