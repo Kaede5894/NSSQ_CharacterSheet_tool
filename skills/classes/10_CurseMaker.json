@@ -13,7 +13,6 @@
       "cost": "FP：3",
       "max_sl_main": -1,
       "max_sl_sub": 0,
-      "prerequisites": [],
       "description": "分類『呪言』のスキルを使用する際に宣言する。抑制攻撃の達成値を+5する。"
     },
     {
@@ -27,7 +26,6 @@
       "cost": "-",
       "max_sl_main": 5,
       "max_sl_sub": 3,
-      "prerequisites": [],
       "description": "分類『呪言』のスキルによる弱体効果の持続ターン数に+(SL/2)を得る。"
     },
     {
@@ -41,9 +39,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《呪言マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《呪言マスタリー》","sl": 1}]
+      },
       "description": "『物理攻撃低下：(SL+1)』の弱体効果を付与する。3ターン持続する。"
     },
     {
@@ -57,9 +56,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《呪言マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《呪言マスタリー》","sl": 1}]
+      },
       "description": "『物理防御低下：(SL+1)』の弱体効果を付与する。3ターン持続する。"
     },
     {
@@ -73,9 +73,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《呪言マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《呪言マスタリー》","sl": 2}]
+      },
       "description": "『速度低下：(SL×3)』の弱体効果を付与する。3ターン持続する。"
     },
     {
@@ -89,9 +90,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《呪言マスタリー》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《呪言マスタリー》","sl": 2}]
+      },
       "description": "このスキルを使用する際は、下記いずれかの名称で宣言する。《封の呪言：頭首》《封の呪言：上肢》《封の呪言：下肢》自身の【抑制攻撃】と対象の【抑制防御】で対抗判定を行い、勝利すると、対象に[頭][腕][脚]いずれかの封じを与える。また、この際の判定に+(SL)を得る。"
     },
     {
@@ -105,9 +107,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《呪言マスタリー》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《呪言マスタリー》","sl": 2}]
+      },
       "description": "自身の【抑制攻撃】と対象の【抑制防御】で対抗判定を行い、勝利すると、対象に[盲目]を与える。また、この際の判定に+(SL)を得る。"
     },
     {
@@ -121,9 +124,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《呪言マスタリー》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《呪言マスタリー》","sl": 2}]
+      },
       "description": "自身の【抑制攻撃】と対象の【抑制防御】で対抗判定を行い、勝利すると、対象に[麻痺]を与える。また、この際の判定に+(SL)を得る。"
     },
     {
@@ -137,9 +141,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《呪言マスタリー》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《呪言マスタリー》","sl": 2}]
+      },
       "description": "自身の【抑制攻撃】と対象の【抑制防御】で対抗判定を行い、勝利すると、対象に[混乱]を与える。また、この際の判定に+(SL)を得る。"
     },
     {
@@ -153,9 +158,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《呪言マスタリー》","sl": 3}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《呪言マスタリー》","sl": 3}]
+      },
       "description": "自身の【抑制攻撃】と対象の【抑制防御】で対抗判定を行い、勝利すると、対象に[睡眠]を与える。また、この際の判定に+(SL)を得る。"
     },
     {
@@ -169,9 +175,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《呪言マスタリー》","sl": 3}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《呪言マスタリー》","sl": 3}]
+      },
       "description": "自身の【抑制攻撃】と対象の【抑制防御】で対抗判定を行い、勝利すると、対象に[毒]を与える。また、この際の判定に+(SL)を得る。"
     },
     {
@@ -185,9 +192,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《呪言マスタリー》","sl": 4}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《呪言マスタリー》","sl": 4}]
+      },
       "description": "自身の【抑制攻撃】と対象の【抑制防御】で対抗判定を行い、勝利すると、対象に[呪い]を与える。また、この際の判定に+(SL)を得る。"
     },
     {
@@ -201,9 +209,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《呪言マスタリー》","sl": 5}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《呪言マスタリー》","sl": 5}]
+      },
       "description": "自身の【抑制攻撃】と対象の【抑制防御】で対抗判定を行い、勝利すると、対象を即死させる。また、この際の判定に+(SL-2)を得る。"
     },
     {
@@ -217,9 +226,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《呪言マスタリー》","sl": 3}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《呪言マスタリー》","sl": 3}]
+      },
       "description": "自身の【抑制攻撃】と対象の【抑制防御】で対抗判定を行い、勝利すると、対象に[テラー]を与える。また、この際の判定に+(SL)を得る。"
     },
     {
@@ -233,9 +243,10 @@
       "cost": "TP：1",
       "max_sl_main": 1,
       "max_sl_sub": 1,
-      "prerequisites": [
-        {"name": "《畏れよ、我を》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《畏れよ、我を》","sl": 1}]
+      },
       "description": "[テラー]で行動不能になっている者に対してのみ有効。そのターンの間、対象は一切の行動が不可能になり、【回避】も0として扱う。"
     },
     {
@@ -249,9 +260,10 @@
       "cost": "TP：1",
       "max_sl_main": 1,
       "max_sl_sub": 1,
-      "prerequisites": [
-        {"name": "《畏れよ、我を》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《畏れよ、我を》","sl": 2}]
+      },
       "description": "[テラー]で行動不能になっている者に対してのみ有効。そのターン、このスキルの対象者は、自分以外のエネミーを攻撃する。"
     },
     {
@@ -265,9 +277,10 @@
       "cost": "TP：1",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《畏れよ、我を》","sl": 3}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《畏れよ、我を》","sl": 3}]
+      },
       "description": "[テラー]で行動不能になっている者に対してのみ有効。そのターンの間、自身が何らかの攻撃の対象になった際、このスキルの対象となった者が肩代わりして攻撃を受ける。"
     },
     {
@@ -281,9 +294,10 @@
       "cost": "TP：1",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《畏れよ、我を》","sl": 3}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《畏れよ、我を》","sl": 3}]
+      },
       "description": "[テラー]で行動不能になっている者に対してのみ有効。そのターン、このスキルの対象者は、自分自身を攻撃する。"
     },
     {
@@ -297,9 +311,10 @@
       "cost": "TP：3",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《呪言マスタリー》","sl": 4}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《呪言マスタリー》","sl": 4}]
+      },
       "description": "無属性の属性攻撃を行う。この際、(自身の最大HPと現在HPの差)÷2だけ自身の【属性攻撃】が高いものとして扱う。"
     },
     {
@@ -313,9 +328,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《呪言マスタリー》","sl": 3}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《呪言マスタリー》","sl": 3}]
+      },
       "description": "『抑制防御低下：(SL)』の弱体効果を付与する。3ターン持続する。"
     },
     {
@@ -329,9 +345,10 @@
       "cost": "TP：2",
       "max_sl_main": 2,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《呪言マスタリー》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《呪言マスタリー》","sl": 2}]
+      },
       "description": "そのターン、自身の【抑制攻撃】を+(SL)として扱う。"
     },
     {
@@ -345,7 +362,6 @@
       "cost": "-",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [],
       "description": "自身が何らかの封じを受けている際、【抑制攻撃】を+1として扱う。"
     },
     {
@@ -359,7 +375,6 @@
       "cost": "-",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [],
       "description": "知識に関係する判定に+3を得る。"
     },
     {
@@ -373,9 +388,10 @@
       "cost": "TP：1",
       "max_sl_main": 1,
       "max_sl_sub": 1,
-      "prerequisites": [
-        {"name": "《呪言マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《呪言マスタリー》","sl": 1}]
+      },
       "description": "対象が睡眠した際、対象の夢に出てメッセージを送る事ができる。できるのは一方的な送信だけであり、相手からの言葉は聞けない。また、対象の名前と居場所を知っている必要がある。"
     },
     {
@@ -389,9 +405,10 @@
       "cost": "TP：1",
       "max_sl_main": 1,
       "max_sl_sub": 1,
-      "prerequisites": [
-        {"name": "《呪言マスタリー》","sl": 3}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《呪言マスタリー》","sl": 3}]
+      },
       "description": "自身の【抑制攻撃】と対象の【抑制防御】で対抗判定を行い、勝利すると、対象の持つ『誰々の居場所』程度の部分的な記憶や恐怖した体験などを忘れさせる事ができる。効果は永続だが、術者が合言葉を唱えれば記憶は復活する。"
     },
     {
@@ -405,9 +422,10 @@
       "cost": "TP：2",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《呪言マスタリー》","sl": 5}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《呪言マスタリー》","sl": 5}]
+      },
       "description": "自身の【抑制攻撃】と対象の【抑制防御】で対抗判定を行い、勝利すると、対象に何らかの行動を禁じる制約を与える。禁じられた行動を試みると、1D6の実ダメージを受ける。また禁止事項に背き続ける限り、1時間につき1D6の実ダメージを受ける。この効果は術者が解除するまで永続する。なお、『呼吸を禁ずる』のような、自殺的な結果を招く指示はできない。"
     },
     {
@@ -421,7 +439,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【HP】に+(SL×2)を得る。"
     },
     {
@@ -435,7 +452,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【TP】に+(SL×2)を得る。"
     },
     {
@@ -449,7 +465,6 @@
       "cost": "-",
       "max_sl_main": 4,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【抑制攻撃】に+(SL/2)を得る。"
     },
     {
@@ -463,7 +478,6 @@
       "cost": "-",
       "max_sl_main": 4,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【抑制防御】に+(SL/2)を得る。"
     }
   ]
