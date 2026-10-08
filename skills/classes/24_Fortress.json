@@ -156,7 +156,7 @@
       "max_sl_sub": 2,
       "prerequisites": {
         "type": "AND",
-        "conditions": [{"name": "《盾マスタリー》","sl": 3],{"name": "《ディバイドガード》","sl": 2}]
+        "conditions": [{"name": "《盾マスタリー》","sl": 3},{"name": "《ディバイドガード》","sl": 2}]
       },
       "description": "自身はスキル使用時に待機状態となる。待機状態中、対象列の者が何らかの攻撃ロールの対象となった際、自身がその攻撃ロールを肩代わりして受ける。待機状態は述べ(SL)回のダメージ肩代わりを行うか、ターン終了で解除される。"
     },
@@ -171,10 +171,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《盾マスタリー》","sl": 4},
-        {"name": "《ラインディバイド》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《盾マスタリー》","sl": 4},{"name": "《ラインディバイド》","sl": 2}]
+      },
       "description": "自身はスキル使用時に待機状態となる。待機状態中、味方が何らかの攻撃ロールの対象となった際、自身がその攻撃ロールを肩代わりして受ける。待機状態は述べ(SL)回のダメージ肩代わりを行うか、ターン終了で解除される。"
     },
     {
@@ -188,10 +188,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《盾マスタリー》","sl": 5},
-        {"name": "《オールディバイド》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《盾マスタリー》","sl": 5},{"name": "《オールディバイド》","sl": 2}]
+      },
       "description": "自身はスキル使用時に待機状態となる。待機状態中、味方が何らかの攻撃ロールの対象となった際、自身がその攻撃ロールを肩代わりして受けるかどうか選択できる。待機状態は述べ(SL)回のダメージ肩代わりを行うか、ターン終了で解除される。"
     },
     {
@@ -205,7 +205,6 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "そのターンの間、単体を対象とした敵からの攻撃ロールの対象を述べ(SL+1)回まで、強制的に自身に変更する。"
     },
     {
@@ -219,7 +218,6 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "物理攻撃ロールに対して、【VIT】による能動回避を行う。また、その際の達成値に+(SL-1)を得る。"
     },
     {
@@ -233,7 +231,6 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "属性攻撃ロールに対して、【VIT】による能動回避を行う。また、その際の達成値に+(SL-1)を得る。"
     },
     {
@@ -247,7 +244,6 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "『抑制防御上昇：(SL)』の強化効果を付与する。3ターン持続する。"
     },
     {
@@ -261,7 +257,6 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "『物理防御上昇：(SL)』の強化効果を付与する。3ターン持続する。"
     },
     {
@@ -275,7 +270,6 @@
       "cost": "TP：4",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "『防御上昇：(SL×2)』の強化効果を付与する。3ターン持続する。"
     },
     {
@@ -289,9 +283,10 @@
       "cost": "TP：4",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《防御陣形》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《防御陣形》","sl": 2}]
+      },
       "description": "『耐性付与：炎氷雷』の強化効果を付与する。3ターン持続する。"
     },
     {
@@ -305,7 +300,6 @@
       "cost": "TP：1",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [],
       "description": "逃走判定の際に使用を宣言する。逃走判定の達成値に+3を得る。"
     },
     {
@@ -319,9 +313,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《騎士道の加護》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《騎士道の加護》","sl": 2}]
+      },
       "description": "『抑制防御上昇：(SL)』の強化効果を付与する。3ターン持続する。"
     },
     {
@@ -335,7 +330,6 @@
       "cost": "TP：2",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "『物理防御上昇：(SL)』および『耐性上昇：炎氷雷』の強化効果を付与する。3ターン持続する。"
     },
     {
@@ -349,7 +343,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【HP】に+(SL×2)を得る。"
     },
     {
@@ -363,7 +356,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【TP】に+(SL×2)を得る。"
     },
     {
@@ -377,7 +369,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【防御】に+(SL)を得る。"
     },
     {
@@ -391,7 +382,6 @@
       "cost": "-",
       "max_sl_main": 4,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【抑制防御】に+(SL/2)を得る。"
     }
   ]
