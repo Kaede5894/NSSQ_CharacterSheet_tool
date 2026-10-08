@@ -39,9 +39,10 @@
       "cost": "-",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《エフィシエント》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《エフィシエント》","sl": 2}]
+      },
       "description": "HP回復系アイテム使用時、戦闘不能からの回復効果が付随する。"
     },
     {
@@ -55,7 +56,6 @@
       "cost": "TP：2",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "自身の【抑制攻撃】と対象の【抑制防御】で対抗判定を行い、勝利すると、対象に[睡眠]を与える。また、この際の判定に+(SL)を得る。加えて、成否に関わらず自身は[睡眠]を受ける。"
     },
     {
@@ -69,7 +69,6 @@
       "cost": "TP：1",
       "max_sl_main": 1,
       "max_sl_sub": 1,
-      "prerequisites": [],
       "description": "自身がそのターンのメインフェイズでまだ行動していないうちに何らかの対象『単体』の攻撃ロールの対象となった際に使用を宣言する。その攻撃の対象を任意の味方一人に入れ替える。自身はそのターン、メインフェイズでの主行動の権利を失う。"
     },
     {
@@ -83,9 +82,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《鳴かずば討たれず》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《鳴かずば討たれず》","sl": 1}]
+      },
       "description": "何らかの状態異常を受けている対象にのみ有効。『物理攻撃低下：(SL)』の弱体効果を付与する。3ターン持続する。"
     },
     {
@@ -99,9 +99,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《弱り目に祟り目》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《弱り目に祟り目》","sl": 2}]
+      },
       "description": "自身が何らかの状態異常を受けている時のみ使用可能。対象に、自身の状態異常を(SL)個まで伝染させる。"
     },
     {
@@ -115,9 +116,10 @@
       "cost": "TP：2",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《子守唄》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《子守唄》","sl": 2}]
+      },
       "description": "自身の【抑制攻撃】と対象の【抑制防御】で対抗判定を行い、勝利すると、対象に[頭][腕][脚]いずれかにランダムで封じを与える。また、この際の判定に+(SL-2)を得る。"
     },
     {
@@ -131,7 +133,6 @@
       "cost": "-",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [],
       "description": "危険が迫っている事に気づくための判定に+3を得る。"
     },
     {
@@ -145,7 +146,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "伐採・採掘・採取イベントにおいて、通常の回数に加えてさらに採集判定を(SL)回、追加で行うことができる。この追加分は、ああっと値を0として扱う。"
     },
     {
@@ -159,7 +159,6 @@
       "cost": "-",
       "max_sl_main": 2,
       "max_sl_sub": 1,
-      "prerequisites": [],
       "description": "ドロップ判定の達成値を±(SL)の範囲で自由に操作できる。"
     },
     {
@@ -173,9 +172,10 @@
       "cost": "-",
       "max_sl_main": 2,
       "max_sl_sub": 1,
-      "prerequisites": [
-        {"name": "《採集マスター》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《採集マスター》","sl": 2}]
+      },
       "description": "採集判定の達成値を±(SL)の範囲で自由に操作できる。"
     },
     {
@@ -189,9 +189,10 @@
       "cost": "-",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《採集マスター》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《採集マスター》","sl": 2}]
+      },
       "description": "アイテムの所持上限数+10を得る。"
     },
     {
@@ -205,9 +206,10 @@
       "cost": "-",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《採集マスター》","sl": 3}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《採集マスター》","sl": 3}]
+      },
       "description": "採集判定でゾロ目が出た場合、該当の素材を1個多く入手する。"
     },
     {
@@ -221,7 +223,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "キャンプによる回復量に+(SL)を得る。"
     },
     {
@@ -235,7 +236,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "ドロップ判定後、『肉』or『魚』or『卵』を(SL)個獲得する。ただし、倒したエネミーが食用に適さないとGMが判断した場合はこの効果は適用されない。"
     },
     {
@@ -249,7 +249,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "採集判定後、『穀類』or『野菜』or『果物』を(SL)個獲得する。ただし、周囲の地形が明らかに食用の植物の自生に適さないとGMが判断した場合はこの効果は適用されない。"
     },
     {
@@ -263,7 +262,6 @@
       "cost": "-",
       "max_sl_main": 1,
       "max_sl_sub": 1,
-      "prerequisites": [],
       "description": "身を隠す、忍び寄るなどの判定に+3を得る。"
     },
     {
@@ -277,7 +275,6 @@
       "cost": "TP：3",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [],
       "description": "およそ5分間、沼地など足を取られる地形の影響を無視できる。"
     },
     {
@@ -291,10 +288,10 @@
       "cost": "-",
       "max_sl_main": 1,
       "max_sl_sub": 1,
-      "prerequisites": [
-        {"name": "《解体マスター》","sl": 1},
-        {"name": "《野生の嗅覚》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《解体マスター》","sl": 1},{"name": "《野生の嗅覚》","sl": 1}]
+      },
       "description": "採集判定およびドロップ判定でゾロ目が発生した場合、入手できるアイテムのランクに+1を得る。"
     },
     {
@@ -308,7 +305,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "ああっと！発生時など、不意討ちを受けた状況において(1D6-1)を振り、結果がSL以下であれば、不意討ちによる1ターン分の行動ロスを防ぐ事ができる。"
     },
     {
@@ -322,7 +318,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【HP】に+(SL×2)を得る。"
     },
     {
@@ -336,7 +331,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【TP】に+(SL×2)を得る。"
     }
   ]
