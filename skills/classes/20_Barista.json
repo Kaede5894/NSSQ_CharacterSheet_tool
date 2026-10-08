@@ -13,7 +13,6 @@
       "cost": "-",
       "max_sl_main": -1,
       "max_sl_sub": 0,
-      "prerequisites": [],
       "description": "自身よりLVの高いエネミーに対する攻撃ロールのダメージのダイスに常に+4個を得る。"
     },
     {
@@ -27,7 +26,6 @@
       "cost": "-",
       "max_sl_main": 5,
       "max_sl_sub": 3,
-      "prerequisites": [],
       "description": "弩による物理命中に+(SL/2)を得る。"
     },
     {
@@ -40,10 +38,10 @@
       "target": "敵単",
       "cost": "TP：1",
       "max_sl_main": 3,
-      "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《弩マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《弩マスタリー》","sl": 1}]
+      },
       "description": "物理攻撃ロールを行う。この際、ダメージダイス+(SL×2)個を得る。"
     },
     {
@@ -57,10 +55,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《弓マスタリー》","sl": 2},
-        {"name": "《弩マスタリー》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "OR",
+        "conditions": [{"name": "《弓マスタリー》","sl": 2},{"name": "《弩マスタリー》","sl": 2}]
+      },
       "description": "このスキルは後発行動で発動する。メインフェイズ終了時点で何らかの封じを受けている敵全員に物理攻撃を行う。また、この攻撃のダメージダイス+(SL)個を得る。"
     },
     {
@@ -74,10 +72,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《弓マスタリー》","sl": 2},
-        {"name": "《弩マスタリー》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "OR",
+        "conditions": [{"name": "《弓マスタリー》","sl": 2},{"name": "《弩マスタリー》","sl": 2}]
+      },
       "description": "このスキルは後発行動で発動する。メインフェイズ終了時点で何らかの状態異常を受けている敵全員に物理攻撃を行う。また、この攻撃のダメージダイス+(SL)個を得る。"
     },
     {
@@ -91,9 +89,10 @@
       "cost": "TP：2",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《弩マスタリー》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《弩マスタリー》","sl": 2}]
+      },
       "description": "3回の物理攻撃ロールを行う。この際、対象は攻撃1回ごとに、敵の中からランダムで選択する。ただし、同一のエネミーには1回しか攻撃できない。また、この際の【物理命中】を-3、ダメージを-(3-(SL))する。"
     },
     {
@@ -107,9 +106,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《弩マスタリー》","sl": 3}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《弩マスタリー》","sl": 3}]
+      },
       "description": "〈突〉+〈炎〉の物理攻撃ロールを行う。この際、ダメージダイス+(SL+1)個を得る。"
     },
     {
@@ -123,9 +123,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《弩マスタリー》","sl": 3}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《弩マスタリー》","sl": 3}]
+      },
       "description": "〈突〉+〈氷〉の物理攻撃ロールを行う。この際、ダメージダイス+(SL+1)個を得る。"
     },
     {
@@ -139,9 +140,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《弩マスタリー》","sl": 3}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《弩マスタリー》","sl": 3}]
+      },
       "description": "〈突〉+〈雷〉の物理攻撃ロールを行う。この際、ダメージダイス+(SL+1)個を得る。"
     },
     {
@@ -155,10 +157,10 @@
       "cost": "TP：2",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《弩マスタリー》","sl": 4},
-        {"name": "《ヘビーショット》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《弩マスタリー》","sl": 4},{"name": "《ヘビーショット》","sl": 2}]
+      },
       "description": "物理攻撃ロールを行う。この際、ダメージダイス+(SL×2)個を得る。またこのスキルは、『物理防御上昇』及び『耐性上昇：突』の強化効果を無視してダメージを計算する。"
     },
     {
@@ -172,9 +174,10 @@
       "cost": "TP：4",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《弩マスタリー》","sl": 5}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《弩マスタリー》","sl": 5}]
+      },
       "description": "次のターンの後発行動タイミングでの遅発攻撃を予約する。この攻撃は、対象を敵の中からランダムに決定する3回攻撃とし、さらにダメージダイス+(SL×2)個した物理攻撃とする。"
     },
     {
@@ -188,10 +191,10 @@
       "cost": "TP：4",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《弩マスタリー》","sl": 5},
-        {"name": "《物理攻撃ブースト》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions":[{"name": "《弩マスタリー》","sl": 5},{"name": "《物理攻撃ブースト》","sl": 2}]
+      },
       "description": "物理攻撃ロールを行う。この際、ダメージダイス+((SL+1)×4)個を得る。"
     },
     {
@@ -205,11 +208,10 @@
       "cost": "-",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《銃マスタリー》","sl": 4},
-        {"name": "《弓マスタリー》","sl": 4},
-        {"name": "《弩マスタリー》","sl": 4}
-      ],
+      "prerequisites": {
+        "type": "OR",
+        "conditions": [{"name": "《銃マスタリー》","sl": 4},{"name": "《弓マスタリー》","sl": 4},{"name": "《弩マスタリー》","sl": 4}]
+      },
       "description": "分類『射撃』の攻撃が、常に『クリティカルアップ』状態扱いとなる。なお、この効果は強化効果とはみなさない。"
     },
     {
@@ -223,9 +225,10 @@
       "cost": "-",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《ウィークショット》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《ウィークショット》","sl": 1}]
+      },
       "description": "クリティカルヒット発生時、自身が希望すればクリティカルヒットを発生させた攻撃と同じ攻撃で同じ対象をもう一度攻撃できる。(もう一度攻撃を行う事で、TPももう一度消費する)なお、この効果は1回の主行動につき一度しか発生しない。"
     },
     {
@@ -239,7 +242,6 @@
       "cost": "-",
       "max_sl_main": 1,
       "max_sl_sub": 1,
-      "prerequisites": [],
       "description": "暗闇でも視界に悪影響を受けなくなる。"
     },
     {
@@ -253,9 +255,10 @@
       "cost": "-",
       "max_sl_main": 1,
       "max_sl_sub": 1,
-      "prerequisites": [
-        {"name": "《弩マスタリー》","sl": 3}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《弩マスタリー》","sl": 3}]
+      },
       "description": "対象『単体』の物理攻撃がクリティカルヒットした場合、後衛の敵1体にも同様の攻撃を行う事ができる。(スキル攻撃だった場合、2回分の【TP】は消費しない)なお、この効果は1回の主行動につき一度しか発生しない。"
     },
     {
@@ -269,9 +272,10 @@
       "cost": "TP：2",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《弩マスタリー》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《弩マスタリー》","sl": 2}]
+      },
       "description": "味方が受けている『命中低下』の弱体効果を消滅させる。また、暗闇などによる視界の悪影響も、1戦闘中は無効化する。"
     },
     {
@@ -285,7 +289,6 @@
       "cost": "-",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [],
       "description": "危険が迫っている事に気づくための判定に+3を得る。"
     },
     {
@@ -299,7 +302,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【HP】に+(SL×2)を得る。"
     },
     {
@@ -313,7 +315,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【TP】に+(SL×2)を得る。"
     },
     {
@@ -327,7 +328,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【物理攻撃】に+(SL)を得る。"
     }
   ]
