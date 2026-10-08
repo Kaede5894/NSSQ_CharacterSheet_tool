@@ -13,7 +13,6 @@
       "cost": "-",
       "max_sl_main": -1,
       "max_sl_sub": 0,
-      "prerequisites": [],
       "description": "シナリオ開始時点で保有しているFPに+2を得る。"
     },
     {
@@ -27,7 +26,6 @@
       "cost": "-",
       "max_sl_main": 2,
       "max_sl_sub": 1,
-      "prerequisites": [],
       "description": "アイテムによる回復効果に常に+(SL)を得る。"
     },
     {
