@@ -13,7 +13,6 @@
       "cost": "-",
       "max_sl_main": -1,
       "max_sl_sub": 0,
-      "prerequisites": [],
       "description": "敵からの攻撃ロールでダメージを受けた際、自身のTPを1回復する。"
     },
     {
@@ -27,7 +26,6 @@
       "cost": "-",
       "max_sl_main": 5,
       "max_sl_sub": 3,
-      "prerequisites": [],
       "description": "鎚による物理命中に+(SL/2)を得る。"
     },
     {
@@ -41,7 +39,6 @@
       "cost": "-",
       "max_sl_main": 5,
       "max_sl_sub": 3,
-      "prerequisites": [],
       "description": "分類『防御』のスキルを使用した際の効果発動回数に+(SL/2)を得る。"
     },
     {
@@ -55,9 +52,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《鎚マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《鎚マスタリー》","sl": 1}]
+      },
       "description": "〈壊〉+〈雷〉属性の物理攻撃ロールを行う。この際、ダメージダイス+(SL)個を得る。"
     },
     {
@@ -71,9 +69,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《鎚マスタリー》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《鎚マスタリー》","sl": 2}]
+      },
       "description": "物理攻撃ロールを行う。この際、ダメージダイス+(SL)個を得る。また、この際に与えたダメージの半分だけ、自身の【HP】を回復する。"
     },
     {
@@ -87,9 +86,10 @@
       "cost": "TP：2",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《鎚マスタリー》","sl": 3}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《鎚マスタリー》","sl": 3}]
+      },
       "description": "自身はスキル使用時に待機状態となる。メインフェイズ終了時、後発行動扱いで敵単体への物理攻撃ロールを行う。この際、(待機状態中に受けたダメージ+(SL×2))個のダメージダイスを得る。"
     },
     {
@@ -103,9 +103,10 @@
       "cost": "TP：4",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《鎚マスタリー》","sl": 5}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《鎚マスタリー》","sl": 5}]
+      },
       "description": "物理攻撃ロールを行う。この際、ダメージダイス+(SL×2)個を得る。ただし、自身は攻撃ロール終了後に[麻痺]を受ける。"
     },
     {
@@ -119,9 +120,10 @@
       "cost": "-",
       "max_sl_main": 1,
       "max_sl_sub": 1,
-      "prerequisites": [
-        {"name": "《盾マスタリー》","sl": 3}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《盾マスタリー》","sl": 3}]
+      },
       "description": "分類『防御』のスキルによる待機状態であっても、後発行動扱いで通常攻撃を行う事ができる。"
     },
     {
@@ -135,9 +137,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《盾マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《盾マスタリー》","sl": 1}]
+      },
       "description": "自身はスキル使用時に待機状態となる。待機状態中、対象が何らかの攻撃ロールの対象となった際、自身がその攻撃ロールを肩代わりして受ける。待機状態は述べ(SL)回のダメージ肩代わりを行うか、ターン終了で解除される。"
     },
     {
@@ -151,10 +154,10 @@
       "cost": "TP：2",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《盾マスタリー》","sl": 3},
-        {"name": "《ディバイドガード》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《盾マスタリー》","sl": 3],{"name": "《ディバイドガード》","sl": 2}]
+      },
       "description": "自身はスキル使用時に待機状態となる。待機状態中、対象列の者が何らかの攻撃ロールの対象となった際、自身がその攻撃ロールを肩代わりして受ける。待機状態は述べ(SL)回のダメージ肩代わりを行うか、ターン終了で解除される。"
     },
     {
