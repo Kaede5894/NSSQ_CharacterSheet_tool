@@ -13,7 +13,6 @@
       "cost": "-",
       "max_sl_main": -1,
       "max_sl_sub": 0,
-      "prerequisites": [],
       "description": "何らかの状態異常が付与されている対象への攻撃ロールでのダメージのダイスに+5個を得る。"
     },
     {
@@ -27,7 +26,6 @@
       "cost": "-",
       "max_sl_main": 5,
       "max_sl_sub": 3,
-      "prerequisites": [],
       "description": "短剣による物理命中に+(SL/2)を得る。"
     },
     {
@@ -41,7 +39,6 @@
       "cost": "-",
       "max_sl_main": 5,
       "max_sl_sub": 3,
-      "prerequisites": [],
       "description": "剣による物理命中に+(SL/2)を得る。"
     },
     {
@@ -55,9 +52,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《剣マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《剣マスタリー》","sl": 1}]
+      },
       "description": "〈斬〉+〈氷〉属性の物理攻撃ロールを行う。この際、ダメージダイス+(SL)個を得る。"
     },
     {
@@ -71,9 +69,10 @@
       "cost": "TP：2",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《剣マスタリー》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《剣マスタリー》","sl": 2}]
+      },
       "description": "物理攻撃ロールを行う。この攻撃が命中し、かつその後メインフェイズ終了までの間自身が一切ダメージを受けなければ、後発行動扱いでもう一度同じ対象に物理攻撃ロールを行う。ただし、いずれの攻撃もダメージに-(3-(SL))を得る。"
     },
     {
@@ -87,9 +86,10 @@
       "cost": "TP：2",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《剣マスタリー》","sl": 3}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《剣マスタリー》","sl": 3}]
+      },
       "description": "物理攻撃ロールを行う。対象が何らかの状態異常を受けており、かつこの攻撃が命中すると、対象は(攻撃者の【抑制攻撃】+(7+SL))を目標値とした抑制防御ロールを行い、これに失敗すると即死する。"
     },
     {
@@ -103,10 +103,10 @@
       "cost": "TP：2",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《剣マスタリー》","sl": 4},
-        {"name": "《アサシネイション》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《剣マスタリー》","sl": 4},{"name": "《アサシネイション》","sl": 2}]
+      },
       "description": "物理攻撃ロールを行う。この際、対象が何らかの状態異常を受けていると、ダメージダイス+(SL×3)個を得る。"
     },
     {
@@ -120,10 +120,10 @@
       "cost": "TP：4",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《剣マスタリー》","sl": 5},
-        {"name": "《ディレイスタブ》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《剣マスタリー》","sl": 5},{"name": "《ディレイスタブ》","sl": 2}]
+      },
       "description": "物理攻撃ロールを行う。この際、対象が何らかの状態異常を受けていると、さらに追加で2回の物理攻撃ロールを行う。また、この際のダメージダイスを-(5-SL)個する。"
     },
     {
@@ -137,9 +137,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《短剣マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《短剣マスタリー》","sl": 1}]
+      },
       "description": "物理攻撃ロールを行う。この際、最終的な実ダメージを半分扱いとしてダメージを算出する。命中すると、対象は(攻撃者の【抑制攻撃】+(7+SL))を目標値とした抑制防御ロールを行い、これに失敗すると[盲目]を受ける。"
     },
     {
@@ -153,9 +154,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《短剣マスタリー》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《短剣マスタリー》","sl": 2}]
+      },
       "description": "物理攻撃ロールを行う。この際、最終的な実ダメージを半分扱いとしてダメージを算出する。命中すると、対象は(攻撃者の【抑制攻撃】+(7+SL))を目標値とした抑制防御ロールを行い、これに失敗すると[麻痺]を受ける。"
     },
     {
@@ -169,9 +171,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《短剣マスタリー》","sl": 3}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《短剣マスタリー》","sl": 3}]
+      },
       "description": "物理攻撃ロールを行う。この際、最終的な実ダメージを半分扱いとしてダメージを算出する。命中すると、対象は(攻撃者の【抑制攻撃】+(7+SL))を目標値とした抑制防御ロールを行い、これに失敗すると[睡眠]を受ける。"
     },
     {
@@ -185,9 +188,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《短剣マスタリー》","sl": 4}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《短剣マスタリー》","sl": 4}]
+      },
       "description": "物理攻撃ロールを行う。この際、最終的な実ダメージを半分扱いとしてダメージを算出する。命中すると、対象は(攻撃者の【抑制攻撃】+(7+SL))を目標値とした抑制防御ロールを行い、これに失敗すると[毒]を受ける。"
     },
     {
@@ -201,9 +205,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《短剣マスタリー》","sl": 5}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《短剣マスタリー》","sl": 5}]
+      },
       "description": "そのターン、分類『投刃』のスキルの効果範囲を『敵列』に拡大する。"
     },
     {
@@ -217,7 +222,6 @@
       "cost": "-",
       "max_sl_main": 1,
       "max_sl_sub": 1,
-      "prerequisites": [],
       "description": "暗闇でも視界に悪影響を受けなくなる。"
     },
     {
@@ -231,7 +235,6 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "味方一人を対象として使用を宣言する。そのターンの間、単体を対象とした敵からの攻撃ロールの対象を述べ(SL+1)回まで、強制的に宣言時の対象に変更する。"
     },
     {
@@ -245,9 +248,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《デコイサイン》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《デコイサイン》","sl": 2}]
+      },
       "description": "【AGI】での能動回避を行う。また、その際の達成値に+(SL-1)を得る。"
     },
     {
@@ -261,10 +265,10 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《剣マスタリー》","sl": 1},
-        {"name": "《短剣マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《剣マスタリー》","sl": 1},{"name": "《短剣マスタリー》","sl": 1}]
+      },
       "description": "種別『剣』or『短剣』の武器を武器スロットとその他スロットに装備し、通常攻撃においてそれぞれの武器で1回ずつ攻撃できるようになる。ただし、それぞれの【物理命中】に-3、【物理攻撃】に-(3-SL)を受ける。"
     },
     {
@@ -278,10 +282,10 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《剣マスタリー》","sl": 4},
-        {"name": "《追影の刃》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《剣マスタリー》","sl": 4},{"name": "《追影の刃》","sl": 1}]
+      },
       "description": "《追影の刃》の効果で武器を2つ同時装備中、分類『白兵』のスキル攻撃をした場合にも2回攻撃ができるようになる。ただし、使用したスキル2回分のTPを消費する。(2回のスキル攻撃を意図的に発動しない事も任意選択可能)また、それぞれの【物理命中】に-(4-SL)を受ける。"
     },
     {
@@ -295,7 +299,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【HP】に+(SL×2)を得る。"
     },
     {
@@ -309,7 +312,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【TP】に+(SL×2)を得る。"
     },
     {
@@ -323,7 +325,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【物理攻撃】に+(SL)を得る。"
     },
     {
@@ -337,7 +338,6 @@
       "cost": "-",
       "max_sl_main": 4,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【抑制攻撃】に+(SL/2)を得る。"
     }
   ]
