@@ -13,7 +13,6 @@
       "cost": "FP：1",
       "max_sl_main": -1,
       "max_sl_sub": 0,
-      "prerequisites": [],
       "description": "そのターン、分類『舞踊』かつ対象『味方列』のスキルの対象を味方全体に変更する。"
     },
     {
@@ -27,7 +26,6 @@
       "cost": "-",
       "max_sl_main": 5,
       "max_sl_sub": 3,
-      "prerequisites": [],
       "description": "剣による物理命中に+(SL/2)を得る。"
     },
     {
@@ -41,7 +39,6 @@
       "cost": "-",
       "max_sl_main": 5,
       "max_sl_sub": 3,
-      "prerequisites": [],
       "description": "分類『舞踊』のスキルによる強化効果の持続ターン数に+(SL/2)を得る。"
     },
     {
@@ -55,9 +52,10 @@
       "cost": "TP：2",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《舞踊マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《舞踊マスタリー》","sl": 1}]
+      },
       "description": "『物理攻撃上昇：(SL×2)』および『属性攻撃上昇：(SL×2)』の強化効果を付与する。3ターン持続する。"
     },
     {
@@ -71,9 +69,10 @@
       "cost": "TP：2",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《舞踊マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《舞踊マスタリー》","sl": 1}]
+      },
       "description": "『物理防御上昇：(SL×2)』の強化効果を付与する。3ターン持続する。"
     },
     {
@@ -87,9 +86,10 @@
       "cost": "TP：2",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《舞踊マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《舞踊マスタリー》","sl": 1}]
+      },
       "description": "『HPリジェネ：(SL)』の強化効果を付与する。3ターン持続する。"
     },
     {
@@ -103,10 +103,10 @@
       "cost": "TP：2",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《舞踊マスタリー》","sl": 2},
-        {"name": "《リジェネワルツ》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《舞踊マスタリー》","sl": 2},{"name": "《リジェネワルツ》","sl": 1}]
+      },
       "description": "回復ロールを行う。この際、回復量のダイスに+(SL+【AGI】B)を得る。"
     },
     {
@@ -120,10 +120,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《舞踊マスタリー》","sl": 2},
-        {"name": "《リジェネワルツ》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《舞踊マスタリー》","sl": 2},{"name": "《リジェネワルツ》","sl": 1}]
+      },
       "description": "対象の状態異常を(SL)個まで解除する。"
     },
     {
@@ -137,10 +137,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《舞踊マスタリー》","sl": 2},
-        {"name": "《リジェネワルツ》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《舞踊マスタリー》","sl": 2},{"name": "《リジェネワルツ》","sl": 1}]
+      },
       "description": "対象の封じを(SL)個まで解除する。"
     },
     {
@@ -154,9 +154,10 @@
       "cost": "TP：4",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《舞踊マスタリー》","sl": 4}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《舞踊マスタリー》","sl": 4}]
+      },
       "description": "『TPリジェネ：(SL)』の強化効果を付与する。3ターン持続する。"
     },
     {
@@ -170,10 +171,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《剣マスタリー》","sl": 1},
-        {"name": "《舞踊マスタリー》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《剣マスタリー》","sl": 1},{"name": "《舞踊マスタリー》","sl": 2}]
+      },
       "description": "自身はスキル使用時に待機状態となる。待機状態中、自身に物理攻撃が行われると自身は攻撃者に対して物理攻撃で反撃を行う。ただし、この際のダメージダイスを-(3-SL)個する。待機状態は述べ3回の反撃を行うか、ターン終了で解除される。"
     },
     {
@@ -187,10 +188,10 @@
       "cost": "TP：2",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《剣マスタリー》","sl": 2},
-        {"name": "《舞踊マスタリー》","sl": 3}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《剣マスタリー》","sl": 2},{"name": "《舞踊マスタリー》","sl": 3}]
+      },
       "description": "自身はスキル使用時に待機状態となる。待機状態中、自身と同列の味方から敵に物理攻撃ロールが行われると、自身はその対象に物理攻撃で追撃を行う。ただし、この際のダメージダイスを-(4-SL)個する。待機状態は述べ3体への追撃を行うか、ターン終了で解除される。"
     },
     {
@@ -204,10 +205,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《剣マスタリー》","sl": 2},
-        {"name": "《舞踊マスタリー》","sl": 4}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《剣マスタリー》","sl": 2},{"name": "《舞踊マスタリー》","sl": 4}]
+      },
       "description": "『追撃：(自身)』の強化を効果を(SL)人に付与する。2ターン持続する。"
     },
     {
@@ -221,10 +222,10 @@
       "cost": "TP：4",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《チェイスサンバ》","sl": 2},
-        {"name": "《舞踊マスタリー》","sl": 5}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《チェイスサンバ》","sl": 2},{"name": "《舞踊マスタリー》","sl": 5}]
+      },
       "description": "自身はスキル使用時に待機状態となる。待機状態中、敵に物理攻撃ロールが行われると、自身はその対象に物理攻撃で追撃を行う。ただし、この際のダメージダイスを-(4-SL)個する。待機状態は述べ3体への追撃を行うか、ターン終了で解除される。"
     },
     {
@@ -238,9 +239,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《舞踊マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《舞踊マスタリー》","sl": 1}]
+      },
       "description": "【AGI】での能動回避を行う。また、その際の達成値に+(SL-1)を得る。"
     },
     {
@@ -254,10 +256,10 @@
       "cost": "TP：2",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《剣マスタリー》","sl": 3},
-        {"name": "《扇の舞》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《剣マスタリー》","sl": 3},{"name": "《扇の舞》","sl": 2}]
+      },
       "description": "【AGI】での能動回避を行う。また、その際の達成値に+(SL-1)を得る。加えて、回避に成功すると通常攻撃で反撃を行う。"
     },
     {
@@ -271,10 +273,10 @@
       "cost": "-",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《舞踊マスタリー》","sl": 4},
-        {"name": "《扇の舞》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《舞踊マスタリー》","sl": 4},{"name": "《扇の舞》","sl": 2}]
+      },
       "description": "クリティカルヒット発生時、対象に[スタン]を与える。"
     },
     {
@@ -288,7 +290,6 @@
       "cost": "-",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [],
       "description": "シナリオ開始時点で保有しているFPに+1を得る。"
     },
     {
@@ -302,9 +303,10 @@
       "cost": "TP：3",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《舞踊マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《舞踊マスタリー》","sl": 1}]
+      },
       "description": "舞が見える範囲の全員に強い関心を抱かせ、注目を集める事ができる。ただし、5分程度継続して見えている相手にしか効果がなく、原則として戦闘中の使用はできない。"
     },
     {
@@ -318,7 +320,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【HP】に+(SL×2)を得る。"
     },
     {
@@ -332,7 +333,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【TP】に+(SL×2)を得る。"
     },
     {
@@ -346,7 +346,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【速度】に+(SL×3)を得る。"
     }
   ]
