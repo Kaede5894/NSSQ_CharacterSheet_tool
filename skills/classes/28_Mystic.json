@@ -13,7 +13,6 @@
       "cost": "-",
       "max_sl_main": -1,
       "max_sl_sub": 0,
-      "prerequisites": [],
       "description": "分類『方陣』のスキルによるトークンを同時に2個まで維持できるようになる。"
     },
     {
@@ -27,7 +26,6 @@
       "cost": "-",
       "max_sl_main": 5,
       "max_sl_sub": 3,
-      "prerequisites": [],
       "description": "分類『方陣』のスキルで配置したトークンの持続ターン数に+(SL/2)を得る。"
     },
     {
@@ -41,9 +39,10 @@
       "cost": "TP：4",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《方陣マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《方陣マスタリー》","sl": 1}]
+      },
       "description": "効果時間3ターンのトークンを配置する。このトークンは敵全体に対して、術者の【抑制攻撃】と対象の【抑制防御】で対抗判定を行い、勝利すると、対象に[毒]を与える。また、この際の判定に+(SL)を得る。"
     },
     {
@@ -57,9 +56,10 @@
       "cost": "TP：4",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《方陣マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《方陣マスタリー》","sl": 1}]
+      },
       "description": "効果時間3ターンのトークンを配置する。このトークンは敵全体に対して、術者の【抑制攻撃】と対象の【抑制防御】で対抗判定を行い、勝利すると、対象に[麻痺]を与える。また、この際の判定に+(SL)を得る。"
     },
     {
@@ -73,9 +73,10 @@
       "cost": "TP：4",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《方陣マスタリー》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《方陣マスタリー》","sl": 2}]
+      },
       "description": "このスキルを使用する際は、下記いずれかの名称で宣言する。《頭封の方陣》《腕封の方陣》《脚封の方陣》効果時間3ターンのトークンを配置する。このトークンは敵全体に対して、術者の【抑制攻撃】と対象の【抑制防御】で対抗判定を行い、勝利すると、対象に[頭][腕][脚]いずれかの封じを与える。また、この際の判定に+(SL)を得る。"
     },
     {
@@ -89,9 +90,10 @@
       "cost": "TP：4",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《方陣マスタリー》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《方陣マスタリー》","sl": 2}]
+      },
       "description": "効果時間3ターンのトークンを配置する。このトークンは敵全体に対して、術者の【抑制攻撃】と対象の【抑制防御】で対抗判定を行い、勝利すると、対象に[混乱]を与える。また、この際の判定に+(SL)を得る。"
     },
     {
@@ -105,9 +107,10 @@
       "cost": "TP：4",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《方陣マスタリー》","sl": 3}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《方陣マスタリー》","sl": 3}]
+      },
       "description": "効果時間3ターンのトークンを配置する。このトークンは敵全体に対して、術者の【抑制攻撃】と対象の【抑制防御】で対抗判定を行い、勝利すると、対象に[睡眠]を与える。また、この際の判定に+(SL)を得る。"
     },
     {
@@ -121,9 +124,10 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《方陣マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《方陣マスタリー》","sl": 1}]
+      },
       "description": "戦闘中、『方陣』分類のトークンが存在している状態で終了フェイズを迎えると、味方全員の【HP】が(SL)回復する。《多重方陣》の効果で複数の『方陣』トークンを配置していても、この効果は二重には発生しない。"
     },
     {
@@ -137,10 +141,10 @@
       "cost": "TP：2",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《方陣マスタリー》","sl": 2},
-        {"name": "《陣回復》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《方陣マスタリー》","sl": 2},{"name": "《陣回復》","sl": 1}]
+      },
       "description": "分類『方陣』のトークンを1つ消滅させ、回復ロールを行う。この際、回復量のダイスに+((SL+1)×2)を得る。"
     },
     {
@@ -154,9 +158,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《方陣マスタリー》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《方陣マスタリー》","sl": 2}]
+      },
       "description": "無属性の属性攻撃を行う。この際、【属性攻撃】を-(3-SL)して扱う。"
     },
     {
@@ -170,9 +175,10 @@
       "cost": "TP：4",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《方陣マスタリー》","sl": 4}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《方陣マスタリー》","sl": 4}]
+      },
       "description": "無属性の属性攻撃を行う。この際、【属性攻撃】を-(3-SL)して扱う。"
     },
     {
@@ -186,9 +192,10 @@
       "cost": "-",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《方陣マスタリー》","sl": 5}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《方陣マスタリー》","sl": 5}]
+      },
       "description": "戦闘中、『方陣』分類のトークンが何らかの理由で消滅した際、自身の【TP】を1回復する。"
     },
     {
@@ -202,9 +209,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《方陣マスタリー》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《方陣マスタリー》","sl": 2}]
+      },
       "description": "『物理攻撃低下：(SL+2)』の弱体効果を付与する。3ターン持続する。"
     },
     {
@@ -218,9 +226,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《方陣マスタリー》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《方陣マスタリー》","sl": 2}]
+      },
       "description": "『物理防御低下：(SL+2)』の弱体効果を付与する。3ターン持続する。"
     },
     {
@@ -234,9 +243,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《方陣マスタリー》","sl": 3}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《方陣マスタリー》","sl": 3}]
+      },
       "description": "対象の強化効果を最大で(SL)個まで消滅させる。"
     },
     {
@@ -250,9 +260,10 @@
       "cost": "TP：4",
       "max_sl_main": 2,
       "max_sl_sub": 1,
-      "prerequisites": [
-        {"name": "《方陣マスタリー》","sl": 3}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《方陣マスタリー》","sl": 3}]
+      },
       "description": "『抑制防御上昇：(SL)』の強化効果を付与する。3ターン持続する。"
     },
     {
@@ -266,7 +277,6 @@
       "cost": "-",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [],
       "description": "知識に関係する判定に+3を得る。"
     },
     {
@@ -280,9 +290,10 @@
       "cost": "TP：5",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《方陣マスタリー》","sl": 3}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《方陣マスタリー》","sl": 3}]
+      },
       "description": "およそ5分間、溶岩や針の山などの上を無傷で歩けるようになる。"
     },
     {
@@ -296,7 +307,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【HP】に+(SL×2)を得る。"
     },
     {
@@ -310,7 +320,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【TP】に+(SL×2)を得る。"
     },
     {
@@ -324,7 +333,6 @@
       "cost": "-",
       "max_sl_main": 4,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【抑制攻撃】に+(SL/2)を得る。"
     },
     {
@@ -338,7 +346,6 @@
       "cost": "-",
       "max_sl_main": 4,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【抑制防御】に+(SL/2)を得る。"
     }
   ]
