@@ -214,6 +214,7 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
+      "prerequisites": {
         "type": "AND",
         "conditions":[{"name": "《王家の血統》","sl": 2}]
       },
@@ -243,6 +244,7 @@
       "cost": "TP：4",
       "max_sl_main": 1,
       "max_sl_sub": 0,
+      "prerequisites": {
         "type": "AND",
         "conditions":[{"name": "《王家の血統》","sl": 3}, {"name": "《拝受すべき王命》","sl": 1}]
       },
@@ -272,7 +274,7 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "max_sl_sub": 2,
+      "prerequisites": {
         "type": "AND",
         "conditions":[{"name": "《ロイヤルベール》","sl": 2}]
       },
@@ -315,7 +317,7 @@
       "cost": "TP：3",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "max_sl_sub": 2,
+      "prerequisites": {
         "type": "AND",
         "conditions":[{"name": "《王者の激励》","sl": 1},{"name": "《王たる証》","sl": 1}]
       },
@@ -332,7 +334,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【HP】に+(SL×2)を得る。"
     },
     {
@@ -346,7 +347,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【TP】に+(SL×2)を得る。"
     },
     {
@@ -360,7 +360,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【防御】に+(SL)を得る。"
     },
     {
@@ -374,7 +373,6 @@
       "cost": "-",
       "max_sl_main": 4,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【抑制防御】に+(SL/2)を得る。"
     }
   ]
