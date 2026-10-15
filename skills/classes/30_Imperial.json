@@ -13,7 +13,6 @@
       "cost": "-",
       "max_sl_main": -1,
       "max_sl_sub": 0,
-      "prerequisites": [],
       "description": "砲剣によるドライブスキルを使用した際に発生するオーバーヒートのターン数が2減少する。"
     },
     {
@@ -27,7 +26,6 @@
       "cost": "-",
       "max_sl_main": 5,
       "max_sl_sub": 3,
-      "prerequisites": [],
       "description": "砲剣による物理命中に+(SL/2)を得る。"
     },
     {
@@ -41,9 +39,10 @@
       "cost": "TP：3",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《砲剣マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《砲剣マスタリー》","sl": 1}]
+      },
       "description": "物理攻撃ロールを行う。この際、【物理攻撃】を+((SL-1)×2)した上で2倍として扱う。使用後、7ターン分のオーバーヒートを得る。"
     },
     {
@@ -57,9 +56,10 @@
       "cost": "TP：4",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《砲剣マスタリー》","sl": 3}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《砲剣マスタリー》","sl": 3}]
+      },
       "description": "このスキルを使用する際は、下記いずれかの名称で宣言する。《フレイムドライブ》《フリーズドライブ》《ショックドライブ》〈斬〉+(〈炎〉〈氷〉〈雷〉いずれか)属性の物理攻撃ロールを行う。この際、【物理攻撃】を+((SL-1)×2)した上で2倍として扱う。使用後、8ターン分のオーバーヒートを得る。"
     },
     {
@@ -73,9 +73,10 @@
       "cost": "TP：5",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《砲剣マスタリー》","sl": 4}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《砲剣マスタリー》","sl": 4}]
+      },
       "description": "無属性の物理攻撃ロールを行う。この際、【物理攻撃】を+(SL×2)して扱う。使用後、9ターン分のオーバーヒートを得る。"
     },
     {
@@ -89,9 +90,10 @@
       "cost": "TP：7",
       "max_sl_main": 3,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《砲剣マスタリー》","sl": 5}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《砲剣マスタリー》","sl": 5}]
+      },
       "description": "無属性の物理攻撃ロールを行う。この際、【物理攻撃】を+(SL)して扱う。使用後、9ターン分のオーバーヒートを得る。"
     },
     {
@@ -105,9 +107,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《砲剣マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《砲剣マスタリー》","sl": 1}]
+      },
       "description": "物理攻撃ロールを行う。この際、ダメージダイス+(SL)個を得る。加えて、オーバーヒートを1ターン短縮する。"
     },
     {
@@ -121,9 +124,10 @@
       "cost": "TP：0",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《砲剣マスタリー》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《砲剣マスタリー》","sl": 2}]
+      },
       "description": "物理攻撃ロールを行う。この際、ダメージダイス-(4-SL)を得る。命中した際、ダメージのダイスで『6』の目が出た個数に等しいだけ自身の【TP】を回復する。"
     },
     {
@@ -137,10 +141,10 @@
       "cost": "TP：2",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《砲剣マスタリー》","sl": 3},
-        {"name": "《シャープエッジ》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《砲剣マスタリー》","sl": 3},{"name": "《シャープエッジ》","sl": 2}]
+      },
       "description": "物理攻撃ロールを行う。この際、ダメージダイス+(SL)個を得る。加えて、オーバーヒートを2ターン短縮する。"
     },
     {
@@ -154,10 +158,10 @@
       "cost": "TP：1",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《砲剣マスタリー》","sl": 3},
-        {"name": "《インパルスエッジ》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《砲剣マスタリー》","sl": 3},{"name": "《インパルスエッジ》","sl": 2}]
+      },
       "description": "物理攻撃ロールを行う。この際、ダメージダイス+(SL)個を得る。加えて、次のターンに《●●ドライブ》を使用する場合、そのダメージダイスに+(SL×3)個を得る。"
     },
     {
@@ -171,9 +175,10 @@
       "cost": "TP：2",
       "max_sl_main": 1,
       "max_sl_sub": 1,
-      "prerequisites": [
-        {"name": "《砲剣マスタリー》","sl": 1}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《砲剣マスタリー》","sl": 1}]
+      },
       "description": "自身のオーバーヒートを3ターン短縮する。"
     },
     {
@@ -187,10 +192,10 @@
       "cost": "-",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《物理攻撃ブースト》","sl": 2},
-        {"name": "《TPブースト》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《物理攻撃ブースト》","sl": 2},{"name": "《TPブースト》","sl": 2}]
+      },
       "description": "対象が『敵単』の攻撃でのクリティカルヒット発生時、攻撃対象と同じ列にいる全ての敵に対しても同様の攻撃を行う事ができる。この際、TPの追加消費は無い。"
     },
     {
@@ -204,7 +209,6 @@
       "cost": "TP：1",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [],
       "description": "そのターン、自身のメインフェイズの行動を後発行動にし、そのターンの間だけ全属性の耐性を+1する。"
     },
     {
@@ -218,9 +222,10 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [
-        {"name": "《砲剣マスタリー》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《砲剣マスタリー》","sl": 2}]
+      },
       "description": "自身の攻撃で敵を戦闘不能にした際、自身の【TP】を(SL)だけ回復する。"
     },
     {
@@ -234,10 +239,10 @@
       "cost": "TP：4",
       "max_sl_main": 1,
       "max_sl_sub": 0,
-      "prerequisites": [
-        {"name": "《砲剣マスタリー》","sl": 5},
-        {"name": "《チャージエッジ》","sl": 2}
-      ],
+      "prerequisites": {
+        "type": "AND",
+        "conditions": [{"name": "《砲剣マスタリー》","sl": 5},{"name": "《チャージエッジ》","sl": 2}]
+      },
       "description": "そのターンに自身が《●●ドライブ》を使用する場合、ダメージダイス+20個を得る。ただし、その《●●ドライブ》を使用した後、その戦闘中はオーバーヒートが一切回復しなくなる。"
     },
     {
@@ -251,7 +256,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "ドロップ判定後、『肉』or『魚』or『卵』を(SL)個獲得する。ただし、倒したエネミーが食用に適さないとGMが判断した場合はこの効果は適用されない。"
     },
     {
@@ -265,7 +269,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【HP】に+(SL×2)を得る。"
     },
     {
@@ -279,7 +282,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【TP】に+(SL×2)を得る。"
     },
     {
@@ -293,7 +295,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【物理攻撃】に+(SL)を得る。"
     },
     {
@@ -307,7 +308,6 @@
       "cost": "-",
       "max_sl_main": 3,
       "max_sl_sub": 2,
-      "prerequisites": [],
       "description": "【防御】に+(SL)を得る。"
     }
   ]
