@@ -327,6 +327,40 @@ let classSkillCache = {};
 let characterSkillLevels = {};
 let skillRenderVersion = 0;
 
+const classSkillFileMap = {
+    1:  "skills/classes/01_PrincePrincess.json",
+    2:  "skills/classes/02_SwordMan.json",
+    3:  "skills/classes/03_Ranger.json",
+    4:  "skills/classes/04_Paladin.json",
+    5:  "skills/classes/05_DarkHunter.json",
+    6:  "skills/classes/06_Medic.json",
+    7:  "skills/classes/07_Alchemist.json",
+    8:  "skills/classes/08_Bard.json",
+    9:  "skills/classes/09_Bushido.json",
+    10: "skills/classes/10_CurseMaker.json",
+    11: "skills/classes/11_Gunner.json",
+    12: "skills/classes/12_DoctorMagus.json",
+    13: "skills/classes/13_Warrior.json",
+    14: "skills/classes/14_Phalanx.json",
+    15: "skills/classes/15_Pirates.json",
+    16: "skills/classes/16_Shinobi.json",
+    17: "skills/classes/17_Monk.json",
+    18: "skills/classes/18_Zodiac.json",
+    19: "skills/classes/19_BeastKing.json",
+    20: "skills/classes/20_Barista.json",
+    21: "skills/classes/21_Farmer.json",
+    22: "skills/classes/22_Shogun.json",
+    23: "skills/classes/23_NightSeeker.json",
+    24: "skills/classes/24_Fortress.json",
+    25: "skills/classes/25_Sniper.json",
+    26: "skills/classes/26_RuneMaster.json",
+    27: "skills/classes/27_Danser.json",
+    28: "skills/classes/28_Mystic.json",
+    29: "skills/classes/29_Mononofu.json",
+    30: "skills/classes/30_Imperial.json",
+    31: "skills/classes/31_Highlander.json"
+};
+
 // nssq_classes.json と nssq_equipments.json を両方取得するよう拡張
 async function loadClassData() {
     try {
@@ -395,7 +429,7 @@ function updateEquipmentOptions() {
     const currentMain = mainSelect.value;
     const currentSub = subSelect.value;
 
-    const mainClassInfo = classData[currentMain] || { weapons: [], armors: [] };
+    const mainClassInfo = [currentMain] || { weapons: [], armors: [] };
     const subClassInfo = classData[currentSub] || { weapons: [], armors: [] };
 
     // ========================================
