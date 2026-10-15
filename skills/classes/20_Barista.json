@@ -38,6 +38,7 @@
       "target": "敵単",
       "cost": "TP：1",
       "max_sl_main": 3,
+      "max_sl_sub": 2,
       "prerequisites": {
         "type": "AND",
         "conditions": [{"name": "《弩マスタリー》","sl": 1}]
