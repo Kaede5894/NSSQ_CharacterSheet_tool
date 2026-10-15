@@ -361,6 +361,37 @@ const classSkillFileMap = {
     31: "skills/classes/31_Highlander.json"
 };
 
+// クラス名からクラススキルJSONを読み込む
+async function loadClassSkills(className) {
+    const classInfo = classData[className];
+    if (!classInfo) return [];
+    const classId = Number(classInfo.classId);
+    const filePath = classSkillFileMap[classId];
+    if (!filePath) {
+        console.error(`クラスID ${classId} のスキルJSONが見つかりません`);
+        return [];
+    }
+    // 読み込み済みならキャッシュを返す
+    if (classSkillCache[classId]) {
+        return classSkillCache[classId];
+    }
+    try {
+        const response = await fetch(filePath);
+        if (!response.ok) {
+            throw new Error(`HTTPエラー: ${response.status}`);
+        }
+        const data = await response.json();
+        classSkillCache[classId] = data.skills || [];
+        return classSkillCache[classId];
+    } catch (error) {
+        console.error(
+            `${className}のクラススキル読み込みエラー:`,
+            error
+        );
+        return [];
+    }
+}
+        
 // nssq_classes.json と nssq_equipments.json を両方取得するよう拡張
 async function loadClassData() {
     try {
