@@ -391,7 +391,192 @@ async function loadClassSkills(className) {
         return [];
     }
 }
-        
+
+// メインクラス・サブクラスのうち、取得レベルが高い方を返す
+function getCurrentSkillLevel(skillName) {
+    const mainLevel =
+        Number(characterSkillLevels[`main:${skillName}`]) || 0;
+    const subLevel =
+        Number(characterSkillLevels[`sub:${skillName}`]) || 0;
+    return Math.max(mainLevel, subLevel);
+}
+
+// 前提スキルの条件を判定する
+function checkSkillPrerequisites(prerequisites) {
+    // 前提条件が設定されていないスキルは取得可能
+    if (!prerequisites) return true;
+    // 個別の前提スキルを判定
+    if (prerequisites.name) {
+        const requiredLevel = Number(prerequisites.sl) || 0;
+        return getCurrentSkillLevel(prerequisites.name)
+            >= requiredLevel;
+    }
+    const conditions = prerequisites.conditions || [];
+    // OR：いずれか1つの条件を満たせばよい
+    if (prerequisites.type === "OR") {
+        return conditions.some(condition =>
+            checkSkillPrerequisites(condition)
+        );
+    }
+    // AND：すべての条件を満たす必要がある
+    // type が省略されている場合も AND として扱う
+    return conditions.every(condition =>
+        checkSkillPrerequisites(condition)
+    );
+}
+
+// クラススキルを指定した表示エリアに描画する
+function renderClassSkills(containerId, skills, role) {
+    const container = document.getElementById(containerId);
+
+    if (!container) {
+        console.error(`クラススキル表示エリアが見つかりません: ${containerId}`);
+        return;
+    }
+
+    // 表示内容を初期化
+    container.replaceChildren();
+
+    if (!Array.isArray(skills) || skills.length === 0) {
+        const message = document.createElement("p");
+        message.textContent = "表示できるクラススキルがありません。";
+        container.appendChild(message);
+        return;
+    }
+
+    skills.forEach(skill => {
+        const skillCard = document.createElement("div");
+        skillCard.style.cssText = [
+            "margin-bottom: 12px",
+            "padding: 10px",
+            "border: 1px solid #ddd",
+            "border-radius: 6px",
+            "background: #fff"
+        ].join(";");
+
+        // スキル名
+        const title = document.createElement("div");
+        title.textContent = skill.name || "名称未設定";
+        title.style.cssText =
+            "font-weight: bold; margin-bottom: 6px;";
+        skillCard.appendChild(title);
+
+        // スキルの基本情報
+        const metadata = [
+            ["武器", skill.weapon],
+            ["部位", skill.part],
+            ["分類", skill.category],
+            ["タイミング", skill.timing],
+            ["射程", skill.range],
+            ["対象", skill.target],
+            ["コスト", skill.cost]
+        ];
+
+        const metadataText = metadata
+            .filter(([, value]) =>
+                value !== undefined &&
+                value !== null &&
+                value !== ""
+            )
+            .map(([label, value]) => `${label}: ${value}`)
+            .join(" ／ ");
+
+        if (metadataText) {
+            const info = document.createElement("div");
+            info.textContent = metadataText;
+            info.style.cssText =
+                "font-size: 0.85rem; color: #555; margin-bottom: 6px;";
+            skillCard.appendChild(info);
+        }
+
+        // スキルレベル入力欄
+        const levelRow = document.createElement("div");
+        levelRow.style.cssText =
+            "display: flex; align-items: center; gap: 8px; margin-bottom: 6px;";
+
+        const levelLabel = document.createElement("label");
+        levelLabel.textContent = "レベル";
+        levelLabel.style.margin = "0";
+        levelRow.appendChild(levelLabel);
+
+        const levelInput = document.createElement("input");
+        levelInput.type = "number";
+        levelInput.min = "0";
+        levelInput.step = "1";
+        levelInput.style.width = "80px";
+
+        const maxLevelKey =
+            role === "main" ? "max_sl_main" : "max_sl_sub";
+
+        const configuredMax = Number(skill[maxLevelKey]);
+        const maxLevel = Number.isFinite(configuredMax)
+            ? configuredMax
+            : 0;
+
+        // -1 は固有スキルの特別な設定として扱う。
+        // 自動取得などの特別処理は後の手順で実装する。
+        levelInput.max = String(maxLevel < 0 ? 1 : maxLevel);
+
+        const skillKey = `${role}:${skill.name}`;
+        const savedLevel =
+            Number(characterSkillLevels[skillKey]) || 0;
+
+        const inputMax = maxLevel < 0 ? 1 : maxLevel;
+        levelInput.value = String(
+            Math.min(inputMax, Math.max(0, savedLevel))
+        );
+
+        // 最大レベルが0のスキルは入力不可
+        levelInput.disabled = maxLevel === 0;
+
+        levelInput.setAttribute(
+            "aria-label",
+            `${skill.name || "名称未設定"}の${role === "main" ? "メイン" : "サブ"}クラスレベル`
+        );
+
+        levelInput.addEventListener("input", () => {
+            let level = Number(levelInput.value);
+
+            if (!Number.isFinite(level)) {
+                level = 0;
+            }
+
+            level = Math.trunc(level);
+            level = Math.max(0, Math.min(inputMax, level));
+
+            levelInput.value = String(level);
+            characterSkillLevels[skillKey] = level;
+        });
+
+        levelRow.appendChild(levelInput);
+        levelRow.appendChild(document.createTextNode(
+            ` / ${maxLevel < 0 ? "固有スキル" : inputMax}`
+        ));
+
+        skillCard.appendChild(levelRow);
+
+        // スキルの解説
+        if (skill.description) {
+            const description = document.createElement("div");
+            description.textContent = skill.description;
+            description.style.cssText =
+                "font-size: 0.9rem; white-space: pre-wrap;";
+            skillCard.appendChild(description);
+        }
+
+        // 前提条件の情報表示
+        if (skill.prerequisites) {
+            const prerequisiteNote = document.createElement("div");
+            prerequisiteNote.textContent = "前提条件あり";
+            prerequisiteNote.style.cssText =
+                "font-size: 0.85rem; color: #666; margin-top: 6px;";
+            skillCard.appendChild(prerequisiteNote);
+        }
+
+        container.appendChild(skillCard);
+    });
+}
+
 // nssq_classes.json と nssq_equipments.json を両方取得するよう拡張
 async function loadClassData() {
     try {
